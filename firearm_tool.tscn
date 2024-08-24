@@ -1,0 +1,130 @@
+[gd_scene load_steps=19 format=3 uid="uid://c054fba3rmi5t"]
+
+[ext_resource type="Script" path="res://FirearmTool.gd" id="1_2j8qw"]
+[ext_resource type="PackedScene" uid="uid://dci4qjpnqr0u4" path="res://flesh_bullet_hit.tscn" id="2_3xxpq"]
+[ext_resource type="Resource" uid="uid://coe0g4cyusmfo" path="res://ammo_item.tres" id="2_nhilb"]
+[ext_resource type="Gradient" uid="uid://dmp5443rni221" path="res://bullet_tracer_gradient.tres" id="2_vw1es"]
+[ext_resource type="PackedScene" uid="uid://dhvc50e66cgaq" path="res://stone_bullet_hit.tscn" id="3_5pw2v"]
+[ext_resource type="Texture2D" uid="uid://c7fy2jpieohw4" path="res://Resources/Textures/muzzleflash.png" id="3_tjnmg"]
+[ext_resource type="PackedScene" uid="uid://cv2ugmyi88s12" path="res://metal_bullet_hit.tscn" id="4_j2mmg"]
+[ext_resource type="Script" path="res://CameraShaker.gd" id="5_y8fo1"]
+[ext_resource type="PackedScene" uid="uid://ck5pughplsc7c" path="res://bleeding_effect.tscn" id="7_8sejh"]
+[ext_resource type="AudioStream" uid="uid://cnh2v1v2x76af" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/weapons/wpn_equip.mp3" id="7_bsqqb"]
+[ext_resource type="PackedScene" uid="uid://b7uv3kdu37y05" path="res://wood_bullet_hit.tscn" id="7_cdb8u"]
+[ext_resource type="AudioStream" uid="uid://73admuykdoo6" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_fire_m16a4.mp3" id="8_84ugv"]
+[ext_resource type="AudioStream" uid="uid://ds5cgwpgjqucx" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_empty.mp3" id="8_scnjw"]
+
+[sub_resource type="Animation" id="Animation_2eghf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MuzzleFlash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MuzzleFlash:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_tms8n"]
+resource_name = "fire"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MuzzleFlash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MuzzleFlash:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8n030"]
+_data = {
+"RESET": SubResource("Animation_2eghf"),
+"fire": SubResource("Animation_tms8n")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bmg16"]
+light_mode = 1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jolsx"]
+radius = 100.0
+
+[node name="FirearmTool" type="Node2D" node_paths=PackedStringArray("stream_player")]
+script = ExtResource("1_2j8qw")
+damage = 30
+supply = ExtResource("2_nhilb")
+supply_amount = 1
+bullet_collision_mask = 10
+trail_gradient = ExtResource("2_vw1es")
+material_hit_effects = {
+"flesh": ExtResource("2_3xxpq"),
+"metal": ExtResource("4_j2mmg"),
+"stone": ExtResource("3_5pw2v"),
+"wood": ExtResource("7_cdb8u")
+}
+apply_effects = Array[PackedScene]([ExtResource("7_8sejh")])
+stream_player = NodePath("AudioStreamPlayer2D")
+equip_stream = ExtResource("7_bsqqb")
+fire_stream = ExtResource("8_84ugv")
+empty_stream = ExtResource("8_scnjw")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8n030")
+}
+
+[node name="MuzzleFlash" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_bmg16")
+position = Vector2(10, 0)
+texture = ExtResource("3_tjnmg")
+
+[node name="CameraShaker" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 64
+script = ExtResource("5_y8fo1")
+amount = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraShaker"]
+shape = SubResource("CircleShape2D_jolsx")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_84ugv")
+max_polyphony = 10

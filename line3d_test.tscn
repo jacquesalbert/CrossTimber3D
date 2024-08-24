@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs17ufaonysfq"]
+
+[ext_resource type="Script" path="res://Line3D.gd" id="1_ahunx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dyog0"]
+transparency = 1
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Line3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_dyog0")
+script = ExtResource("1_ahunx")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.846407, 0.532537, 0, -0.532537, 0.846407, 0, 7.85274, 10.7311)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.807455, 0.376273, -0.454351, 0, 0.770179, 0.637827, 0.589929, -0.515017, 0.621885, -6.83406, 0, -1.24194)

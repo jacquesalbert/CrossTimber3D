@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://wcnt4s2koi7p"]
+
+[ext_resource type="PackedScene" uid="uid://v8vcdpvb6nai" path="res://Resources/FBX/Axe.fbx" id="1_tbx6v"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0492535, 0)
+light_color = Color(1, 0, 0, 1)
+
+[node name="Root Scene" parent="." instance=ExtResource("1_tbx6v")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 0, 0)
