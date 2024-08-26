@@ -3,7 +3,6 @@ extends MeshInstance3D
 
 @export var texture : Texture2D
 @export var two_sided : bool
-@export var uv_t_scale : float = 1
 
 var _points : Array[Vector3]
 var _normals : Array[Vector3]
@@ -19,7 +18,7 @@ func _ready() -> void:
 	_material = StandardMaterial3D.new()
 	_material.texture_repeat = true
 	_material.albedo_texture = texture
-	_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
 	_material.vertex_color_use_as_albedo = true
 
 func clear_points():
@@ -77,12 +76,12 @@ func build_mesh_side(reverse:bool=false):
 		var point_b := point_center - side_modifier * (cross * half_width)
 		
 		mesh.surface_set_normal(point_normal)
-		mesh.surface_set_uv(Vector2(point_t*uv_t_scale, 1))
+		mesh.surface_set_uv(Vector2(point_t/point_width, 1))
 		mesh.surface_set_color(point_color)
 		mesh.surface_add_vertex(point_a)
 		
 		mesh.surface_set_normal(point_normal)
-		mesh.surface_set_uv(Vector2(point_t*uv_t_scale, 0))
+		mesh.surface_set_uv(Vector2(point_t/point_width, 0))
 		mesh.surface_set_color(point_color)
 		mesh.surface_add_vertex(point_b)
 
@@ -105,6 +104,9 @@ func get_point_width(idx:int)->float:
 func get_point_color(idx:int)->Color:
 	return _colors[idx]
 
+func get_point_t(idx:int)->float:
+	return _uv_ts[idx]
+
 func set_point_position(idx:int,pos:Vector3):
 	_points[idx] = pos
 	_rebuild_queued = true
@@ -119,6 +121,10 @@ func set_point_width(idx:int, width:float):
 
 func set_point_color(idx:int, color:Color):
 	_colors[idx] = color
+	_rebuild_queued = true
+
+func set_point_t(idx:int, t:float):
+	_uv_ts[idx] = t
 	_rebuild_queued = true
 
 func _process(delta: float) -> void:

@@ -1,19 +1,20 @@
 class_name Wheel
 extends Node3D
 
-var effect_material : StringName
-var surface : MaterialEffectStaticBody
 var speed : float
 var drive_spin : float
+var traction : float = 1.0
 var traction_slip : bool
 
 @onready var skid_tracker :Tracker= $SkidTracker
 @onready var tread_tracker :Tracker= $TreadTracker
 @onready var audiostream_player := $AudioStreamPlayer3D
 @onready var roost_particles := $RoostParticles
+@onready var surface_cast := $SurfaceRayCast3D
 
 @export var material_roll_sound_effects : Dictionary
 @export var material_skid_sound_effects : Dictionary
+@export var material_deposit_distances : Dictionary
 
 enum State {
 	STOPPED,
@@ -35,79 +36,86 @@ var state : State:
 				State.ROOSTING:
 					set_roosting()
 
-signal surface_changed(surface:MaterialEffectStaticBody)
+signal surface_changed(surface:Node3D)
+
+var _current_effect_material : StringName
+var _active_effect_material : StringName
+var _deposit_remaining : float = 0.0
+
 
 func _ready():
+	surface_cast.surface_changed.connect(_on_surface_changed)
 	if is_instance_valid(roost_particles):
 		roost_particles.emitting = false
 
-func _on_surface_changed(surface:MaterialEffectStaticBody):
-	self.surface = surface
-	if is_instance_valid(skid_tracker):
-		skid_tracker.ground_area = surface
-	if is_instance_valid(tread_tracker):
-		tread_tracker.ground_area = surface
-	if surface:
-		effect_material = surface.effect_material
-	else:
-		effect_material = "none"
+func _on_surface_changed(surface:Node3D):
+	_current_effect_material = surface.get_effect_material() if is_instance_valid(surface) else "none"
+	if _current_effect_material != _active_effect_material:
+		_deposit_remaining = material_deposit_distances.get(_active_effect_material,0.0)
+	traction = surface.get_traction() if is_instance_valid(surface) and surface.has_method("get_traction") else 1.0
 	
+func change_active_material(new_material:StringName):
+	_active_effect_material = new_material
+	
+	if is_instance_valid(skid_tracker):
+		skid_tracker.change_effect_material(_active_effect_material)
+	if is_instance_valid(tread_tracker):
+		tread_tracker.change_effect_material(_active_effect_material)
 	if is_instance_valid(audiostream_player):
 		if state == State.ROOSTING or state == State.SKIDDING:
-			var roost_sound : AudioStream = material_skid_sound_effects.get(effect_material)
+			var roost_sound : AudioStream = material_skid_sound_effects.get(_active_effect_material)
 			audiostream_player.stream = roost_sound
 			audiostream_player.playing = true
 		elif state == State.ROLLING:
-			var roll_sound : AudioStream = material_roll_sound_effects.get(effect_material)
+			var roll_sound : AudioStream = material_roll_sound_effects.get(_active_effect_material)
 			audiostream_player.stream = roll_sound
 			audiostream_player.playing = true
 		else:
 			audiostream_player.stream = null
 			audiostream_player.playing = false
-	
 
 func set_roosting():
 	if is_instance_valid(skid_tracker):
-		skid_tracker.enable_tracking()
+		skid_tracker.enable()
 	if is_instance_valid(tread_tracker):
-		tread_tracker.disable_tracking()
+		tread_tracker.disable()
 	if is_instance_valid(roost_particles):
 		roost_particles.emitting = true
 	if is_instance_valid(audiostream_player):
-		var roost_sound : AudioStream = material_skid_sound_effects.get(effect_material)
+		var roost_sound : AudioStream = material_skid_sound_effects.get(_active_effect_material)
 		audiostream_player.stream = roost_sound
 		audiostream_player.playing = true
 
 func set_skidding():
 	if is_instance_valid(skid_tracker):
-		skid_tracker.enable_tracking()
+		skid_tracker.enable()
 	if is_instance_valid(tread_tracker):
-		tread_tracker.disable_tracking()
+		tread_tracker.disable()
 	if is_instance_valid(roost_particles):
 		roost_particles.emitting = true
-		roost_particles.initial_velocity_max = 0
+		roost_particles.initial_velocity_max = 5
 	if is_instance_valid(audiostream_player):
-		var roost_sound : AudioStream = material_skid_sound_effects.get(effect_material)
+		var roost_sound : AudioStream = material_skid_sound_effects.get(_active_effect_material)
 		audiostream_player.stream = roost_sound
 		audiostream_player.playing = true
 
 func set_rolling():
 	if is_instance_valid(skid_tracker):
-		skid_tracker.disable_tracking()
+		skid_tracker.disable()
 	if is_instance_valid(tread_tracker):
-		tread_tracker.enable_tracking()
+		tread_tracker.enable()
 	if is_instance_valid(roost_particles):
 		roost_particles.emitting = false
 	if is_instance_valid(audiostream_player):
-		var roll_sound : AudioStream = material_roll_sound_effects.get(effect_material)
+		var roll_sound : AudioStream = material_roll_sound_effects.get(_active_effect_material)
 		audiostream_player.stream = roll_sound
 		audiostream_player.playing = true
 
 func set_stopped():
 	if is_instance_valid(skid_tracker):
-		skid_tracker.disable_tracking()
+		skid_tracker.disable()
 	if is_instance_valid(tread_tracker):
-		tread_tracker.disable_tracking()
+		tread_tracker.disable()
 	if is_instance_valid(roost_particles):
 		roost_particles.emitting = false
 	if is_instance_valid(audiostream_player):
@@ -115,6 +123,18 @@ func set_stopped():
 		audiostream_player.playing =  false
 
 func _physics_process(delta):
+	if _active_effect_material != _current_effect_material:
+		_deposit_remaining -= speed * delta
+		if _deposit_remaining <= 0.0:
+			_deposit_remaining = 0
+			change_active_material(_current_effect_material)
+	
+	if surface_cast.is_colliding():
+		tread_tracker.global_position = surface_cast.get_collision_point()
+		tread_tracker.normal_direction = surface_cast.get_collision_normal()
+		skid_tracker.global_position = surface_cast.get_collision_point()
+		skid_tracker.normal_direction = surface_cast.get_collision_normal()
+	
 	if is_zero_approx(speed):
 		state = State.STOPPED
 	elif abs(drive_spin) > 0.0:

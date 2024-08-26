@@ -1,7 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://y2763ntb71tf"]
+[gd_scene load_steps=20 format=3 uid="uid://y2763ntb71tf"]
 
 [ext_resource type="Script" path="res://Character.gd" id="1_aywxf"]
-[ext_resource type="Script" path="res://PlayerController.gd" id="2_7pdhj"]
 [ext_resource type="Script" path="res://CharacterAttributes.gd" id="3_kyxbw"]
 [ext_resource type="Resource" uid="uid://cf20pmwfu20a5" path="res://item_test.tres" id="4_6cwvx"]
 [ext_resource type="PackedScene" uid="uid://btm8hnyoshfbp" path="res://Resources/Character/Adventurer.gltf" id="5_clyuj"]
@@ -12,8 +11,10 @@
 [ext_resource type="Script" path="res://Inventory.gd" id="10_emt75"]
 [ext_resource type="Script" path="res://Interactor.gd" id="11_t6hvw"]
 [ext_resource type="Script" path="res://Tracker.gd" id="12_j113j"]
-[ext_resource type="Script" path="res://TrackSettings.gd" id="13_doifn"]
-[ext_resource type="Texture2D" uid="uid://cvn2b21qpeu4c" path="res://Resources/icons/cover_icon.png" id="14_tqt6m"]
+[ext_resource type="Script" path="res://TrackSettings.gd" id="13_8sisl"]
+[ext_resource type="Script" path="res://SurfaceRayCast3D.gd" id="13_uhoxp"]
+[ext_resource type="Script" path="res://Trailer.gd" id="14_n4qha"]
+[ext_resource type="Texture2D" uid="uid://brsykiw4jlmyb" path="res://Resources/lowres-person-test.png" id="16_oiibl"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p6vq6"]
 radius = 0.3
@@ -24,19 +25,9 @@ height = 1.8
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tvv3i"]
 
-[sub_resource type="Gradient" id="Gradient_7lv14"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="Resource" id="Resource_w07l5"]
-script = ExtResource("13_doifn")
-track = true
-width = 0.5
-texture = ExtResource("14_tqt6m")
-color = Color(1, 0, 0, 1)
-
-[sub_resource type="Resource" id="Resource_1nyax"]
-script = ExtResource("13_doifn")
-track = true
+[sub_resource type="Resource" id="Resource_3l03p"]
+script = ExtResource("13_8sisl")
+track = false
 width = 0.3
 color = Color(0, 0, 0, 1)
 
@@ -50,11 +41,6 @@ character_body_layer = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_p6vq6")
 
-[node name="PlayerController" type="Node3D" parent="."]
-script = ExtResource("2_7pdhj")
-cursor_mask = 3
-max_cursor_distance = 200.0
-
 [node name="CharacterAttributes" type="Node" parent="."]
 script = ExtResource("3_kyxbw")
 base_speed = 5.0
@@ -63,6 +49,7 @@ ExtResource("4_6cwvx"): 10
 }
 
 [node name="Adventurer" parent="." instance=ExtResource("5_clyuj")]
+visible = false
 
 [node name="Skeleton3D" parent="Adventurer/CharacterArmature" index="0"]
 bones/1/position = Vector3(-0.0214583, 0.811097, -0.0456057)
@@ -195,15 +182,22 @@ collide_with_areas = true
 script = ExtResource("11_t6hvw")
 
 [node name="Tracker" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-target_position = Vector3(0, -1.1, 0)
 script = ExtResource("12_j113j")
-gradient = SubResource("Gradient_7lv14")
-lifetime = 10.0
-default_width = 0.2
-default_track_settings = SubResource("Resource_w07l5")
-effect_material_track_settings = {
-"dirt": SubResource("Resource_1nyax")
-}
+default_track_settings = SubResource("Resource_3l03p")
+
+[node name="SurfaceRayCast3D" type="RayCast3D" parent="."]
+script = ExtResource("13_uhoxp")
+
+[node name="Trailer" type="Node3D" parent="."]
+script = ExtResource("14_n4qha")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.25, 0)
+pixel_size = 0.1
+axis = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("16_oiibl")
 
 [editable path="Adventurer"]

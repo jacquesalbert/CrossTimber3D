@@ -15,4 +15,5 @@ func _physics_process(delta: float) -> void:
 		if collider.has_method("get_effect_material"):
 			surface = collider
 			return
+		surface = null
 	surface = null

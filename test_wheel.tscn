@@ -1,17 +1,27 @@
-[gd_scene load_steps=13 format=3 uid="uid://bk0lpn0aayava"]
+[gd_scene load_steps=16 format=3 uid="uid://bk0lpn0aayava"]
 
 [ext_resource type="Script" path="res://Wheel.gd" id="1_8sto1"]
+[ext_resource type="Texture2D" uid="uid://dynew1wq01hxm" path="res://Resources/smoke_sprite.png" id="2_7pjao"]
 [ext_resource type="Script" path="res://Tracker.gd" id="2_nx6bx"]
 [ext_resource type="Script" path="res://TrackSettings.gd" id="3_cqd0c"]
+[ext_resource type="Script" path="res://SurfaceRayCast3D.gd" id="4_v43nl"]
+[ext_resource type="Texture2D" uid="uid://04ecjn62bnmn" path="res://Resources/tread.png" id="5_xmelf"]
+[ext_resource type="Texture2D" uid="uid://bkmtc1nufws7d" path="res://Resources/tire.png" id="6_il5nk"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7x1h"]
-transparency = 1
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3haa"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 2
 vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_7pjao")
+billboard_mode = 3
+particles_anim_h_frames = 28
+particles_anim_v_frames = 1
+particles_anim_loop = false
 
-[sub_resource type="SphereMesh" id="SphereMesh_y047o"]
-material = SubResource("StandardMaterial3D_e7x1h")
-radius = 0.15
-height = 0.3
+[sub_resource type="QuadMesh" id="QuadMesh_he84l"]
+material = SubResource("StandardMaterial3D_i3haa")
 
 [sub_resource type="Curve" id="Curve_d41to"]
 min_value = 1.0
@@ -19,68 +29,86 @@ max_value = 4.0
 _data = [Vector2(0, 1), 0.0, 9.91758, 0, 0, Vector2(1, 4), 0.223705, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_t00f3"]
-colors = PackedColorArray(0.51, 0.51, 0.51, 0.615686, 0.38, 0.38, 0.38, 0)
-
 [sub_resource type="CylinderMesh" id="CylinderMesh_wo12b"]
 height = 0.3
 radial_segments = 6
 rings = 0
 
-[sub_resource type="Gradient" id="Gradient_favqy"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="Resource" id="Resource_cgq5j"]
+[sub_resource type="Resource" id="Resource_rvful"]
 script = ExtResource("3_cqd0c")
 track = false
-width = 1.0
-color = Color(0.133333, 0, 1, 1)
+width = 0.3
+color = Color(0, 0, 0, 1)
 
-[sub_resource type="Resource" id="Resource_1vjl6"]
+[sub_resource type="Resource" id="Resource_53frd"]
+script = ExtResource("3_cqd0c")
+track = true
+width = 0.3
+color = Color(0.24, 0.148, 0, 1)
+
+[sub_resource type="Resource" id="Resource_wf4b6"]
+script = ExtResource("3_cqd0c")
+track = true
+width = 0.3
+color = Color(1, 0, 0, 1)
+
+[sub_resource type="Resource" id="Resource_gct41"]
 script = ExtResource("3_cqd0c")
 track = true
 width = 0.3
 color = Color(0, 0, 0, 1)
 
-[sub_resource type="Resource" id="Resource_1rlil"]
-script = ExtResource("3_cqd0c")
-track = true
-width = 0.3
-color = Color(0.21, 0.154, 0, 1)
-
 [node name="Wheel" type="Node3D"]
 script = ExtResource("1_8sto1")
+material_deposit_distances = {
+"dirt": 1.0,
+"flesh": 10.0
+}
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 
 [node name="RoostParticles" type="CPUParticles3D" parent="."]
 cast_shadow = 0
 amount = 100
-mesh = SubResource("SphereMesh_y047o")
+mesh = SubResource("QuadMesh_he84l")
 direction = Vector3(0, 0.5, -1)
 spread = 10.0
+initial_velocity_min = 19.05
+initial_velocity_max = 28.57
 damping_min = 10.0
 damping_max = 10.0
 scale_amount_curve = SubResource("Curve_d41to")
-color_ramp = SubResource("Gradient_t00f3")
+anim_speed_min = 0.8
+anim_speed_max = 1.2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+visible = false
 mesh = SubResource("CylinderMesh_wo12b")
 
-[node name="TreadTracker" type="RayCast3D" parent="."]
-script = ExtResource("2_nx6bx")
-gradient = SubResource("Gradient_favqy")
-lifetime = 10.0
-default_width = 0.2
-default_track_settings = SubResource("Resource_cgq5j")
+[node name="SurfaceRayCast3D" type="RayCast3D" parent="."]
+script = ExtResource("4_v43nl")
 
-[node name="SkidTracker" type="RayCast3D" parent="."]
+[node name="TreadTracker" type="Node3D" parent="."]
 script = ExtResource("2_nx6bx")
-gradient = SubResource("Gradient_favqy")
-lifetime = 10.0
-default_width = 0.2
-default_track_settings = SubResource("Resource_1vjl6")
+texture = ExtResource("5_xmelf")
+default_track_settings = SubResource("Resource_rvful")
 effect_material_track_settings = {
-"dirt": SubResource("Resource_1rlil")
+"dirt": SubResource("Resource_53frd"),
+"flesh": SubResource("Resource_wf4b6")
 }
+
+[node name="SkidTracker" type="Node3D" parent="."]
+script = ExtResource("2_nx6bx")
+default_track_settings = SubResource("Resource_gct41")
+effect_material_track_settings = {
+"flesh": SubResource("Resource_wf4b6")
+}
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+pixel_size = 0.1
+axis = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("6_il5nk")

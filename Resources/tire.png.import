@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpk48jpt2pv3e"
-path.s3tc="res://.godot/imported/assault_rifle_icon.png-1ac9d36469feaa8b4e1590d7905a372e.s3tc.ctex"
+uid="uid://bkmtc1nufws7d"
+path.s3tc="res://.godot/imported/tire.png-42a5ae43734342a9a3869607077d8a9b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Resources/icons/assault_rifle_icon.png"
-dest_files=["res://.godot/imported/assault_rifle_icon.png-1ac9d36469feaa8b4e1590d7905a372e.s3tc.ctex"]
+source_file="res://Resources/tire.png"
+dest_files=["res://.godot/imported/tire.png-42a5ae43734342a9a3869607077d8a9b.s3tc.ctex"]
 
 [params]
 

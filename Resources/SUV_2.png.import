@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpk48jpt2pv3e"
-path.s3tc="res://.godot/imported/assault_rifle_icon.png-1ac9d36469feaa8b4e1590d7905a372e.s3tc.ctex"
+uid="uid://d0u36bvct4ij0"
+path="res://.godot/imported/SUV_2.png-b3225941707fbdc96ea02ff3735b8712.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/icons/assault_rifle_icon.png"
-dest_files=["res://.godot/imported/assault_rifle_icon.png-1ac9d36469feaa8b4e1590d7905a372e.s3tc.ctex"]
+source_file="res://Resources/SUV_2.png"
+dest_files=["res://.godot/imported/SUV_2.png-b3225941707fbdc96ea02ff3735b8712.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

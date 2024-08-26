@@ -264,14 +264,13 @@ func set_inactive():
 		controller.mounted = false
 	state = State.INACTIVE
 	collision_layer = 0
-	#z_index = 3
 	hitbox.disable()
 	graphics.alive = false
 	tool_user.triggered = false
 	graphics.mounted = false
 	graphics.driving = false
 	supply_area.disable()
-	tracker.disable_tracking()
+	tracker.disable()
 	if controller:
 		controller.trigger_tool_off.disconnect(on_controls_trigger_tool_off)
 		controller.trigger_tool_on.disconnect(on_controls_trigger_tool_on)
@@ -300,7 +299,7 @@ func set_active():
 		#if equipment_user:
 			#controller.trigger_equipment_off.connect(on_controls_trigger_equipment_off)
 			#controller.trigger_equipment_on.connect(on_controls_trigger_equipment_on)
-	tracker.enable_tracking()
+	tracker.enable()
 
 func set_mounted():
 	position = Vector3.ZERO
@@ -318,7 +317,7 @@ func set_mounted():
 	#graphics.driving = false
 	##if tool_user:
 		##on_tool_changed(null, tool_user.current_tool)
-	tracker.disable_tracking()
+	tracker.disable()
 
 func set_driver_mounted():
 	position = Vector3.ZERO
@@ -339,7 +338,7 @@ func set_driver_mounted():
 		#controller.trigger_tool_on.disconnect(on_controls_trigger_tool_on)
 		#controller.trigger_equipment_off.disconnect(on_controls_trigger_equipment_off)
 		#controller.trigger_equipment_on.disconnect(on_controls_trigger_equipment_on)
-	tracker.disable_tracking()
+	tracker.disable()
 
 func active_process(delta:float):
 	apply_controls(delta)

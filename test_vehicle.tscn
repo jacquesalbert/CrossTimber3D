@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d17hiwv22avsm"]
+[gd_scene load_steps=14 format=3 uid="uid://d17hiwv22avsm"]
 
 [ext_resource type="Script" path="res://Vehicle.gd" id="1_ho58b"]
 [ext_resource type="PackedScene" uid="uid://cr55wp2mtwpje" path="res://Resources/FBX/Cop.fbx" id="2_83reb"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://MountInteraction.gd" id="8_t0yfh"]
 [ext_resource type="Script" path="res://InteractionArea.gd" id="8_vohwo"]
 [ext_resource type="Script" path="res://DismountInteraction.gd" id="9_cteup"]
+[ext_resource type="Texture2D" uid="uid://d0u36bvct4ij0" path="res://Resources/SUV_2.png" id="10_wunmk"]
 
 [sub_resource type="Curve" id="Curve_gryd5"]
 _data = [Vector2(0, 0.515648), 0.0, 0.0, 0, 0, Vector2(0.258182, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -4.29303, 0.0, 0, 0]
@@ -36,6 +37,7 @@ shape = SubResource("BoxShape3D_snmgp")
 
 [node name="Cop" parent="." instance=ExtResource("2_83reb")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+visible = false
 
 [node name="RRWheel" parent="." instance=ExtResource("4_r4ysp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0.356664, -1.731)
@@ -106,3 +108,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
 script = ExtResource("9_cteup")
 mount = NodePath("..")
 text = "Dismount"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0)
+pixel_size = 0.1
+axis = 1
+shaded = true
+double_sided = false
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_wunmk")

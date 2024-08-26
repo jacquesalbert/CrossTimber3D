@@ -28,10 +28,10 @@ func _ready():
 	pass
 	
 func set_camera_mounted():
-	pass
+	camera.size = 80
 
 func set_camera_dismounted():
-	pass
+	camera.size = 40
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -219,10 +219,10 @@ func _physics_process(delta:float):
 	var lateral_movement := velocity.dot(right)
 	var lateral_accel := lateral_movement / delta
 	
-	var fl_traction :float= front_left_wheel.surface.traction if is_instance_valid(front_left_wheel.surface) else 1.0
-	var fr_traction :float= front_right_wheel.surface.traction if is_instance_valid(front_right_wheel.surface) else 1.0
-	var rl_traction :float= rear_left_wheel.surface.traction if is_instance_valid(rear_left_wheel.surface) else 1.0
-	var rr_traction :float= rear_right_wheel.surface.traction if is_instance_valid(rear_right_wheel.surface) else 1.0
+	var fl_traction :float= front_left_wheel.traction
+	var fr_traction :float= front_right_wheel.traction
+	var rl_traction :float= rear_left_wheel.traction
+	var rr_traction :float= rear_right_wheel.traction
 	var front_traction :float= max(fl_traction,fr_traction)
 	var rear_traction :float= max(rl_traction,rr_traction)
 	var all_traction : float = max(front_traction,rear_traction)

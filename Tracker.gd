@@ -1,80 +1,64 @@
 class_name Tracker
-extends SurfaceRayCast3D
+extends Node3D
 
 @export var min_segment_length : float = .1
 @export var texture : Texture2D
-@export var default_color : Color = Color.WHITE
-@export var gradient : Gradient
-@export var lifetime : float = 0.5
-@export var default_width : float = 2.0
-@export var width_curve : Curve
+@export var lifetime : float = 10.0
+@export var normal_direction : Vector3 = Vector3.UP
+@export var local_normal : bool
+@export var two_sided : bool
+@export var bias : float = 0.01
+
+@export var tracking: bool:
+	set(value):
+		if value != tracking:
+			tracking = value
+			if tracking:
+				enable()
+			else:
+				disable()
 
 @export var default_track_settings : TrackSettings
 @export var effect_material_track_settings : Dictionary
 
-
-
-
-var _trail : Trail
-var _tracking_enabled : bool = true
-var _trailing : bool = true
-var _track_settings : TrackSettings:
-	get:
-		if not is_instance_valid(_track_settings):
-			_track_settings = default_track_settings
-		return _track_settings
-		
-var _queue_create_trail : bool
-
-func create_trail():
-	_trail = Trail.new()
-	_trail.texture = _track_settings.texture
-	_trail.gradient = gradient
-	_trail.min_segment_length = min_segment_length
-	_trail.default_color = _track_settings.color
-	_trail.default_width = _track_settings.width
-	#_trail.width_curve = width_curve
-	_trail.two_sided = false
-	_trail.hot_time = lifetime
-	_trail.uv_t_scale = 1.0/_track_settings.width
-	#_trail.update_points(global_position)
-	LevelManager.spawn_in_level(_trail)
-	_queue_create_trail = false
-
-func enable_tracking():
-	_tracking_enabled = true
-	if _trailing and _track_settings.track:
-		_queue_create_trail = true
-
-func disable_tracking():
-	_tracking_enabled = false
-	_trail = null
-
-func enable():
-	_trailing = true
-	if _tracking_enabled and _track_settings.track:
-		_queue_create_trail = true
-
-func disable():
-	_trailing = false
-	_trail = null
+var _current_effect_material : StringName
+var _track_settings:TrackSettings
+var _track : Track
 
 func _ready() -> void:
-	surface_changed.connect(on_surface_changed)
+	change_effect_material("none")
 
-func on_surface_changed(new_surface:Node3D):
-	var effect_material :StringName = new_surface.get_effect_material() if is_instance_valid(new_surface) else "none"
-	_track_settings = effect_material_track_settings.get(effect_material,default_track_settings)
+func create_track():
+	_track = Track.new()
+	_track.texture = texture
+	_track.min_segment_length = min_segment_length
+	_track.two_sided = two_sided
+	_track.lifetime = lifetime
+	#_track.update_points(global_position+global_basis*normal_direction*bias,global_basis*normal_direction if local_normal else normal_direction)
+	LevelManager.spawn_in_level(_track)
+	#_queue_create_track = false
+
+func change_effect_material(new_material:StringName):
+	print(new_material)
+	_current_effect_material = new_material
+	_track_settings = effect_material_track_settings.get(_current_effect_material,default_track_settings)
+
+func enable():
+	tracking = true
+	if not is_instance_valid(_track):
+		create_track()
 	if _track_settings.track:
-		enable()
-	else:
-		disable()
+		add_current_point()
 
-func _process(delta: float) -> void:
-	if _queue_create_trail:
-		create_trail()
+func disable():
+	if tracking and _track_settings.track:
+		add_current_point()
+	_track = null
+	tracking = false
+
+func add_current_point():
+	_track.add_point(global_position+global_basis*normal_direction*bias,global_basis*normal_direction if local_normal else normal_direction,_track_settings.width,_track_settings.color)
 
 func _physics_process(delta):
-	super._physics_process(delta)
-	if _tracking_enabled and _trailing and is_instance_valid(_trail) and is_colliding():
-		_trail.update_points(get_collision_point(),get_collision_normal())
+	if tracking and _track_settings.track:
+		add_current_point()
