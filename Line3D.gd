@@ -18,7 +18,8 @@ func _ready() -> void:
 	_material = StandardMaterial3D.new()
 	_material.texture_repeat = true
 	_material.albedo_texture = texture
-	_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
+	_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	_material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
 	_material.vertex_color_use_as_albedo = true
 
 func clear_points():
@@ -61,6 +62,7 @@ func build_mesh_side(reverse:bool=false):
 	mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLE_STRIP)
 	
 	var side_modifier := -1 if reverse else 1
+	var texture_width_ratio :float = float(texture.get_height()) / texture.get_width() if  is_instance_valid(texture) else 1.0
 	for p in range(_points.size()):
 		#progress += (_points[p] - _points[p-1]).length() if p > 0 else 0.0
 		var point_center := _points[p]
@@ -75,13 +77,15 @@ func build_mesh_side(reverse:bool=false):
 		var point_a := point_center + side_modifier * (cross * half_width)
 		var point_b := point_center - side_modifier * (cross * half_width)
 		
+		var texture_width_scale : float = texture_width_ratio/point_width
+		
 		mesh.surface_set_normal(point_normal)
-		mesh.surface_set_uv(Vector2(point_t/point_width, 1))
+		mesh.surface_set_uv(Vector2(point_t*texture_width_scale, 1))
 		mesh.surface_set_color(point_color)
 		mesh.surface_add_vertex(point_a)
 		
 		mesh.surface_set_normal(point_normal)
-		mesh.surface_set_uv(Vector2(point_t/point_width, 0))
+		mesh.surface_set_uv(Vector2(point_t*texture_width_scale, 0))
 		mesh.surface_set_color(point_color)
 		mesh.surface_add_vertex(point_b)
 
