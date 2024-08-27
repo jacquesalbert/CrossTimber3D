@@ -22,6 +22,7 @@ var controller : Controller
 @onready var attributes : CharacterAttributes = $CharacterAttributes
 #@onready var cover_detector : CoverDetector = $CoverDetector
 @onready var tracker : Tracker = $Tracker
+@onready var ray_cast : RayCast3D = $RayCast3D
 
 enum State {
 	ACTIVE,
@@ -38,8 +39,19 @@ var current_mount:Mount
 var current_effects: Array[Effect]
 var current_traits: Array[Trait]
 
+var _current_surface : Node3D:
+	set(value):
+		if _current_surface != value:
+			_current_surface = value
+			var effect_material :StringName= "none"
+			if is_instance_valid(_current_surface) and _current_surface.has_method("get_effect_material"):
+				effect_material = _current_surface.get_effect_material()
+			tracker.change_effect_material(effect_material)
+			surface_changed.emit(_current_surface)
+
 signal effects_changed
 signal traits_changed
+signal surface_changed(surface:Node3D)
 signal mount_changed(mount:Mount)
 
 func apply_controls(delta:float, aim_only:bool=false):
@@ -177,6 +189,10 @@ func _process(delta):
 			pass
 
 func _physics_process(delta):
+	if ray_cast.is_colliding():
+		tracker.global_position = ray_cast.get_collision_point()
+		tracker.normal_direction = ray_cast.get_collision_normal()
+	_current_surface = ray_cast.get_collider()
 	match state:
 		State.ACTIVE:
 			active_physics_process(delta)

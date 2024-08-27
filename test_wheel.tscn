@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dynew1wq01hxm" path="res://Resources/smoke_sprite.png" id="2_7pjao"]
 [ext_resource type="Script" path="res://Tracker.gd" id="2_nx6bx"]
 [ext_resource type="Script" path="res://TrackSettings.gd" id="3_cqd0c"]
-[ext_resource type="Script" path="res://SurfaceRayCast3D.gd" id="4_v43nl"]
 [ext_resource type="Texture2D" uid="uid://04ecjn62bnmn" path="res://Resources/tread.png" id="5_xmelf"]
+[ext_resource type="Texture2D" uid="uid://b2lmwk2tmhx3e" path="res://Resources/tire_skid.png" id="6_75t3i"]
 [ext_resource type="Texture2D" uid="uid://bkmtc1nufws7d" path="res://Resources/tire.png" id="6_il5nk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3haa"]
@@ -37,25 +37,25 @@ rings = 0
 [sub_resource type="Resource" id="Resource_rvful"]
 script = ExtResource("3_cqd0c")
 track = false
-width = 0.3
+width = 0.5
 color = Color(0, 0, 0, 1)
 
 [sub_resource type="Resource" id="Resource_53frd"]
 script = ExtResource("3_cqd0c")
 track = true
-width = 0.3
+width = 0.5
 color = Color(0.24, 0.148, 0, 1)
 
 [sub_resource type="Resource" id="Resource_wf4b6"]
 script = ExtResource("3_cqd0c")
 track = true
-width = 0.3
+width = 0.5
 color = Color(1, 0, 0, 1)
 
 [sub_resource type="Resource" id="Resource_gct41"]
 script = ExtResource("3_cqd0c")
 track = true
-width = 0.3
+width = 0.5
 color = Color(0, 0, 0, 1)
 
 [node name="Wheel" type="Node3D"]
@@ -86,9 +86,6 @@ transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 
 visible = false
 mesh = SubResource("CylinderMesh_wo12b")
 
-[node name="SurfaceRayCast3D" type="RayCast3D" parent="."]
-script = ExtResource("4_v43nl")
-
 [node name="TreadTracker" type="Node3D" parent="."]
 script = ExtResource("2_nx6bx")
 texture = ExtResource("5_xmelf")
@@ -100,6 +97,7 @@ effect_material_track_settings = {
 
 [node name="SkidTracker" type="Node3D" parent="."]
 script = ExtResource("2_nx6bx")
+texture = ExtResource("6_75t3i")
 default_track_settings = SubResource("Resource_gct41")
 effect_material_track_settings = {
 "flesh": SubResource("Resource_wf4b6")
@@ -112,3 +110,5 @@ axis = 1
 alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("6_il5nk")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]

@@ -10,7 +10,7 @@ var traction_slip : bool
 @onready var tread_tracker :Tracker= $TreadTracker
 @onready var audiostream_player := $AudioStreamPlayer3D
 @onready var roost_particles := $RoostParticles
-@onready var surface_cast := $SurfaceRayCast3D
+@onready var ray_cast := $RayCast3D
 
 @export var material_roll_sound_effects : Dictionary
 @export var material_skid_sound_effects : Dictionary
@@ -38,13 +38,19 @@ var state : State:
 
 signal surface_changed(surface:Node3D)
 
+var _current_surface : Node3D:
+	set(value):
+		if _current_surface != value:
+			_current_surface = value
+			_on_surface_changed(_current_surface)
+			surface_changed.emit(_current_surface)
+
 var _current_effect_material : StringName
 var _active_effect_material : StringName
 var _deposit_remaining : float = 0.0
 
 
 func _ready():
-	surface_cast.surface_changed.connect(_on_surface_changed)
 	if is_instance_valid(roost_particles):
 		roost_particles.emitting = false
 
@@ -129,11 +135,12 @@ func _physics_process(delta):
 			_deposit_remaining = 0
 			change_active_material(_current_effect_material)
 	
-	if surface_cast.is_colliding():
-		tread_tracker.global_position = surface_cast.get_collision_point()
-		tread_tracker.normal_direction = surface_cast.get_collision_normal()
-		skid_tracker.global_position = surface_cast.get_collision_point()
-		skid_tracker.normal_direction = surface_cast.get_collision_normal()
+	if ray_cast.is_colliding():
+		tread_tracker.global_position = ray_cast.get_collision_point()
+		tread_tracker.normal_direction = ray_cast.get_collision_normal()
+		skid_tracker.global_position = ray_cast.get_collision_point()
+		skid_tracker.normal_direction = ray_cast.get_collision_normal()
+	_current_surface = ray_cast.get_collider()
 	
 	if is_zero_approx(speed):
 		state = State.STOPPED

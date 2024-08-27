@@ -24,7 +24,8 @@ func add_point(pos:Vector3,normal:Vector3,width:float,color:=Color.WHITE):
 		if last_segment_length < min_segment_length:
 			set_point_position(last_p, new_point)
 			set_point_age(last_p,0.0)
-			set_point_t(last_p,get_point_t(previous_p)+last_segment_length)
+			var new_segment_length := (new_point - previous_position).length()
+			set_point_t(last_p,get_point_t(previous_p)+new_segment_length)
 			return
 	super.add_point(pos,normal,width,color)
 	_point_ages.append(0.0)

@@ -39,7 +39,6 @@ func create_track():
 	#_queue_create_track = false
 
 func change_effect_material(new_material:StringName):
-	print(new_material)
 	_current_effect_material = new_material
 	_track_settings = effect_material_track_settings.get(_current_effect_material,default_track_settings)
 
