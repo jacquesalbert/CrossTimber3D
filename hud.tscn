@@ -1,135 +1,23 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpkenrejsd1ix"]
+[gd_scene load_steps=7 format=3 uid="uid://dpkenrejsd1ix"]
 
 [ext_resource type="Script" path="res://HUD.gd" id="1_ikek3"]
-[ext_resource type="PackedScene" path="res://stat_panel.tscn" id="3_sbwl1"]
-[ext_resource type="Texture2D" uid="uid://bux7ibbb6adwf" path="res://Resources/icons/energy_icon.png" id="3_y8ylk"]
+[ext_resource type="PackedScene" uid="uid://b6s537iy8uetf" path="res://character_panel.tscn" id="2_j7t7a"]
 [ext_resource type="PackedScene" path="res://tool_panel.tscn" id="4_2pxot"]
 [ext_resource type="Theme" uid="uid://c4bj45vfcpsaq" path="res://hud_ui_theme.tres" id="5_iya6b"]
+[ext_resource type="PackedScene" uid="uid://vohpbt3rpthj" path="res://vehicle_hud_panel.tscn" id="5_pak4n"]
 [ext_resource type="PackedScene" path="res://character_hud_overlay.tscn" id="6_f3wvr"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2lo2"]
-bg_color = Color(1, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6x5aq"]
-bg_color = Color(0, 0.498039, 1, 1)
-
-[node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("slot_tool_panels", "slot_equipment_panels", "inventory_container", "interactions_container", "effects_panel", "effects_container", "traits_panel", "traits_container", "character_hud_overlay")]
+[node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("inventory_container", "interactions_container", "character_panel", "character_hud_overlay", "vehicle_panel")]
 script = ExtResource("1_ikek3")
-slot_tool_panels = [NodePath("VBoxContainer/ToolVBoxContainer/ToolPanel"), NodePath("VBoxContainer/ToolVBoxContainer/ToolPanel2")]
-slot_equipment_panels = [NodePath("VBoxContainer/EquipmentVBoxContainer/ToolPanel"), NodePath("VBoxContainer/EquipmentVBoxContainer/ToolPanel2"), NodePath("VBoxContainer/EquipmentVBoxContainer/ToolPanel3"), NodePath("VBoxContainer/EquipmentVBoxContainer/ToolPanel4")]
 inventory_container = NodePath("InventoryVBoxContainer")
 interactions_container = NodePath("InteractionsVBoxContainer")
-effects_panel = NodePath("CharacterStatVBoxContainer/EffectsPanelContainer")
-effects_container = NodePath("CharacterStatVBoxContainer/EffectsPanelContainer/MarginContainer/HBoxContainer")
-traits_panel = NodePath("CharacterStatVBoxContainer/TraitsPanelContainer")
-traits_container = NodePath("CharacterStatVBoxContainer/TraitsPanelContainer/MarginContainer/VBoxContainer")
+character_panel = NodePath("CharacterPanel")
 character_hud_overlay = NodePath("CharacterHUDOverlay")
+vehicle_panel = NodePath("VehiclePanel")
 
-[node name="CharacterStatVBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -262.0
-offset_bottom = 52.0
-grow_horizontal = 0
-theme = ExtResource("5_iya6b")
+[node name="CharacterPanel" parent="." instance=ExtResource("2_j7t7a")]
 
-[node name="HealthStatPanel" parent="CharacterStatVBoxContainer" instance=ExtResource("3_sbwl1")]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="MarginContainer3" parent="CharacterStatVBoxContainer/HealthStatPanel/GridContainer" index="2"]
-custom_minimum_size = Vector2(200, 0)
-
-[node name="ProgressBar" parent="CharacterStatVBoxContainer/HealthStatPanel/GridContainer/MarginContainer3" index="1"]
-theme_override_styles/fill = SubResource("StyleBoxFlat_x2lo2")
-
-[node name="EnergyStatPanel" parent="CharacterStatVBoxContainer" instance=ExtResource("3_sbwl1")]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="TextureRect" parent="CharacterStatVBoxContainer/EnergyStatPanel/GridContainer/MarginContainer" index="0"]
-texture = ExtResource("3_y8ylk")
-
-[node name="MarginContainer3" parent="CharacterStatVBoxContainer/EnergyStatPanel/GridContainer" index="2"]
-custom_minimum_size = Vector2(100, 0)
-
-[node name="ProgressBar" parent="CharacterStatVBoxContainer/EnergyStatPanel/GridContainer/MarginContainer3" index="1"]
-theme_override_styles/fill = SubResource("StyleBoxFlat_6x5aq")
-
-[node name="EffectsPanelContainer" type="PanelContainer" parent="CharacterStatVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="MarginContainer" type="MarginContainer" parent="CharacterStatVBoxContainer/EffectsPanelContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 2
-theme_override_constants/margin_top = 2
-theme_override_constants/margin_right = 2
-theme_override_constants/margin_bottom = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CharacterStatVBoxContainer/EffectsPanelContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="TraitsPanelContainer" type="PanelContainer" parent="CharacterStatVBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="MarginContainer" type="MarginContainer" parent="CharacterStatVBoxContainer/TraitsPanelContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 2
-theme_override_constants/margin_top = 2
-theme_override_constants/margin_right = 2
-theme_override_constants/margin_bottom = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CharacterStatVBoxContainer/TraitsPanelContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="CharacterStatVBoxContainer/TraitsPanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Pack Mule
-"
-
-[node name="Label2" type="Label" parent="CharacterStatVBoxContainer/TraitsPanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Marksman"
-
-[node name="VehicleStatVBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -262.0
-offset_top = -52.0
-grow_horizontal = 0
-grow_vertical = 0
-theme = ExtResource("5_iya6b")
-
-[node name="HealthStatPanel" parent="VehicleStatVBoxContainer" instance=ExtResource("3_sbwl1")]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-
-[node name="MarginContainer3" parent="VehicleStatVBoxContainer/HealthStatPanel/GridContainer" index="2"]
-custom_minimum_size = Vector2(200, 0)
-
-[node name="ProgressBar" parent="VehicleStatVBoxContainer/HealthStatPanel/GridContainer/MarginContainer3" index="1"]
-theme_override_styles/fill = SubResource("StyleBoxFlat_x2lo2")
-
-[node name="EnergyStatPanel" parent="VehicleStatVBoxContainer" instance=ExtResource("3_sbwl1")]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-
-[node name="TextureRect" parent="VehicleStatVBoxContainer/EnergyStatPanel/GridContainer/MarginContainer" index="0"]
-texture = ExtResource("3_y8ylk")
-
-[node name="MarginContainer3" parent="VehicleStatVBoxContainer/EnergyStatPanel/GridContainer" index="2"]
-custom_minimum_size = Vector2(100, 0)
-
-[node name="ProgressBar" parent="VehicleStatVBoxContainer/EnergyStatPanel/GridContainer/MarginContainer3" index="1"]
-theme_override_styles/fill = SubResource("StyleBoxFlat_6x5aq")
+[node name="VehiclePanel" parent="." instance=ExtResource("5_pak4n")]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_right = 200.0
@@ -190,8 +78,3 @@ offset_right = 45.5
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("5_iya6b")
-
-[editable path="CharacterStatVBoxContainer/HealthStatPanel"]
-[editable path="CharacterStatVBoxContainer/EnergyStatPanel"]
-[editable path="VehicleStatVBoxContainer/HealthStatPanel"]
-[editable path="VehicleStatVBoxContainer/EnergyStatPanel"]

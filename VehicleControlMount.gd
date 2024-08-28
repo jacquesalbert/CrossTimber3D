@@ -1,8 +1,6 @@
 class_name VehicleControlMount
 extends Mount
 
-@export var vehicle:Vehicle
-
 func mount(character:Character):
 	super.mount(character)
 	vehicle.driver_character = character

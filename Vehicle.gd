@@ -63,6 +63,9 @@ var can_run : bool:
 	get:
 		return fueled and not disabled
 var _fuel_debt : float
+var _current_effects : Array[Effect]
+
+signal effects_changed
 
 func _ready():
 	front_axle_distance = (front_left_wheel.position.z + front_right_wheel.position.z) * 0.5
@@ -195,6 +198,9 @@ func move_and_handle_collisions(delta:float):
 	for exception in frame_exceptions:
 		remove_collision_exception_with(exception)
 
+func get_speedo()->float:
+	return abs(velocity.dot(global_basis.z))
+
 func _physics_process(delta:float):
 	var forward := global_basis.z
 	var right := -global_basis.x
@@ -305,3 +311,22 @@ func spawn_hit_effect(global_pos:Vector3, direction:Vector3, normal:Vector3, eff
 		hit_effect_instance.global_position = global_pos
 		hit_effect_instance.global_transform = hit_effect_instance.global_transform.looking_at(hit_effect_instance.global_position + normal)
 		LevelManager.spawn_in_level(hit_effect_instance)
+
+func add_effect(effect:Effect):
+	_current_effects.append(effect)
+	effects_changed.emit()
+	for modifier in effect.modifiers:
+		print_debug("vehicle attributes/stats handler")
+		pass
+		#attributes.add_modifier(modifier)
+
+func remove_effect(effect:Effect):
+	_current_effects.erase(effect)
+	effects_changed.emit()
+	for modifier in effect.modifiers:
+		print_debug("vehicle attributes/stats handler")
+		pass
+		#attributes.remove_modifier(modifier)
+
+func get_current_effects()->Array[Effect]:
+	return _current_effects

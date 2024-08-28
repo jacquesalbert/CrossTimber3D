@@ -18,7 +18,7 @@ func _ready() -> void:
 	_material = StandardMaterial3D.new()
 	_material.texture_repeat = true
 	_material.albedo_texture = texture
-	_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
 	_material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
 	_material.vertex_color_use_as_albedo = true
 

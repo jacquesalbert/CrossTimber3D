@@ -16,15 +16,11 @@
 [ext_resource type="Script" path="res://Trailer.gd" id="14_n4qha"]
 [ext_resource type="Texture2D" uid="uid://dpqah26mvoxsk" path="res://Resources/Character/24-person-test-madmax.png" id="15_ibf7h"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p6vq6"]
-radius = 0.3
-height = 1.5
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4a5ra"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_82rh5"]
-radius = 0.3
-height = 1.8
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_gsofm"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tvv3i"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fk3f4"]
 
 [sub_resource type="Resource" id="Resource_3l03p"]
 script = ExtResource("13_8sisl")
@@ -40,7 +36,7 @@ character_body_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CapsuleShape3D_p6vq6")
+shape = SubResource("CylinderShape3D_4a5ra")
 
 [node name="CharacterAttributes" type="Node" parent="."]
 script = ExtResource("3_kyxbw")
@@ -143,7 +139,7 @@ collision_mask = 0
 script = ExtResource("6_dvorw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
-shape = SubResource("CapsuleShape3D_82rh5")
+shape = SubResource("CylinderShape3D_gsofm")
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("7_xe5s5")
@@ -169,7 +165,7 @@ script = ExtResource("9_phpst")
 inventory = NodePath("../Inventory")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyArea"]
-shape = SubResource("CapsuleShape3D_tvv3i")
+shape = SubResource("CylinderShape3D_fk3f4")
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("10_emt75")
@@ -189,6 +185,7 @@ default_track_settings = SubResource("Resource_3l03p")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00366211, 1, -0.0032959)
+target_position = Vector3(0, -3, 0)
 
 [node name="Trailer" type="Node3D" parent="."]
 script = ExtResource("14_n4qha")

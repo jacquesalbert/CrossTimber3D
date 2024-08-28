@@ -36,7 +36,7 @@ var request_state : State
 
 var running : bool
 var current_mount:Mount
-var current_effects: Array[Effect]
+var _current_effects: Array[Effect]
 var current_traits: Array[Trait]
 
 var _current_surface : Node3D:
@@ -381,8 +381,8 @@ func apply_graphics():
 
 func active_physics_process(delta:float):
 	# Add the gravity.
-	if not is_on_floor():
-		velocity.y -= gravity * delta
+	#if not is_on_floor():
+		#velocity.y -= gravity * delta
 	move_and_slide()
 
 func knockback_physics_process(delta:float):
@@ -429,16 +429,19 @@ func on_child_entered(node:Node):
 		add_trait(node)
 
 func add_effect(effect:Effect):
-	current_effects.append(effect)
+	_current_effects.append(effect)
 	effects_changed.emit()
 	for modifier in effect.modifiers:
 		attributes.add_modifier(modifier)
 
 func remove_effect(effect:Effect):
-	current_effects.erase(effect)
+	_current_effects.erase(effect)
 	effects_changed.emit()
 	for modifier in effect.modifiers:
 		attributes.remove_modifier(modifier)
+
+func get_current_effects()->Array[Effect]:
+	return _current_effects
 
 func add_trait(_trait:Trait):
 	current_traits.append(_trait)

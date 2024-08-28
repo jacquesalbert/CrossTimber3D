@@ -7,18 +7,14 @@ extends CanvasLayer
 @export var slot_equipment_panels : Array[ToolPanel]
 @export var inventory_container : VBoxContainer
 @export var interactions_container : VBoxContainer
-@export var effects_panel : PanelContainer
-@export var effects_container : HBoxContainer
-@export var traits_panel : PanelContainer
-@export var traits_container : VBoxContainer
+@export var character_panel : CharacterHUDPanel
 @export var character_hud_overlay : CharacterHUDOverlay
+@export var vehicle_panel : VehicleHUDPanel
 
 
 var _item_panels : Dictionary
 
 func _ready():
-	$CharacterStatVBoxContainer/HealthStatPanel.stat = character.health
-	$CharacterStatVBoxContainer/EnergyStatPanel.stat = character.energy
 	for i in range(slot_tool_panels.size()):
 		slot_tool_panels[i].slot = i
 		slot_tool_panels[i].tool_user = character.tool_user
@@ -38,32 +34,8 @@ func _ready():
 	character.mount_changed.connect(on_mount_changed)
 	character.interactor.interactions_changed.connect(on_interactions_changed)
 	character.interactor.selected_interaction_changed.connect(on_selected_interaction_changed)
+	character_panel.character = character
 	
-	character.effects_changed.connect(on_effects_changed)
-	on_effects_changed()
-	character.traits_changed.connect(on_traits_changed)
-	on_traits_changed()
-
-func on_effects_changed():
-	for child in effects_container.get_children():
-		child.queue_free()
-	effects_panel.visible = false
-	for effect in character.current_effects:
-		effects_panel.visible = true
-		var effect_rect := TextureRect.new()
-		effect_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT
-		effect_rect.texture = effect.icon
-		effects_container.add_child(effect_rect)
-
-func on_traits_changed():
-	for child in traits_container.get_children():
-		child.queue_free()
-	traits_panel.visible = false
-	for _trait in character.current_traits:
-		traits_panel.visible = true
-		var trait_label := Label.new()
-		trait_label.text = _trait.text
-		traits_container.add_child(trait_label)
 
 func on_selected_interaction_changed():
 	var selected_interaction :Interaction= character.interactor.get_selected_interaction()
@@ -95,9 +67,7 @@ func on_hover_changed(object:Node3D):
 
 func on_mount_changed(mount:Mount):
 	#$VehicleStatVBoxContainer/HealthStatPanel.stat = character.mount.vehicle.health
-	if mount is VehicleControlMount:
-		$VehicleStatVBoxContainer/EnergyStatPanel.stat = mount.vehicle.fuel
-		$VehicleStatVBoxContainer/HealthStatPanel.stat = mount.vehicle.health
+	vehicle_panel.vehicle = mount.vehicle if is_instance_valid(mount) else null
 
 func _process(delta):
 	pass
