@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b11qbabvr4r4t"]
+
+[ext_resource type="Script" path="res://GUI/HUD/Effects/effects_panel.gd" id="1_3ncth"]
+
+[node name="EffectsPanelContainer" type="PanelContainer" node_paths=PackedStringArray("effects_container")]
+size_flags_horizontal = 8
+script = ExtResource("1_3ncth")
+effects_container = NodePath("MarginContainer/HBoxContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2

@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://bbq0g4gp3ftjs"]
+
+[ext_resource type="Texture2D" uid="uid://23abxmr3forx" path="res://Resources/icons/health_icon.png" id="1_6s1jl"]
+[ext_resource type="Script" path="res://GUI/HUD/StatDisplay/StatPanel.gd" id="1_bhrcg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l45ob"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xl154"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_evtoo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbrs4"]
+bg_color = Color(0.373372, 0.457977, 1, 1)
+
+[node name="StatPanel" type="PanelContainer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -15.0
+offset_right = 228.0
+offset_bottom = 15.0
+grow_vertical = 2
+script = ExtResource("1_bhrcg")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_6s1jl")
+stretch_mode = 4
+
+[node name="MarginContainer2" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Label" type="Label" parent="GridContainer/MarginContainer2"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "100
+"
+horizontal_alignment = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="ProgressBar2" type="ProgressBar" parent="GridContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxEmpty_l45ob")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xl154")
+value = 80.0
+show_percentage = false
+
+[node name="ProgressBar" type="ProgressBar" parent="GridContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxEmpty_evtoo")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xbrs4")
+value = 50.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="GridContainer/MarginContainer3"]
+wait_time = 0.4
+one_shot = true

@@ -44,18 +44,16 @@ func change_effect_material(new_material:StringName):
 
 func enable():
 	tracking = true
-	if not is_instance_valid(_track):
-		create_track()
 	if _track_settings.track:
 		add_current_point()
 
 func disable():
-	if tracking and _track_settings.track:
-		add_current_point()
 	_track = null
 	tracking = false
 
 func add_current_point():
+	if not is_instance_valid(_track):
+		create_track()
 	_track.add_point(global_position+global_basis*normal_direction*bias,global_basis*normal_direction if local_normal else normal_direction,_track_settings.width,_track_settings.color)
 
 func _physics_process(delta):

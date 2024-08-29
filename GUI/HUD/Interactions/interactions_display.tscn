@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxvtoeb4ysxgo"]
+
+[ext_resource type="Theme" uid="uid://c4bj45vfcpsaq" path="res://GUI/HUD/hud_ui_theme.tres" id="1_tfydt"]
+[ext_resource type="Script" path="res://GUI/HUD/Interactions/interactions_display.gd" id="2_476v4"]
+
+[node name="InteractionsDisplay" type="VBoxContainer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.5
+offset_top = -40.0
+offset_right = 45.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_tfydt")
+script = ExtResource("2_476v4")

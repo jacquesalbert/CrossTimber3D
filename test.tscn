@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://d17hiwv22avsm" path="res://test_vehicle.tscn" id="9_368ct"]
 [ext_resource type="PackedScene" uid="uid://dmnda8wv7ktxj" path="res://tool_pickup_template.tscn" id="9_l86uy"]
 [ext_resource type="Resource" uid="uid://ba12msy183178" path="res://tool_test.tres" id="10_ahy3r"]
-[ext_resource type="PackedScene" uid="uid://dpkenrejsd1ix" path="res://hud.tscn" id="10_p7hlu"]
+[ext_resource type="PackedScene" uid="uid://dpkenrejsd1ix" path="res://GUI/HUD/hud.tscn" id="10_p7hlu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ew573"]
 albedo_texture = ExtResource("7_s0txq")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://blq6kjjgkrl5y"]
+
+[ext_resource type="Script" path="res://GUI/HUD/Tools/tool_display.gd" id="1_gdv1l"]
+
+[node name="ToolDisplay" type="VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+size_flags_horizontal = 0
+script = ExtResource("1_gdv1l")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b60grid37t30t"]
+
+[ext_resource type="Script" path="res://GUI/HUD/Inventory/inventory_display.gd" id="2_41cyj"]
+
+[node name="InventoryDisplay" type="VBoxContainer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+script = ExtResource("2_41cyj")

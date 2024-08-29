@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c4bj45vfcpsaq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixuay"]
+bg_color = Color(0, 0, 0, 0.498039)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sp6rd"]
+bg_color = Color(1, 1, 1, 1)
+
+[resource]
+default_font_size = 16
+ProgressBar/styles/background = SubResource("StyleBoxFlat_ixuay")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_sp6rd")
