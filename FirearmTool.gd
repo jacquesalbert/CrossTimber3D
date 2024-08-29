@@ -2,9 +2,9 @@ extends ToolInstance
 
 @export var damage : int = 10
 @export var fire_rate : float = 1.0
-@export var speed : float = 1000
-@export var speed_variation : float = 100.0
-@export var speed_minimum : float = 200.0
+@export var speed : float = 50
+@export var speed_variation : float = 0.0
+@export var speed_minimum : float = 50.0
 @export var range : float = 1000
 @export var range_variation : float = 50
 @export_range(0.0,TAU) var angle_spread : float = 0.0
@@ -13,14 +13,18 @@ extends ToolInstance
 @export var supply : Item
 @export var supply_amount : int
 #@export var recoil : float = 1
-@export_flags_2d_physics var bullet_collision_mask :int
+@export_flags_3d_physics var bullet_collision_mask :int
+@export var trail_transparency : BaseMaterial3D.Transparency = BaseMaterial3D.Transparency.TRANSPARENCY_ALPHA
+@export var trail_shadow: GeometryInstance3D.ShadowCastingSetting = GeometryInstance3D.ShadowCastingSetting.SHADOW_CASTING_SETTING_OFF
+@export var trail_color : Color = Color.WHITE
 @export var trail_gradient : Gradient
 @export var trail_lifetime : float = 0.1
 @export var trail_width : float = 1.0
+@export var trail_width_curve : Curve
 @export var material_hit_effects: Dictionary
 @export var apply_effects: Array[PackedScene]
 
-@export var stream_player : AudioStreamPlayer2D
+@export var stream_player : AudioStreamPlayer3D
 @export var equip_stream : AudioStream
 @export var fire_stream : AudioStream
 @export var empty_stream : AudioStream
@@ -56,11 +60,11 @@ func attack():
 			inventory.remove_items(supply,supply_amount)
 		for i in range(count):
 			fire_bullet()
-		$AnimationPlayer.play("fire")
+		#$AnimationPlayer.play("fire")
 		stream_player.stream = fire_stream
 		stream_player.play()
 		fired.emit()
-		$CameraShaker.add_trauma()
+		#$CameraShaker.add_trauma()
 	else:
 		stream_player.stream = empty_stream
 		stream_player.play()
@@ -73,10 +77,14 @@ func fire_bullet():
 	var bullet_range := randfn(range, range_variation)
 	var bullet := Bullet.new(global_position, target_dir, bullet_speed, stability, damage, bullet_range, self.character, bullet_collision_mask, trail_gradient, trail_lifetime, trail_width)
 	bullet.apply_effects = apply_effects
+	bullet.trail_transparency = trail_transparency
+	bullet.trail_shadow = trail_shadow
+	bullet.trail_width_curve = trail_width_curve
+	bullet.trail_color = trail_color
 	#for cover_exception in cover_exceptions:
 		#bullet.add_exception(cover_exception)
 	bullet.material_hit_effects = material_hit_effects
-	bullet.z_index = -1
+	#bullet.z_index = -1
 	LevelManager.spawn_in_level(bullet)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

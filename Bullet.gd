@@ -12,6 +12,10 @@ extends RayCast3D
 @export var trail_gradient : Gradient
 @export var trail_lifetime : float
 @export var trail_width : float
+@export var trail_width_curve : Curve
+@export var trail_color : Color
+@export var trail_shadow : GeometryInstance3D.ShadowCastingSetting
+@export var trail_transparency : BaseMaterial3D.Transparency
 
 @export var apply_effects: Array[PackedScene]
 @export var material_hit_effects: Dictionary
@@ -52,15 +56,19 @@ func spawn_hit_effect(global_pos:Vector3, direction:Vector3, normal:Vector3, eff
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("create")
 	noise = FastNoiseLite.new()
 	noise.frequency = 1
 	trailer = Trailer.new()
 	trailer.gradient = trail_gradient
 	trailer.width = trail_width
+	trailer.color = trail_color
+	trailer.width_curve = trail_width_curve
 	trailer.lifetime = trail_lifetime
-	#trailer.trail_z = z_index + 1
-	trailer.enable()
+	trailer.cast_shadow = trail_shadow
+	trailer.transparency = trail_transparency
 	add_child(trailer)
+	trailer.enable()
 	collide_with_areas = true
 	last_pos = global_position
 	set_next_target_position(Engine.time_scale/Engine.physics_ticks_per_second)

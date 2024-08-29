@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Tool" load_steps=4 format=3 uid="uid://ba12msy183178"]
 
-[ext_resource type="PackedScene" uid="uid://c054fba3rmi5t" path="res://firearm_tool.tscn" id="1_nqcqb"]
+[ext_resource type="PackedScene" uid="uid://dscki76d3tu2q" path="res://firearm_tool.tscn" id="1_nqcqb"]
 [ext_resource type="PackedScene" uid="uid://wcnt4s2koi7p" path="res://test_tool_pickup_graphics.tscn" id="2_ufrrx"]
 [ext_resource type="Script" path="res://Tool.gd" id="3_jkues"]
 
