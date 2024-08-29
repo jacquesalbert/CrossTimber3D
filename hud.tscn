@@ -1,16 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpkenrejsd1ix"]
+[gd_scene load_steps=9 format=3 uid="uid://dpkenrejsd1ix"]
 
 [ext_resource type="Script" path="res://HUD.gd" id="1_ikek3"]
 [ext_resource type="PackedScene" uid="uid://b6s537iy8uetf" path="res://character_panel.tscn" id="2_j7t7a"]
-[ext_resource type="PackedScene" path="res://tool_panel.tscn" id="4_2pxot"]
+[ext_resource type="Script" path="res://tool_display.gd" id="5_b621e"]
 [ext_resource type="Theme" uid="uid://c4bj45vfcpsaq" path="res://hud_ui_theme.tres" id="5_iya6b"]
 [ext_resource type="PackedScene" uid="uid://vohpbt3rpthj" path="res://vehicle_hud_panel.tscn" id="5_pak4n"]
 [ext_resource type="PackedScene" path="res://character_hud_overlay.tscn" id="6_f3wvr"]
+[ext_resource type="Script" path="res://inventory_display.gd" id="6_p8ex6"]
+[ext_resource type="Script" path="res://interactions_display.gd" id="8_sfdt3"]
 
-[node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("inventory_container", "interactions_container", "character_panel", "character_hud_overlay", "vehicle_panel")]
+[node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("inventory_display", "interactions_display", "tool_display", "equipment_display", "character_panel", "character_hud_overlay", "vehicle_panel")]
 script = ExtResource("1_ikek3")
-inventory_container = NodePath("InventoryVBoxContainer")
-interactions_container = NodePath("InteractionsVBoxContainer")
+inventory_display = NodePath("InventoryVBoxContainer")
+interactions_display = NodePath("InteractionsVBoxContainer")
+tool_display = NodePath("VBoxContainer/ToolVBoxContainer")
+equipment_display = NodePath("VBoxContainer/EquipmentVBoxContainer")
 character_panel = NodePath("CharacterPanel")
 character_hud_overlay = NodePath("CharacterHUDOverlay")
 vehicle_panel = NodePath("VehiclePanel")
@@ -28,30 +32,14 @@ theme = ExtResource("5_iya6b")
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 0
-
-[node name="ToolPanel" parent="VBoxContainer/ToolVBoxContainer" instance=ExtResource("4_2pxot")]
-layout_mode = 2
-
-[node name="ToolPanel2" parent="VBoxContainer/ToolVBoxContainer" instance=ExtResource("4_2pxot")]
-layout_mode = 2
+script = ExtResource("5_b621e")
 
 [node name="EquipmentVBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 texture_filter = 1
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 0
-
-[node name="ToolPanel" parent="VBoxContainer/EquipmentVBoxContainer" instance=ExtResource("4_2pxot")]
-layout_mode = 2
-
-[node name="ToolPanel2" parent="VBoxContainer/EquipmentVBoxContainer" instance=ExtResource("4_2pxot")]
-layout_mode = 2
-
-[node name="ToolPanel3" parent="VBoxContainer/EquipmentVBoxContainer" instance=ExtResource("4_2pxot")]
-layout_mode = 2
-
-[node name="ToolPanel4" parent="VBoxContainer/EquipmentVBoxContainer" instance=ExtResource("4_2pxot")]
-layout_mode = 2
+script = ExtResource("5_b621e")
 
 [node name="InventoryVBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 2
@@ -61,6 +49,7 @@ offset_top = -200.0
 offset_right = 200.0
 grow_vertical = 0
 theme = ExtResource("5_iya6b")
+script = ExtResource("6_p8ex6")
 
 [node name="CharacterHUDOverlay" parent="." instance=ExtResource("6_f3wvr")]
 size_flags_horizontal = 4
@@ -78,3 +67,4 @@ offset_right = 45.5
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("5_iya6b")
+script = ExtResource("8_sfdt3")

@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cf20pmwfu20a5"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cf20pmwfu20a5"]
 
 [ext_resource type="PackedScene" uid="uid://bojvp2dccjwb4" path="res://aid_kit_graphics_test.tscn" id="1_estyu"]
+[ext_resource type="Texture2D" uid="uid://dx7702uld251g" path="res://Resources/icons/wrench_icon.png" id="2_lu4lk"]
 [ext_resource type="Script" path="res://Item.gd" id="3_xu1pc"]
 
 [resource]
 script = ExtResource("3_xu1pc")
 text = "Test Item"
 description = "test item"
+icon = ExtResource("2_lu4lk")
 stack_size = 5
 single_pickup_graphics = ExtResource("1_estyu")
 partial_stack_pickup_graphics = ExtResource("1_estyu")
