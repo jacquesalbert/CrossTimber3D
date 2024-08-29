@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqvk2xb3nuf5y"
+path="res://.godot/imported/OldDoorClose.ogg-2684d7eb181750a6f9fe35cb03d60b19.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Environment/OldDoorClose.ogg"
+dest_files=["res://.godot/imported/OldDoorClose.ogg-2684d7eb181750a6f9fe35cb03d60b19.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

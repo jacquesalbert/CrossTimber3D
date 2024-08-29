@@ -1,0 +1,28 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/UI/MC.XWILKINX" itemID="5bd8b66b-00000620" lastModified="1540929349">
+  <timeline>
+    <DOMTimeline name="MC.XWILKINX">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF" alpha="0.8"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!700 -700S1|26 -20!26 -20|263 -20!263 -20|700 -700"/>
+                    <Edge fillStyle1="1" edges="!700 700S2|26 21!26 21|263 21!263 21|700 700!-700 -700|-29 -22!-29 -22|-29 -20!-29 -20|-263 -20!-263 -20|-700 -700"/>
+                    <Edge fillStyle0="1" edges="!-700 700S1|-29 23!-29 23|-29 21!-29 21|-263 21!-263 21|-700 700"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

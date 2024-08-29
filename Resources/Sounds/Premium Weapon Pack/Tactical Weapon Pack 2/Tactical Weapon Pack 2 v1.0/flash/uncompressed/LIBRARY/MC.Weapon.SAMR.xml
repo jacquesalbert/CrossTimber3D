@@ -1,0 +1,56 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MC.Weapon.SAMR" itemID="5b5bd048-000011fb" lastModified="1552500089">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.SAMR">
+      <layers>
+        <DOMLayer name="optic" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.SAMR.Optic" name="optic" centerPoint3DX="-15.2" centerPoint3DY="-52.5">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-15.2" ty="-34"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="base" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.SAMR.Base" name="base" centerPoint3DX="5" centerPoint3DY="-8.85">
+                  <matrix>
+                    <Matrix a="0.500045776367188" d="0.500076293945313"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="-0.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mag" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.SAMR.Mag" name="mag" selected="true" centerPoint3DX="-27" centerPoint3DY="39.1">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-27" ty="15.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="47.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

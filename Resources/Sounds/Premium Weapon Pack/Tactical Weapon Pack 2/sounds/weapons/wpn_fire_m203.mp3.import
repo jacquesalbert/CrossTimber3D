@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyr3amrvkln17"
+path="res://.godot/imported/wpn_fire_m203.mp3-93721cf456d9cbd1640186eac5c4cb9c.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/weapons/wpn_fire_m203.mp3"
+dest_files=["res://.godot/imported/wpn_fire_m203.mp3-93721cf456d9cbd1640186eac5c4cb9c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,82 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.MG4.Mag" itemID="5baece94-0000070f" lastModified="1538182875">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.MG4.Mag">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMOvalObject objectWidth="8.5" objectHeight="8.5" x="109.1" y="18.9" endAngle="0">
+                  <matrix>
+                    <Matrix a="0.705886840820313" d="0.705886840820313" tx="-80" ty="-53.95"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor color="#141414"/>
+                  </fill>
+                  <stroke>
+                    <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                      <fill>
+                        <SolidColor alpha="0.498039215686275"/>
+                      </fill>
+                    </SolidStroke>
+                  </stroke>
+                </DOMOvalObject>
+                <DOMOvalObject objectWidth="8.5" objectHeight="8.5" x="109.1" y="18.9" endAngle="0">
+                  <matrix>
+                    <Matrix a="0.705825805664063" d="0.705780029296875" tx="-79.3" ty="22.4"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor color="#141414"/>
+                  </fill>
+                  <stroke>
+                    <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                      <fill>
+                        <SolidColor alpha="0.498039215686275"/>
+                      </fill>
+                    </SolidStroke>
+                  </stroke>
+                </DOMOvalObject>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#141414"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.05" pixelHinting="true" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.498039215686275"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-460 -1052|459 -1052!459 -1052[600 -1052 600 -916!600 -916|600 916!600 916[600 1052 459 1052!459 1052|-460 1052!-460 1052[-588 1052 -599 938!-599 938[-600 928 -600 916!-600 916|-600 -916!-600 -916[-600 -1052 -460 -1052"/>
+                    <Edge cubics="!459 -1052(;553,-1052 600,-1007 600,-916q459 -1052Q600 -1052q600 -916);"/>
+                    <Edge cubics="!600 916(;600,1007 553,1052 459,1052q600 916Q600 1052q459 1052);"/>
+                    <Edge cubics="!-600 -916(;-600,-1007 -553,-1052 -460,-1052q-600 -916Q-600 -1052q-460 -1052);"/>
+                    <Edge cubics="!-599 938(;-600,932 -600,924 -600,916q-599 938Q-600 928q-600 916);"/>
+                    <Edge cubics="!-460 1052(;-545,1052 -592,1014 -599,938q-460 1052Q-588 1052q-599 938);"/>
+                    <Edge cubics="!600 -916(;600,-916 600,916 600,916q600 -916 600 916);"/>
+                    <Edge cubics="!-600 916(;-600,916 -600,-916 -600,-916q-600 916 -600 -916);"/>
+                    <Edge cubics="!459 1052(;459,1052 -460,1052 -460,1052q459 1052 -460 1052);"/>
+                    <Edge cubics="!-460 -1052(;-460,-1052 459,-1052 459,-1052q-460 -1052 459 -1052);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

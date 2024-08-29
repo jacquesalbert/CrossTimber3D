@@ -1,0 +1,207 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.LE6940.Optic" itemID="5b57aca6-0000097b" lastModified="1552495655" lastUniqueIdentifier="19">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.LE6940.Optic" currentFrame="6">
+      <layers>
+        <DOMLayer name="actions" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" name="optic_default" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="optic_reflex_1" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" name="optic_reflex_2" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="3" name="optic_eotech_1" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" name="optic_eotech_2" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="5" name="optic_acog_1" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="6" name="optic_acog_2" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-885 -427[-858 -426 -837 -407!-837 -407[-817 -385 -817 -357!-817 -357[-817 -327 -837 -305!-837 -305[-839 -303 -841 -301!-841 -301[-862 -285 -887 -285!-887 -285[-916 -285 -931 -301!-931 -301[-933 -303 -935 -305!-935 -305[-959 -327 -959
+ -357!-959 -357[-959 -385 -935 -407!-935 -407[-919 -426 -885 -427"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-1016 -184|-1016 -270!-1016 -270|-983 -580!-983 -580|-808 -580!-808 -580|-678 -560!-678 -560|-653 -358!-653 -358|-603 -270"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-452 -145[-432 -123 -432 -95!-432 -95[-432 -65 -452 -43!-452 -43[-454 -41 -456 -39!-456 -39[-477 -23 -502 -23!-502 -23[-531 -23 -546 -39!-546 -39[-548 -41 -550 -43!-550 -43[-574 -65 -574 -95!-574 -95[-574 -123 -550 -145!-550 -145[-534
+ -164 -500 -165!-500 -165[-473 -164 -452 -145!-318 -240|-318 -184!-318 -184|-263 -184"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-318 -240|-263 -185!-263 -185|-263 -184!-603 -270|-318 -240"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-318 -184|-1016 -184!-1016 -270|-603 -270"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-263 -184|-263 0!-263 0|-318 0!-318 0|-1016 0!-1016 0|-1016 -184"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-318 0|-318 -184"/>
+                        <Edge cubics="!-318 -240(;-318,-240 -263,-185 -263,-185q-318 -240 -263 -185)-263,-185;"/>
+                        <Edge cubics="!-263 0(;-263,0 -318,0 -318,0q-263 0 -318 0);"/>
+                        <Edge cubics="!-263 -185(;-263,-185 -263,-184 -263,-184q-263 -185 -263 -184)-263,-184;"/>
+                        <Edge cubics="!-263 -184(;-263,-184 -318,-184 -318,-184q-263 -184 -318 -184)-318,-184;"/>
+                        <Edge cubics="!-263 -184(;-263,-184 -263,0 -263,0q-263 -184 -263 0);"/>
+                        <Edge cubics="!-452 -145(;-438,-131 -432,-113 -432,-95q-452 -145Q-432 -123q-432 -95)-432,-95;"/>
+                        <Edge cubics="!-574 -95(-574,-95;-574,-113 -566,-131 -550,-145q-574 -95Q-574 -123q-550 -145)-550,-145;"/>
+                        <Edge cubics="!-432 -95(;-432,-75 -438,-57 -452,-43q-432 -95Q-432 -65q-452 -43)-452,-43;"/>
+                        <Edge cubics="!-550 -43(;-566,-57 -574,-75 -574,-95q-550 -43Q-574 -65q-574 -95)-574,-95;"/>
+                        <Edge cubics="!-546 -39(;-547,-40 -549,-42 -550,-43q-546 -39Q-548 -41q-550 -43);"/>
+                        <Edge cubics="!-500 -165(;-482,-164 -466,-158 -452,-145q-500 -165Q-473 -164q-452 -145);"/>
+                        <Edge cubics="!-452 -43(;-453,-42 -455,-40 -456,-39q-452 -43Q-454 -41q-456 -39);"/>
+                        <Edge cubics="!-456 -39(;-470,-28 -485,-23 -502,-23q-456 -39Q-477 -23q-502 -23);"/>
+                        <Edge cubics="!-502 -23(;-521,-23 -536,-28 -546,-39q-502 -23Q-531 -23q-546 -39);"/>
+                        <Edge cubics="!-550 -145(;-539,-158 -523,-164 -500,-165q-550 -145Q-534 -164q-500 -165);"/>
+                        <Edge cubics="!-318 -240(-318,-240;-318,-240 -318,-184 -318,-184q-318 -240 -318 -184)-318,-184;"/>
+                        <Edge cubics="!-318 0(;-318,0 -318,-184 -318,-184q-318 0 -318 -184)-318,-184;"/>
+                        <Edge cubics="!-837 -407(;-823,-393 -817,-375 -817,-357q-837 -407Q-817 -385q-817 -357)-817,-357;"/>
+                        <Edge cubics="!-959 -357(-959,-357;-959,-375 -951,-393 -935,-407q-959 -357Q-959 -385q-935 -407)-935,-407;"/>
+                        <Edge cubics="!-817 -357(;-817,-337 -823,-319 -837,-305q-817 -357Q-817 -327q-837 -305)-837,-305;"/>
+                        <Edge cubics="!-935 -305(;-951,-319 -959,-337 -959,-357q-935 -305Q-959 -327q-959 -357)-959,-357;"/>
+                        <Edge cubics="!-931 -301(;-932,-302 -934,-304 -935,-305q-931 -301Q-933 -303q-935 -305);"/>
+                        <Edge cubics="!-885 -427(;-867,-426 -851,-420 -837,-407q-885 -427Q-858 -426q-837 -407);"/>
+                        <Edge cubics="!-837 -305(;-838,-304 -840,-302 -841,-301q-837 -305Q-839 -303q-841 -301);"/>
+                        <Edge cubics="!-841 -301(;-855,-290 -870,-285 -887,-285q-841 -301Q-862 -285q-887 -285);"/>
+                        <Edge cubics="!-887 -285(;-906,-285 -921,-290 -931,-301q-887 -285Q-916 -285q-931 -301);"/>
+                        <Edge cubics="!-935 -407(;-924,-420 -908,-426 -885,-427q-935 -407Q-919 -426q-885 -427);"/>
+                        <Edge cubics="!-1016 -270(;-1016,-270 -1016,-184 -1016,-184q-1016 -270 -1016 -184);"/>
+                        <Edge cubics="!-1016 -270(;-1016,-270 -983,-580 -983,-580q-1016 -270 -983 -580);"/>
+                        <Edge cubics="!-318 -184(;-318,-184 -1016,-184 -1016,-184q-318 -184 -1016 -184);"/>
+                        <Edge cubics="!-318 0(;-318,0 -1016,0 -1016,0q-318 0 -1016 0);"/>
+                        <Edge cubics="!-1016 -184(;-1016,-184 -1016,0 -1016,0q-1016 -184 -1016 0);"/>
+                        <Edge cubics="!-983 -580(;-983,-580 -808,-580 -808,-580q-983 -580 -808 -580);"/>
+                        <Edge cubics="!-653 -358(;-653,-358 -603,-270 -603,-270q-653 -358 -603 -270);"/>
+                        <Edge cubics="!-678 -560(;-678,-560 -653,-358 -653,-358q-678 -560 -653 -358);"/>
+                        <Edge cubics="!-808 -580(;-808,-580 -678,-560 -678,-560q-808 -580 -678 -560);"/>
+                        <Edge cubics="!-603 -270(;-603,-270 -318,-240 -318,-240q-603 -270 -318 -240);"/>
+                        <Edge cubics="!-1016 -270(;-1016,-270 -603,-270 -603,-270q-1016 -270 -603 -270);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Mods/MC.Mods.Optics.Reflex.1">
+                  <matrix>
+                    <Matrix tx="2.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="-20.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Mods/MC.Mods.Optics.Reflex.2">
+                  <matrix>
+                    <Matrix tx="20.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="-28.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Mods/Optics/MC.Mods.Optics.EOTech.1" centerPoint3DX="20" centerPoint3DY="-26">
+                  <matrix>
+                    <Matrix tx="20"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-26"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Mods/Optics/MC.Mods.Optics.EOTech.2" centerPoint3DX="47.2" centerPoint3DY="-26">
+                  <matrix>
+                    <Matrix tx="47.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-26"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Mods/Optics/ACOG/MC.Mods.Optics.ACOG.1" centerPoint3DX="9.05" centerPoint3DY="-29.2">
+                  <matrix>
+                    <Matrix tx="9.05" ty="1.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-30.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Mods/Optics/ACOG/MC.Mods.Optics.ACOG.2" centerPoint3DX="10.4" centerPoint3DY="-30.2">
+                  <matrix>
+                    <Matrix tx="10.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-30.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#9933CC" locked="true" outline="true" useOutlineView="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="7" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF0000" alpha="0"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!-1800 -1400|1800 -1400!1800 -1400|1800 0!1800 0|-1800 0!-1800 0|-1800 -1400"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

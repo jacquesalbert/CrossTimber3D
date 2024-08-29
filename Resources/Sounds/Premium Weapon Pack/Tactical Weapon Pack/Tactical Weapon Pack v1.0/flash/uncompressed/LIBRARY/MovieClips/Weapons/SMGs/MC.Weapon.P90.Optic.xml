@@ -1,0 +1,176 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/SMGs/MC.Weapon.P90.Optic" itemID="5b67c51d-000010ce" lastModified="1540989352" lastUniqueIdentifier="19">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.P90.Optic">
+      <layers>
+        <DOMLayer name="actions" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" name="optic_default" labelType="name" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="optic_reflex_1" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" name="optic_reflex_2" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="3" name="optic_eotech_1" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" name="optic_eotech_2" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="5" name="optic_acog_1" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="6" name="optic_acog_2" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gfx" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <transformationPoint>
+                    <Point y="-22.5"/>
+                  </transformationPoint>
+                  <members>
+                    <DOMShape>
+                      <transformationPoint>
+                        <Point y="-22.5"/>
+                      </transformationPoint>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!636 -565|636 -416!636 -416|902 -260!902 -260|-903 -260!-903 -260|-578 -394!-578 -394|-369 -640!-369 -640|591 -640!591 -640|636 -565"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-369 -640|-369 -565!-369 -565|636 -565"/>
+                        <Edge cubics="!-578 -394(;-578,-394 -369,-640 -369,-640q-578 -394 -369 -640);"/>
+                        <Edge cubics="!-903 -260(;-903,-260 -578,-394 -578,-394q-903 -260 -578 -394);"/>
+                        <Edge cubics="!-369 -640(;-369,-640 -369,-565 -369,-565q-369 -640 -369 -565);"/>
+                        <Edge cubics="!636 -565(;636,-565 636,-416 636,-416q636 -565 636 -416);"/>
+                        <Edge cubics="!591 -640(;591,-640 636,-565 636,-565q591 -640 636 -565);"/>
+                        <Edge cubics="!-369 -640(;-369,-640 591,-640 591,-640q-369 -640 591 -640);"/>
+                        <Edge cubics="!-369 -565(;-369,-565 636,-565 636,-565q-369 -565 636 -565);"/>
+                        <Edge cubics="!636 -416(;636,-416 902,-260 902,-260q636 -416 902 -260);"/>
+                        <Edge cubics="!902 -260(;902,-260 -903,-260 -903,-260q902 -260 -903 -260);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.Reflex.1">
+                  <matrix>
+                    <Matrix tx="-21.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="-20.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.Reflex.2">
+                  <matrix>
+                    <Matrix tx="-3.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="-28.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.EOTech.1" centerPoint3DX="-4" centerPoint3DY="-26">
+                  <matrix>
+                    <Matrix tx="-4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-26"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.EOTech.2" centerPoint3DX="15.2" centerPoint3DY="-26">
+                  <matrix>
+                    <Matrix tx="15.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-26"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.ACOG.1" centerPoint3DX="-20.6" centerPoint3DY="-29.2">
+                  <matrix>
+                    <Matrix tx="-20.6" ty="1.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-30.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.ACOG.2" centerPoint3DX="2.4" centerPoint3DY="-28.95">
+                  <matrix>
+                    <Matrix tx="2.4" ty="1.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-30.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#9933CC" locked="true" outline="true" useOutlineView="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="7" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <matrix>
+                    <Matrix ty="-35"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF0000" alpha="0"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!-1800 -700S2|1800 -700!1800 -700|1800 700!1800 700|-1800 700!-1800 700|-1800 -700"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

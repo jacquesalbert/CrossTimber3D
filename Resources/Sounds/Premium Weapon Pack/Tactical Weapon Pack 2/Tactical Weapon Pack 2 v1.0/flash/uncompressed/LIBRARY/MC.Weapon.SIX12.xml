@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MC.Weapon.SIX12" itemID="5c9e66dc-000008fe" lastModified="1553886175">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.SIX12">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MC.Weapon.SIX12.Base" name="base" centerPoint3DX="-0.05">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MC.Weapon.SIX12.Mag" name="mag" centerPoint3DX="-82.2" centerPoint3DY="-4">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-82.2" ty="-4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.Striker.Optic" name="optic" centerPoint3DX="15.5" centerPoint3DY="-48.55">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="15.5" ty="-39.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-18.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

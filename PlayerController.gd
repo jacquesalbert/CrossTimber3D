@@ -4,6 +4,8 @@ extends Controller
 @export_flags_3d_physics var cursor_mask : int
 @export var max_cursor_distance : float = 100
 @export var camera : Camera3D
+@export var camera_mounted_zoom : float = 80
+@export var camera_dismounted_zoom : float = 40
 
 var hover_object : Node3D:
 	set(value):
@@ -28,10 +30,10 @@ func _ready():
 	pass
 	
 func set_camera_mounted():
-	camera.size = 80
+	camera.size = camera_mounted_zoom
 
 func set_camera_dismounted():
-	camera.size = 40
+	camera.size = camera_dismounted_zoom
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

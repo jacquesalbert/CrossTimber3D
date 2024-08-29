@@ -1,0 +1,62 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Parts/WPN.SPRINGFIELD.Slide" itemID="531fab23-000004b9" lastModified="1394586245">
+  <timeline>
+    <DOMTimeline name="WPN.SPRINGFIELD.Slide">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#272727"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#191919"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.250980392156863"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!-187 12|-195 12!-195 12|-205 26!-205 26|-219 26!-219 26|-228 12!-228 12|-221 -27!-221 -27|-210 -27!-210 -27|-197 -9!-197 -9|-107 -9"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-107 -9|-107 -22!-107 -22|219 -22!219 -22|243 11!243 11|-107 11"/>
+                    <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!-179 11|-187 12"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!-179 11|-179 12!-179 12|-187 12!-107 11|-179 11"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!-107 11|-107 -9"/>
+                    <Edge cubics="!-221 -27(;-221,-27 -210,-27 -210,-27q-221 -27 -210 -27);"/>
+                    <Edge cubics="!-205 26(-205,26;-205,26 -219,26 -219,26q-205 26 -219 26);"/>
+                    <Edge cubics="!-195 12(;-195,12 -205,26 -205,26q-195 12 -205 26);"/>
+                    <Edge cubics="!-210 -27(;-210,-27 -197,-9 -197,-9q-210 -27 -197 -9);"/>
+                    <Edge cubics="!-228 12(;-228,12 -221,-27 -221,-27q-228 12 -221 -27);"/>
+                    <Edge cubics="!-219 26(;-219,26 -228,12 -228,12q-219 26 -228 12);"/>
+                    <Edge cubics="!219 -22(;219,-22 243,11 243,11p219 -22 243 11);"/>
+                    <Edge cubics="!185 -22(185,-22;185,-22 219,-22 219,-22q185 -22 219 -22);"/>
+                    <Edge cubics="!243 11(243,11;243,11 185,11 185,11q243 11 185 11);"/>
+                    <Edge cubics="!185 11(185,11;185,11 185,-22 185,-22q185 11 185 -22);"/>
+                    <Edge cubics="!-197 -9(-197,-9;-197,-9 -107,-9 -107,-9q-197 -9 -107 -9);"/>
+                    <Edge cubics="!-107 -9(-107,-9;-107,-9 -107,-22 -107,-22q-107 -9 -107 -22);"/>
+                    <Edge cubics="!-179 11(-179,11;-179,11 -187,12 -187,12q-179 11 -187 12);"/>
+                    <Edge cubics="!-179 11(;-179,11 -179,12 -179,12q-179 11 -179 12);"/>
+                    <Edge cubics="!-107 11(;-107,11 -179,11 -179,11q-107 11 -179 11);"/>
+                    <Edge cubics="!-179 12(;-179,12 -187,12 -187,12q-179 12 -187 12);"/>
+                    <Edge cubics="!-187 12(;-187,12 -195,12 -195,12q-187 12 -195 12);"/>
+                    <Edge cubics="!-107 11(;-107,11 -107,-9 -107,-9q-107 11 -107 -9);"/>
+                    <Edge cubics="!-107 -22(;-107,-22 185,-22 185,-22q-107 -22 185 -22);"/>
+                    <Edge cubics="!185 11(;185,11 -107,11 -107,11q185 11 -107 11);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

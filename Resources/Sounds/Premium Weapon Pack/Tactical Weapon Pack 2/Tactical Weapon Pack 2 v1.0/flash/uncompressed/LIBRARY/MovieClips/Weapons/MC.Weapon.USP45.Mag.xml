@@ -1,0 +1,60 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.USP45.Mag" itemID="5b5a4b12-00001010" lastModified="1532644114">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.USP45.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-547 841S7|21 841"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!21 841S5|623 -1099!623 -1099|72 -1099!72 -1099|-58 -731!-58 -731|-547 841"/>
+                        <Edge fillStyle1="1" edges="!21 841S2|166 841"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!166 841S6|252 841!252 841|258 872!258 872|300 1019!300 1019|323 1019!323 1019|323 1086!323 1086|288 1099!288 1099|-582 1034!-582 1034|-624 951!-624 951|-598 841!-598 841|-547 841"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!300 1019S7|-624 951"/>
+                        <Edge cubics="!-598 841(-598,841;-598,841 -624,951 -624,951q-598 841 -624 951);"/>
+                        <Edge cubics="!258 872(;258,872 252,841 252,841q258 872 252 841);"/>
+                        <Edge cubics="!300 1019(;300,1019 258,872 258,872q300 1019 258 872);"/>
+                        <Edge cubics="!300 1019(;300,1019 -624,951 -624,951q300 1019 -624 951);"/>
+                        <Edge cubics="!288 1099(;288,1099 323,1086 323,1086q288 1099 323 1086);"/>
+                        <Edge cubics="!300 1019(;300,1019 323,1019 323,1019q300 1019 323 1019);"/>
+                        <Edge cubics="!323 1019(323,1019;323,1019 323,1086 323,1086q323 1019 323 1086);"/>
+                        <Edge cubics="!-582 1034(-582,1034;-582,1034 -624,951 -624,951q-582 1034 -624 951);"/>
+                        <Edge cubics="!-582 1034(;-582,1034 288,1099 288,1099q-582 1034 288 1099);"/>
+                        <Edge cubics="!-598 841(;-598,841 -547,841 -547,841q-598 841 -547 841);"/>
+                        <Edge cubics="!21 841(21,841;21,841 166,841 166,841q21 841 166 841);"/>
+                        <Edge cubics="!166 841(;166,841 252,841 252,841q166 841 252 841);"/>
+                        <Edge cubics="!623 -1099(;623,-1099 72,-1099 72,-1099q623 -1099 72 -1099);"/>
+                        <Edge cubics="!72 -1099(;72,-1099 -58,-731 -58,-731q72 -1099 -58 -731);"/>
+                        <Edge cubics="!21 841(;21,841 623,-1099 623,-1099q21 841 623 -1099);"/>
+                        <Edge cubics="!-58 -731(;-58,-731 -547,841 -547,841q-58 -731 -547 841);"/>
+                        <Edge cubics="!21 841(21,841;21,841 -547,841 -547,841q21 841 -547 841);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

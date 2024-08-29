@@ -1,0 +1,55 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MC.Weapon.FiveSeven.Slide" itemID="5c86bbe3-00000621" lastModified="1538709038">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.FiveSeven.Slide">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!611 -104S5|590 -131!590 -131|-833 -131"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1396 -104S6|1475 -289!1475 -289|1511 -307!1511 -307|1605 -255!1605 -255|1625 -221!1625 -221|1625 -104!611 -104|1396 -104!1625 -104|1740 -104!1740 -104|1771 30"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!1396 -104S7|1625 -104"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!1771 30S6|1771 270!1771 270|1760 298!1760 298|712 298"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!721 30S7|740 54!740 54|740 140!740 140|712 298"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-695 308S5|712 308!712 308|712 298"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!1771 30S7|721 30!611 -104|721 30"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-1526 -292S5|-1569 -292!-1569 -292|-1560 -149!-1410 -235|-1440 -272!-1440 -272|-1526 -292!-1547 -97|-1574 -135!-1574 -135|-1608 -135!-1608 -135[-1659 -120 -1687 -66!-1687 -66|-1771 308!-1771 308|-695 308"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-1560 -149S7|-1526 -144!-1547 -97|-1531 -63!-1531 -63|-1542 -12!-1542 -12|-1600 278!-1600 278|-1651 278!-1651 278|-1667 225!-1667 225|-1613 -56!-1613 -56[-1580 -111 -1547 -97!-1542 -12|-1472 -12"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-1493 -97S5|-1547 -97!-1560 -149|-1493 -97"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-1335 -12S7|-1268 -12!-1405 -12|-1335 -12!-1410 -131|-1410 -97!-1410 -97|-1493 -97!-1410 -131|-1410 -235!-1472 -12|-1405 -12!-1526 -144|-1410 -131!-1526 -292|-1526 -144!-1132 -12|-1063 -12!-1200 -12|-1132 -12"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-1046 -131S5|-1046 -173!-1046 -173|-1085 -214!-1085 -214|-1410 -235"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-995 -12S7|-973 -12!-973 -12|-932 37!-1063 -12|-995 -12"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-833 -131S5|-1046 -131"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-1268 -12S7|-1200 -12!-1046 -131|-1410 -131!-336 -48[-336 -25 -350 -9!-350 -9[-363 8 -383 8!-383 8[-403 8 -415 -9!-415 -9[-430 -25 -430 -48!-430 -48[-430 -71 -415 -88!-415 -88[-403 -104 -383 -104!-383 -104[-363 -104 -350 -88!-350 -88
+[-336 -71 -336 -48!-833 -131|-669 69!-669 69[-644 103 -669 188!-669 188|-695 308!-871 110|-826 168!-826 168|-826 235!-826 235|-857 267!-932 37|-871 110!-871 110|-901 246!-932 37|-975 253!-1472 -12|-1526 253!-1405 -12|-1459 253!-1335 -12
+|-1389 253!-1268 -12|-1322 253!-1200 -12|-1253 253!-1132 -12|-1186 253!-1063 -12|-1118 253!-995 -12|-1049 253"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

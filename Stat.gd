@@ -1,6 +1,8 @@
 class_name Stat
 extends Node
 
+#@export var text : String
+#@export var icon : Texture2D
 @export var max_value : int = 100
 @export var allow_negative : bool
 

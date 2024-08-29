@@ -1,0 +1,43 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.Stoner.Mag" itemID="5c6cd45a-0000046b" lastModified="1550636175">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.Stoner.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!382 1126S5|546 1034!546 1034|546 -626!546 -626|520 -658!520 -658|520 -1127!520 -1127|382 -1127"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!382 1126S7|382 -1127!-267 17[-267 49 -290 72!-290 72[-313 95 -345 95!-345 95[-377 95 -400 72!-400 72[-423 49 -423 17!-423 17[-423 -15 -400 -38!-400 -38[-377 -61 -345 -61!-345 -61[-313 -61 -290 -38!-290 -38[-267 -15 -267 17"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!382 1126S6|-438 1126!-438 1126[#FFFDF0.52 #443.43 -546 1003!-546 1003|-546 -332!-546 -332|-448 -440!-448 -440|-448 -1127!-448 -1127|382 -1127"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-267 457S7[-267 489 -290 512!-290 512[-313 535 -345 535!-345 535[-377 535 -400 512!-400 512[-423 489 -423 457!-423 457[-423 425 -400 402!-400 402[-377 379 -345 379!-345 379[-313 379 -290 402!-290 402[-267 425 -267 457!-267 897[-267 929
+ -290 952!-290 952[-313 975 -345 975!-345 975[-377 975 -400 952!-400 952[-423 929 -423 897!-423 897[-423 865 -400 842!-400 842[-377 819 -345 819!-345 819[-313 819 -290 842!-290 842[-267 865 -267 897"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,18 +1,9 @@
 class_name AttributeModifier
 extends Resource
 
-enum Type {
-	TRAIT,
-	EFFECT
-}
-
-@export var type : Type
-@export var text : String
-
 @export var overrides : Dictionary
 @export var multiply_modifiers : Dictionary
 @export var add_modifiers : Dictionary
-#@export var spawn_scene : PackedScene
 
 func override_value(attribute:StringName,value):
 	if overrides.has(attribute):

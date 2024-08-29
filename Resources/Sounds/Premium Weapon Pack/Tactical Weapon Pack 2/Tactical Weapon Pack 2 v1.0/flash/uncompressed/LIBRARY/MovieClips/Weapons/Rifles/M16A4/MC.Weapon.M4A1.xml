@@ -1,0 +1,64 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.M4A1" itemID="5c2152a4-0000077e" lastModified="1551103547">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.M4A1">
+      <layers>
+        <DOMLayer name="optic" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.M16A4.Optic" name="optic" centerPoint3DX="-24.3" centerPoint3DY="-35.15">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-24.3" ty="-26"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-18.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="base" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.M4A1.Base" name="base" centerPoint3DX="-76" centerPoint3DY="-14.85">
+                  <matrix>
+                    <Matrix a="0.500045776367188" d="0.500076293945313" tx="-81" ty="-6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="-0.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Generic/MC.Point" selected="true">
+                  <matrix>
+                    <Matrix tx="167.2" ty="-15.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mag" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.M16A4.Mag" name="mag" centerPoint3DX="-2.35" centerPoint3DY="47.1">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-2.35" ty="23.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="47.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,120 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Parts/WPN.AA12.Sight" itemID="528037c9-0000398b" lastModified="1405737869" lastUniqueIdentifier="15">
+  <timeline>
+    <DOMTimeline name="WPN.AA12.Sight" currentFrame="18">
+      <layers>
+        <DOMLayer name="actions" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" name="none" labelType="name" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" name="reflex" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="5" name="eotech" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="14" duration="5" name="aimpoint" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gfx" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Sights/SIGHT.Reflex" centerPoint3DX="17.25" centerPoint3DY="0.75">
+                  <matrix>
+                    <Matrix tx="17.25" ty="0.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Sights/SIGHT.EOTech" centerPoint3DX="15.9" centerPoint3DY="-3.95">
+                  <matrix>
+                    <Matrix tx="15.9" ty="0.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-4.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="14" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Sights/SIGHT.Aimpoint" centerPoint3DX="18.4" centerPoint3DY="-4.45">
+                  <matrix>
+                    <Matrix tx="18.4" ty="0.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="iron" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="19" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#191919"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.247058823529412"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!32 -168[25 -168 20 -163!20 -163[16 -157 16 -152!16 -152[16 -144 20 -140!20 -140[25 -134 32 -134!32 -134[39 -134 44 -140!44 -140[48 -144 48 -152!48 -152[48 -157 44 -163!44 -163[39 -168 32 -168"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-39 -17|7 -160!7 -160|24 -181!24 -181|65 -181!65 -181|65 0!65 0|45 0!45 0|45 -116!45 -116|15 -116!15 -116|-21 0!-21 0|-45 0!-45 0|-66 0!-66 0|-66 -17!-66 -17|-39 -17"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-45 0|-39 -17"/>
+                    <Edge cubics="!48 -152(;48,-156 46,-159 44,-163q48 -152Q48 -157q44 -163);"/>
+                    <Edge cubics="!44 -163(;41,-166 37,-168 32,-168q44 -163Q39 -168q32 -168);"/>
+                    <Edge cubics="!32 -134(;37,-134 41,-136 44,-140q32 -134Q39 -134q44 -140);"/>
+                    <Edge cubics="!44 -140(;46,-142 48,-147 48,-152q44 -140Q48 -144q48 -152);"/>
+                    <Edge cubics="!65 -181(65,-181;65,-181 24,-181 24,-181q65 -181 24 -181)24,-181;"/>
+                    <Edge cubics="!20 -140(20,-140;23,-136 28,-134 32,-134q20 -140Q25 -134q32 -134);"/>
+                    <Edge cubics="!32 -168(;28,-168 23,-166 20,-163q32 -168Q25 -168q20 -163);"/>
+                    <Edge cubics="!24 -181(;24,-181 7,-160 7,-160q24 -181 7 -160);"/>
+                    <Edge cubics="!20 -163(20,-163;18,-159 16,-156 16,-152q20 -163Q16 -157q16 -152);"/>
+                    <Edge cubics="!16 -152(16,-152;16,-147 18,-142 20,-140q16 -152Q16 -144q20 -140);"/>
+                    <Edge cubics="!45 0(45,0;45,0 65,0 65,0p45 0 65 0);"/>
+                    <Edge cubics="!15 -116(;15,-116 45,-116 45,-116q15 -116 45 -116);"/>
+                    <Edge cubics="!45 -116(45,-116;45,-116 45,0 45,0q45 -116p45 0);"/>
+                    <Edge cubics="!-21 0(;-21,0 15,-116 15,-116p-21 0q15 -116);"/>
+                    <Edge cubics="!65 0(;65,0 65,-181 65,-181p65 0q65 -181);"/>
+                    <Edge cubics="!-39 -17(-39,-17;-39,-17 -45,0 -45,0p-39 -17 -45 0);"/>
+                    <Edge cubics="!-66 0(-66,0;-66,0 -45,0 -45,0p-66 0 -45 0)-45,0;"/>
+                    <Edge cubics="!-66 -17(;-66,-17 -66,0 -66,0q-66 -17p-66 0);"/>
+                    <Edge cubics="!-39 -17(;-39,-17 -66,-17 -66,-17p-39 -17q-66 -17);"/>
+                    <Edge cubics="!7 -160(;7,-160 -39,-17 -39,-17q7 -160p-39 -17);"/>
+                    <Edge cubics="!-45 0(;-45,0 -21,0 -21,0p-45 0 -21 0);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

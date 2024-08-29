@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.Evo3" itemID="5c90ea3f-00000f8e" lastModified="1553002084">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.Evo3">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.Evo3.Mag" name="mag" centerPoint3DX="34.05" centerPoint3DY="16.9">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="34" ty="16.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.1" y="0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.Evo3.Base" name="base" centerPoint3DX="-0.05">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.Evo3.Optic" name="optic" centerPoint3DX="9.45" centerPoint3DY="-50.9">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="9.45" ty="-33.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Generic/MC.Point">
+                  <matrix>
+                    <Matrix ty="-15.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

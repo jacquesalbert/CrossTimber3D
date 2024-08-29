@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpkw3hly8havm"
+path="res://.godot/imported/physics_concrete_impact_bullet_3.mp3-64c881b266a147a99b49d5e8df217569.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/physics/concrete/physics_concrete_impact_bullet_3.mp3"
+dest_files=["res://.godot/imported/physics_concrete_impact_bullet_3.mp3-64c881b266a147a99b49d5e8df217569.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

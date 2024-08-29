@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MC.Weapon.R870" itemID="5c9d829d-00000a95" lastModified="1553867687">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.R870">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MC.Weapon.R870.Mag" name="mag" centerPoint3DX="-11.65" centerPoint3DY="19.7">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-11.7" ty="19.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MC.Weapon.R870.Base" name="base" centerPoint3DX="-0.05">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MC.Weapon.R870.Slide" name="pump" centerPoint3DX="84.1" centerPoint3DY="-16.5">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="84.1" ty="-16.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.R870.Optic" name="optic" centerPoint3DX="-23.75" centerPoint3DY="-46.6">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-23.75" ty="-37.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-18.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

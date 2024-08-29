@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MC.Weapon.MAC10.Mag" itemID="5c56457a-000003cf" lastModified="1551982635">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.MAC10.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#424242"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#4C4C4C"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" edges="!253 -1846|122 -1846"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!122 -1846|122 1741"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!253 1634|351 1741!351 1741[353 1856 271 1845!271 1845|-346 1845!-346 1845[-364 1733 -320 1706"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!253 1634|253 1741!253 1741|122 1741"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!122 1741|-320 1741!-320 1741|-320 1706"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!253 1634|253 -1846"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!122 -1846|-320 -1846!-320 -1846|-320 1706"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

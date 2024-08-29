@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckklj67p87mtv"
+path="res://.godot/imported/EatingFood3.ogg-288c91adc0f4deacb8f99ccc702b642d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Food/EatingFood3.ogg"
+dest_files=["res://.godot/imported/EatingFood3.ogg-288c91adc0f4deacb8f99ccc702b642d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

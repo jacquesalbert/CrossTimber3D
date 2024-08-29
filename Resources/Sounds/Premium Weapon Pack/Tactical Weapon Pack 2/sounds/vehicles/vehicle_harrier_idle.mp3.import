@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ci0wyte4xiegi"
+path="res://.godot/imported/vehicle_harrier_idle.mp3-02c6aa193039591babfc6f60384e44c0.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/vehicles/vehicle_harrier_idle.mp3"
+dest_files=["res://.godot/imported/vehicle_harrier_idle.mp3-02c6aa193039591babfc6f60384e44c0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

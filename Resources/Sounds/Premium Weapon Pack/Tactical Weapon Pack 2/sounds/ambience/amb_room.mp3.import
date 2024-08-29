@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbjadur3011ih"
+path="res://.godot/imported/amb_room.mp3-78c6fd298e05009452dda60367a12398.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/ambience/amb_room.mp3"
+dest_files=["res://.godot/imported/amb_room.mp3-78c6fd298e05009452dda60367a12398.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

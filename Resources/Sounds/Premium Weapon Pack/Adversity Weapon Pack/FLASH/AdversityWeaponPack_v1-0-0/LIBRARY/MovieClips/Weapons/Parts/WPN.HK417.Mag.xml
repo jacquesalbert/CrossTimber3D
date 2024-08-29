@@ -1,0 +1,92 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Parts/WPN.HK417.Mag" itemID="52804cef-00003c8b" lastModified="1389055274">
+  <timeline>
+    <DOMTimeline name="WPN.HK417.Mag" currentFrame="13">
+      <layers>
+        <DOMLayer name="actions" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" name="none" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" name="extended" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="5" name="fmj" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="14" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#6B6B6B"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#757575"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.247058823529412"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                    <StrokeStyle index="2">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" miterLimit="60" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.247058823529412"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!33 -197S7|35 -134!35 -134[35 -112 36 -89!36 -89[39 -58 43 -29!43 -29[47 0 54 27"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="2" edges="!33 -197.5S3|33 -197"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!129 64S1|123 55!123 55[102 -26 96 -139!96 -139|90 -203!90 -203|33 -197.5!33 -197.5|-137 -181!-137 -181|-136 -118!-136 -118[-126 9 -96 109!-96 109|-104 121!-104 121|-82 155!-82 155|136 116!136 116|136 71!136 71|129 64"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!67 77S3|129 64"/>
+                    <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!54 27S3[59 52 67 77"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-96 109S3|-58 102"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!-58 102S3|67 77"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!-58 102S3|35 27!35 27|-74 29!-74 29|28 -31!28 -31|-82 -33!-82 -33|18 -90!18 -90|-92 -98!-92 -98|33 -197"/>
+                    <Edge cubics="!35 -134(35,-134;35,-119 35,-104 36,-89p35 -134Q35 -112p36 -89);"/>
+                    <Edge cubics="!43 -29(;46,-10 49,9 54,27p43 -29Q47 0p54 27);"/>
+                    <Edge cubics="!36 -89(36,-89;38,-69 40,-49 43,-29p36 -89Q39 -58p43 -29);"/>
+                    <Edge cubics="!35 27(;35,27 -74,29 -74,29p35 27 -74 29);"/>
+                    <Edge cubics="!-74 29(;-74,29 28,-31 28,-31p-74 29 28 -31);"/>
+                    <Edge cubics="!-92 -98(;-92,-98 18,-90 18,-90p-92 -98 18 -90);"/>
+                    <Edge cubics="!-82 -33(-82,-33;-82,-33 18,-90 18,-90p-82 -33 18 -90)18,-90;"/>
+                    <Edge cubics="!28 -31(;28,-31 -82,-33 -82,-33p28 -31 -82 -33);"/>
+                    <Edge cubics="!-104 121(-104,121;-104,121 -96,109 -96,109q-104 121p-96 109);"/>
+                    <Edge cubics="!-58 102(;-58,102 67,77 67,77p-58 102 67 77);"/>
+                    <Edge cubics="!54 27(;57,44 62,61 67,77p54 27Q59 52p67 77);"/>
+                    <Edge cubics="!-58 102(;-58,102 35,27 35,27p-58 102 35 27);"/>
+                    <Edge cubics="!-96 109(;-116,43 -129,-34 -136,-118p-96 109Q-126 9p-136 -118);"/>
+                    <Edge cubics="!123 55(;123,55 129,64 129,64q123 55p129 64);"/>
+                    <Edge cubics="!129 64(;129,64 136,71 136,71p129 64q136 71);"/>
+                    <Edge cubics="!96 -139(;100,-64 109,1 123,55p96 -139Q102 -26q123 55);"/>
+                    <Edge cubics="!67 77(67,77;67,77 129,64 129,64p67 77 129 64);"/>
+                    <Edge cubics="!33 -197(33,-197;33,-197 90,-203 90,-203q33 -197 90 -203)90,-203;"/>
+                    <Edge cubics="!90 -203(;90,-203 96,-139 96,-139q90 -203 96 -139);"/>
+                    <Edge cubics="!-136 -118(;-136,-118 -137,-181 -137,-181q-136 -118 -137 -181);"/>
+                    <Edge cubics="!35 -134(35,-134;35,-134 33,-197 33,-197q35 -134 33 -197)33,-197;"/>
+                    <Edge cubics="!-82 155(-82,155;-82,155 -104,121 -104,121q-82 155 -104 121);"/>
+                    <Edge cubics="!-96 109(-96,109;-96,109 -58,102 -58,102q-96 109 -58 102);"/>
+                    <Edge cubics="!-137 -181(;-137,-181 33,-197 33,-197q-137 -181p33 -197);"/>
+                    <Edge cubics="!-92 -98(;-92,-98 33,-197 33,-197q-92 -98 33 -197);"/>
+                    <Edge cubics="!136 71(;136,71 136,116 136,116q136 71 136 116);"/>
+                    <Edge cubics="!136 116(136,116;136,116 -82,155 -82,155q136 116 -82 155);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

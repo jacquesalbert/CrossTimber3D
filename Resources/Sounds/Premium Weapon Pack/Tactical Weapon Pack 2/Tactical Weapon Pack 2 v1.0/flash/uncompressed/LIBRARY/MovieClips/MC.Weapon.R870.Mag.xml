@@ -1,0 +1,56 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/MC.Weapon.R870.Mag" itemID="5c9d8324-00000aa0" lastModified="1553826638">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.R870.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.149019607843137"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!388 -834|448 -792!448 -792|472 -552!-806 -672|-868 -1113!-868 -1113|332 -1293!332 -1293|388 -834"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-320 1266|-284 1288!-284 1288|826 928!826 928|868 882!868 882|810 776!810 776|768 792"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!472 -552|768 792"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="2" edges="!-246 -119[-246 -67 -283 -30!-283 -30[-320 7 -372 7!-372 7[-424 7 -461 -30!-461 -30[-498 -67 -498 -119!-498 -119[-498 -171 -461 -208!-461 -208[-424 -245 -372 -245!-372 -245[-320 -245 -283 -208!-283 -208[-246 -171 -246 -119"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-784 -380|-810 -414!-810 -414|-848 -630!-848 -630|-806 -672"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="2" edges="!-149 309[-149 361 -186 398!-186 398[-223 435 -275 435!-275 435[-327 435 -364 398!-364 398[-401 361 -401 309!-401 309[-401 257 -364 220!-364 220[-327 183 -275 183!-275 183[-223 183 -186 220!-186 220[-149 257 -149 309!-48 749[-48 801 -85
+ 838!-85 838[-122 875 -174 875!-174 875[-226 875 -263 838!-263 838[-300 801 -300 749!-300 749[-300 697 -263 660!-263 660[-226 623 -174 623!-174 623[-122 623 -85 660!-85 660[-48 697 -48 749"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-320 1266|-384 1292!-384 1292|-484 1018!-484 1018|-784 -380"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!768 792|-320 1152!-320 1152|-320 1266!-784 -380|472 -552!-806 -672|388 -834"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,56 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Effects/FX.Laser" itemID="53b3179b-00006e24" lastModified="1424234839" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="FX.Laser">
+      <layers>
+        <DOMLayer name="gfx" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Effects/FX.Laser.MC" centerPoint3DX="19.25">
+                  <matrix>
+                    <Matrix tx="-5.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25"/>
+                  </transformationPoint>
+                  <filters>
+                    <GlowFilter quality="3"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#9933CC" locked="true" autoNamed="false" visible="false" layerType="guide">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <RadialGradient>
+                        <matrix>
+                          <Matrix a="0.02081298828125" d="0.005035400390625"/>
+                        </matrix>
+                        <GradientEntry color="#FF3F3F" alpha="0.250980392156863" ratio="0"/>
+                        <GradientEntry color="#FF0000" alpha="0" ratio="0.890196078431372"/>
+                      </RadialGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!219 -53[310 -31 310 0!310 0[310 31 219 53!219 53[128 75 0 75!0 75|0 -75!0 -75[128 -75 219 -53"/>
+                    <Edge cubics="!0 -75(;85,-75 158,-67 219,-53q0 -75Q128 -75q219 -53);"/>
+                    <Edge cubics="!219 53(;158,68 85,75 0,75q219 53Q128 75q0 75);"/>
+                    <Edge cubics="!310 0(;310,21 280,38 219,53q310 0Q310 31q219 53);"/>
+                    <Edge cubics="!219 -53(;280,-38 310,-21 310,0q219 -53Q310 -31q310 0);"/>
+                    <Edge cubics="!0 -75(;0,-75 0,75 0,75q0 -75 0 75);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

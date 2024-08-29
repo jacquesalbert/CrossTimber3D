@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bp2x8ek0t3ais"
+path="res://.godot/imported/physics_body_impact_bullet_2.mp3-3e242c66372546d99de7e376182e1df6.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/physics/body/physics_body_impact_bullet_2.mp3"
+dest_files=["res://.godot/imported/physics_body_impact_bullet_2.mp3-3e242c66372546d99de7e376182e1df6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

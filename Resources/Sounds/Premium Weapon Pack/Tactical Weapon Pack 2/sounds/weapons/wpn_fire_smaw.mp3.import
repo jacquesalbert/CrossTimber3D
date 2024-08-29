@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1hi4amos4gpx"
+path="res://.godot/imported/wpn_fire_smaw.mp3-4235d3fe8d8bc150099f8c3ea2c2b0a6.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/weapons/wpn_fire_smaw.mp3"
+dest_files=["res://.godot/imported/wpn_fire_smaw.mp3-4235d3fe8d8bc150099f8c3ea2c2b0a6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

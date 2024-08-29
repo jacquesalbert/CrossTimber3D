@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7xcd5bpu10ej"]
+
+[ext_resource type="Script" path="res://Trailer.gd" id="1_rasgo"]
+
+[sub_resource type="Gradient" id="Gradient_70rba"]
+offsets = PackedFloat32Array(0, 0.166667, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.766667, 0, 1, 1, 0, 0, 0)
+
+[sub_resource type="Curve" id="Curve_8yjg8"]
+_data = [Vector2(0, 0), 0.0, 6.18367, 0, 0, Vector2(0.0544554, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Trailer" type="Node3D"]
+script = ExtResource("1_rasgo")
+lifetime = 0.06
+gradient = SubResource("Gradient_70rba")
+width_curve = SubResource("Curve_8yjg8")

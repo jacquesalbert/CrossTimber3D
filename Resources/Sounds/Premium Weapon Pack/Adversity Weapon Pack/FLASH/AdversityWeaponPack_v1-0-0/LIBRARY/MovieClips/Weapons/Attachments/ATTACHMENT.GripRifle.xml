@@ -1,0 +1,44 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Attachments/ATTACHMENT.GripRifle" itemID="527c4e80-000025b4" lastModified="1383881716">
+  <timeline>
+    <DOMTimeline name="ATTACHMENT.GripRifle">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#191919"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#171717"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.247058823529412"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-33 28|-39 18!-39 18|-48 7!-48 7|-48 5!-48 5|-46 4!-46 4|-45 3!-45 3|-45 -8!-45 -8|-44 -9!-44 -9|73 -9!73 -9|72 -8!72 -8|73 -6!73 -6|75 -3!75 -3|84 -4!84 -4|85 28!85 28|50 28!50 28|51 41"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!51 41|18 72!18 72|9 158!9 158|46 197"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!43 208|62 221!62 221|60 242!60 242|-23 242!-23 242|-23 213!46 197|43 208"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!51 41|54 162!54 162|46 197"/>
+                    <Edge strokeStyle="1" edges="!-33 28|-27 39"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-20 28|-33 28!-23 213|-10 204!-10 204|-20 149!-20 149|-20 28"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-23 213|43 208!43 208|-10 204!50 28|-20 28"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

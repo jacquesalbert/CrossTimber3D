@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtgh83qe07uqq"
+path="res://.godot/imported/OverflowingWaterPipeLoop.ogg-58c9943e59fa5bed2653472a538306e5.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Environment/OverflowingWaterPipeLoop.ogg"
+dest_files=["res://.godot/imported/OverflowingWaterPipeLoop.ogg-58c9943e59fa5bed2653472a538306e5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

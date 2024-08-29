@@ -1,0 +1,51 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Effects/FX.MuzzleSparks" itemID="54e518e9-00000c40" lastModified="1424300484" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="FX.MuzzleSparks" currentFrame="3">
+      <layers>
+        <DOMLayer name="Layer 3" color="#FF800A" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="Images/sparks1.jpg">
+                  <matrix>
+                    <Matrix a="0.3720703125" d="0.3720703125" ty="-47.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="256" y="128.05"/>
+                  </transformationPoint>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="Images/sparks2.jpg">
+                  <matrix>
+                    <Matrix a="0.410736083984375" d="0.410736083984375" ty="-52.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="256" y="127.95"/>
+                  </transformationPoint>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="Images/sparks3.jpg">
+                  <matrix>
+                    <Matrix a="0.382232666015625" d="0.382232666015625" tx="-21.8" ty="-48.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="288.05" y="128.05"/>
+                  </transformationPoint>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

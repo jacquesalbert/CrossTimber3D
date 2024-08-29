@@ -1,0 +1,39 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Parts/WPN.R870.Slide" itemID="5270795b-0000265f" lastModified="1383102811">
+  <timeline>
+    <DOMTimeline name="WPN.R870.Slide">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#191919"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.250980392156863"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!140 56S6|-140 56!-140 56|-140 -55!-140 -55|140 -55!140 -55|140 56"/>
+                    <Edge cubics="!140 56(;140,56 -140,56 -140,56q140 56 -140 56);"/>
+                    <Edge cubics="!-140 -55(;-140,-55 140,-55 140,-55q-140 -55 140 -55);"/>
+                    <Edge cubics="!140 -55(140,-55;140,-55 140,56 140,56q140 -55 140 56)140,56;"/>
+                    <Edge cubics="!-140 56(;-140,56 -140,-55 -140,-55q-140 56 -140 -55);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

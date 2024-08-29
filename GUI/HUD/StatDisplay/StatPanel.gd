@@ -1,22 +1,28 @@
 class_name StatPanel
 extends PanelContainer
 
+@export var value_bar : ProgressBar
+@export var trauma_bar : ProgressBar
+@export var label : Label
+@export var timer : Timer
+
+
 var stat : Stat:
 	set(value):
 		if is_instance_valid(stat):
 			stat.changed.disconnect(update_stat)
 		stat = value
 		stat.changed.connect(update_stat)
-		$GridContainer/MarginContainer3/ProgressBar.max_value = stat.max_value
-		$GridContainer/MarginContainer3/ProgressBar2.max_value = stat.max_value
-		$GridContainer/MarginContainer3/Timer.timeout.connect(set_damage_bar)
+		value_bar.max_value = stat.max_value
+		trauma_bar.max_value = stat.max_value
+		timer.timeout.connect(set_damage_bar)
 		update_stat(stat.value,null)
 		set_damage_bar()
 
 func update_stat(new_value:int,changed_by:Node):
-	$GridContainer/MarginContainer3/ProgressBar.value = stat.value
-	$GridContainer/MarginContainer2/Label.text = str(stat.value)
-	$GridContainer/MarginContainer3/Timer.start(0)
+	value_bar.value = stat.value
+	label.text = str(stat.value)
+	timer.start(0)
 
 func set_damage_bar():
-	$GridContainer/MarginContainer3/ProgressBar2.value = stat.value
+	trauma_bar.value = stat.value

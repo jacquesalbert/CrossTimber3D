@@ -1,0 +1,56 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Machine Pistols/MC.Weapon.M93R" itemID="5b8a0a4f-00000ee0" lastModified="1538536248">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.M93R">
+      <layers>
+        <DOMLayer name="slide" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Pistols/MC.Weapon.M9.Slide" name="slide" centerPoint3DX="-3.15" centerPoint3DY="-23.3">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-3.15" ty="-23.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="base" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Pistols/MC.Weapon.M93R.Base" name="base" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mag" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Pistols/MC.Weapon.M93R.Mag" name="mag" centerPoint3DX="-34.6" centerPoint3DY="15">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-34.6" ty="13.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="3.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

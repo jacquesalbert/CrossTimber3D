@@ -14,13 +14,14 @@ extends ToolInstance
 @export var supply_amount : int
 #@export var recoil : float = 1
 @export_flags_3d_physics var bullet_collision_mask :int
-@export var trail_transparency : BaseMaterial3D.Transparency = BaseMaterial3D.Transparency.TRANSPARENCY_ALPHA
-@export var trail_shadow: GeometryInstance3D.ShadowCastingSetting = GeometryInstance3D.ShadowCastingSetting.SHADOW_CASTING_SETTING_OFF
-@export var trail_color : Color = Color.WHITE
-@export var trail_gradient : Gradient
-@export var trail_lifetime : float = 0.1
-@export var trail_width : float = 1.0
-@export var trail_width_curve : Curve
+#@export var trail_transparency : BaseMaterial3D.Transparency = BaseMaterial3D.Transparency.TRANSPARENCY_ALPHA
+#@export var trail_shadow: GeometryInstance3D.ShadowCastingSetting = GeometryInstance3D.ShadowCastingSetting.SHADOW_CASTING_SETTING_OFF
+#@export var trail_color : Color = Color.WHITE
+#@export var trail_gradient : Gradient
+#@export var trail_lifetime : float = 0.1
+#@export var trail_width : float = 1.0
+#@export var trail_width_curve : Curve
+@export var bullet_trailer_scene : PackedScene
 @export var material_hit_effects: Dictionary
 @export var apply_effects: Array[PackedScene]
 
@@ -75,17 +76,25 @@ func fire_bullet():
 	var target_dir := global_basis * Vector3(randf()*angle_spread,randf()*angle_spread,1.0).normalized()
 	var bullet_speed :float = max(speed_minimum,randfn(speed, speed_variation))
 	var bullet_range := randfn(range, range_variation)
-	var bullet := Bullet.new(global_position, target_dir, bullet_speed, stability, damage, bullet_range, self.character, bullet_collision_mask, trail_gradient, trail_lifetime, trail_width)
+	var bullet := Bullet.new(target_dir, bullet_speed, stability, damage, bullet_range, self.character, bullet_collision_mask)
 	bullet.apply_effects = apply_effects
-	bullet.trail_transparency = trail_transparency
-	bullet.trail_shadow = trail_shadow
-	bullet.trail_width_curve = trail_width_curve
-	bullet.trail_color = trail_color
+	#bullet.trail_transparency = trail_transparency
+	#bullet.trail_shadow = trail_shadow
+	#bullet.trail_width_curve = trail_width_curve
+	#bullet.trail_color = trail_color
 	#for cover_exception in cover_exceptions:
 		#bullet.add_exception(cover_exception)
 	bullet.material_hit_effects = material_hit_effects
 	#bullet.z_index = -1
 	LevelManager.spawn_in_level(bullet)
+	bullet.global_position = global_position
+	if is_instance_valid(bullet_trailer_scene):
+		var trailer := bullet_trailer_scene.instantiate()
+		bullet.add_child(trailer)
+		trailer.enable()
+	$AnimationPlayer.seek(0)
+	$AnimationPlayer.play("fire")
+	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dqiy8hk15kn42"
+path="res://.godot/imported/GateWoodChain3.ogg-a5bc639e03631d867bd3e4a1ad22b078.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Environment/GateWoodChain3.ogg"
+dest_files=["res://.godot/imported/GateWoodChain3.ogg-a5bc639e03631d867bd3e4a1ad22b078.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

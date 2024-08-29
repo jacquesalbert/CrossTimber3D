@@ -1,0 +1,64 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Launchers/MC.Weapon.XM25.Mag" itemID="5ba0581f-00000674" lastModified="1537235477">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.XM25.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#4C4C4C"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#474747"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!582 -15[532 -275 518 -545!518 -545|518 -1109!518 -1109|-793 -1109!-793 -1109|-793 -809!-793 -809|-736 -43!-736 -43[-722 125 -696 283!-696 283[#FFFD68.6F #1EB.45 -612 682"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!-612 682[#FFFDA4.A1 #2CA.C9 -594 747!-594 747[-554 903 -504 1031!-504 1031|-142 1109!-142 1109|792 863!792 863[#2E8.53 #2CE.93 705.5 574"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!705.5 574[#2B0.F2 #200.93 674 451!674 451[622 217 582 -15"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!705.5 574|256 706!256 706[#5B.BB #74.3A 4 -818!4 -818|-216 -818!-216 -818[#FFFF6F.19 #7A.A6 36 770.5!36 770.5|-106 812!-106 812|-612 682"/>
+                        <Edge cubics="!-504 1031(;-504,1031 -142,1109 -142,1109q-504 1031 -142 1109);"/>
+                        <Edge cubics="!-142 1109(;-142,1109 792,863 792,863q-142 1109 792 863);"/>
+                        <Edge cubics="!-594 747(;-568,851 -542,941 -504,1031q-594 747Q-554 903q-504 1031);"/>
+                        <Edge cubics="!792 863(;763,765 736,674 706,574q792 863 706 574);"/>
+                        <Edge cubics="!706 574(;698,538 686,495 674,451q706 574 674 451);"/>
+                        <Edge cubics="!-736 -43(;-722,75 -710,177 -696,283q-736 -43Q-722 125q-696 283);"/>
+                        <Edge cubics="!674 451(;634,295 608,139 582,-15q674 451Q622 217q582 -15);"/>
+                        <Edge cubics="!582 -15(;544,-183 532,-365 518,-545q582 -15Q532 -275q518 -545);"/>
+                        <Edge cubics="!-793 -809(;-793,-809 -793,-1109 -793,-1109q-793 -809 -793 -1109);"/>
+                        <Edge cubics="!-793 -1109(;-793,-1109 518,-1109 518,-1109q-793 -1109 518 -1109);"/>
+                        <Edge cubics="!518 -545(;518,-545 518,-1109 518,-1109q518 -545 518 -1109);"/>
+                        <Edge cubics="!-793 -809(;-793,-809 -736,-43 -736,-43q-793 -809 -736 -43);"/>
+                        <Edge cubics="!706 574(;706,574 256,706 256,706q706 574 256 706);"/>
+                        <Edge cubics="!256 706(;256,706 -106,812 -106,812q256 706 -106 812);"/>
+                        <Edge cubics="!-106 812(;-106,812 -612,682 -612,682q-106 812 -612 682);"/>
+                        <Edge cubics="!-612 682(;-606,704 -600,726 -594,747q-612 682Q-603 715q-594 747);"/>
+                        <Edge cubics="!-696 283(;-675,422 -647,555 -612,682q-696 283Q-664 491q-612 682);"/>
+                        <Edge cubics="!256 706(;256,706 4,-818 4,-818q256 706 4 -818);"/>
+                        <Edge cubics="!4 -818(;4,-818 -216,-818 -216,-818q4 -818 -216 -818);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

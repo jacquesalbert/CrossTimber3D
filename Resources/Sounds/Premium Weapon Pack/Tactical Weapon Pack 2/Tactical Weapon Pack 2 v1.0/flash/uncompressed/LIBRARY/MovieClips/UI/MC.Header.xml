@@ -1,0 +1,119 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/UI/MC.Header" itemID="5bd8b689-00000626" lastModified="1554393222" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="MC.Header">
+      <layers>
+        <DOMLayer name="buttons" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Buttons/BTN.Checkbox" name="button_filters" symbolType="button">
+                  <matrix>
+                    <Matrix tx="552"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gfx" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMStaticText left="-51.6" width="247.2" height="20.1" autoExpand="true" antiAliasSharpness="200" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-72" ty="-28"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>TACTICAL WEAPON PACK </characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" alpha="0.8" lineHeight="20.1" size="18" bitmapSize="360" face="Arial-BoldMT" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                    <DOMTextRun>
+                      <characters>2</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" alpha="0.8" lineHeight="20.1" size="18" bitmapSize="360" face="Arial-BoldMT" fillColor="#FF0000"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMStaticText selected="true" left="21.95" width="100.1" height="13.7" autoExpand="true" antiAliasSharpness="200" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-72" ty="-8.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>v1.0 - APRIL 2019</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" alpha="0.32156862745098" lineHeight="13.7" bitmapSize="240" face="Arial-BoldMT" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMStaticText left="13.55" width="116.9" height="12.55" autoExpand="true" antiAliasSharpness="200" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-72" ty="16.6"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>WWW.XWILKINX.COM</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" alpha="0.32156862745098" lineHeight="12.55" size="11" bitmapSize="220" face="Arial-BoldMT" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMSymbolInstance libraryItemName="Buttons/BTN.XWILKINX" name="button_xwilkinx" symbolType="button">
+                  <matrix>
+                    <Matrix tx="-609"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMStaticText left="56.4" width="102.9" height="13.7" autoExpand="true" antiAliasSharpness="200" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="457.2" ty="-5.85"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>ENABLE FILTERS</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" alpha="0.8" lineHeight="13.7" bitmapSize="240" face="Arial-BoldMT" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMSymbolInstance libraryItemName="MovieClips/UI/MC.Checkbox" name="mc_filters" centerPoint3DX="494.5">
+                  <matrix>
+                    <Matrix tx="494.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/UI/MC.HeaderBackground" name="mc_bg">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

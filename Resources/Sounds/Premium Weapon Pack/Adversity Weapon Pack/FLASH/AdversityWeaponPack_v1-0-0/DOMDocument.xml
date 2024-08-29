@@ -1,0 +1,1244 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#999999" width="800" frameRate="30" currentTimeline="1" xflVersion="2.95" creatorInfo="Adobe Animate CC" platform="Windows" versionInfo="Saved by Animate Windows 16.5 build 100" majorVersion="16" minorVersion="5" buildNumber="100" vanishingPoint3DX="400" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="9E4166894E540C40B203D3A621301C4B">
+     <folders>
+          <DOMFolderItem name="Buttons" itemID="54e8fc26-00000b5c"/>
+          <DOMFolderItem name="Images" itemID="54e547e6-00000cc8"/>
+          <DOMFolderItem name="MovieClips" itemID="54e8d78f-000003e1" isExpanded="true"/>
+          <DOMFolderItem name="MovieClips/Characters" itemID="51ac0c43-0000089a"/>
+          <DOMFolderItem name="MovieClips/Characters/Hands" itemID="5233a7ea-0000029e"/>
+          <DOMFolderItem name="MovieClips/Classes" itemID="54e8fc3e-00000b62"/>
+          <DOMFolderItem name="MovieClips/Effects" itemID="5146b221-000000a3"/>
+          <DOMFolderItem name="MovieClips/Equipment" itemID="523f7e4a-00000292"/>
+          <DOMFolderItem name="MovieClips/Equipment/Complete" itemID="523f7e6b-0000029e"/>
+          <DOMFolderItem name="MovieClips/Equipment/Parts" itemID="523f7e68-0000029a"/>
+          <DOMFolderItem name="MovieClips/Misc + Generic" itemID="54e3f3fe-0000060c"/>
+          <DOMFolderItem name="MovieClips/Weapons" itemID="5233a7d5-00000295"/>
+          <DOMFolderItem name="MovieClips/Weapons/Attachments" itemID="52470429-00000297"/>
+          <DOMFolderItem name="MovieClips/Weapons/Complete" itemID="5233a7df-00000299"/>
+          <DOMFolderItem name="MovieClips/Weapons/Parts" itemID="5233a803-000002a5"/>
+          <DOMFolderItem name="MovieClips/Weapons/Sights" itemID="525764e5-00000b1f"/>
+          <DOMFolderItem name="Sounds" itemID="54e54c33-00000cfb"/>
+     </folders>
+     <media>
+          <DOMSoundItem name="Sounds/env_tone.mp3" itemID="54e69bc6-0000113e" linkageExportForAS="true" linkageClassName="SFX_Env_Tone" sourceExternalFilepath="./LIBRARY/Sounds/env_tone.mp3" sourceLastImported="1424398987" externalFileCRC32="600500873" externalFileSize="331022" href="Sounds/env_tone.mp3" soundDataHRef="M 15 1424555037.dat" format="44kHz 16bit Stereo" sampleCount="912384" exportFormat="1" exportBits="7" dataLength="331022" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="114048"/>
+          <DOMSoundItem name="Sounds/fire_handgun_1.mp3" itemID="54e54c2c-00000ce6" linkageExportForAS="true" linkageClassName="SFX_Fire_Handgun_1" sourceExternalFilepath="./LIBRARY/Sounds/fire_handgun_1.mp3" sourceLastImported="1424313203" externalFileCRC32="1034484266" externalFileSize="27584" href="Sounds/fire_handgun_1.mp3" soundDataHRef="M 16 1424555037.dat" format="44kHz 16bit Stereo" sampleCount="76032" exportFormat="1" exportBits="7" dataLength="27584" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="9504"/>
+          <DOMSoundItem name="Sounds/fire_handgun_2.mp3" itemID="54e54ea6-00000d04" linkageExportForAS="true" linkageClassName="SFX_Fire_Handgun_2" sourceExternalFilepath="./LIBRARY/Sounds/fire_handgun_2.mp3" sourceLastImported="1424313835" externalFileCRC32="3736046498" externalFileSize="28002" href="Sounds/fire_handgun_2.mp3" soundDataHRef="M 17 1424555037.dat" format="44kHz 16bit Stereo" sampleCount="77184" exportFormat="1" exportBits="7" dataLength="28002" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="9648"/>
+          <DOMSoundItem name="Sounds/fire_handgun_3.mp3" itemID="54e54ea6-00000d08" linkageExportForAS="true" linkageClassName="SFX_Fire_Handgun_3" sourceExternalFilepath="./LIBRARY/Sounds/fire_handgun_3.mp3" sourceLastImported="1424313848" externalFileCRC32="1767771237" externalFileSize="28002" href="Sounds/fire_handgun_3.mp3" soundDataHRef="M 18 1424555037.dat" format="44kHz 16bit Stereo" sampleCount="77184" exportFormat="1" exportBits="7" dataLength="28002" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="9648"/>
+          <DOMSoundItem name="Sounds/fire_rifle_1.mp3" itemID="54e54c2c-00000cea" linkageExportForAS="true" linkageClassName="SFX_Fire_Rifle_1" sourceExternalFilepath="./LIBRARY/Sounds/fire_rifle_1.mp3" sourceLastImported="1424313897" externalFileCRC32="2134575382" externalFileSize="60603" href="Sounds/fire_rifle_1.mp3" soundDataHRef="M 19 1424555037.dat" format="44kHz 16bit Stereo" sampleCount="167040" exportFormat="1" exportBits="7" dataLength="60603" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="20880"/>
+          <DOMSoundItem name="Sounds/fire_rifle_2.mp3" itemID="54e54ea6-00000d0c" linkageExportForAS="true" linkageClassName="SFX_Fire_Rifle_2" sourceExternalFilepath="./LIBRARY/Sounds/fire_rifle_2.mp3" sourceLastImported="1424314684" externalFileCRC32="3624075099" externalFileSize="58513" href="Sounds/fire_rifle_2.mp3" soundDataHRef="M 20 1424555037.dat" format="44kHz 16bit Stereo" sampleCount="161280" exportFormat="1" exportBits="7" dataLength="58513" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="20160"/>
+          <DOMSoundItem name="Sounds/fire_rifle_3.mp3" itemID="54e54ea6-00000d10" linkageExportForAS="true" linkageClassName="SFX_Fire_Rifle_3" sourceExternalFilepath="./LIBRARY/Sounds/fire_rifle_3.mp3" sourceLastImported="1424314691" externalFileCRC32="1349290893" externalFileSize="55587" href="Sounds/fire_rifle_3.mp3" soundDataHRef="M 21 1424555037.dat" format="44kHz 16bit Stereo" sampleCount="153216" exportFormat="1" exportBits="7" dataLength="55587" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="19152"/>
+          <DOMSoundItem name="Sounds/fire_shotgun_1.mp3" itemID="54e54c2c-00000cee" linkageExportForAS="true" linkageClassName="SFX_Fire_Shotgun_1" sourceExternalFilepath="./LIBRARY/Sounds/fire_shotgun_1.mp3" sourceLastImported="1424313259" externalFileCRC32="1541573862" externalFileSize="40123" href="Sounds/fire_shotgun_1.mp3" soundDataHRef="M 22 1424555037.dat" format="44kHz 16bit Stereo" sampleCount="110592" exportFormat="1" exportBits="7" dataLength="40123" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="13824"/>
+          <DOMSoundItem name="Sounds/fire_shotgun_2.mp3" itemID="54e54ea6-00000d14" linkageExportForAS="true" linkageClassName="SFX_Fire_Shotgun_2" sourceExternalFilepath="./LIBRARY/Sounds/fire_shotgun_2.mp3" sourceLastImported="1424313977" externalFileCRC32="1343136343" externalFileSize="40123" href="Sounds/fire_shotgun_2.mp3" soundDataHRef="M 23 1424555037.dat" format="44kHz 16bit Stereo" sampleCount="110592" exportFormat="1" exportBits="7" dataLength="40123" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="13824"/>
+          <DOMSoundItem name="Sounds/fire_shotgun_3.mp3" itemID="54e54ea6-00000d18" linkageExportForAS="true" linkageClassName="SFX_Fire_Shotgun_3" sourceExternalFilepath="./LIBRARY/Sounds/fire_shotgun_3.mp3" sourceLastImported="1424314869" externalFileCRC32="3421305119" externalFileSize="40123" href="Sounds/fire_shotgun_3.mp3" soundDataHRef="M 24 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="110592" exportFormat="1" exportBits="7" dataLength="40123" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="13824"/>
+          <DOMSoundItem name="Sounds/fire_silencer_1.mp3" itemID="54e551f1-00000d3c" linkageExportForAS="true" linkageClassName="SFX_Fire_Silencer_1" sourceExternalFilepath="./LIBRARY/Sounds/fire_silencer_1.mp3" sourceLastImported="1424314833" externalFileCRC32="2964612392" externalFileSize="20479" href="Sounds/fire_silencer_1.mp3" soundDataHRef="M 25 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="56448" exportFormat="1" exportBits="7" dataLength="20479" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="7056"/>
+          <DOMSoundItem name="Sounds/fire_silencer_2.mp3" itemID="54e551f1-00000d40" linkageExportForAS="true" linkageClassName="SFX_Fire_Silencer_2" sourceExternalFilepath="./LIBRARY/Sounds/fire_silencer_2.mp3" sourceLastImported="1424314845" externalFileCRC32="380065872" externalFileSize="19643" href="Sounds/fire_silencer_2.mp3" soundDataHRef="M 26 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="54144" exportFormat="1" exportBits="7" dataLength="19643" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="6768"/>
+          <DOMSoundItem name="Sounds/fire_silencer_3.mp3" itemID="54e551f1-00000d44" linkageExportForAS="true" linkageClassName="SFX_Fire_Silencer_3" sourceExternalFilepath="./LIBRARY/Sounds/fire_silencer_3.mp3" sourceLastImported="1424314853" externalFileCRC32="2879786538" externalFileSize="18807" href="Sounds/fire_silencer_3.mp3" soundDataHRef="M 27 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="51840" exportFormat="1" exportBits="7" dataLength="18807" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="6480"/>
+          <DOMSoundItem name="Sounds/fire_smg_1.mp3" itemID="54e54c2c-00000cf2" linkageExportForAS="true" linkageClassName="SFX_Fire_Smg_1" sourceExternalFilepath="./LIBRARY/Sounds/fire_smg_1.mp3" sourceLastImported="1424314707" externalFileCRC32="1564152869" externalFileSize="24658" href="Sounds/fire_smg_1.mp3" soundDataHRef="M 28 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="67968" exportFormat="1" exportBits="7" dataLength="24658" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="8496"/>
+          <DOMSoundItem name="Sounds/fire_smg_2.mp3" itemID="54e54f75-00000d2e" linkageExportForAS="true" linkageClassName="SFX_Fire_Smg_2" sourceExternalFilepath="./LIBRARY/Sounds/fire_smg_2.mp3" sourceLastImported="1424314775" externalFileCRC32="3647706473" externalFileSize="23404" href="Sounds/fire_smg_2.mp3" soundDataHRef="M 29 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="64512" exportFormat="1" exportBits="7" dataLength="23404" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="8064"/>
+          <DOMSoundItem name="Sounds/fire_smg_3.mp3" itemID="54e54f75-00000d32" linkageExportForAS="true" linkageClassName="SFX_Fire_Smg_3" sourceExternalFilepath="./LIBRARY/Sounds/fire_smg_3.mp3" sourceLastImported="1424314780" externalFileCRC32="3672332217" externalFileSize="22568" href="Sounds/fire_smg_3.mp3" soundDataHRef="M 30 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="62208" exportFormat="1" exportBits="7" dataLength="22568" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="7776"/>
+          <DOMSoundItem name="Sounds/fire_sniper_1.mp3" itemID="54e54c2c-00000cf6" linkageExportForAS="true" linkageClassName="SFX_Fire_Sniper_1" sourceExternalFilepath="./LIBRARY/Sounds/fire_sniper_1.mp3" sourceLastImported="1424314407" externalFileCRC32="3078979980" externalFileSize="73141" href="Sounds/fire_sniper_1.mp3" soundDataHRef="M 31 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="201600" exportFormat="1" exportBits="7" dataLength="73141" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="25200"/>
+          <DOMSoundItem name="Sounds/fire_sniper_2.mp3" itemID="54e54ea6-00000d1c" linkageExportForAS="true" linkageClassName="SFX_Fire_Sniper_2" sourceExternalFilepath="./LIBRARY/Sounds/fire_sniper_2.mp3" sourceLastImported="1424314423" externalFileCRC32="3125036697" externalFileSize="69798" href="Sounds/fire_sniper_2.mp3" soundDataHRef="M 32 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="192384" exportFormat="1" exportBits="7" dataLength="69798" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="24048"/>
+          <DOMSoundItem name="Sounds/fire_sniper_3.mp3" itemID="54e54ea6-00000d20" linkageExportForAS="true" linkageClassName="SFX_Fire_Sniper_3" sourceExternalFilepath="./LIBRARY/Sounds/fire_sniper_3.mp3" sourceLastImported="1424314431" externalFileCRC32="3997789145" externalFileSize="66454" href="Sounds/fire_sniper_3.mp3" soundDataHRef="M 33 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="183168" exportFormat="1" exportBits="7" dataLength="66454" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="22896"/>
+          <DOMSoundItem name="Sounds/menu_click.mp3" itemID="54e69bbf-00001136" linkageExportForAS="true" linkageClassName="SFX_Menu_Click" sourceExternalFilepath="./LIBRARY/Sounds/menu_click.mp3" sourceLastImported="1424398899" externalFileCRC32="3030911551" externalFileSize="3342" href="Sounds/menu_click.mp3" soundDataHRef="M 34 1424555038.dat" format="44kHz 16bit Mono" sampleCount="9216" exportFormat="1" exportBits="7" dataLength="3342" exportNative="true" cachedSampleCount="1152"/>
+          <DOMSoundItem name="Sounds/menu_hover.mp3" itemID="54e69bbf-0000113a" linkageExportForAS="true" linkageClassName="SFX_Menu_Hover" sourceExternalFilepath="./LIBRARY/Sounds/menu_hover.mp3" sourceLastImported="1424400395" externalFileCRC32="3730432949" externalFileSize="3760" href="Sounds/menu_hover.mp3" soundDataHRef="M 35 1424555038.dat" format="44kHz 16bit Mono" sampleCount="10368" exportFormat="1" exportBits="7" dataLength="3760" exportNative="true" cachedSampleCount="1296"/>
+          <DOMBitmapItem name="Images/mf1.jpg" itemID="54e51692-00000c17" sourceExternalFilepath="./LIBRARY/Images/mf1.jpg" sourceLastImported="1424299666" externalFileCRC32="2170010888" externalFileSize="14615" quality="50" href="Images/mf1.jpg" bitmapDataHRef="M 2 1424546440.dat" frameRight="25600" frameBottom="16000" isJPEG="true"/>
+          <DOMBitmapItem name="Images/mf2.jpg" itemID="54e51696-00000c18" sourceExternalFilepath="./LIBRARY/Images/mf2.jpg" sourceLastImported="1424299670" externalFileCRC32="3880471507" externalFileSize="11904" quality="50" href="Images/mf2.jpg" bitmapDataHRef="M 1 1424546440.dat" frameRight="25600" frameBottom="14400" isJPEG="true"/>
+          <DOMBitmapItem name="Images/mf3.jpg" itemID="54e51689-00000c12" sourceExternalFilepath="./LIBRARY/Images/mf3.jpg" sourceLastImported="1424299594" externalFileCRC32="210431427" externalFileSize="37317" quality="50" href="Images/mf3.jpg" bitmapDataHRef="M 3 1424546440.dat" frameRight="10240" frameBottom="6400" isJPEG="true"/>
+          <DOMBitmapItem name="Images/mf4.jpg" itemID="54e51689-00000c16" sourceExternalFilepath="./LIBRARY/Images/mf4.jpg" sourceLastImported="1424299615" externalFileCRC32="2332861235" externalFileSize="32121" quality="50" href="Images/mf4.jpg" bitmapDataHRef="M 4 1424546440.dat" frameRight="11520" frameBottom="5120" isJPEG="true"/>
+          <DOMBitmapItem name="Images/mf5.jpg" itemID="54e51689-00000c0e" sourceExternalFilepath="./LIBRARY/Images/mf5.jpg" sourceLastImported="1424299636" externalFileCRC32="842832967" externalFileSize="35032" quality="50" href="Images/mf5.jpg" bitmapDataHRef="M 5 1424546440.dat" frameRight="10240" frameBottom="6400" isJPEG="true"/>
+          <DOMSoundItem name="Sounds/reload_attach_1.mp3" itemID="54e55d2e-00000d5c" linkageExportForAS="true" linkageClassName="SFX_Reload_Attach_1" sourceExternalFilepath="./LIBRARY/Sounds/reload_attach_1.mp3" sourceLastImported="1424317683" externalFileCRC32="625735132" externalFileSize="5432" href="Sounds/reload_attach_1.mp3" soundDataHRef="M 36 1424555038.dat" format="44kHz 16bit Mono" sampleCount="14976" exportFormat="1" exportBits="7" dataLength="5432" exportNative="true" cachedSampleCount="1872"/>
+          <DOMSoundItem name="Sounds/reload_attach_2.mp3" itemID="54e55d2e-00000d60" linkageExportForAS="true" linkageClassName="SFX_Reload_Attach_2" sourceExternalFilepath="./LIBRARY/Sounds/reload_attach_2.mp3" sourceLastImported="1424317718" externalFileCRC32="3314927046" externalFileSize="5014" href="Sounds/reload_attach_2.mp3" soundDataHRef="M 37 1424555038.dat" format="44kHz 16bit Mono" sampleCount="13824" exportFormat="1" exportBits="7" dataLength="5014" exportNative="true" cachedSampleCount="1728"/>
+          <DOMSoundItem name="Sounds/reload_bolt.mp3" itemID="54e565ba-00000d8c" linkageExportForAS="true" linkageClassName="SFX_Reload_Bolt" sourceExternalFilepath="./LIBRARY/Sounds/reload_bolt.mp3" sourceLastImported="1424320091" externalFileCRC32="1907361008" externalFileSize="12119" href="Sounds/reload_bolt.mp3" soundDataHRef="M 38 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="33408" exportFormat="1" exportBits="7" dataLength="12119" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="4176"/>
+          <DOMSoundItem name="Sounds/reload_equip_1.mp3" itemID="54e55d2e-00000d64" linkageExportForAS="true" linkageClassName="SFX_Reload_Equip_1" sourceExternalFilepath="./LIBRARY/Sounds/reload_equip_1.mp3" sourceLastImported="1424318124" externalFileCRC32="44895840" externalFileSize="5432" href="Sounds/reload_equip_1.mp3" soundDataHRef="M 39 1424555038.dat" format="44kHz 16bit Mono" sampleCount="14976" exportFormat="1" exportBits="7" dataLength="5432" exportNative="true" cachedSampleCount="1872"/>
+          <DOMSoundItem name="Sounds/reload_equip_2.mp3" itemID="54e55d2e-00000d68" linkageExportForAS="true" linkageClassName="SFX_Reload_Equip_2" sourceExternalFilepath="./LIBRARY/Sounds/reload_equip_2.mp3" sourceLastImported="1424318162" externalFileCRC32="2866726075" externalFileSize="7104" href="Sounds/reload_equip_2.mp3" soundDataHRef="M 40 1424555038.dat" format="44kHz 16bit Mono" sampleCount="19584" exportFormat="1" exportBits="7" dataLength="7104" exportNative="true" cachedSampleCount="2448"/>
+          <DOMSoundItem name="Sounds/reload_magin.mp3" itemID="54e55d2e-00000d6c" linkageExportForAS="true" linkageClassName="SFX_Reload_MagIn" sourceExternalFilepath="./LIBRARY/Sounds/reload_magin.mp3" sourceLastImported="1424319584" externalFileCRC32="217634719" externalFileSize="9194" href="Sounds/reload_magin.mp3" soundDataHRef="M 41 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="25344" exportFormat="1" exportBits="7" dataLength="9194" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="3168"/>
+          <DOMSoundItem name="Sounds/reload_magout.mp3" itemID="54e55d2e-00000d70" linkageExportForAS="true" linkageClassName="SFX_Reload_MagOut" sourceExternalFilepath="./LIBRARY/Sounds/reload_magout.mp3" sourceLastImported="1424319591" externalFileCRC32="2129283995" externalFileSize="9194" href="Sounds/reload_magout.mp3" soundDataHRef="M 42 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="25344" exportFormat="1" exportBits="7" dataLength="9194" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="3168"/>
+          <DOMSoundItem name="Sounds/reload_pump.mp3" itemID="54e56a75-00000da4" linkageExportForAS="true" linkageClassName="SFX_Reload_Pump" sourceExternalFilepath="./LIBRARY/Sounds/reload_pump.mp3" sourceLastImported="1424321132" externalFileCRC32="1598984276" externalFileSize="10030" href="Sounds/reload_pump.mp3" soundDataHRef="M 43 1424555038.dat" format="44kHz 16bit Mono" sampleCount="27648" exportFormat="1" exportBits="7" dataLength="10030" exportNative="true" cachedSampleCount="3456"/>
+          <DOMSoundItem name="Sounds/reload_pump_sniper.mp3" itemID="54e56cbe-00000db1" linkageExportForAS="true" linkageClassName="SFX_Reload_Pump_Sniper" sourceExternalFilepath="./LIBRARY/Sounds/reload_pump_sniper.mp3" sourceLastImported="1424321800" externalFileCRC32="3115149507" externalFileSize="11701" href="Sounds/reload_pump_sniper.mp3" soundDataHRef="M 44 1424555038.dat" format="44kHz 16bit Mono" sampleCount="32256" exportFormat="1" exportBits="7" dataLength="11701" exportNative="true" cachedSampleCount="4032"/>
+          <DOMSoundItem name="Sounds/reload_shell_shotgun.mp3" itemID="54e56b91-00000dac" linkageExportForAS="true" linkageClassName="SFX_Reload_Shell_Shotgun" sourceExternalFilepath="./LIBRARY/Sounds/reload_shell_shotgun.mp3" sourceLastImported="1424321544" externalFileCRC32="11545388" externalFileSize="6686" href="Sounds/reload_shell_shotgun.mp3" soundDataHRef="M 45 1424555038.dat" format="44kHz 16bit Mono" sampleCount="18432" exportFormat="1" exportBits="7" dataLength="6686" exportNative="true" cachedSampleCount="2304"/>
+          <DOMSoundItem name="Sounds/reload_slideback.mp3" itemID="54e56198-00000d7b" linkageExportForAS="true" linkageClassName="SFX_Reload_SlideBack" sourceExternalFilepath="./LIBRARY/Sounds/reload_slideback.mp3" sourceLastImported="1424319607" externalFileCRC32="1805228557" externalFileSize="7940" href="Sounds/reload_slideback.mp3" soundDataHRef="M 46 1424555038.dat" format="44kHz 16bit Stereo" sampleCount="21888" exportFormat="1" exportBits="7" dataLength="7940" exportNative="true" cacheFormat="5kHz 8bit Stereo" cachedSampleCount="2736"/>
+          <DOMSoundItem name="Sounds/reload_sliderelease.mp3" itemID="54e56199-00000d7f" linkageExportForAS="true" linkageClassName="SFX_Reload_SlideRelease" sourceExternalFilepath="./LIBRARY/Sounds/reload_sliderelease.mp3" sourceLastImported="1424318847" externalFileCRC32="1801024948" externalFileSize="5432" href="Sounds/reload_sliderelease.mp3" soundDataHRef="M 47 1424555038.dat" format="44kHz 16bit Mono" sampleCount="14976" exportFormat="1" exportBits="7" dataLength="5432" exportNative="true" cachedSampleCount="1872"/>
+          <DOMBitmapItem name="Images/sil1.jpg" itemID="54e53c01-00000c89" sourceExternalFilepath="./LIBRARY/Images/sil1.jpg" sourceLastImported="1424308987" externalFileCRC32="637211969" externalFileSize="16695" quality="50" href="Images/sil1.jpg" bitmapDataHRef="M 6 1424546440.dat" frameRight="6400" frameBottom="3840" isJPEG="true"/>
+          <DOMBitmapItem name="Images/sil2.jpg" itemID="54e53c01-00000c8d" sourceExternalFilepath="./LIBRARY/Images/sil2.jpg" sourceLastImported="1424309029" externalFileCRC32="721612074" externalFileSize="17670" quality="50" href="Images/sil2.jpg" bitmapDataHRef="M 7 1424546440.dat" frameRight="7680" frameBottom="5120" isJPEG="true"/>
+          <DOMBitmapItem name="Images/sil3.jpg" itemID="54e53c01-00000c91" sourceExternalFilepath="./LIBRARY/Images/sil3.jpg" sourceLastImported="1424309049" externalFileCRC32="1772976240" externalFileSize="17860" quality="50" href="Images/sil3.jpg" bitmapDataHRef="M 8 1424546440.dat" frameRight="7680" frameBottom="5120" isJPEG="true"/>
+          <DOMBitmapItem name="Images/sil4.jpg" itemID="54e53c01-00000c85" sourceExternalFilepath="./LIBRARY/Images/sil4.jpg" sourceLastImported="1424309075" externalFileCRC32="1996991346" externalFileSize="20878" quality="50" href="Images/sil4.jpg" bitmapDataHRef="M 9 1424546440.dat" frameRight="7680" frameBottom="5640" isJPEG="true"/>
+          <DOMBitmapItem name="Images/Smoke.png" itemID="5233ad9e-0000040f" sourceExternalFilepath="./LIBRARY/Images/Smoke.png" sourceLastImported="1379118467" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Images/Smoke.png" bitmapDataHRef="M 13 1424546472.dat" frameRight="800" frameBottom="800"/>
+          <DOMBitmapItem name="Images/sparks1.jpg" itemID="54e51838-00000c2b" sourceExternalFilepath="./LIBRARY/Images/sparks1.jpg" sourceLastImported="1424300036" externalFileCRC32="435279960" externalFileSize="21553" quality="50" href="Images/sparks1.jpg" bitmapDataHRef="M 10 1424546440.dat" frameRight="10240" frameBottom="5120" isJPEG="true"/>
+          <DOMBitmapItem name="Images/sparks2.jpg" itemID="54e51838-00000c2f" sourceExternalFilepath="./LIBRARY/Images/sparks2.jpg" sourceLastImported="1424300066" externalFileCRC32="132591790" externalFileSize="22385" quality="50" href="Images/sparks2.jpg" bitmapDataHRef="M 11 1424546440.dat" frameRight="10240" frameBottom="5120" isJPEG="true"/>
+          <DOMBitmapItem name="Images/sparks3.jpg" itemID="54e51838-00000c33" sourceExternalFilepath="./LIBRARY/Images/sparks3.jpg" sourceLastImported="1424300083" externalFileCRC32="1205272752" externalFileSize="21760" quality="50" href="Images/sparks3.jpg" bitmapDataHRef="M 12 1424546440.dat" frameRight="11520" frameBottom="5120" isJPEG="true"/>
+          <DOMBitmapItem name="Images/XWILKINX_Logo.png" itemID="54e8f5a1-000009f0" sourceExternalFilepath="./LIBRARY/Images/XWILKINX_Logo.png" sourceLastImported="1424553295" externalFileCRC32="2188743313" externalFileSize="2408" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Images/XWILKINX_Logo.png" bitmapDataHRef="M 14 1424553377.dat" frameRight="2000" frameBottom="600"/>
+     </media>
+     <symbols>
+          <Include href="Buttons/BUT.Arrow.xml" itemIcon="0" loadImmediate="false" itemID="54e8f870-00000b2c" lastModified="1424554129"/>
+          <Include href="MovieClips/Characters/Hands/HAND.GripBarrel.Shell.xml" loadImmediate="false" itemID="536421b5-0000614d" lastModified="1424235920"/>
+          <Include href="MovieClips/Classes/ImpactEffect.xml" itemID="5244c530-00001674" lastModified="1409525469"/>
+          <Include href="MovieClips/Classes/Mag.xml" loadImmediate="false" itemID="5130303f-000002f1" lastModified="1424553054"/>
+          <Include href="MovieClips/Classes/MuzzleFlash.xml" loadImmediate="false" itemID="512c0b83-000003e0" lastModified="1424553054"/>
+          <Include href="MovieClips/Classes/Shell.xml" loadImmediate="false" itemID="512c3ac8-0000043c" lastModified="1424553054"/>
+          <Include href="MovieClips/Classes/Smoke.xml" loadImmediate="false" itemID="51590d84-000002b4" lastModified="1424553054"/>
+          <Include href="MovieClips/Classes/Weapon.xml" loadImmediate="false" itemID="5122ca89-00000218" lastModified="1424553054"/>
+          <Include href="MovieClips/Effects/FX.Impact.Blood.xml" loadImmediate="false" itemID="531526a0-00000f4a" lastModified="1393902026"/>
+          <Include href="MovieClips/Effects/FX.Impact.Default.xml" loadImmediate="false" itemID="531526fe-00000f59" lastModified="1393901686"/>
+          <Include href="MovieClips/Effects/FX.Impact.Headshot.xml" loadImmediate="false" itemID="5403a2c1-0000106b" lastModified="1409525427"/>
+          <Include href="MovieClips/Effects/FX.Laser.xml" loadImmediate="false" itemID="53b3179b-00006e24" lastModified="1424234839"/>
+          <Include href="MovieClips/Effects/FX.Laser.MC.xml" loadImmediate="false" itemID="54e41578-000009f9" lastModified="1424234220"/>
+          <Include href="MovieClips/Effects/FX.MuzzleFlash.xml" loadImmediate="false" itemID="51590eee-000002c1" lastModified="1424299821"/>
+          <Include href="MovieClips/Effects/FX.MuzzleFlashSilencer.xml" loadImmediate="false" itemID="54e53be0-00000c71" lastModified="1424309522"/>
+          <Include href="MovieClips/Effects/FX.MuzzleSparks.xml" loadImmediate="false" itemID="54e518e9-00000c40" lastModified="1424300484"/>
+          <Include href="MovieClips/Effects/FX.Smoke.xml" loadImmediate="false" itemID="51590ece-000002bb" lastModified="1379118527"/>
+          <Include href="MovieClips/Equipment/Complete/BATON.xml" loadImmediate="false" itemID="5235124a-0000178b" lastModified="1408834400"/>
+          <Include href="MovieClips/Equipment/Parts/EQP.BATON.Gfx.xml" loadImmediate="false" itemID="523665ee-000017ed" lastModified="1408836389"/>
+          <Include href="MovieClips/Equipment/Parts/EQP.BATON.Weapon.xml" loadImmediate="false" itemID="52f18a49-00001948" lastModified="1424396888"/>
+          <Include href="MovieClips/Equipment/Parts/EQP.CROWBAR.Weapon.xml" loadImmediate="false" itemID="5317c506-00001678" lastModified="1424396901"/>
+          <Include href="MovieClips/Equipment/Parts/EQP.KNIFE.Gfx.xml" loadImmediate="false" itemID="523665e3-000017ea" lastModified="1408998021"/>
+          <Include href="MovieClips/Equipment/Parts/WPN.CONCUSSION.Grenade.xml" loadImmediate="false" itemID="52ba2af5-000018c4" lastModified="1409523732"/>
+          <Include href="MovieClips/Equipment/Parts/WPN.FRAG.Grenade.xml" loadImmediate="false" itemID="52578a9c-00000b86" lastModified="1424396917"/>
+          <Include href="MovieClips/Equipment/Parts/WPN.HANDS.xml" loadImmediate="false" itemID="5260b88f-00001c24" lastModified="1424226823"/>
+          <Include href="MovieClips/Equipment/Parts/WPN.STUN.Grenade.xml" loadImmediate="false" itemID="52583c2f-000010c4" lastModified="1409523600"/>
+          <Include href="MovieClips/Equipment/Parts/WPN.TEARGAS.Grenade.xml" loadImmediate="false" itemID="525893a2-0000151d" lastModified="1424396577"/>
+          <Include href="MovieClips/Misc + Generic/MC.Arrow.xml" loadImmediate="false" itemID="54e3ccba-00000510" lastModified="1424554096"/>
+          <Include href="MovieClips/Misc + Generic/MC.Point.xml" loadImmediate="false" itemID="511dacc0-00000035" lastModified="1424322066"/>
+          <Include href="MovieClips/Weapons/Attachments/ATTACHMENT.Bayonet.xml" loadImmediate="false" itemID="5316739b-00001003" lastModified="1403984146"/>
+          <Include href="MovieClips/Weapons/Attachments/ATTACHMENT.Grip.xml" loadImmediate="false" itemID="5270673f-000023e6" lastModified="1383098281"/>
+          <Include href="MovieClips/Weapons/Attachments/ATTACHMENT.GripRifle.xml" loadImmediate="false" itemID="527c4e80-000025b4" lastModified="1383881716"/>
+          <Include href="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.Glock.xml" loadImmediate="false" itemID="52d363ae-0000045a" lastModified="1404246589"/>
+          <Include href="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.Kimber.xml" loadImmediate="false" itemID="52d36251-0000041d" lastModified="1404246599"/>
+          <Include href="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.M9.xml" loadImmediate="false" itemID="52d362ad-00000430" lastModified="1404246608"/>
+          <Include href="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.P226.xml" loadImmediate="false" itemID="52d362fe-0000044d" lastModified="1404246618"/>
+          <Include href="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.Rifle.xml" loadImmediate="false" itemID="52d36352-00000450" lastModified="1408833117"/>
+          <Include href="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.USP.xml" loadImmediate="false" itemID="52d3634b-0000044f" lastModified="1404246751"/>
+          <Include href="MovieClips/Weapons/Attachments/ATTACHMENT.Silencer.xml" loadImmediate="false" itemID="52536b88-00002b7c" lastModified="1424229581"/>
+          <Include href="MovieClips/Weapons/Attachments/ATTACHMENT.Silencer.Shotgun.xml" loadImmediate="false" itemID="53af1872-00003e08" lastModified="1424229206"/>
+          <Include href="MovieClips/Weapons/Complete/SHIELD.xml" loadImmediate="false" itemID="52fa9e7e-00000417" lastModified="1392168601"/>
+          <Include href="MovieClips/Weapons/Complete/SHIELD.Front.xml" loadImmediate="false" itemID="52faa2d1-0000042c" lastModified="1424397098"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.AA12.xml" loadImmediate="false" itemID="528034f6-0000382b" lastModified="1424226823"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.AA12.Gun.xml" loadImmediate="false" itemID="5280348e-00003827" lastModified="1404614457"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.AA12.Mag.xml" loadImmediate="false" itemID="5280344a-0000380d" lastModified="1389055279"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.AA12.Sight.xml" loadImmediate="false" itemID="528037c9-0000398b" lastModified="1405737869"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.AA12.Slide.xml" loadImmediate="false" itemID="5280347e-00003823" lastModified="1384212986"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.ACR.xml" loadImmediate="false" itemID="527c5ac0-00002717" lastModified="1424298354"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.ACR.Gun.xml" loadImmediate="false" itemID="527c5978-0000270f" lastModified="1403984531"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.ACR.Mag.xml" loadImmediate="false" itemID="527c594c-0000270b" lastModified="1389055259"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.ACR.Sight.xml" loadImmediate="false" itemID="527c5c0d-0000274d" lastModified="1406682424"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.ACR.Slide.xml" loadImmediate="false" itemID="527c5984-00002713" lastModified="1383881092"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.AUG.xml" loadImmediate="false" itemID="527b0eb5-00001a61" lastModified="1424226823"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.AUG.Gun.xml" loadImmediate="false" itemID="527b0e66-00001a5c" lastModified="1405731611"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.AUG.Mag.xml" loadImmediate="false" itemID="527b0bbc-00001a11" lastModified="1389055223"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.AUG.Sight.xml" loadImmediate="false" itemID="527b0e15-00001a42" lastModified="1405735586"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.AUG.Slide.xml" loadImmediate="false" itemID="527b0e57-00001a58" lastModified="1383796311"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.EVO3.xml" loadImmediate="false" itemID="527c3239-00002297" lastModified="1424226823"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.EVO3.Gun.xml" loadImmediate="false" itemID="527c3129-00002286" lastModified="1394515297"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.EVO3.Mag.xml" loadImmediate="false" itemID="527c30fd-00002282" lastModified="1389055229"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.EVO3.Sight.xml" loadImmediate="false" itemID="527c32b2-000022c1" lastModified="1406682350"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.EVO3.Slide.xml" loadImmediate="false" itemID="527c3143-00002293" lastModified="1383870787"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.FAMAS.xml" loadImmediate="false" itemID="528043b6-00003b3e" lastModified="1424226823"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.FAMAS.Gun.xml" loadImmediate="false" itemID="52804259-00003a86" lastModified="1405736598"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.FAMAS.Mag.xml" loadImmediate="false" itemID="52804200-00003a80" lastModified="1389055266"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.FAMAS.Sight.xml" loadImmediate="false" itemID="52804370-00003ae7" lastModified="1405736609"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.FAMAS.Slide.xml" loadImmediate="false" itemID="528041f4-00003a7c" lastModified="1384138373"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.G36C.xml" loadImmediate="false" itemID="527c487d-0000249e" lastModified="1424238047"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.G36C.Gun.xml" loadImmediate="false" itemID="527c469f-0000248d" lastModified="1404256054"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.G36C.Mag.xml" loadImmediate="false" itemID="527c4645-00002489" lastModified="1390950368"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.G36C.Sight.xml" loadImmediate="false" itemID="527c4a9c-00002552" lastModified="1405736559"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.G36C.Slide.xml" loadImmediate="false" itemID="527c46ae-0000249a" lastModified="1384670951"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.GLOCK.xml" loadImmediate="false" itemID="526db216-0000218b" lastModified="1424226823"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.GLOCK.Gun.xml" loadImmediate="false" itemID="526db11f-0000217a" lastModified="1394515309"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.GLOCK.Mag.xml" loadImmediate="false" itemID="526db1a5-0000217e" lastModified="1405129274"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.GLOCK.Slide.xml" loadImmediate="false" itemID="526db0f1-00002176" lastModified="1382922154"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.HK417.xml" loadImmediate="false" itemID="52804dc8-00003c9a" lastModified="1424226823"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.HK417.Gun.xml" loadImmediate="false" itemID="52804d50-00003c8f" lastModified="1403984905"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.HK417.Mag.xml" loadImmediate="false" itemID="52804cef-00003c8b" lastModified="1389055274"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.HK417.Sight.xml" loadImmediate="false" itemID="52804e9b-00003cbd" lastModified="1406682448"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.HK417.Slide.xml" loadImmediate="false" itemID="52804d7c-00003c96" lastModified="1384140156"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.KIMBER.xml" loadImmediate="false" itemID="52488179-00001f0c" lastModified="1424321180"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.KIMBER.Gun.xml" loadImmediate="false" itemID="52488037-00001f08" lastModified="1424320498"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.KIMBER.Mag.xml" loadImmediate="false" itemID="52488330-00001f2f" lastModified="1405128581"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.KIMBER.Slide.xml" loadImmediate="false" itemID="52488027-00001f04" lastModified="1409451143"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M2.xml" loadImmediate="false" itemID="52768387-00000302" lastModified="1424502727"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M2.Gun.xml" loadImmediate="false" itemID="527682f1-000002ed" lastModified="1404614382"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M2.Sight.xml" loadImmediate="false" itemID="52768352-000002fe" lastModified="1405736695"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M2.Slide.xml" loadImmediate="false" itemID="52768305-000002fa" lastModified="1383499491"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M4.xml" loadImmediate="false" itemID="524cef5d-000028df" lastModified="1424319439"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M4.Gun.xml" loadImmediate="false" itemID="524ceefc-000028ce" lastModified="1424233506"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M4.Mag.xml" loadImmediate="false" itemID="524ceec0-000028ca" lastModified="1389055246"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M4.Sight.xml" loadImmediate="false" itemID="524e1f61-00002af5" lastModified="1406682384"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M4.Slide.xml" loadImmediate="false" itemID="524cef24-000028db" lastModified="1381457936"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M9.xml" loadImmediate="false" itemID="5248e833-00002508" lastModified="1424226823"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M9.Gun.xml" loadImmediate="false" itemID="5248e79f-000024e5" lastModified="1394515339"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M9.Mag.xml" loadImmediate="false" itemID="5248e81c-000024fd" lastModified="1405128618"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M9.Slide.xml" loadImmediate="false" itemID="5248e795-000024e1" lastModified="1380509662"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M590.xml" loadImmediate="false" itemID="5276c86e-000004a1" lastModified="1424502969"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M590.Gun.xml" loadImmediate="false" itemID="5276c7a2-0000049d" lastModified="1404614446"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M590.Pump.xml" loadImmediate="false" itemID="5276c794-00000499" lastModified="1424227627"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M590.Sight.xml" loadImmediate="false" itemID="5276f05b-000011a5" lastModified="1405736724"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M590.Slide.xml" loadImmediate="false" itemID="5276c77d-00000495" lastModified="1383516029"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M1014.xml" loadImmediate="false" itemID="523259c0-00003d27" lastModified="1424502596"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M1014.Gun.xml" loadImmediate="false" itemID="5232599e-00003d1f" lastModified="1404614340"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M1014.Sight.xml" loadImmediate="false" itemID="524e2573-00002b5c" lastModified="1405736657"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.M1014.Slide.xml" loadImmediate="false" itemID="5233a7f6-0000029f" lastModified="1383369066"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.MAC10.xml" loadImmediate="false" itemID="52800ab2-000028bf" lastModified="1424319967"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.MAC10.Gun.xml" loadImmediate="false" itemID="52800a19-000028bb" lastModified="1394515342"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.MAC10.Mag.xml" loadImmediate="false" itemID="528009db-000028b7" lastModified="1389055235"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.MAC10.Sight.xml" loadImmediate="false" itemID="52800ceb-00002c33" lastModified="1394515406"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.MAC10.Slide.xml" loadImmediate="false" itemID="528009d1-000028b3" lastModified="1384122833"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.MP5.xml" loadImmediate="false" itemID="525de9f6-00001a5f" lastModified="1424408418"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.MP5.Gun.xml" loadImmediate="false" itemID="525de925-00001a45" lastModified="1424405965"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.MP5.Mag.xml" loadImmediate="false" itemID="525de8fb-00001a41" lastModified="1389055218"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.MP5.Sight.xml" loadImmediate="false" itemID="525deb23-00001b06" lastModified="1405735565"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.MP5.Slide.xml" loadImmediate="false" itemID="525de967-00001a5b" lastModified="1381886328"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.P226.xml" loadImmediate="false" itemID="524a25b7-000026a5" lastModified="1424226823"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.P226.Gun.xml" loadImmediate="false" itemID="524a24fd-0000268e" lastModified="1408924379"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.P226.Mag.xml" loadImmediate="false" itemID="524a2555-000026a3" lastModified="1405128685"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.P226.Slide.xml" loadImmediate="false" itemID="524a24cd-0000268a" lastModified="1380591057"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.R870.xml" loadImmediate="false" itemID="52707959-0000265d" lastModified="1424502375"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.R870.Gun.xml" loadImmediate="false" itemID="5270795f-00002661" lastModified="1404614363"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.R870.Pump.xml" loadImmediate="false" itemID="5270795a-0000265e" lastModified="1424228514"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.R870.Sight.xml" loadImmediate="false" itemID="5270795d-00002660" lastModified="1405736678"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.R870.Slide.xml" loadImmediate="false" itemID="5270795b-0000265f" lastModified="1383102811"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.SPRINGFIELD.xml" loadImmediate="false" itemID="531faaf7-000004b5" lastModified="1424315006"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.SPRINGFIELD.Gun.xml" loadImmediate="false" itemID="531fab5a-000004c1" lastModified="1394586230"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.SPRINGFIELD.Sight.xml" loadImmediate="false" itemID="531fab4f-000004bd" lastModified="1394584501"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.SPRINGFIELD.Slide.xml" loadImmediate="false" itemID="531fab23-000004b9" lastModified="1394586245"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.UMP45.xml" loadImmediate="false" itemID="5280270f-0000362e" lastModified="1424320491"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.UMP45.Gun.xml" loadImmediate="false" itemID="528026fd-0000362a" lastModified="1394515356"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.UMP45.Mag.xml" loadImmediate="false" itemID="52802675-000035f5" lastModified="1405135922"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.UMP45.Sight.xml" loadImmediate="false" itemID="528028ba-0000365f" lastModified="1406682370"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.UMP45.Slide.xml" loadImmediate="false" itemID="528026f0-00003626" lastModified="1384130288"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.USP.xml" loadImmediate="false" itemID="52537fc4-00002be6" lastModified="1424226823"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.USP.Gun.xml" loadImmediate="false" itemID="52537f3b-00002bd6" lastModified="1394515372"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.USP.Mag.xml" loadImmediate="false" itemID="52537f32-00002bd2" lastModified="1415595896"/>
+          <Include href="MovieClips/Weapons/Parts/WPN.USP.Slide.xml" loadImmediate="false" itemID="52537f26-00002bce" lastModified="1381203750"/>
+          <Include href="MovieClips/Weapons/Sights/SIGHT.ACOG.xml" loadImmediate="false" itemID="524e224d-00002b13" lastModified="1383871273"/>
+          <Include href="MovieClips/Weapons/Sights/SIGHT.Aimpoint.xml" loadImmediate="false" itemID="524e229d-00002b17" lastModified="1424229004"/>
+          <Include href="MovieClips/Weapons/Sights/SIGHT.EOTech.xml" loadImmediate="false" itemID="524e210d-00002b02" lastModified="1384120669"/>
+          <Include href="MovieClips/Weapons/Sights/SIGHT.Reflex.xml" loadImmediate="false" itemID="524e1f08-00002af1" lastModified="1424229125"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1" currentFrame="15">
+               <layers>
+                    <DOMLayer name="actions" color="#FF800A" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="4" name="intro" labelType="name" keyMode="9728">
+                                   <Actionscript>
+                                        <script><![CDATA[import flash.events.MouseEvent;
+import flash.display.MovieClip;
+
+trace("ADVERSITY WEAPON PACK v1.0.0\nDeveloped by XWILKINX (www.xwilkinx.com)");
+
+stop();
+
+var frames:Array = ["intro", "items", "mods", "misc"];
+
+b_prev.addEventListener(MouseEvent.CLICK, mouseHandler);
+b_next.addEventListener(MouseEvent.CLICK, mouseHandler);
+
+function mouseHandler(e:MouseEvent):void {
+	
+	var mc:MovieClip = e.currentTarget as MovieClip;
+	
+	if (mc == b_next) {
+		
+		goto(true);
+		
+	}
+	else if (mc == b_prev) {
+		
+		goto(false);
+		
+	}
+	
+}
+
+function goto(_next:Boolean):void {
+	
+	var index:int = frames.indexOf(currentFrameLabel);
+	
+	if (index >= 0) {
+	
+		if (_next && ((index + 1) < frames.length)) {
+			
+			gotoAndStop(frames[index + 1]);
+			
+		}
+		else if (!_next && ((index - 1) >= 0)) {
+			
+			gotoAndStop(frames[index - 1]);
+			
+		} 
+	
+	}
+	
+}]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="4" duration="5" name="items" labelType="name" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="9" duration="5" name="mods" labelType="name" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                              <DOMFrame index="14" duration="5" name="misc" labelType="name" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="title" color="#4FFF4F" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="19" keyMode="9728">
+                                   <elements>
+                                        <DOMStaticText left="-160.1" width="268.15" height="22.35" autoExpand="true" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="426.05" ty="4"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>ADVERSITY WEAPON PACK</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs aliasText="false" autoKern="false" rotation="true" alpha="0.717647058823529" lineSpacing="0" lineHeight="22.35" size="20" bitmapSize="400" face="ArialMT" fillColor="#FFFFFF"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                        <DOMStaticText width="90.9" height="12.85" includeOutlines="true" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="542.6" ty="8.75"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>v1.0.0</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs aliasText="false" autoKern="false" rotation="true" alpha="0.498039215686275" lineSpacing="0" lineHeight="12.85" bitmapSize="240" face="CourierNewPSMT" fillColor="#FFFFFF"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                        <DOMBitmapInstance libraryItemName="Images/XWILKINX_Logo.png">
+                                             <matrix>
+                                                  <Matrix tx="700"/>
+                                             </matrix>
+                                        </DOMBitmapInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="buttons" color="#4F80FF" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="19" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Misc + Generic/MC.Arrow" name="b_prev" centerPoint3DX="20" centerPoint3DY="199.95">
+                                             <matrix>
+                                                  <Matrix a="2.00001525878906" d="1.99502563476563" tx="20" ty="199.95"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Misc + Generic/MC.Arrow" name="b_next" centerPoint3DX="780" centerPoint3DY="199.95">
+                                             <matrix>
+                                                  <Matrix a="-2.00001525878906" d="1.99502563476563" tx="780" ty="199.95"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="content" color="#4FFFFF" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="4" keyMode="9728">
+                                   <elements>
+                                        <DOMStaticText left="-115.75" width="375.5" height="17.9" autoExpand="true" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="328" ty="191.05"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>Thanks for downloading the Adversity Weapon Pack!</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" rotation="true" lineSpacing="0" lineHeight="17.9" size="16" bitmapSize="320" face="ArialMT" fillColor="#FFFFFF"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                        <DOMStaticText left="-92.45" width="496" height="15.6" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="244.45" ty="218.05"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>Visit www.xwilkinx.com for more resources and games!</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" rotation="true" alpha="0.498039215686275" lineSpacing="0" lineHeight="15.6" size="14" bitmapSize="280" face="ArialMT" fillColor="#FFFFFF"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="4" duration="5" keyMode="9728">
+                                   <elements>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.AUG" selected="true" centerPoint3DX="160.15" centerPoint3DY="151.3">
+                                                       <matrix>
+                                                            <Matrix tx="159.7" ty="151.65"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="0.45" y="-0.35"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.EVO3" selected="true" centerPoint3DX="160.15" centerPoint3DY="341.15">
+                                                       <matrix>
+                                                            <Matrix tx="159.65" ty="341"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="0.5" y="0.15"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.MAC10" selected="true" centerPoint3DX="160.15" centerPoint3DY="214.3">
+                                                       <matrix>
+                                                            <Matrix tx="160.15" ty="214.3"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.MP5" selected="true" centerPoint3DX="160.15" centerPoint3DY="91.1">
+                                                       <matrix>
+                                                            <Matrix tx="161.2" ty="91"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-1.05" y="0.1"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.UMP45" selected="true" centerPoint3DX="160.15" centerPoint3DY="278.8">
+                                                       <matrix>
+                                                            <Matrix tx="160.15" ty="278.8"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.ACR" centerPoint3DX="304.85" centerPoint3DY="191.05">
+                                                       <matrix>
+                                                            <Matrix tx="305.05" ty="191.05"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.2" y="-0.05"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.FAMAS" centerPoint3DX="304.85" centerPoint3DY="249.1">
+                                                       <matrix>
+                                                            <Matrix tx="304.85" ty="249.1"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.G36C" centerPoint3DX="304.85" centerPoint3DY="134.9">
+                                                       <matrix>
+                                                            <Matrix tx="304.85" ty="135.75"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="-0.85"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.HK417" centerPoint3DX="304.85" centerPoint3DY="306.55">
+                                                       <matrix>
+                                                            <Matrix tx="304.85" ty="306.55"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.M4" selected="true" centerPoint3DX="304.85" centerPoint3DY="79.4">
+                                                       <matrix>
+                                                            <Matrix tx="304.85" ty="78.65"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="0.7"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.SPRINGFIELD" centerPoint3DX="304.85" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="304.85" ty="357.8"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="0.2"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.AA12" selected="true" centerPoint3DX="472" centerPoint3DY="329.35">
+                                                       <matrix>
+                                                            <Matrix tx="470.45" ty="329.4"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="1.55"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.M2" selected="true" centerPoint3DX="472" centerPoint3DY="154.7">
+                                                       <matrix>
+                                                            <Matrix tx="472" ty="154.7"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="0.05"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.M1014" selected="true" centerPoint3DX="472" centerPoint3DY="210.1">
+                                                       <matrix>
+                                                            <Matrix tx="467.25" ty="210.15"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="4.75" y="-0.05"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.M590" selected="true" centerPoint3DX="472" centerPoint3DY="266.7">
+                                                       <matrix>
+                                                            <Matrix tx="472" ty="265.95"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="0.75"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.R870" selected="true" centerPoint3DX="472" centerPoint3DY="98.4">
+                                                       <matrix>
+                                                            <Matrix tx="472" ty="98.8"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="-0.4"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.GLOCK" selected="true" centerPoint3DX="67.75" centerPoint3DY="158.8">
+                                                       <matrix>
+                                                            <Matrix tx="67.55" ty="158.8"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="0.2"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.KIMBER" selected="true" centerPoint3DX="68.95" centerPoint3DY="332.4">
+                                                       <matrix>
+                                                            <Matrix tx="68.95" ty="332.4"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.M9" selected="true" centerPoint3DX="67.75" centerPoint3DY="100.85">
+                                                       <matrix>
+                                                            <Matrix tx="68.2" ty="100.9"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.55" y="-0.05"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.USP" selected="true" centerPoint3DX="67.75" centerPoint3DY="216.65">
+                                                       <matrix>
+                                                            <Matrix tx="67.75" ty="216.65"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.P226" selected="true" centerPoint3DX="67.75" centerPoint3DY="274.6">
+                                                       <matrix>
+                                                            <Matrix tx="67.75" ty="274.6"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Complete/SHIELD.Front" selected="true" centerPoint3DX="653.9" centerPoint3DY="119.35">
+                                                       <matrix>
+                                                            <Matrix tx="653.9" ty="119.35"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Complete/SHIELD" selected="true" centerPoint3DX="712.55" centerPoint3DY="119.5">
+                                                       <matrix>
+                                                            <Matrix tx="713.4" ty="119.1"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.85" y="0.4"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Equipment/Parts/EQP.BATON.Gfx" selected="true" centerPoint3DX="622.25" centerPoint3DY="213.5">
+                                                       <matrix>
+                                                            <Matrix tx="623.05" ty="213.9"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.8" y="-0.4"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Equipment/Parts/EQP.CROWBAR.Weapon" selected="true" centerPoint3DX="729.6" centerPoint3DY="213.65">
+                                                       <matrix>
+                                                            <Matrix a="0" b="-1" c="1" d="0" tx="726.5" ty="200.9"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-12.6" y="3.1"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Equipment/Parts/EQP.KNIFE.Gfx" selected="true" centerPoint3DX="675.95" centerPoint3DY="213.5">
+                                                       <matrix>
+                                                            <Matrix tx="675.95" ty="213.55"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="-0.05"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Equipment/Parts/WPN.CONCUSSION.Grenade" selected="true" centerPoint3DX="627.55" centerPoint3DY="288.15">
+                                                       <matrix>
+                                                            <Matrix tx="627.55" ty="288.15"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Equipment/Parts/WPN.FRAG.Grenade" selected="true" centerPoint3DX="722.4" centerPoint3DY="288.15">
+                                                       <matrix>
+                                                            <Matrix tx="722.85" ty="288.15"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.45"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Equipment/Parts/WPN.STUN.Grenade" selected="true" centerPoint3DX="658.55" centerPoint3DY="288.15">
+                                                       <matrix>
+                                                            <Matrix tx="658.55" ty="288.15"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Equipment/Parts/WPN.TEARGAS.Grenade" selected="true" centerPoint3DX="689.55" centerPoint3DY="288.15">
+                                                       <matrix>
+                                                            <Matrix tx="689.55" ty="288.2"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="-0.05"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMStaticText left="47.5" width="49" height="17.9" autoExpand="true" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="328" ty="34"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>ITEMS</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" rotation="true" alpha="0.498039215686275" lineSpacing="0" lineHeight="17.9" size="16" bitmapSize="320" face="ArialMT" fillColor="#FFFFFF"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="9" duration="5" keyMode="9728">
+                                   <elements>
+                                        <DOMStaticText left="8.4" width="127.2" height="17.9" autoExpand="true" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="328" ty="34"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>MODIFICATIONS</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" rotation="true" alpha="0.498039215686275" lineSpacing="0" lineHeight="17.9" size="16" bitmapSize="320" face="ArialMT" fillColor="#FFFFFF"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.Bayonet" selected="true" centerPoint3DX="164.3" centerPoint3DY="203.95">
+                                                       <matrix>
+                                                            <Matrix tx="149.9" ty="201.7"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="14.4" y="2.25"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.Grip" selected="true" centerPoint3DX="164.3" centerPoint3DY="240.3">
+                                                       <matrix>
+                                                            <Matrix tx="164.3" ty="234.35"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="5.95"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.GripRifle" selected="true" centerPoint3DX="164.3" centerPoint3DY="277.3">
+                                                       <matrix>
+                                                            <Matrix tx="163.4" ty="271.5"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="0.9" y="5.8"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.Glock" selected="true" centerPoint3DX="322.3" centerPoint3DY="188.9">
+                                                       <matrix>
+                                                            <Matrix tx="275.95" ty="185.6"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="46.6" y="3.3"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.Kimber" selected="true" centerPoint3DX="322.3" centerPoint3DY="210.25">
+                                                       <matrix>
+                                                            <Matrix tx="275.4" ty="207.25"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="47.15" y="3"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.M9" selected="true" centerPoint3DX="322.3" centerPoint3DY="231.25">
+                                                       <matrix>
+                                                            <Matrix tx="276.25" ty="228.25"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="46.3" y="3"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.P226" selected="true" centerPoint3DX="322.3" centerPoint3DY="251.85">
+                                                       <matrix>
+                                                            <Matrix tx="276.45" ty="248.5"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="46.1" y="3.35"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.Rifle" selected="true" centerPoint3DX="322.3" centerPoint3DY="293.7">
+                                                       <matrix>
+                                                            <Matrix tx="278" ty="291.15"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="44.55" y="2.55"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.USP" selected="true" centerPoint3DX="322.3" centerPoint3DY="272.8">
+                                                       <matrix>
+                                                            <Matrix tx="275.95" ty="269.5"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="46.6" y="3.3"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.Silencer" selected="true" centerPoint3DX="471.7" centerPoint3DY="224.4">
+                                                       <matrix>
+                                                            <Matrix tx="462.7" ty="224.4"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="9"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.Silencer.Shotgun" selected="true" centerPoint3DX="471.7" centerPoint3DY="257.05">
+                                                       <matrix>
+                                                            <Matrix tx="462.75" ty="257.05"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="8.95"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Sights/SIGHT.ACOG" selected="true" centerPoint3DX="584.45" centerPoint3DY="290.1">
+                                                       <matrix>
+                                                            <Matrix tx="584.55" ty="296.1"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.1" y="-6"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Sights/SIGHT.Aimpoint" selected="true" centerPoint3DX="584.45" centerPoint3DY="255.7">
+                                                       <matrix>
+                                                            <Matrix tx="588.35" ty="259.95"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-3.9" y="-4.25"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Sights/SIGHT.EOTech" selected="true" centerPoint3DX="584.45" centerPoint3DY="223.15">
+                                                       <matrix>
+                                                            <Matrix tx="584.45" ty="227.3"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="-4.15"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Sights/SIGHT.Reflex" selected="true" centerPoint3DX="584.45" centerPoint3DY="190.55">
+                                                       <matrix>
+                                                            <Matrix tx="584.45" ty="195.35"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="-4.8"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMGroup selected="true">
+                                                       <members>
+                                                            <DOMShape selected="true">
+                                                                 <fills>
+                                                                      <FillStyle index="1">
+                                                                           <SolidColor color="#D1D0C1"/>
+                                                                      </FillStyle>
+                                                                      <FillStyle index="2">
+                                                                           <SolidColor color="#745555"/>
+                                                                      </FillStyle>
+                                                                      <FillStyle index="3">
+                                                                           <SolidColor color="#6B4E4E"/>
+                                                                      </FillStyle>
+                                                                      <FillStyle index="4">
+                                                                           <SolidColor color="#E0DFCF"/>
+                                                                      </FillStyle>
+                                                                 </fills>
+                                                                 <strokes>
+                                                                      <StrokeStyle index="1">
+                                                                           <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                                                                                <fill>
+                                                                                     <SolidColor alpha="0.247058823529412"/>
+                                                                                </fill>
+                                                                           </SolidStroke>
+                                                                      </StrokeStyle>
+                                                                 </strokes>
+                                                                 <edges>
+                                                                      <Edge fillStyle1="1" strokeStyle="1" edges="!10126 1705S6|10126 1715!10126 1715|10101 1715!10101 1715|10101 1562!10101 1562|10126 1562!10126 1562|10126 1570"/>
+                                                                      <Edge fillStyle1="3" strokeStyle="1" edges="!10211 1570S6|10512 1570!10512 1570|10512 1639"/>
+                                                                      <Edge fillStyle1="2" strokeStyle="1" edges="!10512 1639S6|10512 1705!10512 1705|10211 1705"/>
+                                                                      <Edge fillStyle1="1" strokeStyle="1" edges="!10126 1570S6|10211 1570"/>
+                                                                      <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!10126 1570S7|10126 1639"/>
+                                                                      <Edge fillStyle0="4" fillStyle1="1" strokeStyle="1" edges="!10126 1639S7|10126 1705"/>
+                                                                      <Edge fillStyle0="4" fillStyle1="2" strokeStyle="1" edges="!10211 1705S7|10211 1639"/>
+                                                                      <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="!10211 1639S7|10211 1570"/>
+                                                                      <Edge fillStyle1="4" strokeStyle="1" edges="!10211 1705S6|10126 1705"/>
+                                                                      <Edge fillStyle0="2" fillStyle1="3" edges="!10512 1639S3|10211 1639"/>
+                                                                      <Edge fillStyle0="4" fillStyle1="1" edges="!10211 1639S3|10126 1639"/>
+                                                                 </edges>
+                                                            </DOMShape>
+                                                       </members>
+                                                  </DOMGroup>
+                                                  <DOMGroup selected="true">
+                                                       <members>
+                                                            <DOMShape selected="true">
+                                                                 <fills>
+                                                                      <FillStyle index="1">
+                                                                           <SolidColor color="#E0DFCF"/>
+                                                                      </FillStyle>
+                                                                      <FillStyle index="2">
+                                                                           <SolidColor color="#D1D0C1"/>
+                                                                      </FillStyle>
+                                                                 </fills>
+                                                                 <strokes>
+                                                                      <StrokeStyle index="1">
+                                                                           <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                                                                                <fill>
+                                                                                     <SolidColor alpha="0.247058823529412"/>
+                                                                                </fill>
+                                                                           </SolidStroke>
+                                                                      </StrokeStyle>
+                                                                 </strokes>
+                                                                 <edges>
+                                                                      <Edge fillStyle0="1" strokeStyle="1" edges="!8850 1585S5|8850 1566!8850 1566|8834 1566!8834 1566|8834 1709!8834 1709|8850 1709!8850 1709|8850 1692"/>
+                                                                      <Edge fillStyle0="2" strokeStyle="1" edges="!8865 1583S5|8850 1585!9112 1566|8865 1566!8865 1566|8865 1583!8850 1692|8865 1692"/>
+                                                                      <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!8865 1583S7|8865 1638"/>
+                                                                      <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!8865 1638S7|8865 1692"/>
+                                                                      <Edge fillStyle0="1" strokeStyle="1" edges="!8865 1692S5|8865 1709!8865 1709|9116 1709"/>
+                                                                      <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!8850 1692S7|8850 1585"/>
+                                                                      <Edge fillStyle0="1" strokeStyle="1" edges="!9114 1711S5|9175 1684!9175 1684|9368 1684!9368 1684|9368 1638"/>
+                                                                      <Edge fillStyle0="2" strokeStyle="1" edges="!9368 1638S5|9368 1591!9368 1591|9177 1591!9177 1591|9112 1568"/>
+                                                                      <Edge fillStyle0="2" edges="!9112 1568S1|9112 1566"/>
+                                                                      <Edge fillStyle0="1" edges="!9116 1709S1|9114 1711"/>
+                                                                      <Edge fillStyle0="2" fillStyle1="1" edges="!8865 1638S3|9368 1638"/>
+                                                                 </edges>
+                                                            </DOMShape>
+                                                       </members>
+                                                  </DOMGroup>
+                                                  <DOMGroup selected="true">
+                                                       <members>
+                                                            <DOMShape selected="true">
+                                                                 <fills>
+                                                                      <FillStyle index="1">
+                                                                           <SolidColor color="#E0DFCF"/>
+                                                                      </FillStyle>
+                                                                      <FillStyle index="2">
+                                                                           <SolidColor color="#D1D0C1"/>
+                                                                      </FillStyle>
+                                                                 </fills>
+                                                                 <strokes>
+                                                                      <StrokeStyle index="1">
+                                                                           <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                                                                                <fill>
+                                                                                     <SolidColor alpha="0.247058823529412"/>
+                                                                                </fill>
+                                                                           </SolidStroke>
+                                                                      </StrokeStyle>
+                                                                 </strokes>
+                                                                 <edges>
+                                                                      <Edge fillStyle0="1" strokeStyle="1" edges="!7880 1699S5|7933 1679!7933 1679|8101 1679!8101 1679|8101 1639"/>
+                                                                      <Edge fillStyle0="2" strokeStyle="1" edges="!8101 1639S5|8101 1599!8101 1599|7935 1599!7935 1599|7878 1579"/>
+                                                                      <Edge fillStyle0="1" strokeStyle="1" edges="!7650 1595S5|7650 1578!7650 1578|7636 1578!7636 1578|7636 1698!7636 1698|7650 1698!7650 1698|7650 1684"/>
+                                                                      <Edge fillStyle0="2" strokeStyle="1" edges="!7878 1578S5|7663 1578!7663 1578|7663 1593!7663 1593|7650 1595"/>
+                                                                      <Edge fillStyle0="1" strokeStyle="1" edges="!7663 1684S5|7663 1698!7663 1698|7882 1698"/>
+                                                                      <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!7663 1593S7|7663 1639"/>
+                                                                      <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!7663 1639S7|7663 1684"/>
+                                                                      <Edge fillStyle0="2" strokeStyle="1" edges="!7650 1684S5|7663 1684"/>
+                                                                      <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!7650 1595S7|7650 1684"/>
+                                                                      <Edge fillStyle0="2" edges="!7878 1579S1|7878 1578"/>
+                                                                      <Edge fillStyle0="1" edges="!7882 1698S1|7880 1699"/>
+                                                                      <Edge fillStyle0="2" fillStyle1="1" edges="!7663 1639S3|8101 1639"/>
+                                                                 </edges>
+                                                            </DOMShape>
+                                                       </members>
+                                                  </DOMGroup>
+                                                  <DOMGroup selected="true">
+                                                       <members>
+                                                            <DOMShape selected="true">
+                                                                 <fills>
+                                                                      <FillStyle index="1">
+                                                                           <SolidColor color="#E0DFCF"/>
+                                                                      </FillStyle>
+                                                                      <FillStyle index="2">
+                                                                           <SolidColor color="#D1D0C1"/>
+                                                                      </FillStyle>
+                                                                 </fills>
+                                                                 <strokes>
+                                                                      <StrokeStyle index="1">
+                                                                           <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                                                                                <fill>
+                                                                                     <SolidColor alpha="0.247058823529412"/>
+                                                                                </fill>
+                                                                           </SolidStroke>
+                                                                      </StrokeStyle>
+                                                                 </strokes>
+                                                                 <edges>
+                                                                      <Edge fillStyle0="2" edges="!6680 1579S1|6680 1578"/>
+                                                                      <Edge fillStyle0="1" strokeStyle="1" edges="!6682 1699S5|6735 1679!6735 1679|6903 1679!6903 1679|6903 1639"/>
+                                                                      <Edge fillStyle0="2" strokeStyle="1" edges="!6903 1639S5|6903 1599!6903 1599|6737 1599!6737 1599|6680 1579"/>
+                                                                      <Edge fillStyle0="1" edges="!6684 1698S1|6682 1699"/>
+                                                                      <Edge fillStyle0="2" strokeStyle="1" edges="!6680 1578S5|6465 1578!6465 1578|6465 1593!6465 1593|6452 1595"/>
+                                                                      <Edge fillStyle0="1" strokeStyle="1" edges="!6452 1595S5|6452 1578!6452 1578|6438 1578!6438 1578|6438 1698!6438 1698|6452 1698!6452 1698|6452 1684!6465 1684|6465 1698!6465 1698|6684 1698"/>
+                                                                      <Edge fillStyle0="2" strokeStyle="1" edges="!6452 1684S5|6465 1684"/>
+                                                                      <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!6465 1593S7|6465 1639"/>
+                                                                      <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!6465 1639S7|6465 1684"/>
+                                                                      <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!6452 1595S7|6452 1684"/>
+                                                                      <Edge fillStyle0="2" fillStyle1="1" edges="!6465 1639S3|6903 1639"/>
+                                                                 </edges>
+                                                            </DOMShape>
+                                                       </members>
+                                                  </DOMGroup>
+                                                  <DOMGroup selected="true">
+                                                       <members>
+                                                            <DOMShape selected="true">
+                                                                 <fills>
+                                                                      <FillStyle index="1">
+                                                                           <SolidColor color="#D1D0C1"/>
+                                                                      </FillStyle>
+                                                                      <FillStyle index="2">
+                                                                           <SolidColor color="#E0DFCF"/>
+                                                                      </FillStyle>
+                                                                 </fills>
+                                                                 <strokes>
+                                                                      <StrokeStyle index="1">
+                                                                           <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                                                                                <fill>
+                                                                                     <SolidColor alpha="0.247058823529412"/>
+                                                                                </fill>
+                                                                           </SolidStroke>
+                                                                      </StrokeStyle>
+                                                                 </strokes>
+                                                                 <edges>
+                                                                      <Edge fillStyle0="2" strokeStyle="1" edges="!5528 1684S5|5528 1696!5528 1696|5705 1696!5705 1696|5705 1642"/>
+                                                                      <Edge fillStyle0="1" strokeStyle="1" edges="!5705 1642S5|5705 1581!5705 1581|5528 1581!5528 1581|5528 1600!5528 1600|5507 1600"/>
+                                                                      <Edge fillStyle0="2" strokeStyle="1" edges="!5507 1600S5|5507 1581!5507 1581|5488 1581!5488 1581|5488 1696!5488 1696|5507 1696!5507 1696|5507 1684"/>
+                                                                      <Edge fillStyle0="1" strokeStyle="1" edges="!5507 1684S5|5528 1684"/>
+                                                                      <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!5528 1600S7|5528 1642"/>
+                                                                      <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!5528 1642S7|5528 1684"/>
+                                                                      <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!5507 1600S7|5507 1684"/>
+                                                                      <Edge fillStyle0="1" fillStyle1="2" edges="!5528 1642S3|5705 1642"/>
+                                                                 </edges>
+                                                            </DOMShape>
+                                                       </members>
+                                                  </DOMGroup>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Classes/Shell" selected="true" centerPoint3DX="420.35" centerPoint3DY="132.3">
+                                                       <matrix>
+                                                            <Matrix a="0" b="-3.80950927734375" c="3.8094482421875" d="0" tx="420.55" ty="131.9"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.05" y="-0.05"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Classes/Mag" selected="true" centerPoint3DX="383.3" centerPoint3DY="132">
+                                                       <matrix>
+                                                            <Matrix a="1.89999389648438" d="1.90475463867188" tx="383.3" ty="132"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                        <DOMGroup>
+                                             <members>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.AA12.Mag" selected="true" centerPoint3DX="84.75" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="84.6" ty="358.3"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="0.15" y="-0.3"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.ACR.Mag" selected="true" centerPoint3DX="126.55" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="126.65" ty="359.4"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.1" y="-1.4"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.AUG.Mag" selected="true" centerPoint3DX="166.2" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="166.2" ty="358"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.EVO3.Mag" selected="true" centerPoint3DX="205.55" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="205.7" ty="360.6"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.15" y="-2.6"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.FAMAS.Mag" selected="true" centerPoint3DX="248.65" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="248.65" ty="359.55"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="-1.55"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.G36C.Mag" selected="true" centerPoint3DX="292.65" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="292.85" ty="361.05"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.2" y="-3.05"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.GLOCK.Mag" selected="true" centerPoint3DX="335.15" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="333.65" ty="365.55"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="1.5" y="-7.55"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.HK417.Mag" selected="true" centerPoint3DX="378.6" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="378.65" ty="359.2"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.05" y="-1.2"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.KIMBER.Mag" selected="true" centerPoint3DX="422.1" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="422.1" ty="358"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.M4.Mag" selected="true" centerPoint3DX="464.5" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="464.5" ty="359.55"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="-1.55"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.M9.Mag" selected="true" centerPoint3DX="506.95" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="506.95" ty="358"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.MAC10.Mag" selected="true" centerPoint3DX="545.9" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="545.9" ty="364.55"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point y="-6.55"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.MP5.Mag" selected="true" centerPoint3DX="586.6" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="587.15" ty="359.7"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.55" y="-1.7"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.P226.Mag" selected="true" centerPoint3DX="629.75" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="629.75" ty="358"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.UMP45.Mag" selected="true" centerPoint3DX="672.3" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="673" ty="360.6"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="-0.7" y="-2.6"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                                  <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.USP.Mag" selected="true" centerPoint3DX="715" centerPoint3DY="358">
+                                                       <matrix>
+                                                            <Matrix tx="713.7" ty="365.6"/>
+                                                       </matrix>
+                                                       <transformationPoint>
+                                                            <Point x="1.3" y="-7.6"/>
+                                                       </transformationPoint>
+                                                  </DOMSymbolInstance>
+                                             </members>
+                                        </DOMGroup>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="14" duration="5" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Classes/MuzzleFlash" centerPoint3DX="400" centerPoint3DY="224">
+                                             <matrix>
+                                                  <Matrix tx="315.25" ty="224"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="84.75"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Classes/Smoke" centerPoint3DX="400" centerPoint3DY="348.9">
+                                             <matrix>
+                                                  <Matrix tx="400" ty="348.9"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMStaticText left="51.9" width="40.2" height="17.9" autoExpand="true" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="328" ty="34"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>MISC</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" rotation="true" alpha="0.498039215686275" lineSpacing="0" lineHeight="17.9" size="16" face="ArialMT" fillColor="#FFFFFF"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Classes/ImpactEffect">
+                                             <matrix>
+                                                  <Matrix tx="400" ty="102.95"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="background" color="#9933CC" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="19" keyMode="9728">
+                                   <elements>
+                                        <DOMRectangleObject objectWidth="800" objectHeight="191.35" x="-400" y="-160" selected="true" lockFlag="true">
+                                             <matrix>
+                                                  <Matrix d="0.156829833984375" tx="400" ty="25.1"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point y="-64.4"/>
+                                             </transformationPoint>
+                                             <fill>
+                                                  <SolidColor color="#666666" alpha="0.749019607843137"/>
+                                             </fill>
+                                        </DOMRectangleObject>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <scripts/>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="1380221" publishTime="1424555556"/>
+          <PublishItem publishSize="1380222" publishTime="1424555520"/>
+          <PublishItem publishSize="1367027" publishTime="1424555376"/>
+          <PublishItem publishSize="1367015" publishTime="1424555352"/>
+          <PublishItem publishSize="248005" publishTime="1424554684"/>
+          <PublishItem publishSize="248005" publishTime="1424554668"/>
+          <PublishItem publishSize="248006" publishTime="1424554640"/>
+          <PublishItem publishSize="247981" publishTime="1424554594"/>
+          <PublishItem publishSize="247981" publishTime="1424554570"/>
+          <PublishItem publishSize="247988" publishTime="1424554549"/>
+          <PublishItem publishSize="247988" publishTime="1424554543"/>
+          <PublishItem publishSize="247982" publishTime="1424554535"/>
+          <PublishItem publishSize="247673" publishTime="1424554521"/>
+          <PublishItem publishSize="247453" publishTime="1424554241"/>
+          <PublishItem publishSize="247414" publishTime="1424554226"/>
+          <PublishItem publishSize="247245" publishTime="1424554131"/>
+          <PublishItem publishSize="17387" publishTime="1424545717"/>
+     </publishHistory>
+</DOMDocument>

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxm8fu2uv80o2"
+path="res://.godot/imported/explosion_3.mp3-88e8003cbdca765cc41f61a7ab0d4590.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/explosions/explosion_3.mp3"
+dest_files=["res://.godot/imported/explosion_3.mp3-88e8003cbdca765cc41f61a7ab0d4590.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

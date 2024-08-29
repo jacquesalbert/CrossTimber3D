@@ -1,0 +1,54 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MC.Weapon.P320.Slide" itemID="5c7af543-0000047c" lastModified="1551562358">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.P320.Slide">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!1411 -177|147 -177!147 -177|121 -83!121 -83|-371 -83!-371 -83|-395 -177!-395 -177|-1341 -177!1673 -177|1639 -239!1639 -239|1469 -261!1469 -261|1411 -177"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!1640.5 -176.5|1701 -176!1673 -177|1640.5 -176.5"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!1701 -176|1701 -177!1701 -177|1673 -177"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!1411 -177|1640.5 -176.5!1411 261|1491 63!1491 63[1447 29 1425 63!1425 63|1349 261!1211 261|1289 63!1289 63[1247 29 1223 63!1223 63|1149 261!1311 261|1391 63!1391 63[1347 29 1325 63!1325 63|1249 261"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!1249 261|1311 261!1311 261|1349 261!1349 261|1411 261"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!1009 261|1089 63!1089 63[1045 29 1023 63!1023 63|947 261!1109 261|1189 63!1189 63[1145 29 1123 63!1123 63|1047 261"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!947 261|1009 261!1149 261|1211 261!1109 261|1149 261!1047 261|1109 261!1009 261|1047 261!1211 261|1249 261!1411 261|1701 261!1701 261|1701 -176"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-1463 261|-1277 -21!-1277 -21[-1301 -71 -1343 -21!-1343 -21|-1525 261"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-1341 -177|-1341 -249!-1341 -249|-1507 -249!-1507 -249|-1543 -177"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-1341 -177|-1543 -177"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-1543 -177|-1609 -145!-1609 -145|-1701 233!-1701 233|-1671 261!-1671 261|-1525 261"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-1061 261|-875 -21!-875 -21[-899 -71 -941 -21!-941 -21|-1123 261!-1161 261|-975 -21!-975 -21[-999 -71 -1041 -21!-1041 -21|-1223 261!-1261 261|-1075 -21!-1075 -21[-1101 -71 -1141 -21!-1141 -21|-1323 261!-1361 261|-1175 -21!-1175 -21[-1201
+ -71 -1241 -21!-1241 -21|-1423 261"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="
+!-1061 261|-205 261!-205 261|-221 215!-221 215|-7 215!-7 215|-35 261!-35 261|947 261!-1123 261|-1061 261!-1161 261|-1123 261!-1261 261|-1223 261!-1323 261|-1261 261!-1361 261|-1323 261!-1423 261|-1361 261!-1463 261|-1423 261!-1525 261
+|-1463 261!-1223 261|-1161 261"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

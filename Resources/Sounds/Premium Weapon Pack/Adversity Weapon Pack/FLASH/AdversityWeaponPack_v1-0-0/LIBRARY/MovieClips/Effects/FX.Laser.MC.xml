@@ -1,0 +1,60 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Effects/FX.Laser.MC" itemID="54e41578-000009f9" lastModified="1424234220">
+  <timeline>
+    <DOMTimeline name="FX.Laser.MC">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" pixelHinting="true" joints="miter">
+                        <fill>
+                          <LinearGradient>
+                            <matrix>
+                              <Matrix a="0.0537109375" d="0.0006103515625" tx="43.55"/>
+                            </matrix>
+                            <GradientEntry color="#FFFFFF" ratio="0"/>
+                            <GradientEntry color="#FF0000" alpha="0.501960784313725" ratio="0.149019607843137"/>
+                            <GradientEntry color="#FF0000" alpha="0" ratio="1"/>
+                          </LinearGradient>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!1 0|1741 0"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4FFF4F" locked="true" visible="false" layerType="guide">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMRectangleObject objectWidth="87" objectHeight="1" x="1.7" y="-1.85" selected="true" lockFlag="true">
+                  <matrix>
+                    <Matrix tx="-1.7" ty="1.35"/>
+                  </matrix>
+                  <fill>
+                    <LinearGradient>
+                      <matrix>
+                        <Matrix a="0.0726318359375" d="0.001220703125" tx="44.05" ty="-0.05"/>
+                      </matrix>
+                      <GradientEntry color="#FFFFFF" alpha="0.250980392156863" ratio="0.117647058823529"/>
+                      <GradientEntry color="#FF3F3F" alpha="0.498039215686275" ratio="0.243137254901961"/>
+                      <GradientEntry color="#FF0000" alpha="0" ratio="0.913725490196078"/>
+                    </LinearGradient>
+                  </fill>
+                </DOMRectangleObject>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

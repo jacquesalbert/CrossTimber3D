@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Equipment/Parts/EQP.BATON.Gfx" itemID="523665ee-000017ed" lastModified="1408836389" lastUniqueIdentifier="4">
+  <timeline>
+    <DOMTimeline name="EQP.BATON.Gfx">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Equipment/Parts/EQP.BATON.Weapon" selected="true" centerPoint3DX="-0.35" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="0" b="-1" c="1" d="0" tx="11.55" ty="4.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="4.5" y="-11.9"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

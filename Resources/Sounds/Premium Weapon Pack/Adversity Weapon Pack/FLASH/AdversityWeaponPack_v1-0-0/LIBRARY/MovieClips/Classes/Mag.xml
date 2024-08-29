@@ -1,0 +1,247 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Classes/Mag" itemID="5130303f-000002f1" lastModified="1424553054" lastUniqueIdentifier="81">
+  <timeline>
+    <DOMTimeline name="Mag" currentFrame="78">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" name="kimber" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" name="m9" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="5" name="p226" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="14" duration="5" name="usp" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="5" name="glock" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="24" duration="5" name="mp5" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="29" duration="5" name="aug" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="34" duration="5" name="evo3" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="39" duration="5" name="mac10" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="44" duration="5" name="ump45" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="49" duration="5" name="m4" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="54" duration="5" name="g36c" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="59" duration="5" name="acr" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="64" duration="5" name="famas" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="69" duration="5" name="hk417" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="74" duration="5" name="aa12" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gfx" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.KIMBER.Mag" name="mc_mag">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.M9.Mag" name="mc_mag">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.P226.Mag" name="mc_mag">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="14" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.USP.Mag" name="mc_mag" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix tx="-1.3" ty="7.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1.3" y="-7.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.GLOCK.Mag" name="mc_mag">
+                  <matrix>
+                    <Matrix tx="-1.5" ty="7.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1.5" y="-7.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="24" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.MP5.Mag" name="mc_mag" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix tx="0.55" ty="1.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.55" y="-1.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.AUG.Mag" name="mc_mag" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix ty="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="34" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.EVO3.Mag" name="mc_mag" centerPoint3DX="-0.05">
+                  <matrix>
+                    <Matrix tx="0.15" ty="2.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.2" y="-2.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.MAC10.Mag" name="mc_mag">
+                  <matrix>
+                    <Matrix ty="6.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-6.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="44" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.UMP45.Mag" name="mc_mag" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix tx="0.7" ty="2.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.7" y="-2.6"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.M4.Mag" name="mc_mag" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix ty="1.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-1.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="54" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.G36C.Mag" name="mc_mag" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix tx="-0.45" ty="2.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.45" y="-2.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.ACR.Mag" name="mc_mag">
+                  <matrix>
+                    <Matrix tx="0.1" ty="1.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="-1.4"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="64" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.FAMAS.Mag" name="mc_mag">
+                  <matrix>
+                    <Matrix ty="1.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-1.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="69" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.HK417.Mag" name="mc_mag">
+                  <matrix>
+                    <Matrix tx="0.05" ty="1.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="-1.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="74" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Parts/WPN.AA12.Mag" name="mc_mag" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix tx="-0.15" ty="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.15" y="-0.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

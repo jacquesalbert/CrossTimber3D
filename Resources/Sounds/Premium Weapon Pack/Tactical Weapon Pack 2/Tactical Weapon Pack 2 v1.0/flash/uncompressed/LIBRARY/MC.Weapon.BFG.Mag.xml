@@ -1,0 +1,77 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MC.Weapon.BFG.Mag" itemID="5c5db2ba-0000083b" lastModified="1549644474">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.BFG.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#4C4C4C"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#424242"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!864 784S5|1171 746!1171 746|1171 -1053!1171 -1053|864 -1053"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!864 -1053S5|488 -1053"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!488 -1053S5|-428 -1053"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!-428 -1053S5|-924 -1053"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-924 -1053S5|-1171 -1053!-1171 -1053|-1171 1052!-1171 1052|-925 1014!-925 1014|-924 1015"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!-924 1015S5|-891 1052!-891 1052|-489 998!-489 998|-429 958!-429 958|-428 958"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-428 958S5|487 824!487 824|488 825"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="!488 825S5|557 856!557 856|863 828!863 828|863 784!863 784|864 784"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!488 825S3|488 -1053"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!864 784S3|864 -1053"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!-924 1015S3|-924 -1053"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!-428 958S3|-428 -1053"/>
+                        <Edge cubics="!-429 958(;-429,958 -489,998 -489,998q-429 958 -489 998);"/>
+                        <Edge cubics="!-489 998(;-489,998 -891,1052 -891,1052q-489 998 -891 1052);"/>
+                        <Edge cubics="!-925 1014(;-925,1014 -1171,1052 -1171,1052q-925 1014 -1171 1052);"/>
+                        <Edge cubics="!863 784(;863,784 863,828 863,828q863 784 863 828);"/>
+                        <Edge cubics="!863 828(;863,828 557,856 557,856q863 828 557 856);"/>
+                        <Edge cubics="!488 825(;488,825 487,824 487,824q488 825 487 824);"/>
+                        <Edge cubics="!557 856(;557,856 488,825 488,825q557 856 488 825);"/>
+                        <Edge cubics="!864 784(;864,784 863,784 863,784q864 784 863 784);"/>
+                        <Edge cubics="!1171 746(;1171,746 864,784 864,784q1171 746 864 784);"/>
+                        <Edge cubics="!-428 958(;-428,958 -429,958 -429,958q-428 958 -429 958);"/>
+                        <Edge cubics="!487 824(;487,824 -428,958 -428,958q487 824 -428 958);"/>
+                        <Edge cubics="!-891 1052(;-891,1052 -924,1015 -924,1015q-891 1052 -924 1015);"/>
+                        <Edge cubics="!-924 1015(;-924,1015 -925,1014 -925,1014q-924 1015 -925 1014);"/>
+                        <Edge cubics="!-1171 -1053(;-1171,-1053 -924,-1053 -924,-1053q-1171 -1053 -924 -1053);"/>
+                        <Edge cubics="!-924 -1053(;-924,-1053 -428,-1053 -428,-1053q-924 -1053 -428 -1053);"/>
+                        <Edge cubics="!-428 -1053(;-428,-1053 488,-1053 488,-1053q-428 -1053 488 -1053);"/>
+                        <Edge cubics="!488 -1053(;488,-1053 864,-1053 864,-1053q488 -1053 864 -1053);"/>
+                        <Edge cubics="!864 -1053(;864,-1053 1171,-1053 1171,-1053q864 -1053 1171 -1053);"/>
+                        <Edge cubics="!1171 746(;1171,746 1171,-1053 1171,-1053q1171 746 1171 -1053);"/>
+                        <Edge cubics="!-1171 1052(;-1171,1052 -1171,-1053 -1171,-1053q-1171 1052 -1171 -1053);"/>
+                        <Edge cubics="!864 784(;864,784 864,-1053 864,-1053q864 784 864 -1053);"/>
+                        <Edge cubics="!488 825(;488,825 488,-1053 488,-1053q488 825 488 -1053);"/>
+                        <Edge cubics="!-428 958(;-428,958 -428,-1053 -428,-1053q-428 958 -428 -1053);"/>
+                        <Edge cubics="!-924 1015(;-924,1015 -924,-1053 -924,-1053q-924 1015 -924 -1053);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

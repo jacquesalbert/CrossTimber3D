@@ -5,16 +5,12 @@ extends Node
 @export var health_recharge_rate : float = 1.0 # how much healing per second
 @export var health_exchange_rate : int = 1
 @export var energy_exchange_rate : int = 2
-@export var run_energy_rate : float = 0.5 # how much run energy used per second
 
 @export var inventory_search_interval : float = 1.0
 
-@export var exhaustion_effect_scene : PackedScene
-
 var _health_recharge_debt : float
-var _run_energy_debt : float
+
 var _inventory_search_timer : float
-var _exhausted_effect : Effect
 
 func search_inventory():
 	var health_deficit := character.health.max_value - character.health.value
@@ -48,10 +44,10 @@ func search_inventory():
 					character.energy.modify(item.energy*use_quantity,character)
 				return
 
-func heal(real_timestep:float):
+func heal(timestep:float):
 	var health_deficit := character.health.max_value - character.health.value
 	if health_deficit > 0:
-		_health_recharge_debt += health_recharge_rate * real_timestep
+		_health_recharge_debt += health_recharge_rate * timestep
 		_health_recharge_debt = min(health_deficit,_health_recharge_debt)
 		if _health_recharge_debt >= health_exchange_rate:
 			var heal_count : int = floor(_health_recharge_debt / health_exchange_rate)
@@ -63,34 +59,14 @@ func heal(real_timestep:float):
 				character.health.modify(heal_amount,character)
 				character.energy.modify(-energy_cost,character)
 
-func run_energy(real_timestep:float):
-	if character.running and not character.velocity.is_zero_approx():
-		_run_energy_debt += run_energy_rate * real_timestep
-		if _run_energy_debt > 1.0 and character.energy.value > 0:
-			#print_debug("consuming " + str(1.0) + " energy for running")
-			character.energy.modify(-1.0,character)
-			_run_energy_debt -= 1.0
-	var exhausted := character.energy.value <= 0
-	if exhausted:
-		if not is_instance_valid(_exhausted_effect):
-			_exhausted_effect = exhaustion_effect_scene.instantiate()
-			character.add_child(_exhausted_effect)
-	else:
-		if is_instance_valid(_exhausted_effect):
-			character.remove_child(_exhausted_effect)
-			_exhausted_effect.queue_free()
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta:float):
-	var real_timestep := delta * Engine.time_scale
-
 	if character.state != Character.State.ACTIVE:
 		return
 	
-	_inventory_search_timer += real_timestep
+	_inventory_search_timer += delta
 	if _inventory_search_timer >= inventory_search_interval:
 		_inventory_search_timer -= inventory_search_interval
 		search_inventory()
 	
-	heal(real_timestep)
-	run_energy(real_timestep)
+	heal(delta)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhbq5ys4a5ny7"
+path="res://.godot/imported/wpn_fire_augpara.mp3-79bbe08b1d1c0ba49afe4a8a8b943ea6.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/weapons/wpn_fire_augpara.mp3"
+dest_files=["res://.godot/imported/wpn_fire_augpara.mp3-79bbe08b1d1c0ba49afe4a8a8b943ea6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdy8qdoan1pwp"
+path="res://.godot/imported/wpn_fire_deagle.mp3-4b4e1a24d6c9440e97eb553022fadeff.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_fire_deagle.mp3"
+dest_files=["res://.godot/imported/wpn_fire_deagle.mp3-4b4e1a24d6c9440e97eb553022fadeff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

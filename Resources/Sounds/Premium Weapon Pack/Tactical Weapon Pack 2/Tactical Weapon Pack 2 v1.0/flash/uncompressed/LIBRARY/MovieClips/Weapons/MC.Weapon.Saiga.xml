@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.Saiga" itemID="5c6d8383-000007d5" lastModified="1552065716">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.Saiga">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.Saiga.Mag" name="mag" centerPoint3DX="13" centerPoint3DY="23.45">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="13" ty="23.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.Saiga.Base" name="base" centerPoint3DX="0.05" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" ty="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.AK47.Optic" name="optic" centerPoint3DX="-27.45" centerPoint3DY="-51.2">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-27.5" ty="-33.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.1" y="-35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

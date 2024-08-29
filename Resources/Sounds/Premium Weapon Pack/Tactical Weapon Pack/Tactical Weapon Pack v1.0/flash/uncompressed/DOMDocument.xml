@@ -1,0 +1,1224 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#666666" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.95" creatorInfo="Adobe Animate CC" platform="Windows" versionInfo="Saved by Animate Windows 16.5 build 100" majorVersion="16" minorVersion="5" buildNumber="100" viewAngle3D="71.8291629029669" vanishingPoint3DX="640" vanishingPoint3DY="360" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="D2DB43CF6A5E134FB00B455A0AA8862A">
+     <folders>
+          <DOMFolderItem name="Buttons" itemID="5bd8b67c-00000625"/>
+          <DOMFolderItem name="Fonts" itemID="5bd8bd9e-00000705"/>
+          <DOMFolderItem name="Images" itemID="5bd9a3e8-000004d8"/>
+          <DOMFolderItem name="MovieClips" itemID="5bd8a4a1-00000418" isExpanded="true"/>
+          <DOMFolderItem name="MovieClips/Mods" itemID="5bd8a4a1-0000041a"/>
+          <DOMFolderItem name="MovieClips/Mods/Barrels" itemID="5bd8a5b6-00000458"/>
+          <DOMFolderItem name="MovieClips/Mods/Mags" itemID="5bd8a5b5-00000457"/>
+          <DOMFolderItem name="MovieClips/Mods/Optics" itemID="5bd8a6d2-00000526"/>
+          <DOMFolderItem name="MovieClips/UI" itemID="5bd8a5a0-00000455"/>
+          <DOMFolderItem name="MovieClips/Weapons" itemID="5bd8a4a1-00000419" isExpanded="true"/>
+          <DOMFolderItem name="MovieClips/Weapons/Launchers" itemID="5bd8a725-0000053b"/>
+          <DOMFolderItem name="MovieClips/Weapons/LMGs" itemID="5bc93eb1-000014bc"/>
+          <DOMFolderItem name="MovieClips/Weapons/Machine Pistols" itemID="5bd8a786-00000545"/>
+          <DOMFolderItem name="MovieClips/Weapons/Pistols" itemID="5bd8a797-00000546"/>
+          <DOMFolderItem name="MovieClips/Weapons/Rifles" itemID="5bd8a4a1-00000427"/>
+          <DOMFolderItem name="MovieClips/Weapons/Shotguns" itemID="5bd8a75a-00000540"/>
+          <DOMFolderItem name="MovieClips/Weapons/SMGs" itemID="5bd8a703-00000535"/>
+          <DOMFolderItem name="MovieClips/Weapons/Snipers" itemID="5bd8a6ff-00000531"/>
+     </folders>
+     <fonts>
+          <DOMFontItem name="Fonts/Arial" itemID="5bd8bd9a-00000700" font="Arial-BoldMT" size="0" id="1" sourceLastImported="1540930970" embedRanges="1|2|3|4"/>
+     </fonts>
+     <media>
+          <DOMBitmapItem name="Images/tiles.jpg" itemID="5bd9a33c-000004c8" sourceExternalFilepath="./LIBRARY/Images/tiles.jpg" sourceLastImported="1540989745" externalFileCRC32="2816214383" externalFileSize="158280" quality="50" href="Images/tiles.jpg" bitmapDataHRef="M 2 1540989756.dat" frameRight="25600" frameBottom="14400" isJPEG="true"/>
+     </media>
+     <symbols>
+          <Include href="Buttons/BTN.Arrow.xml" itemIcon="0" loadImmediate="false" itemID="5bd8b738-0000062f" lastModified="1540995380"/>
+          <Include href="Buttons/BTN.Checkbox.xml" itemIcon="0" loadImmediate="false" itemID="5bd9ae1b-0000032d" lastModified="1540992672"/>
+          <Include href="Buttons/BTN.XWILKINX.xml" itemIcon="0" loadImmediate="false" itemID="5bd8b734-00000628" lastModified="1540992263"/>
+          <Include href="MC.ExplosiveRound.xml" loadImmediate="false" itemID="5be5abed-00000590" lastModified="1541778424"/>
+          <Include href="MC.ExplosiveRound.Bullet.xml" loadImmediate="false" itemID="5be5abf8-00000594" lastModified="1541778595"/>
+          <Include href="MovieClips/Mods/Barrels/MC.Barrel.M203.xml" loadImmediate="false" itemID="5b9f0419-00000c06" lastModified="1537148016"/>
+          <Include href="MovieClips/Mods/Barrels/MC.Barrel.M203.Small.xml" loadImmediate="false" itemID="5bd340fd-00000615" lastModified="1540571493"/>
+          <Include href="MovieClips/Mods/Barrels/MC.Mods.Laser.Default.ANPEQ.xml" loadImmediate="false" itemID="55596256-000003e6" lastModified="1539619198"/>
+          <Include href="MovieClips/Mods/Barrels/MC.MuzzleBreak.xml" loadImmediate="false" itemID="5bd859be-000003d2" lastModified="1540905974"/>
+          <Include href="MovieClips/Mods/Mags/MC.ExtendedMag.xml" loadImmediate="false" itemID="5bd85ace-000003e2" lastModified="1540905983"/>
+          <Include href="MovieClips/Mods/Mags/MC.FMJ.xml" loadImmediate="false" itemID="5bdb0bc7-000005c9" lastModified="1541083452"/>
+          <Include href="MovieClips/Mods/Mags/MC.FMJ.Bullet.xml" loadImmediate="false" itemID="5bdb0bd4-000005d7" lastModified="1541082683"/>
+          <Include href="MovieClips/Mods/Mags/MC.HollowPoint.xml" loadImmediate="false" itemID="5bdb242a-00000768" lastModified="1541088298"/>
+          <Include href="MovieClips/Mods/Mags/MC.HollowPoint.Bullet.xml" loadImmediate="false" itemID="5bdb242f-00000769" lastModified="1541088303"/>
+          <Include href="MovieClips/Mods/Optics/MC.Mods.Optics.ACOG.1.xml" loadImmediate="false" itemID="550105a7-000014af" lastModified="1532472220"/>
+          <Include href="MovieClips/Mods/Optics/MC.Mods.Optics.ACOG.2.xml" loadImmediate="false" itemID="550105a9-000014b0" lastModified="1532472212"/>
+          <Include href="MovieClips/Mods/Optics/MC.Mods.Optics.EOTech.1.xml" loadImmediate="false" itemID="550105ad-000014b1" lastModified="1532472245"/>
+          <Include href="MovieClips/Mods/Optics/MC.Mods.Optics.EOTech.2.xml" loadImmediate="false" itemID="550105b0-000014b2" lastModified="1532472235"/>
+          <Include href="MovieClips/Mods/Optics/MC.Mods.Optics.Reflex.1.xml" loadImmediate="false" itemID="5576690c-00009d1d" lastModified="1532472254"/>
+          <Include href="MovieClips/Mods/Optics/MC.Mods.Optics.Reflex.2.xml" loadImmediate="false" itemID="55766c8b-00009d40" lastModified="1532219139"/>
+          <Include href="MovieClips/UI/MC.Arrow.xml" loadImmediate="false" itemID="5bd8b29b-0000054c" lastModified="1540995370"/>
+          <Include href="MovieClips/UI/MC.Checkbox.xml" loadImmediate="false" itemID="5bd9ab0f-0000030d" lastModified="1540992125"/>
+          <Include href="MovieClips/UI/MC.CheckboxBackground.xml" loadImmediate="false" itemID="5bd9ae3b-00000332" lastModified="1540992675"/>
+          <Include href="MovieClips/UI/MC.Checkmark.xml" loadImmediate="false" itemID="5bd9aba7-00000314" lastModified="1540992133"/>
+          <Include href="MovieClips/UI/MC.Header.xml" loadImmediate="false" itemID="5bd8b689-00000626" lastModified="1541074389"/>
+          <Include href="MovieClips/UI/MC.HeaderBackground.xml" loadImmediate="false" itemID="5bd9bf81-00000428" lastModified="1540996993"/>
+          <Include href="MovieClips/UI/MC.TextContainer.xml" loadImmediate="false" itemID="5bd8be5a-00000708" lastModified="1540997004"/>
+          <Include href="MovieClips/UI/MC.Tiles.xml" loadImmediate="false" itemID="5bd9a342-000004ca" lastModified="1540995036"/>
+          <Include href="MovieClips/UI/MC.Welcome.xml" loadImmediate="false" itemID="5bd9b826-0000041e" lastModified="1540995128"/>
+          <Include href="MovieClips/UI/MC.XWILKINX.xml" loadImmediate="false" itemID="5bd8b66b-00000620" lastModified="1540929349"/>
+          <Include href="MovieClips/Weapons/Launchers/MC.Weapon.M32.xml" loadImmediate="false" itemID="5bccd264-000017ae" lastModified="1540165293"/>
+          <Include href="MovieClips/Weapons/Launchers/MC.Weapon.M32.Base.xml" loadImmediate="false" itemID="5bccd26f-000017b3" lastModified="1540167320"/>
+          <Include href="MovieClips/Weapons/Launchers/MC.Weapon.M203.xml" loadImmediate="false" itemID="5b8dee06-00000a47" lastModified="1536028180"/>
+          <Include href="MovieClips/Weapons/Launchers/MC.Weapon.M203.Base.xml" loadImmediate="false" itemID="5b8dee0e-00000a4b" lastModified="1536028362"/>
+          <Include href="MovieClips/Weapons/Launchers/MC.Weapon.RPG.xml" loadImmediate="false" itemID="5b5bd803-0000128c" lastModified="1540991624"/>
+          <Include href="MovieClips/Weapons/Launchers/MC.Weapon.RPG.Base.xml" loadImmediate="false" itemID="5b5bd815-00001290" lastModified="1540167297"/>
+          <Include href="MovieClips/Weapons/Launchers/MC.Weapon.RPG.Mag.xml" loadImmediate="false" itemID="5b5bd81f-00001294" lastModified="1540172668"/>
+          <Include href="MovieClips/Weapons/Launchers/MC.Weapon.XM25.xml" loadImmediate="false" itemID="5ba05810-0000066f" lastModified="1537409783"/>
+          <Include href="MovieClips/Weapons/Launchers/MC.Weapon.XM25.Base.xml" loadImmediate="false" itemID="5ba05899-0000067b" lastModified="1537235494"/>
+          <Include href="MovieClips/Weapons/Launchers/MC.Weapon.XM25.Mag.xml" loadImmediate="false" itemID="5ba0581f-00000674" lastModified="1537235477"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.AUGHBAR.xml" loadImmediate="false" itemID="5b88a751-00000ce1" lastModified="1535682884"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.AUGHBAR.Base.xml" loadImmediate="false" itemID="5b88a761-00000ce5" lastModified="1540167130"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.AUGHBAR.Mag.xml" loadImmediate="false" itemID="5b88a8db-00000d0b" lastModified="1535682849"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.AUGHBAR.Optic.xml" loadImmediate="false" itemID="5b88a7ee-00000cf9" lastModified="1540989297"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.HAMR.xml" loadImmediate="false" itemID="5b7b7be5-00000a0a" lastModified="1534819936"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.HAMR.Base.xml" loadImmediate="false" itemID="5b7b7bfd-00000a13" lastModified="1540167152"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.HAMR.Mag.xml" loadImmediate="false" itemID="5b7b7bf6-00000a0f" lastModified="1534819889"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.M249.xml" loadImmediate="false" itemID="5b5d25b4-0000141b" lastModified="1538182709"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.M249.Base.xml" loadImmediate="false" itemID="5b5d25db-0000141f" lastModified="1539806027"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.M249.Mag.xml" loadImmediate="false" itemID="5b5d25e0-00001423" lastModified="1540167161"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.M249.Optic.xml" loadImmediate="false" itemID="5b5d287f-00001676" lastModified="1540989328"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.MG4.xml" loadImmediate="false" itemID="5baecdab-000006c5" lastModified="1538183208"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.MG4.Base.xml" loadImmediate="false" itemID="5baecdb3-000006ce" lastModified="1540167137"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.MG4.Mag.xml" loadImmediate="false" itemID="5baece94-0000070f" lastModified="1538182875"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.MG4.Optic.xml" loadImmediate="false" itemID="5baece42-00000704" lastModified="1540989335"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.QBB95.xml" loadImmediate="false" itemID="5bc93ebd-000014dc" lastModified="1539916240"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.QBB95.Base.xml" loadImmediate="false" itemID="58cb4889-00000291" lastModified="1539916219"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.RPK.xml" loadImmediate="false" itemID="5bcd10da-00001a5e" lastModified="1540166979"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.RPK.Base.xml" loadImmediate="false" itemID="5bcd11fa-00001a6b" lastModified="1540167119"/>
+          <Include href="MovieClips/Weapons/LMGs/MC.Weapon.RPK.Mag.xml" loadImmediate="false" itemID="5bcd1167-00001a65" lastModified="1540166564"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.G18.xml" loadImmediate="false" itemID="5b8a0cd1-00000f91" lastModified="1538618941"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.G18.Base.xml" loadImmediate="false" itemID="5b8a0cd7-00000f95" lastModified="1540167698"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.G18.Mag.xml" loadImmediate="false" itemID="5b8a0d5b-00000f99" lastModified="1535774152"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.M93R.xml" loadImmediate="false" itemID="5b8a0a4f-00000ee0" lastModified="1538536248"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.MP9.xml" loadImmediate="false" itemID="5bcd2eb6-00001acc" lastModified="1540173599"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.MP9.Base.xml" loadImmediate="false" itemID="5bcd2ebe-00001ad0" lastModified="1540173654"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.MP9.Mag.xml" loadImmediate="false" itemID="5bcd2ec4-00001ad4" lastModified="1540173585"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.MP1911.xml" loadImmediate="false" itemID="5b8b3643-00001401" lastModified="1539035855"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.MP1911.Base.xml" loadImmediate="false" itemID="5b8b364c-00001405" lastModified="1540167279"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.MP1911.Mag.xml" loadImmediate="false" itemID="5b8b37c6-00001409" lastModified="1535850457"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.USPM.xml" loadImmediate="false" itemID="5ba055ea-00000347" lastModified="1538708928"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.USPM.Base.xml" loadImmediate="false" itemID="5ba055f7-0000034b" lastModified="1538708908"/>
+          <Include href="MovieClips/Weapons/Machine Pistols/MC.Weapon.USPM.Mag.xml" loadImmediate="false" itemID="5ba056d8-00000353" lastModified="1537234690"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.Deagle.xml" loadImmediate="false" itemID="5b5dece9-000016b6" lastModified="1538621093"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.Deagle.Base.xml" loadImmediate="false" itemID="5b5decef-000016ba" lastModified="1538621366"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.Deagle.Mag.xml" loadImmediate="false" itemID="5b5decf6-000016be" lastModified="1532882230"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.Deagle.Slide.xml" loadImmediate="false" itemID="5bb57e9c-00000396" lastModified="1538621295"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.FiveSeven.xml" loadImmediate="false" itemID="5b5a4bb0-00001040" lastModified="1538709230"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.FiveSeven.Base.xml" loadImmediate="false" itemID="5b5a4bbf-00001044" lastModified="1538709084"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.FiveSeven.Mag.xml" loadImmediate="false" itemID="5b5a4bc8-00001048" lastModified="1532644296"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.FiveSeven.Slide.xml" loadImmediate="false" itemID="5bb6d62e-000004f3" lastModified="1538709038"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.G17.xml" loadImmediate="false" itemID="5b5d22ff-000013dd" lastModified="1538618212"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.G17.Base.xml" loadImmediate="false" itemID="5b5d2306-000013e1" lastModified="1538618959"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.G17.Mag.xml" loadImmediate="false" itemID="5b5d230d-000013e5" lastModified="1532830522"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.G17.Slide.xml" loadImmediate="false" itemID="5bb57359-00000387" lastModified="1538618371"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.M9.xml" loadImmediate="false" itemID="5b529cc8-000009c1" lastModified="1538535530"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.M9.Base.xml" loadImmediate="false" itemID="5554241c-00000332" lastModified="1538535474"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.M9.Mag.xml" loadImmediate="false" itemID="5554237e-0000032e" lastModified="1532483382"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.M9.Slide.xml" loadImmediate="false" itemID="5bb42f38-00000391" lastModified="1538535224"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.M9.Trigger.xml" loadImmediate="false" itemID="555424ca-0000038e" lastModified="1539915706"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.M93R.Base.xml" loadImmediate="false" itemID="5b8a0a5a-00000eec" lastModified="1538536242"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.M93R.Mag.xml" loadImmediate="false" itemID="5b8a0b4f-00000efa" lastModified="1535773532"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.M1911.xml" loadImmediate="false" itemID="5b8a09bf-00000ead" lastModified="1539035656"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.M1911.Base.xml" loadImmediate="false" itemID="5b8a09c5-00000eb2" lastModified="1540167268"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.M1911.Mag.xml" loadImmediate="false" itemID="5b8a09cb-00000eb6" lastModified="1535773131"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.M1911.Slide.xml" loadImmediate="false" itemID="5bbbd0ea-0000038b" lastModified="1539035511"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.Magnum.xml" loadImmediate="false" itemID="5bd51e0d-00000b2e" lastModified="1540693558"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.Magnum.Base.xml" loadImmediate="false" itemID="5bd51e2f-00000b33" lastModified="1540693551"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.USP45.xml" loadImmediate="false" itemID="5b5a4af1-00001007" lastModified="1538708953"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.USP45.Base.xml" loadImmediate="false" itemID="5b5a4b0c-0000100c" lastModified="1538708947"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.USP45.Mag.xml" loadImmediate="false" itemID="5b5a4b12-00001010" lastModified="1532644114"/>
+          <Include href="MovieClips/Weapons/Pistols/MC.Weapon.USP45.Slide.xml" loadImmediate="false" itemID="5bb6d4c5-000004e7" lastModified="1538708695"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.AK47.xml" loadImmediate="false" itemID="5b8dd6dd-00000911" lastModified="1536022396"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.AK47.Base.xml" loadImmediate="false" itemID="5b8dd702-0000091b" lastModified="1540167188"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.AK47.Mag.xml" loadImmediate="false" itemID="5b8dd6f3-00000917" lastModified="1536022331"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.AK47.Optic.xml" loadImmediate="false" itemID="5b8dd75b-0000095d" lastModified="1540989290"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.AUG.xml" loadImmediate="false" itemID="5b875069-00000c11" lastModified="1535594895"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.AUG.Base.xml" loadImmediate="false" itemID="5b875079-00000c16" lastModified="1540167345"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.AUG.Mag.xml" loadImmediate="false" itemID="5b87507f-00000c1a" lastModified="1535594623"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.AUG.Optic.xml" loadImmediate="false" itemID="5b8750b2-00000c22" lastModified="1540989294"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.FAMAS.xml" loadImmediate="false" itemID="5baecbac-0000066d" lastModified="1538182187"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.FAMAS.Base.xml" loadImmediate="false" itemID="5baecba3-00000668" lastModified="1538182144"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.FAMAS.Optic.xml" loadImmediate="false" itemID="5baecc1d-000006aa" lastModified="1540989304"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.G36C.xml" loadImmediate="false" itemID="5b5ba032-0000110f" lastModified="1540571372"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.G36C.Base.xml" loadImmediate="false" itemID="5b5ba03f-00001114" lastModified="1532732325"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.G36C.Mag.xml" loadImmediate="false" itemID="5b5ba047-00001118" lastModified="1532731975"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.G36C.Optic.xml" loadImmediate="false" itemID="5b5ba126-00001151" lastModified="1540989307"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.HK416.xml" loadImmediate="false" itemID="5b666512-00000914" lastModified="1533438143"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.HK416.Base.xml" loadImmediate="false" itemID="5b66652b-00000920" lastModified="1533438126"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.HK416.Optic.xml" loadImmediate="false" itemID="5b666713-0000093d" lastModified="1540989311"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.LE6940.xml" loadImmediate="false" itemID="5b57a533-000008cd" lastModified="1532472739"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.LE6940.Base.xml" loadImmediate="false" itemID="5b57a554-000008d9" lastModified="1532731583"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.LE6940.Mag.xml" loadImmediate="false" itemID="5b57a73d-00000906" lastModified="1532471757"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.LE6940.Optic.xml" loadImmediate="false" itemID="5b57aca6-0000097b" lastModified="1540989317"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.M4.xml" loadImmediate="false" itemID="5b53b024-00000a1a" lastModified="1540565780"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.M4.Base.xml" loadImmediate="false" itemID="5bd8a98c-00000549" lastModified="1540925836"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.M16A4.xml" loadImmediate="false" itemID="5b513fd1-00000907" lastModified="1540562343"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.M16A4.Base.xml" loadImmediate="false" itemID="5b514295-0000096a" lastModified="1532731608"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.M16A4.Mag.xml" loadImmediate="false" itemID="54ebbc57-00000412" lastModified="1532471884"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.M16A4.Optic.xml" loadImmediate="false" itemID="54ebe9b6-00000537" lastModified="1540989322"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.M16A4.Trigger.xml" loadImmediate="false" itemID="54ed41ef-00000b9c" lastModified="1532211270"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.RSASS.Mag.xml" loadImmediate="false" itemID="5a1ca98c-0000124a" lastModified="1532485623"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.SCARL.xml" loadImmediate="false" itemID="5b5d157b-000012ce" lastModified="1532829478"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.SCARL.Base.xml" loadImmediate="false" itemID="5b5d1613-000012d8" lastModified="1540167205"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.SCARL.Mag.xml" loadImmediate="false" itemID="5b5d161a-000012dc" lastModified="1532829156"/>
+          <Include href="MovieClips/Weapons/Rifles/MC.Weapon.SCARL.Optic.xml" loadImmediate="false" itemID="5b5d16c9-0000130e" lastModified="1540989363"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.AA12.xml" loadImmediate="false" itemID="5b8b23ca-0000120c" lastModified="1535849051"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.AA12.Base.xml" loadImmediate="false" itemID="5b8b2412-00001210" lastModified="1535849037"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.AA12.Mag.xml" loadImmediate="false" itemID="5b8b2418-00001214" lastModified="1535849031"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.AA12.Optic.xml" loadImmediate="false" itemID="5b8b2457-00001248" lastModified="1540989287"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.M3.xml" loadImmediate="false" itemID="5b5e70be-00001704" lastModified="1538532681"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.M3.Base.xml" loadImmediate="false" itemID="5b5e70c8-00001708" lastModified="1538532678"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.M3.Optic.xml" loadImmediate="false" itemID="5b5e7131-00001737" lastModified="1540989319"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.M3.Pump.xml" loadImmediate="false" itemID="5bb42536-00000388" lastModified="1538532662"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.M1014.xml" loadImmediate="false" itemID="5b57dc00-00000e4c" lastModified="1533522938"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.M1014.Base.xml" loadImmediate="false" itemID="5b57dc0e-00000e51" lastModified="1533522997"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.M1014.Optic.xml" loadImmediate="false" itemID="5b57dd33-00000e82" lastModified="1540989331"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.Mossberg.xml" loadImmediate="false" itemID="5b67b07d-00000e4e" lastModified="1538532647"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.Mossberg.Base.xml" loadImmediate="false" itemID="5b67b087-00000e52" lastModified="1538532639"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.Mossberg.Optic.xml" loadImmediate="false" itemID="5b67b14d-00000e89" lastModified="1540989338"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.Mossberg.Pump.xml" loadImmediate="false" itemID="5bb42509-00000380" lastModified="1538532617"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.SPAS12.xml" loadImmediate="false" itemID="5b5e7c8d-00001792" lastModified="1532919583"/>
+          <Include href="MovieClips/Weapons/Shotguns/MC.Weapon.SPAS12.Base.xml" loadImmediate="false" itemID="5b5e7c99-00001796" lastModified="1532919560"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.AK74U.xml" loadImmediate="false" itemID="5b8dd7c6-0000098e" lastModified="1536022630"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.AK74U.Base.xml" loadImmediate="false" itemID="5b8dd7ce-00000992" lastModified="1540167228"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.AUGPARA.xml" loadImmediate="false" itemID="5b893ef8-0000033f" lastModified="1535722063"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.AUGPARA.Base.xml" loadImmediate="false" itemID="5b893f04-00000343" lastModified="1540167218"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.AUGPARA.Optic.xml" loadImmediate="false" itemID="5b893f55-00000355" lastModified="1540989300"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.MP5.xml" loadImmediate="false" itemID="5b53bf93-00000d82" lastModified="1532483201"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.MP5.Base.xml" loadImmediate="false" itemID="5b53bfbe-00000d8a" lastModified="1532483143"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.MP5.Mag.xml" loadImmediate="false" itemID="5b53bfb2-00000d86" lastModified="1532483151"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.MP5.Optic.xml" loadImmediate="false" itemID="5b53bfdc-00000db7" lastModified="1540989340"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.MP7.xml" loadImmediate="false" itemID="5b5bccfd-0000118f" lastModified="1532743121"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.MP7.Base.xml" loadImmediate="false" itemID="5b5bcd08-00001194" lastModified="1532743087"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.MP7.Mag.xml" loadImmediate="false" itemID="5b5bcd26-00001198" lastModified="1532743153"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.MP7.Optic.xml" loadImmediate="false" itemID="5b5bcd51-000011c7" lastModified="1540989344"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.P90.xml" loadImmediate="false" itemID="5b67c4c5-00001096" lastModified="1533528607"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.P90.Base.xml" loadImmediate="false" itemID="5b67c4d1-0000109a" lastModified="1533528577"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.P90.Mag.xml" loadImmediate="false" itemID="5b67c4d9-0000109e" lastModified="1540167648"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.P90.Optic.xml" loadImmediate="false" itemID="5b67c51d-000010ce" lastModified="1540989352"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.UMP45.xml" loadImmediate="false" itemID="5b8b34b2-0000130d" lastModified="1535849797"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.UMP45.Base.xml" loadImmediate="false" itemID="5b8b34c6-00001311" lastModified="1535849670"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.UMP45.Mag.xml" loadImmediate="false" itemID="5b8b34cc-00001315" lastModified="1535849820"/>
+          <Include href="MovieClips/Weapons/SMGs/MC.Weapon.UMP45.Optic.xml" loadImmediate="false" itemID="5b8b34dd-00001342" lastModified="1540989364"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.HK417.xml" loadImmediate="false" itemID="5b67aaa1-0000060f" lastModified="1533521375"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.HK417.Base.xml" loadImmediate="false" itemID="5b67aaa6-0000061b" lastModified="1533521353"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.HK417.Optic.xml" loadImmediate="false" itemID="5b67acec-0000081b" lastModified="1540989314"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.M40A3.xml" loadImmediate="false" itemID="5b53ca84-000014b5" lastModified="1532483945"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.M40A3.Base.xml" loadImmediate="false" itemID="5b53cbce-000014c5" lastModified="1540167895"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.M40A3.Optic.xml" loadImmediate="false" itemID="5b67acd2-000006c0" lastModified="1540989325"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.MSR.xml" loadImmediate="false" itemID="5b666a35-00000971" lastModified="1533439292"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.MSR.Base.xml" loadImmediate="false" itemID="5b666a3f-00000975" lastModified="1533439296"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.MSR.Mag.xml" loadImmediate="false" itemID="5b666a47-00000979" lastModified="1533439097"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.MSR.Optic.xml" loadImmediate="false" itemID="5b666a6c-000009a8" lastModified="1540989347"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.RSASS.xml" loadImmediate="false" itemID="5b57dfd9-00000f01" lastModified="1532485800"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.RSASS.Base.xml" loadImmediate="false" itemID="5b57e015-00000f16" lastModified="1540925156"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.RSASS.Optic.xml" loadImmediate="false" itemID="5b57e047-00000f4f" lastModified="1540989357"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.SAMR.xml" loadImmediate="false" itemID="5b5bd048-000011fb" lastModified="1532745131"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.SAMR.Base.xml" loadImmediate="false" itemID="5b5bd053-00001207" lastModified="1538533143"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.SAMR.Mag.xml" loadImmediate="false" itemID="5b5bd05a-00001213" lastModified="1532882859"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.SAMR.Optic.xml" loadImmediate="false" itemID="5b5bd3bf-0000124a" lastModified="1540989360"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.TPR.xml" loadImmediate="false" itemID="5b9f05fa-00000c40" lastModified="1537409832"/>
+          <Include href="MovieClips/Weapons/Snipers/MC.Weapon.TPR.Base.xml" loadImmediate="false" itemID="5b9f0603-00000c44" lastModified="1540167181"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1" currentFrame="9">
+               <layers>
+                    <DOMLayer name="actions" color="#FF4FFF" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="10" name="XWILKINX" labelType="comment" keyMode="9728">
+                                   <Actionscript>
+                                        <script><![CDATA[/*
+	Tactical Weapon Pack
+	v1.0 - November 2018
+	Find more games and asset packs at www.xwilkinx.com!
+*/
+
+import flash.events.MouseEvent;
+import flash.net.URLRequest;
+import flash.events.Event;
+import flash.display.StageScaleMode;
+import flash.display.MovieClip;
+import flash.filters.DropShadowFilter;
+import flash.filters.GlowFilter;
+import flash.filters.BevelFilter;
+import flash.display.SimpleButton;
+import flash.display.StageAlign;
+
+var bApplyFilters:Boolean = true;
+var labels:Array = [
+	"Home",
+	"Pistols",
+	"Machine Pistols",
+	"SMGs",
+	"Assault Rifles",
+	"Shotguns",
+	"Snipers",
+	"LMGs",
+	"Launchers",
+	"Attachments"
+]
+
+stop();
+mc_header.button_xwilkinx.addEventListener(MouseEvent.CLICK, onHeaderClicked);
+mc_header.button_filters.addEventListener(MouseEvent.CLICK, onFiltersClicked);
+button_prev.addEventListener(MouseEvent.CLICK, onPrevClicked);
+button_next.addEventListener(MouseEvent.CLICK, onNextClicked);
+updateFrame();
+
+function onFiltersClicked(e:MouseEvent):void 
+{
+	bApplyFilters = !bApplyFilters;
+	mc_header.mc_filters.mc_checkmark.visible = bApplyFilters;
+	updateFrame();
+}
+
+function onHeaderClicked(e:MouseEvent):void 
+{
+	navigateToURL(new URLRequest("http://xwilkinx.com"), "_blank");
+}
+
+function onPrevClicked(e:MouseEvent):void 
+{
+	prevFrame();
+	updateFrame();
+}
+
+function onNextClicked(e:MouseEvent):void 
+{
+	nextFrame();
+	updateFrame();
+}
+
+function updateFrame():void 
+{
+	var maxPages:int = labels.length;
+	button_prev.visible = currentFrame > 1;
+	button_next.visible = currentFrame < maxPages;
+	mc_text.t_page.text = String(currentFrame + "/" + maxPages + ": " + labels[currentFrame - 1].toUpperCase());
+	/* Apply filters to items */
+	if (currentFrame > 1)
+	{
+		for (var i = 0; i < numChildren; i ++)
+		{
+			var child:MovieClip = getChildAt(i) as MovieClip;
+			if (child)
+			{
+				if (child.name.indexOf("wpn") >= 0 || child.name.indexOf("mod") >= 0)
+				{
+					if (bApplyFilters)
+					{
+						child.filters = [
+							new BevelFilter(3, 45, 0xFFFFFF, 0.5, 0x000000, 0.5, 1.5, 1.5, 0.35, 1),
+							new GlowFilter(0x000000, 1, 2, 2, 1, 1, true),
+							new DropShadowFilter(12, 45, 0x000000, 0.5, 8, 8, 0.5, 3)
+						];
+					}
+					else 
+					{
+						child.filters = [];
+					}
+				}
+			}
+		}
+	}
+}]]></script>
+                                   </Actionscript>
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="overlay" color="#4F80FF" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="10" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Buttons/BTN.Arrow" name="button_prev" symbolType="button">
+                                             <matrix>
+                                                  <Matrix a="-1" tx="60" ty="120"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="Buttons/BTN.Arrow" name="button_next" symbolType="button">
+                                             <matrix>
+                                                  <Matrix tx="1220" ty="120"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/UI/MC.Header" name="mc_header">
+                                             <matrix>
+                                                  <Matrix tx="640" ty="30"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/UI/MC.TextContainer" name="mc_text">
+                                             <matrix>
+                                                  <Matrix ty="660"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="gfx" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/UI/MC.Welcome">
+                                             <matrix>
+                                                  <Matrix tx="640" ty="360"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="1" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Pistols/MC.Weapon.FiveSeven" name="wpn_fiveseven" centerPoint3DX="548.85" centerPoint3DY="385.5">
+                                             <matrix>
+                                                  <Matrix tx="548.85" ty="388.1"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Pistols/MC.Weapon.M1911" name="wpn_m1911" centerPoint3DX="723.45" centerPoint3DY="385.5">
+                                             <matrix>
+                                                  <Matrix tx="723.45" ty="386.1"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Pistols/MC.Weapon.Deagle" name="wpn_deagle" centerPoint3DX="547.1" centerPoint3DY="506.5">
+                                             <matrix>
+                                                  <Matrix tx="547.1" ty="503.5"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Pistols/MC.Weapon.Magnum" name="wpnmagnum">
+                                             <matrix>
+                                                  <Matrix tx="726.3" ty="506.5"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Pistols/MC.Weapon.M9" name="wpn_m9" centerPoint3DX="459.8" centerPoint3DY="267.05">
+                                             <matrix>
+                                                  <Matrix tx="459.8" ty="266.35"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Pistols/MC.Weapon.USP45" name="wpn_usp45" centerPoint3DX="819.3" centerPoint3DY="267.05">
+                                             <matrix>
+                                                  <Matrix tx="819.3" ty="269.45"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Pistols/MC.Weapon.G17" name="wpn_g17" centerPoint3DX="639.1" centerPoint3DY="267.05">
+                                             <matrix>
+                                                  <Matrix tx="639.1" ty="266.4"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="2" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Machine Pistols/MC.Weapon.MP1911" name="wpn_mp1911" centerPoint3DX="510.75" centerPoint3DY="466.35">
+                                             <matrix>
+                                                  <Matrix tx="513.05" ty="451.15"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Machine Pistols/MC.Weapon.MP9" name="wpn_mp9" centerPoint3DX="737.1" centerPoint3DY="466.35">
+                                             <matrix>
+                                                  <Matrix tx="737.1" ty="448.65"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Machine Pistols/MC.Weapon.M93R" name="wpn_m93r" centerPoint3DX="464.8" centerPoint3DY="292.5">
+                                             <matrix>
+                                                  <Matrix tx="464.8" ty="285.05"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Machine Pistols/MC.Weapon.G18" name="wpn_g18" centerPoint3DX="638" centerPoint3DY="292.5">
+                                             <matrix>
+                                                  <Matrix tx="639.35" ty="276.4"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Machine Pistols/MC.Weapon.USPM" name="wpn_uspm" centerPoint3DX="813.2" centerPoint3DY="292.5">
+                                             <matrix>
+                                                  <Matrix tx="813.9" ty="289.3"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="3" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/SMGs/MC.Weapon.MP7" name="wpn_mp7" centerPoint3DX="313.5" centerPoint3DY="466.3">
+                                             <matrix>
+                                                  <Matrix tx="313.5" ty="457.2"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/SMGs/MC.Weapon.P90" name="wpn_p90" centerPoint3DX="630.15" centerPoint3DY="466.3">
+                                             <matrix>
+                                                  <Matrix tx="630.15" ty="480.05"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/SMGs/MC.Weapon.AK74U" name="wpn_ak74u" centerPoint3DX="956.65" centerPoint3DY="466.3">
+                                             <matrix>
+                                                  <Matrix tx="956.65" ty="468.2"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/SMGs/MC.Weapon.MP5" name="wpn_mp5" centerPoint3DX="343.35" centerPoint3DY="282.4">
+                                             <matrix>
+                                                  <Matrix tx="343.35" ty="285.6"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/SMGs/MC.Weapon.AUGPARA" name="wpn_augpara" centerPoint3DX="635.5" centerPoint3DY="282.4">
+                                             <matrix>
+                                                  <Matrix tx="635.5" ty="297.55"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/SMGs/MC.Weapon.UMP45" name="wpn_ump45" centerPoint3DX="932.15" centerPoint3DY="282.4">
+                                             <matrix>
+                                                  <Matrix tx="932.15" ty="274.05"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="4" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/MC.Weapon.M16A4" name="wpn_m16a4" centerPoint3DX="300.85" centerPoint3DY="170.7">
+                                             <matrix>
+                                                  <Matrix tx="300.85" ty="170.7"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="8"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/MC.Weapon.M4" name="wpn_m4" centerPoint3DX="703.35" centerPoint3DY="170.1">
+                                             <matrix>
+                                                  <Matrix tx="703.35" ty="170.7"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/MC.Weapon.G36C" name="wpn_g36c" centerPoint3DX="1042.5" centerPoint3DY="170.1">
+                                             <matrix>
+                                                  <Matrix tx="1042.5" ty="173.95"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/MC.Weapon.LE6940" name="wpn_le6940" centerPoint3DX="277.25" centerPoint3DY="357">
+                                             <matrix>
+                                                  <Matrix tx="277.25" ty="361.1"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/MC.Weapon.SCARL" name="wpn_scarl" centerPoint3DX="660" centerPoint3DY="357">
+                                             <matrix>
+                                                  <Matrix tx="660" ty="356"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/MC.Weapon.AUG" name="wpn_aug" centerPoint3DX="1022.7" centerPoint3DY="357">
+                                             <matrix>
+                                                  <Matrix tx="1022.7" ty="372.15"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/MC.Weapon.HK416" name="wpn_hk416" centerPoint3DX="282.15" centerPoint3DY="552.75">
+                                             <matrix>
+                                                  <Matrix tx="282.15" ty="555.7"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/MC.Weapon.AK47" name="wpn_ak47" centerPoint3DX="656.5" centerPoint3DY="552.75">
+                                             <matrix>
+                                                  <Matrix tx="656.5" ty="556.25"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/MC.Weapon.FAMAS" name="wpn_famas" centerPoint3DX="1014.35" centerPoint3DY="552.75">
+                                             <matrix>
+                                                  <Matrix tx="1014.45" ty="556.2"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="5" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Shotguns/MC.Weapon.M1014" name="wpn_m1014" centerPoint3DX="849.7" centerPoint3DY="185.5">
+                                             <matrix>
+                                                  <Matrix tx="849.7" ty="201.05"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Shotguns/MC.Weapon.Mossberg" name="wpn_mossberg" centerPoint3DX="418.75" centerPoint3DY="185.5">
+                                             <matrix>
+                                                  <Matrix tx="418.75" ty="202"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Shotguns/MC.Weapon.M3" name="wpn_m3" centerPoint3DX="440.5" centerPoint3DY="371.5">
+                                             <matrix>
+                                                  <Matrix tx="440.5" ty="388"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Shotguns/MC.Weapon.SPAS12" name="wpn_spas12" centerPoint3DX="856.35" centerPoint3DY="371.5">
+                                             <matrix>
+                                                  <Matrix tx="856.35" ty="386.2"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Shotguns/MC.Weapon.AA12" name="wpn_aa12" centerPoint3DX="676.55" centerPoint3DY="568.55">
+                                             <matrix>
+                                                  <Matrix tx="676.55" ty="572.6"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="6" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Snipers/MC.Weapon.HK417" name="wpn_hk417" centerPoint3DX="392.6" centerPoint3DY="565.65">
+                                             <matrix>
+                                                  <Matrix tx="392.6" ty="577.35"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Snipers/MC.Weapon.TPR" name="wpn_tpr" centerPoint3DX="881.75" centerPoint3DY="565.65">
+                                             <matrix>
+                                                  <Matrix tx="881.75" ty="574.35"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Snipers/MC.Weapon.SAMR" name="wpn_samr" centerPoint3DX="392.6" centerPoint3DY="363.8">
+                                             <matrix>
+                                                  <Matrix tx="392.6" ty="372.4"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Snipers/MC.Weapon.MSR" name="wpn_msr" centerPoint3DX="888.5" centerPoint3DY="363.8">
+                                             <matrix>
+                                                  <Matrix tx="888.5" ty="381.75"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Snipers/MC.Weapon.M40A3" name="wpn_m40a3" centerPoint3DX="406.25" centerPoint3DY="176.75">
+                                             <matrix>
+                                                  <Matrix tx="406.25" ty="193.75"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="222.05" y="46.6"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Snipers/MC.Weapon.RSASS" name="wpn_rsass" centerPoint3DX="885.9" centerPoint3DY="176.75">
+                                             <matrix>
+                                                  <Matrix tx="882" ty="188.45"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="7" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/LMGs/MC.Weapon.HAMR" name="wpn_hamr" centerPoint3DX="415.3" centerPoint3DY="549.35">
+                                             <matrix>
+                                                  <Matrix tx="415.3" ty="545.5"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/LMGs/MC.Weapon.QBB95" name="wpn_qbb95" centerPoint3DX="883.3" centerPoint3DY="549.35">
+                                             <matrix>
+                                                  <Matrix tx="883.3" ty="550.8"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point y="0.25"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/LMGs/MC.Weapon.AUGHBAR" name="wpn_aughbar" centerPoint3DX="388.2" centerPoint3DY="360.2">
+                                             <matrix>
+                                                  <Matrix tx="388.2" ty="368.35"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/LMGs/MC.Weapon.RPK" name="wpn_rpk" centerPoint3DX="866.45" centerPoint3DY="360.2">
+                                             <matrix>
+                                                  <Matrix tx="866.45" ty="363.1"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/LMGs/MC.Weapon.M249" name="wpn_m249" centerPoint3DX="871" centerPoint3DY="178.75">
+                                             <matrix>
+                                                  <Matrix tx="871" ty="181.05"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/LMGs/MC.Weapon.MG4" name="wpn_mg4" centerPoint3DX="403.35" centerPoint3DY="178.75">
+                                             <matrix>
+                                                  <Matrix tx="403.35" ty="186.35"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="8" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Launchers/MC.Weapon.RPG" name="wpn_rpg" centerPoint3DX="640" centerPoint3DY="531.85">
+                                             <matrix>
+                                                  <Matrix tx="577.55" ty="531.85"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Launchers/MC.Weapon.M203" name="wpn_m203" centerPoint3DX="260.25" centerPoint3DY="350">
+                                             <matrix>
+                                                  <Matrix tx="260.25" ty="350"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Launchers/MC.Weapon.XM25" name="wpn_xm25" centerPoint3DX="599.4" centerPoint3DY="350">
+                                             <matrix>
+                                                  <Matrix tx="599.4" ty="347.8"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Launchers/MC.Weapon.M32" name="wpn_m32" centerPoint3DX="979.15" centerPoint3DY="350">
+                                             <matrix>
+                                                  <Matrix tx="979.15" ty="350"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                              <DOMFrame index="9" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.Reflex.1" name="mod_reflex_1" centerPoint3DX="247.15" centerPoint3DY="252.55">
+                                             <matrix>
+                                                  <Matrix tx="226.05" ty="278.3"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="21.1" y="-25.75"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.Reflex.2" name="mod_reflex_2" centerPoint3DX="378.25" centerPoint3DY="252.55">
+                                             <matrix>
+                                                  <Matrix tx="375.2" ty="278.8"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="3.05" y="-26.25"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.EOTech.1" name="mod_eotech_1" centerPoint3DX="529.25" centerPoint3DY="252.55">
+                                             <matrix>
+                                                  <Matrix tx="525.25" ty="280.4"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="4" y="-27.85"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.EOTech.2" name="mod_eotech_2" centerPoint3DX="671.6" centerPoint3DY="252.55">
+                                             <matrix>
+                                                  <Matrix tx="686.8" ty="280.4"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="-15.2" y="-27.85"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.ACOG.1" name="mod_acog_1" centerPoint3DX="822.25" centerPoint3DY="252.55">
+                                             <matrix>
+                                                  <Matrix tx="823.3" ty="283.1"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="-1.05" y="-30.55"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.ACOG.2" name="mod_acog_2" centerPoint3DX="1002.5" centerPoint3DY="252.55">
+                                             <matrix>
+                                                  <Matrix tx="1004.9" ty="283.8"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="-2.4" y="-31.25"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Barrels/MC.Barrel.M203" name="mod_m203" centerPoint3DX="544.4" centerPoint3DY="375.75">
+                                             <matrix>
+                                                  <Matrix tx="544.4" ty="375.75"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Barrels/MC.Mods.Laser.Default.ANPEQ" name="mod_laser" centerPoint3DX="351.7" centerPoint3DY="369.9">
+                                             <matrix>
+                                                  <Matrix tx="351.75" ty="369.9"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="-0.05"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Barrels/MC.Barrel.M203.Small" name="mod_m203_small" centerPoint3DX="833" centerPoint3DY="375.75">
+                                             <matrix>
+                                                  <Matrix tx="833" ty="375.75"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Barrels/MC.MuzzleBreak" name="mod_muzzle_break" centerPoint3DX="960.9" centerPoint3DY="369.9">
+                                             <matrix>
+                                                  <Matrix tx="959.8" ty="369.9"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Mags/MC.ExtendedMag" name="mod_extended" centerPoint3DX="588.3" centerPoint3DY="520.65">
+                                             <matrix>
+                                                  <Matrix tx="588.35" ty="499.7"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="-0.05" y="-0.05"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Mags/MC.FMJ" name="mod_fmj">
+                                             <matrix>
+                                                  <Matrix tx="456.05" ty="520.65"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="-0.05"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/Mods/Mags/MC.HollowPoint" name="mod_hollowpoint">
+                                             <matrix>
+                                                  <Matrix tx="720.6" ty="520.4"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="MC.ExplosiveRound" name="mod_explosive">
+                                             <matrix>
+                                                  <Matrix tx="823.95" ty="520.6"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="-0.05"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="bg" color="#4F80FF" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" duration="10" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="MovieClips/UI/MC.Tiles" name="mc_tiles">
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                             <color>
+                                                  <Color alphaMultiplier="0.25"/>
+                                             </color>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <scripts/>
+     <swatchLists>
+          <swatchList>
+               <swatchListInfo name="Default Swatches"/>
+
+               <swatches>
+                    <swatchListInfo name="Default Swatches"/>
+
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#003300" hue="80" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#006600" hue="80" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009900" hue="80" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC00" hue="80" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF00" hue="80" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330000" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#333300" hue="40" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#336600" hue="60" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#339900" hue="67" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#33CC00" hue="70" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#33FF00" hue="72" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#660000" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663300" hue="20" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#666600" hue="40" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#669900" hue="53" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#66CC00" hue="60" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#66FF00" hue="64" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#333333" brightness="48"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000033" hue="160" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#003333" hue="120" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#006633" hue="100" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009933" hue="93" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC33" hue="90" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF33" hue="88" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330033" hue="200" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#333333" brightness="48"/>
+                    <SolidSwatchItem color="#336633" hue="80" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#339933" hue="80" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC33" hue="80" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF33" hue="80" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660033" hue="220" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663333" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#666633" hue="40" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#669933" hue="60" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#66CC33" hue="67" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#66FF33" hue="70" saturation="239" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#666666" brightness="96"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000066" hue="160" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#003366" hue="140" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#006666" hue="120" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009966" hue="107" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC66" hue="100" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF66" hue="96" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330066" hue="180" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#333366" hue="160" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#336666" hue="120" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#339966" hue="100" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC66" hue="93" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF66" hue="90" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660066" hue="200" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663366" hue="200" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#666666" brightness="96"/>
+                    <SolidSwatchItem color="#669966" hue="80" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#66CC66" hue="80" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FF66" hue="80" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#999999" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000099" hue="160" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#003399" hue="147" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#006699" hue="133" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#009999" hue="120" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC99" hue="110" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF99" hue="104" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330099" hue="173" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#333399" hue="160" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#336699" hue="140" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#339999" hue="120" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC99" hue="107" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF99" hue="100" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660099" hue="187" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#663399" hue="180" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#666699" hue="160" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#669999" hue="120" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#66CC99" hue="100" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FF99" hue="93" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#CCCCCC" brightness="192"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000CC" hue="160" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0033CC" hue="150" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0066CC" hue="140" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0099CC" hue="130" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00CCCC" hue="120" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FFCC" hue="112" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3300CC" hue="170" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#3333CC" hue="160" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#3366CC" hue="147" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#3399CC" hue="133" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33CCCC" hue="120" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FFCC" hue="110" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6600CC" hue="180" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#6633CC" hue="173" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#6666CC" hue="160" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#6699CC" hue="140" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66CCCC" hue="120" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FFCC" hue="107" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FFFFFF" brightness="240"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000FF" hue="160" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0033FF" hue="152" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0066FF" hue="144" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0099FF" hue="136" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#00CCFF" hue="128" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#00FFFF" hue="120" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3300FF" hue="168" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3333FF" hue="160" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#3366FF" hue="150" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#3399FF" hue="140" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#33CCFF" hue="130" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#33FFFF" hue="120" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6600FF" hue="176" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#6633FF" hue="170" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6666FF" hue="160" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#6699FF" hue="147" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#66CCFF" hue="133" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#66FFFF" hue="120" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FF0000" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990000" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993300" hue="13" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#996600" hue="27" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#999900" hue="40" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#99CC00" hue="50" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#99FF00" hue="56" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#CC0000" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3300" hue="10" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC6600" hue="20" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC9900" hue="30" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CCCC00" hue="40" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CCFF00" hue="48" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF0000" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3300" hue="8" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF6600" hue="16" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF9900" hue="24" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FFCC00" hue="32" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FFFF00" hue="40" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#00FF00" hue="80" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990033" hue="227" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993333" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996633" hue="20" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#999933" hue="40" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#99CC33" hue="53" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#99FF33" hue="60" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#CC0033" hue="230" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3333" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6633" hue="13" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC9933" hue="27" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CCCC33" hue="40" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CCFF33" hue="50" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF0033" hue="232" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3333" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6633" hue="10" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF9933" hue="20" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FFCC33" hue="30" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FFFF33" hue="40" saturation="239" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000FF" hue="160" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990066" hue="213" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993366" hue="220" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996666" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#999966" hue="40" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#99CC66" hue="60" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#99FF66" hue="67" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#CC0066" hue="220" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3366" hue="227" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6666" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC9966" hue="20" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CCCC66" hue="40" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CCFF66" hue="53" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF0066" hue="224" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3366" hue="230" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6666" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF9966" hue="13" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FFCC66" hue="27" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FFFF66" hue="40" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FFFF00" hue="40" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990099" hue="200" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993399" hue="200" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996699" hue="200" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#999999" brightness="144"/>
+                    <SolidSwatchItem color="#99CC99" hue="80" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99FF99" hue="80" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC0099" hue="210" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3399" hue="213" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6699" hue="220" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC9999" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCCC99" hue="40" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCFF99" hue="60" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FF0099" hue="216" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3399" hue="220" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6699" hue="227" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF9999" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCC99" hue="20" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFFF99" hue="40" saturation="239" brightness="192"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#00FFFF" hue="120" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#9900CC" hue="190" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#9933CC" hue="187" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#9966CC" hue="180" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#9999CC" hue="160" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99CCCC" hue="120" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99FFCC" hue="100" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC00CC" hue="200" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC33CC" hue="200" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC66CC" hue="200" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC99CC" hue="200" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCCCCC" brightness="192"/>
+                    <SolidSwatchItem color="#CCFFCC" hue="80" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FF00CC" hue="208" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF33CC" hue="210" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF66CC" hue="213" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF99CC" hue="220" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCCCC" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FFFFCC" hue="40" saturation="239" brightness="216"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FF00FF" hue="200" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#9900FF" hue="184" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#9933FF" hue="180" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#9966FF" hue="173" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#9999FF" hue="160" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#99CCFF" hue="140" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#99FFFF" hue="120" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC00FF" hue="192" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#CC33FF" hue="190" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#CC66FF" hue="187" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#CC99FF" hue="180" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CCCCFF" hue="160" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#CCFFFF" hue="120" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FF00FF" hue="200" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF33FF" hue="200" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF66FF" hue="200" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF99FF" hue="200" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCCFF" hue="200" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FFFFFF" brightness="240"/>
+                    <SolidSwatchItem color="#FFFFFF" alpha="0.8" brightness="240"/>
+               </swatches>
+          </swatchList>
+     </swatchLists>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="311004" publishTime="1541127234" publishDebug="true"/>
+          <PublishItem publishSize="310136" publishTime="1541088305" publishDebug="true"/>
+          <PublishItem publishSize="310117" publishTime="1541088262" publishDebug="true"/>
+          <PublishItem publishSize="310089" publishTime="1541088238" publishDebug="true"/>
+          <PublishItem publishSize="310088" publishTime="1541088207" publishDebug="true"/>
+          <PublishItem publishSize="308684" publishTime="1541088189"/>
+          <PublishItem publishSize="308684" publishTime="1541088165"/>
+          <PublishItem publishSize="308670" publishTime="1541088130"/>
+          <PublishItem publishSize="308665" publishTime="1541088097"/>
+          <PublishItem publishSize="308665" publishTime="1541088079"/>
+          <PublishItem publishSize="308645" publishTime="1541088049"/>
+          <PublishItem publishSize="308525" publishTime="1541087964"/>
+          <PublishItem publishSize="308525" publishTime="1541084330"/>
+          <PublishItem publishSize="306178" publishTime="1541076062"/>
+          <PublishItem publishSize="305917" publishTime="1541074439"/>
+          <PublishItem publishSize="305917" publishTime="1540997916"/>
+          <PublishItem publishSize="306156" publishTime="1540997878"/>
+          <PublishItem publishSize="306155" publishTime="1540997848"/>
+          <PublishItem publishSize="306137" publishTime="1540997138"/>
+          <PublishItem publishSize="306133" publishTime="1540997128"/>
+     </publishHistory>
+</DOMDocument>

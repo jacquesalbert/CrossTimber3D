@@ -3,7 +3,7 @@ extends Node3D
 
 var speed : float
 var drive_spin : float
-var traction : float = 1.0
+var traction : float = 0.0
 var traction_slip : bool
 
 @onready var skid_tracker :Tracker= $SkidTracker
@@ -58,8 +58,8 @@ func _on_surface_changed(surface:Node3D):
 	_current_effect_material = surface.get_effect_material() if is_instance_valid(surface) else "none"
 	if _current_effect_material != _active_effect_material:
 		_deposit_remaining = material_deposit_distances.get(_active_effect_material,0.0)
-	traction = surface.get_traction() if is_instance_valid(surface) and surface.has_method("get_traction") else 1.0
-	
+	traction = surface.get_traction() if is_instance_valid(surface) and surface.has_method("get_traction") else 0.0
+
 func change_active_material(new_material:StringName):
 	_active_effect_material = new_material
 	

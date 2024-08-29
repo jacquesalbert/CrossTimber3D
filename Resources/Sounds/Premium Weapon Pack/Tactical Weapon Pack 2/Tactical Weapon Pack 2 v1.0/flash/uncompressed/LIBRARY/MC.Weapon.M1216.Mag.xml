@@ -1,0 +1,69 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MC.Weapon.M1216.Mag" itemID="5c9d4e70-00000a39" lastModified="1553887267">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.M1216.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <LinearGradient>
+                            <matrix>
+                              <Matrix a="0" b="-0.02557373046875" c="0.02630615234375" d="0" tx="2.05"/>
+                            </matrix>
+                            <GradientEntry color="#272727" ratio="0"/>
+                            <GradientEntry color="#333333" ratio="0.513725490196078"/>
+                            <GradientEntry color="#272727" ratio="1"/>
+                          </LinearGradient>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                        <StrokeStyle index="2">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.149019607843137"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="2" edges="!2202 -277|2201 -277"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="2" edges="!2201 -277|-2237 -276"/>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-2237 120|-2237 278!-2237 278|-2237 431!-2237 431|2183 431!2183 431|2183 278!2183 278|2183 277!2183 277|2269 277!2269 277|2319 185!2319 185|2225 -277!2225 -277|2202 -277!2201 -277|2095 -431!2095 -431|-1739 -431!-1785 -430|-2237 -430
+!-2237 -430|-2237 -276!-2237 -276|-2237 -170"/>
+                        <Edge fillStyle0="2" strokeStyle="1" edges="
+!-2237 -170|-2319 -170!-2319 -170|-2319 120!-2319 120|-2237 120!-1739 -431|-1785 -431!-1785 -431|-1785 -430"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-1785 -430[-1785 -427 -1787 -425"/>
+                        <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!-1739 -431|-1785 -430"/>
+                        <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="
+!-2237 120|-2237 -170"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="2" edges="
+!2183 278|-2237 278"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

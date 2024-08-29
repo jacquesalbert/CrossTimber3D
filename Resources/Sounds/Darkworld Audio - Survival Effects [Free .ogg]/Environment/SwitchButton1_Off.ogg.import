@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c7gi84pxd55sw"
+path="res://.godot/imported/SwitchButton1_Off.ogg-b47f8118e809a3853d71f45b6f02d214.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Environment/SwitchButton1_Off.ogg"
+dest_files=["res://.godot/imported/SwitchButton1_Off.ogg-b47f8118e809a3853d71f45b6f02d214.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

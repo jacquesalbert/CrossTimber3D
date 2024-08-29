@@ -1,0 +1,58 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Characters/Hands/HAND.GripBarrel.Shell" itemID="536421b5-0000614d" lastModified="1424235920" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="HAND.GripBarrel.Shell">
+      <layers>
+        <DOMLayer name="shell" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#745555"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#D1D0C1"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#6B4E4E"/>
+                        </FillStyle>
+                        <FillStyle index="4">
+                          <SolidColor color="#E0DFCF"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.247058823529412"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="3" strokeStyle="1" edges="!-58 -11|-17 -163!-17 -163|18 -154"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!18 -154|51 -145!51 -145|10 7"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!-2 51|3 53!3 53|0 65!0 65|-77 44!-77 44|-74 32!-74 32|-70 33"/>
+                        <Edge fillStyle0="4" fillStyle1="1" strokeStyle="1" edges="!10 7|-23 -2"/>
+                        <Edge fillStyle0="2" fillStyle1="3" strokeStyle="1" edges="!-23 -2|-58 -11"/>
+                        <Edge fillStyle0="2" fillStyle1="4" strokeStyle="1" edges="!-2 51|-35 42"/>
+                        <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!-35 42|-70 33"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!-70 33|-58 -11"/>
+                        <Edge fillStyle0="1" fillStyle1="3" edges="!18 -154|-23 -2"/>
+                        <Edge fillStyle0="4" fillStyle1="2" edges="!-23 -2|-35 42"/>
+                        <Edge fillStyle1="4" strokeStyle="1" edges="!10 7|-2 51"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

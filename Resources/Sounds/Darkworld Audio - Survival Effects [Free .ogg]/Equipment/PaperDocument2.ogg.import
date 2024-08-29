@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bsmqvohe68nnl"
+path="res://.godot/imported/PaperDocument2.ogg-c3926455aeeecef7b1ded6ea620368a7.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Equipment/PaperDocument2.ogg"
+dest_files=["res://.godot/imported/PaperDocument2.ogg-c3926455aeeecef7b1ded6ea620368a7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

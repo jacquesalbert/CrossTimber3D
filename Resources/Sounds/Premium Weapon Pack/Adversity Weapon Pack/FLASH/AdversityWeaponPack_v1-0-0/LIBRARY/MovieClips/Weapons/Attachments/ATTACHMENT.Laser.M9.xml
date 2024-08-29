@@ -1,0 +1,84 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.M9" itemID="52d362ad-00000430" lastModified="1404246608" lastUniqueIdentifier="5">
+  <timeline>
+    <DOMTimeline name="ATTACHMENT.Laser.M9">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#191919"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#2D2D2D"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#171717"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.0980392156862745"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!147 15|218 15!218 15|218 56!218 113|218 120!218 120|92 120"/>
+                    <Edge fillStyle0="2" strokeStyle="1" edges="!218 113|223 110!223 110[226 104 228 98!228 98[228 97 229 96!229 96[229 93 229 90!229 90[229 75 223 59!223 59|218 56"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!154.5 96[158 #59.DC 158 82!158 82[158 70 150 62!150 62[149 60 147 59!147 59[140 54 131 54!131 54[121 54 115 59!115 59[112 60 111 62!111 62[102 70 102 82!102 82[102 #59.DC 106 96!106 96[108 97 111 99!111 99[119 104 131 104!131 104[142
+ 104 150 99!150 99[153 97 155 96"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!92 102|107 107!107 107[129 113 151 110!151 110[169 106 173.5 96!173.5 96[#AF.BD #56.83 174 74!174 74|147 15"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="
+!155 96|154.5 96"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="
+!218 56|183 65!183 65|183 107!183 107|218 113"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!82 15|58 15"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!0 50|33 0!33 0|60 0!60 0|82 15!0 107|0 82!92 120|25 120"/>
+                    <Edge fillStyle0="3" fillStyle1="1" strokeStyle="1" edges="
+!25 120[9 115 0 107"/>
+                    <Edge fillStyle0="3" strokeStyle="1" edges="
+!0 107|0 120"/>
+                    <Edge fillStyle0="3" edges="
+!0 120|25 120"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!82.5 82|88 96!88 96|92 102!92 120|92 102"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!0 82|0 50"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!71 51|82.5 82!0 50|65 50!0 82|82.5 82"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!82 15|147 15"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="laser" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Effects/FX.Laser" name="mc_laser" selected="true" centerPoint3DX="10.85" centerPoint3DY="4.25">
+                  <matrix>
+                    <Matrix tx="10.85" ty="4.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

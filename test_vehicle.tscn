@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d17hiwv22avsm"]
+[gd_scene load_steps=15 format=3 uid="uid://d17hiwv22avsm"]
 
 [ext_resource type="Script" path="res://Vehicle.gd" id="1_ho58b"]
 [ext_resource type="PackedScene" uid="uid://cr55wp2mtwpje" path="res://Resources/FBX/Cop.fbx" id="2_83reb"]
@@ -16,10 +16,13 @@ _data = [Vector2(0, 0.515648), 0.0, 0.0, 0, 0, Vector2(0.258182, 1), 0.0, 0.0, 0
 point_count = 3
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_snmgp"]
-size = Vector3(3.5, 2, 9)
+size = Vector3(1.75, 1, 4.5)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_aiyah"]
-radius = 2.0
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0l12j"]
+radius = 1.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_evnc1"]
+size = Vector3(1.5, 1, 4)
 
 [node name="Vehicle" type="CharacterBody3D" node_paths=PackedStringArray("fuel", "health")]
 collision_layer = 128
@@ -32,7 +35,7 @@ fuel = NodePath("Fuel")
 health = NodePath("Health")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_snmgp")
 
 [node name="Cop" parent="." instance=ExtResource("2_83reb")]
@@ -40,16 +43,16 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 visible = false
 
 [node name="RRWheel" parent="." instance=ExtResource("4_r4ysp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, -2.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.825, 0.5, -1.175)
 
 [node name="RLWheel" parent="." instance=ExtResource("4_r4ysp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, -2.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.825, 0.5, -1.175)
 
 [node name="FRWheel" parent="." instance=ExtResource("4_r4ysp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.5, 2.55)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.825, 0.5, 1.275)
 
 [node name="FLWheel" parent="." instance=ExtResource("4_r4ysp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 2.55)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.825, 0.5, 1.275)
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("4_ocxkf")
@@ -59,18 +62,19 @@ script = ExtResource("4_ocxkf")
 max_value = 15000
 
 [node name="Mount" type="Node3D" parent="." node_paths=PackedStringArray("vehicle", "dismount_point")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, -1.5, 0)
 script = ExtResource("6_l5t2n")
 vehicle = NodePath("..")
 dismount_point = NodePath("Node3D")
 
 [node name="InteractionArea" type="Area3D" parent="Mount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("8_vohwo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mount/InteractionArea"]
-shape = SubResource("SphereShape3D_aiyah")
+shape = SubResource("CylinderShape3D_0l12j")
 
 [node name="MountInteraction" type="Node" parent="Mount/InteractionArea" node_paths=PackedStringArray("mount")]
 script = ExtResource("8_t0yfh")
@@ -78,7 +82,7 @@ mount = NodePath("../..")
 text = "Passenger"
 
 [node name="Node3D" type="Node3D" parent="Mount"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.5, 0)
 
 [node name="DismountInteraction" type="Node" parent="Mount" node_paths=PackedStringArray("mount")]
 script = ExtResource("9_cteup")
@@ -86,19 +90,20 @@ mount = NodePath("..")
 text = "Dismount"
 
 [node name="VehicleControlMount" type="Node3D" parent="." node_paths=PackedStringArray("vehicle", "dismount_point")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -1.5, 0)
 script = ExtResource("7_i6lbx")
 vehicle = NodePath("..")
 dismount_point = NodePath("Node3D")
 control = true
 
 [node name="InteractionArea" type="Area3D" parent="VehicleControlMount"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("8_vohwo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VehicleControlMount/InteractionArea"]
-shape = SubResource("SphereShape3D_aiyah")
+shape = SubResource("CylinderShape3D_0l12j")
 
 [node name="MountInteraction" type="Node" parent="VehicleControlMount/InteractionArea" node_paths=PackedStringArray("mount")]
 script = ExtResource("8_t0yfh")
@@ -106,7 +111,7 @@ mount = NodePath("../..")
 text = "Driver"
 
 [node name="Node3D" type="Node3D" parent="VehicleControlMount"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, 0)
 
 [node name="DismountInteraction" type="Node" parent="VehicleControlMount" node_paths=PackedStringArray("mount")]
 script = ExtResource("9_cteup")
@@ -114,11 +119,16 @@ mount = NodePath("..")
 text = "Dismount"
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.5, 0)
-pixel_size = 0.1
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0)
+pixel_size = 0.05
 axis = 1
 shaded = true
 double_sided = false
 alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("10_wth24")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+cast_shadow = 3
+mesh = SubResource("BoxMesh_evnc1")

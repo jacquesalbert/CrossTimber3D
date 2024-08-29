@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://co0c3usulvrk2"
+path="res://.godot/imported/wpn_fire_magnum.mp3-b90a298cc8ecb7f197ab11eb182d8304.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/weapons/wpn_fire_magnum.mp3"
+dest_files=["res://.godot/imported/wpn_fire_magnum.mp3-b90a298cc8ecb7f197ab11eb182d8304.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

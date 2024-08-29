@@ -15,6 +15,7 @@ alpha_antialiasing_mode = 0
 shading_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("2_7pjao")
+texture_filter = 0
 billboard_mode = 3
 particles_anim_h_frames = 28
 particles_anim_v_frames = 1
@@ -105,7 +106,7 @@ effect_material_track_settings = {
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
-pixel_size = 0.1
+pixel_size = 0.05
 axis = 1
 alpha_cut = 1
 texture_filter = 0

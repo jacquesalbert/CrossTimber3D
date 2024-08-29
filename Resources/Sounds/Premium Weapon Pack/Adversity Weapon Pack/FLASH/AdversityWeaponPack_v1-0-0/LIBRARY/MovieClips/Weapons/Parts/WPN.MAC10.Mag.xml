@@ -1,0 +1,64 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Parts/WPN.MAC10.Mag" itemID="528009db-000028b7" lastModified="1389055235">
+  <timeline>
+    <DOMTimeline name="WPN.MAC10.Mag" currentFrame="13">
+      <layers>
+        <DOMLayer name="actions" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" name="none" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" name="extended" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="5" name="fmj" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="14" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#6B6B6B"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#757575"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.247058823529412"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!19 -397S6|46 -397!46 -397|46 135!46 135|-46 135!-46 135|-46 -397!-46 -397|0 -397"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!0 -397S6|19 -397"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!0 -397S3|0 99!0 99[10 114 19 99!19 99|19 -397"/>
+                    <Edge cubics="!19 -135(;19,-135 0,-135 0,-135p19 -135 0 -135);"/>
+                    <Edge cubics="!46 -135(;46,-135 19,-135 19,-135p46 -135 19 -135);"/>
+                    <Edge cubics="!0 99(;7,109 13,109 19,99q0 99Q10 114q19 99);"/>
+                    <Edge cubics="!19 99(19,99;19,99 19,-135 19,-135q19 99p19 -135);"/>
+                    <Edge cubics="!0 -135(0,-135;0,-135 0,99 0,99p0 -135q0 99)0,99;"/>
+                    <Edge cubics="!-46 135(;-46,135 -46,-135 -46,-135q-46 135p-46 -135);"/>
+                    <Edge cubics="!46 -135(;46,-135 46,135 46,135p46 -135q46 135);"/>
+                    <Edge cubics="!0 -135(;0,-135 -46,-135 -46,-135q0 -135 -46 -135);"/>
+                    <Edge cubics="!46 135(46,135;46,135 -46,135 -46,135q46 135 -46 135)-46,135;"/>
+                    <Edge cubics="!46 -135(46,-135;46,-135 46,-429 46,-429q46 -135 46 -429);"/>
+                    <Edge cubics="!-46 -135(-46,-135;-46,-135 -46,-397 -46,-397q-46 -135 -46 -397);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

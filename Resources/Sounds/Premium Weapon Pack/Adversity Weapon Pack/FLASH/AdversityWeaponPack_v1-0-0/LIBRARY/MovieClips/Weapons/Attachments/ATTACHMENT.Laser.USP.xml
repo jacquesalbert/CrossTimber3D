@@ -1,0 +1,89 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.USP" itemID="52d3634b-0000044f" lastModified="1404246751" lastUniqueIdentifier="4">
+  <timeline>
+    <DOMTimeline name="ATTACHMENT.Laser.USP">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#191919"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#2D2D2D"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#171717"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.0980392156862745"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!208 61|208 119"/>
+                    <Edge fillStyle0="2" strokeStyle="1" edges="!226 124|231 119!231 119[233 115 234 110!234 110[235 105 236 100!236 100[237 95 237 90!237 90[237 75 231 59!231 59|226 56"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!226 56|208 61"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!226 56|226 30!226 30|154 30!92 133|226 133!226 133|226 124"/>
+                    <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!226 124|208 119"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!124 110[127 111 131 111!131 111[135 111 138 110!138 110[#90.A9 #6C.01 150 102!150 102[158 94 158 82!158 82[158 70 150 62!150 62[149 60 147 59!147 59[140 54 131 54!131 54[121 54 115 59!115 59[112 60 111 62!111 62[#6A.F4 #41.98 104.5 70
+!104.5 70[102 #4B.65 102 82!102 82[102 94 111 102!111 102[#74.57 #6C.01 123.5 110"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="
+!123.5 110|124 110"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!154 30|174 74!174 74[#B1.38 #61.3 167 110!167 110[161 116 151 119!151 119[129 125 107 116!107 116|92 107"/>
+                    <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!208 119|191 115!191 115|191 65!191 65|208 61"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!82 15|147 15!147 15|154 30"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!82 15|58 15"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!33 30|33 0!33 0|60 0!60 0|82 15!0 115|0 111!0 111|1 110!1 110[#1B.F5 #6F.35 31.5 69.5!31.5 69.5|33 68!33 68|33 30"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!92 107|92 70!92 70|31.5 69.5"/>
+                    <Edge fillStyle1="3" edges="
+!25 133|0 133"/>
+                    <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="
+!0 115[9 126 25 133"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="
+!25 133|92 133"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!92 107|92 133"/>
+                    <Edge fillStyle1="3" strokeStyle="1" edges="
+!0 133|0 115"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!104.5 70|92 70!154 30|33 30"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="laser" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Effects/FX.Laser" name="mc_laser" centerPoint3DX="11.45" centerPoint3DY="4.55">
+                  <matrix>
+                    <Matrix tx="11.45" ty="4.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

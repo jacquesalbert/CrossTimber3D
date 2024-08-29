@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/MC.Weapon.Stoner" itemID="5c6cd333-00000442" lastModified="1552501886">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.Stoner">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/MC.Weapon.Stoner.Mag" name="mag" centerPoint3DX="-6.3" centerPoint3DY="18.8">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-6.3" ty="18.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/MC.Weapon.Stoner.Base" name="base">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.Stoner.Optic" name="optic" centerPoint3DX="-41.45" centerPoint3DY="-48.7">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-41.45" ty="-31.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

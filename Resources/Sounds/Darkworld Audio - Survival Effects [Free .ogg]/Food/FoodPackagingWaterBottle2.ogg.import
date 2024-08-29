@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://by6e412wu7jb6"
+path="res://.godot/imported/FoodPackagingWaterBottle2.ogg-c756dc7a257b446a02090da6400e9d2d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Food/FoodPackagingWaterBottle2.ogg"
+dest_files=["res://.godot/imported/FoodPackagingWaterBottle2.ogg-c756dc7a257b446a02090da6400e9d2d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

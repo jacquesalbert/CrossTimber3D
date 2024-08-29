@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cw822jhw0l582"
+path="res://.godot/imported/DesignedAxe4.ogg-1b60a9d8f0cea3b584628348920b677e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Tools/DesignedAxe4.ogg"
+dest_files=["res://.godot/imported/DesignedAxe4.ogg-1b60a9d8f0cea3b584628348920b677e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

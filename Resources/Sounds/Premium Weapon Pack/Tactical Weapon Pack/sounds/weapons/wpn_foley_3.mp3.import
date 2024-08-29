@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dg13h31xipqy5"
+path="res://.godot/imported/wpn_foley_3.mp3-45e58f59b679d62449c36b5931809390.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_foley_3.mp3"
+dest_files=["res://.godot/imported/wpn_foley_3.mp3-45e58f59b679d62449c36b5931809390.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

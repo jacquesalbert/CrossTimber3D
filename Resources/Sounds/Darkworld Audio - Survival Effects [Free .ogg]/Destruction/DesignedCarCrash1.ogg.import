@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqwrttbo02l7f"
+path="res://.godot/imported/DesignedCarCrash1.ogg-496ecf19b32c77d9f4c33e946ff98c2d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Destruction/DesignedCarCrash1.ogg"
+dest_files=["res://.godot/imported/DesignedCarCrash1.ogg-496ecf19b32c77d9f4c33e946ff98c2d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

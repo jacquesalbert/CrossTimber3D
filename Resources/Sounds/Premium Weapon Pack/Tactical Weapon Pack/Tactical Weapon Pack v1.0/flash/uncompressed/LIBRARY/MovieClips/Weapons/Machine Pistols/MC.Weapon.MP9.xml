@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Machine Pistols/MC.Weapon.MP9" itemID="5bcd2eb6-00001acc" lastModified="1540173599">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.MP9">
+      <layers>
+        <DOMLayer name="base" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Machine Pistols/MC.Weapon.MP9.Base" name="base" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" ty="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mag" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Machine Pistols/MC.Weapon.MP9.Mag" name="mag" centerPoint3DX="18" centerPoint3DY="33.9">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="18" ty="33.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

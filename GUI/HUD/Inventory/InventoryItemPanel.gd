@@ -30,6 +30,7 @@ func on_quantity_changed():
 	fill_meter.max_value = max_quantity
 	fill_meter.value = quantity
 	quantity_label.text = str(quantity) 
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

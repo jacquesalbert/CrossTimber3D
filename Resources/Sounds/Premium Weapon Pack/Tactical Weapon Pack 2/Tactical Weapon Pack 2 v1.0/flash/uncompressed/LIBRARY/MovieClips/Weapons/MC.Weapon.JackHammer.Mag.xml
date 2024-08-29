@@ -1,0 +1,37 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.JackHammer.Mag" itemID="5c6719b0-000008a4" lastModified="1552692535">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.JackHammer.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#141414"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.498039215686275"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!469 56S5|880 -468!880 -468|880 -996!880 -996|-880 -996!-880 -996|-880 56"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!469 56S6|469 848!469 848|241 996!241 996|-577 996!-577 996|-668 848!-668 848|-880 848!-880 848|-880 56"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!469 56S7|-880 56"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

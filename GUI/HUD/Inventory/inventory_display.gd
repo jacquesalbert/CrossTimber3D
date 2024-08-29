@@ -13,13 +13,14 @@ var inventory : Inventory:
 			var panel :InventoryItemPanel = ITEM_PANEL_SCENE.instantiate()
 			add_child(panel)
 			panel.item = item
+			panel.max_quantity = inventory.get_item_capacity(item)
+			panel.quantity = inventory.get_item_quantity(item)
 			_item_panels[item] = panel
-		on_inventory_changed()
 
 
 func on_inventory_changed():
 	for item in _item_panels:
-		_item_panels[item].max_quantity = inventory.get_item_capacity(item)
+		_item_panels[item].max_quantity = inventory.get_item_max_capacity(item)
 		_item_panels[item].quantity = inventory.get_item_quantity(item)
 
 # Called when the node enters the scene tree for the first time.

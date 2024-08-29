@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://de3wmks2wcjmh"
+path="res://.godot/imported/Rockfall2.ogg-f0b7539b1bff86351f5d35bb71208b75.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Environment/Rockfall2.ogg"
+dest_files=["res://.godot/imported/Rockfall2.ogg-f0b7539b1bff86351f5d35bb71208b75.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

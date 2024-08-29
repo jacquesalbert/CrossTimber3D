@@ -7,6 +7,7 @@ var traits_owner : Node:
 	set(value):
 		traits_owner = value
 		on_traits_owner_changed()
+		on_traits_changed()
 
 func on_traits_owner_changed():
 	traits_owner.traits_changed.connect(on_traits_changed)

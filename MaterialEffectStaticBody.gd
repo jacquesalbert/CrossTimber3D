@@ -7,5 +7,5 @@ extends StaticBody3D
 func get_effect_material()->StringName:
 	return effect_material
 
-func get_ttraction()->float:
+func get_traction()->float:
 	return traction

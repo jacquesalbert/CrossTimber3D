@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d2b7q03vkwd4"
+path="res://.godot/imported/physics_shell_generic_3.mp3-15a2fde4b55c2eb4d6850b63d6acbbdd.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/physics/shell/physics_shell_generic_3.mp3"
+dest_files=["res://.godot/imported/physics_shell_generic_3.mp3-15a2fde4b55c2eb4d6850b63d6acbbdd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

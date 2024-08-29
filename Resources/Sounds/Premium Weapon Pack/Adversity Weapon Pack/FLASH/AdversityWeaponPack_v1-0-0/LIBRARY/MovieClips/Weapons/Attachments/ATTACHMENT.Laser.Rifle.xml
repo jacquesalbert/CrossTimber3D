@@ -1,0 +1,129 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Attachments/ATTACHMENT.Laser.Rifle" itemID="52d36352-00000450" lastModified="1408833117" lastUniqueIdentifier="6">
+  <timeline>
+    <DOMTimeline name="ATTACHMENT.Laser.Rifle">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#191919"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#2D2D2D"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.101960784313725"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!172 34|203 34!203 34|203 90!203 90|195 90"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!195 90|195 103!195 103|169 103!169 103|169 90"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!169 90|153 90"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!127 90|114 90"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!142 90|127 90"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!114 90|114 103!114 103|88 103!88 103|88 90!153 90|153 103!153 103|127 103!127 103|127 90"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!195 90|172 90!172 90|169 90"/>
+                    <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!142 90|142 34!153 90|142 90"/>
+                    <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="!172 90|172 34"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!142 34|172 34"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-17 34|-17 0!-17 0|55 0!55 0|55 34"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!5 35[0 40 0 48!0 48[0 55 5 61!5 61[10 66 18 66!18 66[25 66 30 61!30 61[36 55 36 48!36 48[36 40 30 35!30 35[30 34 28 33!28 33[24 30 18 30!18 30[12 30 8 33!8 33[6 34 5 35"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!78 90|55 98"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!55 90|55 98!78 90|55 90"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!88 90|78 90"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!55 90|55 34!114 90|88 90"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!55 34|142 34!-17 98|-53 90!-53 90|-53 34!-53 34|-17 34"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-17 98|-17 34"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!55 98|-17 98"/>
+                    <Edge cubics="!-17 98(;-17,98 -17,34 -17,34p-17 98 -17 34);"/>
+                    <Edge cubics="!-17 98(;-17,98 -53,90 -53,90p-17 98q-53 90);"/>
+                    <Edge cubics="!-53 34(;-53,34 -53,90 -53,90q-53 34 -53 90);"/>
+                    <Edge cubics="!-53 34(;-53,34 -17,34 -17,34q-53 34p-17 34)-17,34;"/>
+                    <Edge cubics="!-17 34(;-17,34 -17,0 -17,0p-17 34q-17 0);"/>
+                    <Edge cubics="!142 34(;142,34 172,34 172,34p142 34 172 34);"/>
+                    <Edge cubics="!0 48(;0,53 2,57 5,61q0 48Q0 55q5 61);"/>
+                    <Edge cubics="!5 35(;2,38 0,43 0,48q5 35Q0 40q0 48);"/>
+                    <Edge cubics="!8 33(;7,34 6,34 5,35q8 33Q6 34q5 35);"/>
+                    <Edge cubics="!18 30(;14,30 11,31 8,33q18 30Q12 30q8 33);"/>
+                    <Edge cubics="!30 61(;34,57 36,53 36,48q30 61Q36 55q36 48);"/>
+                    <Edge cubics="!36 48(;36,43 34,38 30,35q36 48Q36 40q30 35);"/>
+                    <Edge cubics="!30 35(;30,34 29,34 28,33q30 35Q30 34q28 33);"/>
+                    <Edge cubics="!28 33(;25,31 22,30 18,30q28 33Q24 30q18 30);"/>
+                    <Edge cubics="!55 98(;55,98 78,90 78,90p55 98 78 90);"/>
+                    <Edge cubics="!78 90(;78,90 55,90 55,90p78 90 55 90);"/>
+                    <Edge cubics="!55 90(;55,90 55,98 55,98p55 90 55 98);"/>
+                    <Edge cubics="!18 66(;23,66 27,64 30,61q18 66Q25 66q30 61);"/>
+                    <Edge cubics="!5 61(;8,64 13,66 18,66q5 61Q10 66q18 66);"/>
+                    <Edge cubics="!55 34(;55,34 142,34 142,34p55 34 142 34);"/>
+                    <Edge cubics="!172 34(;172,34 203,34 203,34p172 34q203 34);"/>
+                    <Edge cubics="!55 98(;55,98 -17,98 -17,98p55 98 -17 98);"/>
+                    <Edge cubics="!-17 0(;-17,0 55,0 55,0q-17 0 55 0);"/>
+                    <Edge cubics="!127 90(;127,90 127,103 127,103q127 90 127 103);"/>
+                    <Edge cubics="!127 103(;127,103 153,103 153,103q127 103 153 103);"/>
+                    <Edge cubics="!153 103(;153,103 153,90 153,90q153 103 153 90);"/>
+                    <Edge cubics="!88 90(;88,90 88,103 88,103q88 90 88 103);"/>
+                    <Edge cubics="!88 103(88,103;88,103 114,103 114,103q88 103 114 103);"/>
+                    <Edge cubics="!114 103(;114,103 114,90 114,90q114 103 114 90);"/>
+                    <Edge cubics="!114 90(;114,90 88,90 88,90q114 90 88 90);"/>
+                    <Edge cubics="!169 90(;169,90 169,103 169,103q169 90 169 103);"/>
+                    <Edge cubics="!169 103(;169,103 195,103 195,103q169 103 195 103);"/>
+                    <Edge cubics="!195 103(;195,103 195,90 195,90q195 103 195 90);"/>
+                    <Edge cubics="!127 90(;127,90 114,90 114,90q127 90 114 90);"/>
+                    <Edge cubics="!142 90(;142,90 127,90 127,90p142 90q127 90);"/>
+                    <Edge cubics="!169 90(;169,90 153,90 153,90q169 90 153 90);"/>
+                    <Edge cubics="!169 90(;169,90 172,90 172,90q169 90 172 90);"/>
+                    <Edge cubics="!172 90(;172,90 195,90 195,90q172 90 195 90);"/>
+                    <Edge cubics="!153 90(;153,90 142,90 142,90q153 90p142 90);"/>
+                    <Edge cubics="!88 90(;88,90 78,90 78,90q88 90p78 90);"/>
+                    <Edge cubics="!203 90(203,90;203,90 195,90 195,90q203 90 195 90);"/>
+                    <Edge cubics="!203 34(;203,34 203,46 203,46q203 34 203 46);"/>
+                    <Edge cubics="!203 46(;203,46 203,90 203,90q203 46 203 90);"/>
+                    <Edge cubics="!172 46(;172,46 172,34 172,34q172 46 172 34);"/>
+                    <Edge cubics="!142 34(;142,34 142,46 142,46q142 34 142 46);"/>
+                    <Edge cubics="!172 46(;172,46 142,46 142,46q172 46 142 46);"/>
+                    <Edge cubics="!142 46(;142,46 142,90 142,90q142 46 142 90);"/>
+                    <Edge cubics="!172 90(;172,90 172,46 172,46q172 90 172 46);"/>
+                    <Edge cubics="!55 34(;55,34 55,46 55,46q55 34 55 46);"/>
+                    <Edge cubics="!55 7(;55,7 55,34 55,34q55 7 55 34);"/>
+                    <Edge cubics="!55 0(;55,0 55,7 55,7q55 0 55 7);"/>
+                    <Edge cubics="!45 46(;45,46 45,7 45,7q45 46 45 7);"/>
+                    <Edge cubics="!55 46(;55,46 45,46 45,46q55 46 45 46);"/>
+                    <Edge cubics="!45 7(;45,7 55,7 55,7q45 7 55 7);"/>
+                    <Edge cubics="!55 46(;55,46 55,90 55,90q55 46 55 90);"/>
+                    <Edge cubics="!142 46(;142,46 55,46 55,46q142 46 55 46);"/>
+                    <Edge cubics="!203 46(;203,46 172,46 172,46q203 46 172 46);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="laser" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Effects/FX.Laser" name="mc_laser" centerPoint3DX="10" centerPoint3DY="3.25">
+                  <matrix>
+                    <Matrix tx="10" ty="3.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

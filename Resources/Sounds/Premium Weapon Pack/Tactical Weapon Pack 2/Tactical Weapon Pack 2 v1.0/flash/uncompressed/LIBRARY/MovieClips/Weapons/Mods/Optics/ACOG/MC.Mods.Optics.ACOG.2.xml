@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Mods/Optics/ACOG/MC.Mods.Optics.ACOG.2" itemID="550105a9-000014b0" lastModified="1552496565" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="MC.Mods.Optics.ACOG.2">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/MC.Romeo5" selected="true">
+                  <matrix>
+                    <Matrix tx="28.25" ty="-25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

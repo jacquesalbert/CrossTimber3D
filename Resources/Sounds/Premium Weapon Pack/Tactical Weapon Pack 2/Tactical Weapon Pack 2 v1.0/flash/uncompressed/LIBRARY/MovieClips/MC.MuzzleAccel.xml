@@ -1,0 +1,63 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/MC.MuzzleAccel" itemID="5c65aa11-00000412" lastModified="1553021023">
+  <timeline>
+    <DOMTimeline name="MC.MuzzleAccel">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-281 -180S6|-281 -200!-281 -200|373 -200!373 -200|262 -77!262 -77|261 -56!261 -56|-180 -56"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!262 -77S7|261 -76!261 -76|-180 -76!-180 -76|-180 -56"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-180 62S6|263.5 62!263.5 62|263.5 82.5!263.5 82.5|373 200!373 200|-281 200!-281 200|-281 180!-281 180|-372 180!-372 180|-372 -180!-372 -180|-281 -180"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-180 62S7|-180 82!-180 82|263 82!263 82|263.5 82.5"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-180 -56S6|-180 62"/>
+                        <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-281 -180S7|-281 174"/>
+                        <Edge cubics="!373 -200(;373,-200 -281,-200 -281,-200q373 -200 -281 -200);"/>
+                        <Edge cubics="!-281 200(;-281,200 373,200 373,200q-281 200 373 200);"/>
+                        <Edge cubics="!373 200(;373,200 263,82 263,82q373 200 263 82);"/>
+                        <Edge cubics="!-180 82(;-180,82 263,82 263,82q-180 82 263 82);"/>
+                        <Edge cubics="!-180 -76(;-180,-76 261,-76 261,-76q-180 -76 261 -76);"/>
+                        <Edge cubics="!-372 -180(;-372,-180 -281,-180 -281,-180q-372 -180 -281 -180);"/>
+                        <Edge cubics="!-281 180(;-281,180 -372,180 -372,180q-281 180 -372 180);"/>
+                        <Edge cubics="!-372 -180(;-372,-180 -372,180 -372,180q-372 -180 -372 180);"/>
+                        <Edge cubics="!-281 -200(;-281,-200 -281,-180 -281,-180q-281 -200 -281 -180);"/>
+                        <Edge cubics="!-281 200(;-281,200 -281,180 -281,180q-281 200 -281 180);"/>
+                        <Edge cubics="!-281 -180(;-281,-180 -281,174 -281,174q-281 -180 -281 174);"/>
+                        <Edge cubics="!-180 -56(;-180,-56 261,-56 261,-56q-180 -56 261 -56);"/>
+                        <Edge cubics="!-180 -76(;-180,-76 -180,-56 -180,-56q-180 -76 -180 -56);"/>
+                        <Edge cubics="!-180 62(;-180,62 263,62 263,62q-180 62 263 62);"/>
+                        <Edge cubics="!-180 62(;-180,62 -180,82 -180,82q-180 62 -180 82);"/>
+                        <Edge cubics="!-180 -56(;-180,-56 -180,62 -180,62q-180 -56 -180 62);"/>
+                        <Edge cubics="!261 -56(;261,-56 262,-77 262,-77q261 -56 262 -77);"/>
+                        <Edge cubics="!262 -77(;262,-77 261,-76 261,-76q262 -77 261 -76);"/>
+                        <Edge cubics="!373 -200(;373,-200 262,-77 262,-77q373 -200 262 -77);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,143 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/MC.MuzzleBooster" itemID="5c65aabe-00000416" lastModified="1553020792">
+  <timeline>
+    <DOMTimeline name="MC.MuzzleBooster">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#141414"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.498039215686275"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-235 -180|-235 -200!-235 -200|-134 -200!-134 -200|-134 200!-134 200|-235 200!-235 200|-235 180!-235 180|-326 180!-326 180|-326 -180!-326 -180|-235 -180"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-235 -180|-235 174"/>
+                    <Edge cubics="!770 -404(;770,-404 862,-404 862,-404q770 -404 862 -404);"/>
+                    <Edge cubics="!1194 -427(;1194,-427 1195,-426 1195,-426q1194 -427 1195 -426);"/>
+                    <Edge cubics="!862 -300(;862,-300 770,-300 770,-300q862 -300 770 -300);"/>
+                    <Edge cubics="!1195 -426(;1195,-426 1298,-349 1298,-349q1195 -426 1298 -349);"/>
+                    <Edge cubics="!1298 -349(;1298,-349 934,-349 934,-349q1298 -349 934 -349);"/>
+                    <Edge cubics="!862 -300(;862,-300 934,-349 934,-349q862 -300 934 -349);"/>
+                    <Edge cubics="!862 -474(;862,-474 862,-404 862,-404q862 -474 862 -404);"/>
+                    <Edge cubics="!1194 -427(;1194,-427 862,-474 862,-474q1194 -427 862 -474);"/>
+                    <Edge cubics="!770 -300(;770,-300 770,-404 770,-404q770 -300 770 -404);"/>
+                    <Edge cubics="!419 -200(;419,-200 -134,-200 -134,-200q419 -200 -134 -200);"/>
+                    <Edge cubics="!-134 -200(;-134,-200 -235,-200 -235,-200q-134 -200 -235 -200);"/>
+                    <Edge cubics="!-235 200(;-235,200 -134,200 -134,200q-235 200 -134 200);"/>
+                    <Edge cubics="!-134 200(;-134,200 172,200 172,200q-134 200 172 200);"/>
+                    <Edge cubics="!172 200(;172,200 419,200 419,200q172 200 419 200);"/>
+                    <Edge cubics="!307 -76(;307,-76 419,-200 419,-200q307 -76 419 -200);"/>
+                    <Edge cubics="!419 200(;419,200 309,82 309,82q419 200 309 82);"/>
+                    <Edge cubics="!-134 82(;-134,82 309,82 309,82q-134 82 309 82);"/>
+                    <Edge cubics="!-134 82(;-134,82 -134,-76 -134,-76q-134 82 -134 -76);"/>
+                    <Edge cubics="!-134 -76(;-134,-76 60,-76 60,-76q-134 -76 60 -76);"/>
+                    <Edge cubics="!60 -76(;60,-76 307,-76 307,-76q60 -76 307 -76);"/>
+                    <Edge cubics="!-326 -180(;-326,-180 -235,-180 -235,-180q-326 -180 -235 -180);"/>
+                    <Edge cubics="!-235 180(;-235,180 -326,180 -326,180q-235 180 -326 180);"/>
+                    <Edge cubics="!-326 -180(;-326,-180 -326,180 -326,180q-326 -180 -326 180);"/>
+                    <Edge cubics="!-235 -200(;-235,-200 -235,-180 -235,-180q-235 -200 -235 -180);"/>
+                    <Edge cubics="!-235 200(;-235,200 -235,180 -235,180q-235 200 -235 180);"/>
+                    <Edge cubics="!-235 -180(;-235,-180 -235,174 -235,174q-235 -180 -235 174);"/>
+                    <Edge cubics="!-134 -200(;-134,-200 -134,-238 -134,-238q-134 -200 -134 -238);"/>
+                    <Edge cubics="!-134 -76(;-134,-76 -134,-200 -134,-200q-134 -76 -134 -200);"/>
+                  </edges>
+                </DOMShape>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle0="1" strokeStyle="1" edges="!-134 -66|-42 -66!-42 -66|30 -115!30 -115|394 -115!394 -115|291 -192!291 -192|290 -193!290 -193|-42 -240!-42 -240|-42 -170!-42 -170|-134 -170!-134 -170|-134 -66"/>
+                        <Edge cubics="!-134 -170(;-134,-170 -42,-170 -42,-170q-134 -170 -42 -170);"/>
+                        <Edge cubics="!290 -193(;290,-193 291,-192 291,-192q290 -193 291 -192);"/>
+                        <Edge cubics="!-42 -66(;-42,-66 -134,-66 -134,-66q-42 -66 -134 -66);"/>
+                        <Edge cubics="!291 -192(;291,-192 394,-115 394,-115q291 -192 394 -115);"/>
+                        <Edge cubics="!394 -115(;394,-115 30,-115 30,-115q394 -115 30 -115);"/>
+                        <Edge cubics="!-42 -66(;-42,-66 30,-115 30,-115q-42 -66 30 -115);"/>
+                        <Edge cubics="!-42 -240(;-42,-240 -42,-170 -42,-170q-42 -240 -42 -170);"/>
+                        <Edge cubics="!290 -193(;290,-193 -42,-240 -42,-240q290 -193 -42 -240);"/>
+                        <Edge cubics="!-134 -66(;-134,-66 -134,-170 -134,-170q-134 -66 -134 -170);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+                <DOMGroup>
+                  <members>
+                    <DOMShape>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#141414"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-134 66|-42 66!-42 66|30 115!30 115|394 115!394 115|291 192!291 192|290 193!290 193|-42 240!-42 240|-42 170!-42 170|-134 170!-134 170|-134 66"/>
+                        <Edge cubics="!-134 170(;-134,170 -42,170 -42,170q-134 170 -42 170);"/>
+                        <Edge cubics="!290 193(;290,193 291,192 291,192q290 193 291 192);"/>
+                        <Edge cubics="!-42 66(;-42,66 -134,66 -134,66q-42 66 -134 66);"/>
+                        <Edge cubics="!291 192(;291,192 394,115 394,115q291 192 394 115);"/>
+                        <Edge cubics="!394 115(;394,115 30,115 30,115q394 115 30 115);"/>
+                        <Edge cubics="!-42 66(;-42,66 30,115 30,115q-42 66 30 115);"/>
+                        <Edge cubics="!-42 240(;-42,240 -42,170 -42,170q-42 240 -42 170);"/>
+                        <Edge cubics="!290 193(;290,193 -42,240 -42,240q290 193 -42 240);"/>
+                        <Edge cubics="!-134 66(;-134,66 -134,170 -134,170q-134 66 -134 170);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+                <DOMRectangleObject objectWidth="24" objectHeight="5" x="24.3" y="-2" lockFlag="true">
+                  <matrix>
+                    <Matrix tx="-31.3" ty="-0.5"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor color="#141414"/>
+                  </fill>
+                  <stroke>
+                    <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                      <fill>
+                        <SolidColor alpha="0.498039215686275"/>
+                      </fill>
+                    </SolidStroke>
+                  </stroke>
+                </DOMRectangleObject>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

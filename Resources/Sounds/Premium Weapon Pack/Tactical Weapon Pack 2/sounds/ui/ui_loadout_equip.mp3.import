@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cv0diwkn6yo7k"
+path="res://.godot/imported/ui_loadout_equip.mp3-82bd7fa1f5c363ce5d260fab0bfcbee0.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/ui/ui_loadout_equip.mp3"
+dest_files=["res://.godot/imported/ui_loadout_equip.mp3-82bd7fa1f5c363ce5d260fab0bfcbee0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

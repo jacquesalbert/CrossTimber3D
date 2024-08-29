@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwi0m50o0t17d"
+path="res://.godot/imported/wpn_fire_skorpion.mp3-76f71def6a508902c2e82caa63b2c53c.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/weapons/wpn_fire_skorpion.mp3"
+dest_files=["res://.godot/imported/wpn_fire_skorpion.mp3-76f71def6a508902c2e82caa63b2c53c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

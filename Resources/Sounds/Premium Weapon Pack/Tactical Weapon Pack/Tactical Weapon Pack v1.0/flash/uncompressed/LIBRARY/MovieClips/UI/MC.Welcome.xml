@@ -1,0 +1,60 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/UI/MC.Welcome" itemID="5bd9b826-0000041e" lastModified="1540995128">
+  <timeline>
+    <DOMTimeline name="MC.Welcome">
+      <layers>
+        <DOMLayer name="text" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMStaticText left="-153.15" width="450.3" height="86" autoExpand="true" antiAliasSharpness="200" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-72" ty="-43"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>THANK YOU FOR DOWNLOADING THE TACTICAL WEAPON PACK!&#xD;&#xD;FIND MORE GAMES AND ASSET PACKS AT </characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" alpha="0.8" lineHeight="15.6" size="14" bitmapSize="280" face="Arial-BoldMT" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                    <DOMTextRun>
+                      <characters>WWW.XWILKINX.COM</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" alpha="0.8" lineHeight="15.6" size="14" bitmapSize="280" face="Arial-BoldMT" fillColor="#FFDA91"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                    <DOMTextRun>
+                      <characters>.&#xD;&#xD;CREATED BY XWILKINX</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" alpha="0.8" lineHeight="15.6" size="14" bitmapSize="280" face="Arial-BoldMT" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/UI/MC.XWILKINX">
+                  <matrix>
+                    <Matrix a="4.285888671875" d="4.285888671875"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.05078125"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

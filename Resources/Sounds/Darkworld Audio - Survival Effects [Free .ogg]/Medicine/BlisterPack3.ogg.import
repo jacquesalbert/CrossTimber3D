@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfvd11h6pl83w"
+path="res://.godot/imported/BlisterPack3.ogg-7a3ba180b10f62009b5c758e8a98d2f5.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Medicine/BlisterPack3.ogg"
+dest_files=["res://.godot/imported/BlisterPack3.ogg-7a3ba180b10f62009b5c758e8a98d2f5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

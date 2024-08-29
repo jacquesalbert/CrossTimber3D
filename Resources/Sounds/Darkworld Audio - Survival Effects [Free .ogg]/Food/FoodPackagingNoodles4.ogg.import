@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b7p7jtpdbu1xy"
+path="res://.godot/imported/FoodPackagingNoodles4.ogg-7217a9b8dc82778b59d6e891ef1500e3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Food/FoodPackagingNoodles4.ogg"
+dest_files=["res://.godot/imported/FoodPackagingNoodles4.ogg-7217a9b8dc82778b59d6e891ef1500e3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

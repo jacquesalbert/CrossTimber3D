@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c5wpwlsjaa2vd"
+path="res://.godot/imported/ClothesRubberMovement3.ogg-f29f95d5fd8cdb7c2fa1cd8dc1173dd3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Clothing/ClothesRubberMovement3.ogg"
+dest_files=["res://.godot/imported/ClothesRubberMovement3.ogg-f29f95d5fd8cdb7c2fa1cd8dc1173dd3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

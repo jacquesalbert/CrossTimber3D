@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.P320" itemID="5c7af520-00000477" lastModified="1552570317">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.P320">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.P320.Mag" name="mag" centerPoint3DX="-27.7" centerPoint3DY="7.8">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-27.7" ty="7.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.P320.Base" name="base" centerPoint3DX="17.8" centerPoint3DY="-2.05">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.P320.Slide" name="slide" centerPoint3DX="3.85" centerPoint3DY="-26.95">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="3.8" ty="-26.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bj3gjb28nihim"
+path="res://.godot/imported/wpn_fire_m1911.mp3-8a6e81710d7db424af23fa36ad0b230c.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_fire_m1911.mp3"
+dest_files=["res://.godot/imported/wpn_fire_m1911.mp3-8a6e81710d7db424af23fa36ad0b230c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

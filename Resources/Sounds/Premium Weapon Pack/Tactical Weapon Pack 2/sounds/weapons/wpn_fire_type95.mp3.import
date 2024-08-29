@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://pevopid5xi56"
+path="res://.godot/imported/wpn_fire_type95.mp3-a50cb0a467912b36a2c50e5d27129f62.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/weapons/wpn_fire_type95.mp3"
+dest_files=["res://.godot/imported/wpn_fire_type95.mp3-a50cb0a467912b36a2c50e5d27129f62.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

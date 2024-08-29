@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://43twip0rhf8v"
+path="res://.godot/imported/ui_beep.mp3-071346846378ee04c6edae3b8a5e7637.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/ui/ui_beep.mp3"
+dest_files=["res://.godot/imported/ui_beep.mp3-071346846378ee04c6edae3b8a5e7637.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

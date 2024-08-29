@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Snipers/MC.Weapon.TPR" itemID="5b9f05fa-00000c40" lastModified="1537409832">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.TPR">
+      <layers>
+        <DOMLayer name="Layer 3" color="#FF800A" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Snipers/MC.Weapon.TPR.Base" name="base" centerPoint3DY="-0.05">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Snipers/MC.Weapon.RSASS.Optic" name="optic" centerPoint3DX="14.3" centerPoint3DY="-56.55">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="14.3" ty="-38.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/MC.Weapon.RSASS.Mag" name="mag" centerPoint3DX="2.3" centerPoint3DY="24.3">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="2.3" ty="24.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.7" y="19.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

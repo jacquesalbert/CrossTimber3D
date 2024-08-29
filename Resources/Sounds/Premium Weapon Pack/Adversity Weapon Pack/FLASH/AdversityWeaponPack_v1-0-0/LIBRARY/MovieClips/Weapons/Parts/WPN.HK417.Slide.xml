@@ -1,0 +1,43 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Parts/WPN.HK417.Slide" itemID="52804d7c-00003c96" lastModified="1384140156">
+  <timeline>
+    <DOMTimeline name="WPN.HK417.Slide">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#404040"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.247058823529412"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-141 -1S2|-141 -39!-141 -39|141 -39!141 -39|141 -1!141 -1|141 38!141 38|-141 38!-141 38|-141 -1"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-141 -1S3|141 -1"/>
+                    <Edge cubics="!-141 -39(-141,-39;-141,-39 141,-39 141,-39q-141 -39 141 -39);"/>
+                    <Edge cubics="!-141 38(;-141,38 -141,-1 -141,-1q-141 38 -141 -1);"/>
+                    <Edge cubics="!-141 -1(;-141,-1 -141,-39 -141,-39q-141 -1 -141 -39);"/>
+                    <Edge cubics="!141 -1(;141,-1 141,-39 141,-39p141 -1q141 -39);"/>
+                    <Edge cubics="!141 38(;141,38 141,-1 141,-1q141 38p141 -1);"/>
+                    <Edge cubics="!141 38(;141,38 -141,38 -141,38q141 38 -141 38);"/>
+                    <Edge cubics="!141 -1(;141,-1 -141,-1 -141,-1p141 -1 -141 -1);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

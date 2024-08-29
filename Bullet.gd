@@ -9,13 +9,13 @@ extends RayCast3D
 #@export var material_effect_definition :MaterialEffectDefinition
 #@export_flags_2d_physics var ground_area_mask :int
 #@export var trail_template: PackedScene
-@export var trail_gradient : Gradient
-@export var trail_lifetime : float
-@export var trail_width : float
-@export var trail_width_curve : Curve
-@export var trail_color : Color
-@export var trail_shadow : GeometryInstance3D.ShadowCastingSetting
-@export var trail_transparency : BaseMaterial3D.Transparency
+#@export var trail_gradient : Gradient
+#@export var trail_lifetime : float
+#@export var trail_width : float
+#@export var trail_width_curve : Curve
+#@export var trail_color : Color
+#@export var trail_shadow : GeometryInstance3D.ShadowCastingSetting
+#@export var trail_transparency : BaseMaterial3D.Transparency
 
 @export var apply_effects: Array[PackedScene]
 @export var material_hit_effects: Dictionary
@@ -28,19 +28,18 @@ var noise : Noise
 var total_travelled : float
 var last_pos : Vector3
 
-var trailer : Trailer
+#var trailer : Trailer
 
-func _init(global_pos:Vector3, direction:Vector3, speed:float, stability:float, damage:int, range:float, responsible_node:Node, mask:int, trail_gradient, trail_lifetime, trail_width):
-	global_position = global_pos
+func _init(direction:Vector3, speed:float, stability:float, damage:int, range:float, responsible_node:Node, mask:int):
 	self.direction = direction
 	self.speed = speed
 	self.stability = stability
 	self.damage = damage
 	self.range = range
 	self.responsible_node = responsible_node
-	self.trail_gradient = trail_gradient
-	self.trail_lifetime = trail_lifetime
-	self.trail_width = trail_width
+	#self.trail_gradient = trail_gradient
+	#self.trail_lifetime = trail_lifetime
+	#self.trail_width = trail_width
 	collision_mask = mask
 	
 #var trail:Trail
@@ -49,26 +48,26 @@ func spawn_hit_effect(global_pos:Vector3, direction:Vector3, normal:Vector3, eff
 	var effect : PackedScene = material_hit_effects.get(effect_material)
 	if effect:
 		var hit_effect_instance := effect.instantiate()
-		print("set rotation")
+		#print("set rotation")
 		#hit_effect_instance.global_rotation = normal.angle()
 		hit_effect_instance.global_position = global_pos
 		LevelManager.spawn_in_level(hit_effect_instance)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("create")
+	#print("create")
 	noise = FastNoiseLite.new()
 	noise.frequency = 1
-	trailer = Trailer.new()
-	trailer.gradient = trail_gradient
-	trailer.width = trail_width
-	trailer.color = trail_color
-	trailer.width_curve = trail_width_curve
-	trailer.lifetime = trail_lifetime
-	trailer.cast_shadow = trail_shadow
-	trailer.transparency = trail_transparency
-	add_child(trailer)
-	trailer.enable()
+	#trailer = Trailer.new()
+	#trailer.gradient = trail_gradient
+	#trailer.width = trail_width
+	#trailer.color = trail_color
+	#trailer.width_curve = trail_width_curve
+	#trailer.lifetime = trail_lifetime
+	#trailer.cast_shadow = trail_shadow
+	#trailer.transparency = trail_transparency
+	#add_child(trailer)
+	#trailer.enable()
 	collide_with_areas = true
 	last_pos = global_position
 	set_next_target_position(Engine.time_scale/Engine.physics_ticks_per_second)
@@ -171,7 +170,7 @@ func _physics_process(delta):
 	# if we didn't hit anything, advance our position. Be careful to check that we don't extend the ray further than the total distance
 	last_pos = global_position
 	global_position += target_position
-	print("set tumble")
+	#print("set tumble")
 	#var tumble_angle : float= noise.get_noise_2dv(global_position)*PI * (1.0 - stability) * 10 * delta
 	#direction = direction.rotated(tumble_angle)
 	set_next_target_position(delta)

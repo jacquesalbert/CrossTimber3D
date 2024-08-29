@@ -1,0 +1,191 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/SMGs/MC.Weapon.UMP45.Optic" itemID="5b8b34dd-00001342" lastModified="1540989364" lastUniqueIdentifier="19">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.UMP45.Optic">
+      <layers>
+        <DOMLayer name="actions" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" name="optic_default" labelType="name" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="optic_reflex_1" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" name="optic_reflex_2" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="3" name="optic_eotech_1" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" name="optic_eotech_2" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="5" name="optic_acog_1" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="6" name="optic_acog_2" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gfx" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <members>
+                    <DOMGroup selected="true">
+                      <members>
+                        <DOMShape selected="true">
+                          <fills>
+                            <FillStyle index="1">
+                              <SolidColor color="#141414"/>
+                            </FillStyle>
+                          </fills>
+                          <strokes>
+                            <StrokeStyle index="1">
+                              <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                                <fill>
+                                  <SolidColor alpha="0.498039215686275"/>
+                                </fill>
+                              </SolidStroke>
+                            </StrokeStyle>
+                          </strokes>
+                          <edges>
+                            <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-1359 -70S7[-1359 -51 -1373 -36!-1373 -36[-1389 -20 -1414 -20!-1414 -20[-1434 -20 -1448 -36!-1448 -36[-1463 -51 -1463 -70!-1463 -70[-1463 -94 -1448 -110!-1448 -110[-1434 -125 -1414 -125!-1414 -125[-1389 -125 -1373 -110!-1373 -110[-1359
+ -94 -1359 -70"/>
+                            <Edge fillStyle1="1" strokeStyle="1" edges="
+!-1036 -352S6|-1036 -401!-1036 -401|-934 -401!-934 -401|-934 -352"/>
+                            <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!-934 -352S7|-1036 -352"/>
+                            <Edge fillStyle0="1" strokeStyle="1" edges="
+!-1036 -352S5|-1111 -352!-1111 -352|-1685 -26!-1685 -26|-1685 0!-1685 0|-824 0!-824 0|-824 -327!-824 -327|-854 -352!-854 -352|-934 -352"/>
+                            <Edge cubics="!-934 -352(;-934,-352 -1036,-352 -1036,-352q-934 -352 -1036 -352);"/>
+                            <Edge cubics="!-934 -401(;-934,-401 -934,-352 -934,-352q-934 -401 -934 -352);"/>
+                            <Edge cubics="!-1036 -401(;-1036,-401 -934,-401 -934,-401q-1036 -401 -934 -401);"/>
+                            <Edge cubics="!-1036 -352(;-1036,-352 -1036,-401 -1036,-401q-1036 -352 -1036 -401);"/>
+                            <Edge cubics="!-1036 -352(;-1036,-352 -1111,-352 -1111,-352q-1036 -352 -1111 -352);"/>
+                            <Edge cubics="!-1448 -36(;-1458,-46 -1463,-58 -1463,-70q-1448 -36Q-1463 -51q-1463 -70);"/>
+                            <Edge cubics="!-1448 -110(;-1438,-120 -1426,-125 -1414,-125q-1448 -110Q-1434 -125q-1414 -125);"/>
+                            <Edge cubics="!-1373 -110(;-1364,-99 -1359,-86 -1359,-70q-1373 -110Q-1359 -94q-1359 -70);"/>
+                            <Edge cubics="!-1359 -70(;-1359,-58 -1364,-46 -1373,-36q-1359 -70Q-1359 -51q-1373 -36);"/>
+                            <Edge cubics="!-1463 -70(;-1463,-86 -1458,-99 -1448,-110q-1463 -70Q-1463 -94q-1448 -110);"/>
+                            <Edge cubics="!-1373 -36(;-1384,-25 -1397,-20 -1414,-20q-1373 -36Q-1389 -20q-1414 -20);"/>
+                            <Edge cubics="!-1414 -125(;-1397,-125 -1384,-120 -1373,-110q-1414 -125Q-1389 -125q-1373 -110);"/>
+                            <Edge cubics="!-1414 -20(;-1426,-20 -1438,-25 -1448,-36q-1414 -20Q-1434 -20q-1448 -36);"/>
+                            <Edge cubics="!-1685 -26(;-1685,-26 -1685,0 -1685,0q-1685 -26 -1685 0);"/>
+                            <Edge cubics="!-1111 -352(;-1111,-352 -1685,-26 -1685,-26q-1111 -352 -1685 -26);"/>
+                            <Edge cubics="!-854 -352(;-854,-352 -824,-327 -824,-327q-854 -352 -824 -327);"/>
+                            <Edge cubics="!-934 -352(;-934,-352 -854,-352 -854,-352q-934 -352 -854 -352);"/>
+                            <Edge cubics="!-1685 0(;-1685,0 -824,0 -824,0q-1685 0 -824 0);"/>
+                            <Edge cubics="!-824 0(;-824,0 -824,-327 -824,-327q-824 0 -824 -327);"/>
+                          </edges>
+                        </DOMShape>
+                      </members>
+                    </DOMGroup>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.Reflex.1">
+                  <matrix>
+                    <Matrix tx="9.9" ty="-4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="-20.65"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.Reflex.2">
+                  <matrix>
+                    <Matrix tx="23.95" ty="-4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.05" y="-28.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.EOTech.1" centerPoint3DX="16" centerPoint3DY="-30">
+                  <matrix>
+                    <Matrix tx="16" ty="-4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-26"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.EOTech.2" centerPoint3DX="43.2" centerPoint3DY="-30">
+                  <matrix>
+                    <Matrix tx="43.2" ty="-4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-26"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.ACOG.1" centerPoint3DX="1.05" centerPoint3DY="-33.2">
+                  <matrix>
+                    <Matrix tx="1.05" ty="-2.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-30.45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Optics/MC.Mods.Optics.ACOG.2" centerPoint3DX="2.4" centerPoint3DY="-32.95">
+                  <matrix>
+                    <Matrix tx="2.4" ty="-2.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-30.2"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#9933CC" locked="true" outline="true" useOutlineView="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="7" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <matrix>
+                    <Matrix ty="-35"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF0000" alpha="0"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!-1800 -700S2|1800 -700!1800 -700|1800 700!1800 700|-1800 700!-1800 700|-1800 -700"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

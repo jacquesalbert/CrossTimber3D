@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://p5xi5wghqci2"
+path="res://.godot/imported/MatchStrike1.ogg-64c3db87dbe202891e04931af21c51dd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Equipment/MatchStrike1.ogg"
+dest_files=["res://.godot/imported/MatchStrike1.ogg-64c3db87dbe202891e04931af21c51dd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

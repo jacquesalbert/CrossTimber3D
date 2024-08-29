@@ -5,7 +5,7 @@ extends CharacterBody3D
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @export_flags_2d_physics var character_body_layer
-
+@export var exhaustion_effect_scene : PackedScene
 
 var controller : Controller
 @onready var tool_user : SlotToolUser = $ToolUser
@@ -19,7 +19,7 @@ var controller : Controller
 #@onready var bleeder : Decaler = $BloodDecaler
 #@onready var small_bleeder : Decaler = $SmallBloodDecaler
 @onready var hitbox : Hitbox = $Hitbox
-@onready var attributes : CharacterAttributes = $CharacterAttributes
+@onready var attributes : EntityAttributeHandler = $EntityAttributeHandler
 #@onready var cover_detector : CoverDetector = $CoverDetector
 @onready var tracker : Tracker = $Tracker
 @onready var ray_cast : RayCast3D = $RayCast3D
@@ -37,8 +37,10 @@ var request_state : State
 var running : bool
 var current_mount:Mount
 var _current_effects: Array[Effect]
-var current_traits: Array[Trait]
-
+var _current_traits: Array[Trait]
+var _run_energy_debt : float
+var _exhausted_effect : Effect
+var _traction : float
 var _current_surface : Node3D:
 	set(value):
 		if _current_surface != value:
@@ -48,6 +50,7 @@ var _current_surface : Node3D:
 				effect_material = _current_surface.get_effect_material()
 			tracker.change_effect_material(effect_material)
 			surface_changed.emit(_current_surface)
+			_traction = _current_surface.get_traction() if is_instance_valid(_current_surface) and _current_surface.has_method("get_traction") else 0.0
 
 signal effects_changed
 signal traits_changed
@@ -56,19 +59,25 @@ signal mount_changed(mount:Mount)
 
 func apply_controls(delta:float, aim_only:bool=false):
 	var target_velocity_2d := Vector2.ZERO
+	
+	var turn_speed :float = attributes.get_attribute_value("turn_speed")
+	var speed :float = attributes.get_attribute_value("speed")
+	var run_modifier :float = attributes.get_attribute_value("run_modifier")
+	var can_run :bool = attributes.get_attribute_value("can_run")
+	var acceleration :float = attributes.get_attribute_value("acceleration")
 	if controller:
 		var aim_vector_flattened := controller.aim_point * Vector3(1,0,1)
 		var look_at_rotation_y := -aim_vector_flattened.signed_angle_to(Vector3.MODEL_FRONT,Vector3.UP)
-		global_rotation.y = rotate_toward(global_rotation.y,look_at_rotation_y,attributes.turn_speed*delta)
-		var speed :float = attributes.speed * attributes.run_modifier if (running and attributes.can_run) else attributes.speed
+		global_rotation.y = rotate_toward(global_rotation.y,look_at_rotation_y,turn_speed*delta)
+		var move_speed :float = speed * run_modifier if (running and can_run) else speed
 		#var max_speed := speed if running and energized else speed * walk_modifier
 		running = controller.run
-		target_velocity_2d = controller.movement.rotated(-global_rotation.y) * speed
+		target_velocity_2d = controller.movement.rotated(-global_rotation.y) * move_speed
 
 	if aim_only:
 		return
 	var target_velocity_3d := Vector3(target_velocity_2d.x, 0, target_velocity_2d.y)
-	velocity = velocity.move_toward(target_velocity_3d,attributes.acceleration*delta)
+	velocity = velocity.move_toward(target_velocity_3d,acceleration*_traction*delta)
 
 func on_controls_trigger_tool_on():
 	tool_user.trigger()
@@ -99,7 +108,6 @@ func _ready():
 	child_exiting_tree.connect(on_child_exited)
 	# first connect all the necessary components
 	if attributes:
-		attributes.character = self
 		attributes.attributes_changed.connect(update_attribute_values)
 	#if cover_detector:
 		#cover_detector.character = self
@@ -146,18 +154,22 @@ func _ready():
 
 
 func update_attribute_values():
+	var accuracy :float= attributes.get_attribute_value("accuracy")
+	var max_health :int= attributes.get_attribute_value("health")
+	var max_energy :int= attributes.get_attribute_value("energy")
+	var ammo_capacity :float= attributes.get_attribute_value("ammo_capacity")
 	if tool_user:
-		tool_user.angle_accuracy = attributes.accuracy * 360.0
+		tool_user.angle_accuracy = accuracy * 360.0
 		#tool_user.distance_accuracy = attributes.accuracy
 	if equipment_user:
-		equipment_user.angle_accuracy = attributes.accuracy * 360.0
+		equipment_user.angle_accuracy = accuracy * 360.0
 		#equipment_user.distance_accuracy = attributes.accuracy
 	if health:
-		health.max_value = attributes.health
+		health.max_value = max_health
 	if energy:
-		energy.max_value = attributes.energy
+		energy.max_value = max_energy
 	if inventory:
-		inventory.max_item_capacity = attributes.inventory_max_capacities
+		inventory.max_item_capacity[load("res://item_test.tres")] = ammo_capacity
 
 func load_character():
 	for child in get_children():
@@ -166,6 +178,7 @@ func load_character():
 			child.queue_free()
 
 func _process(delta):
+	run_energy(delta)
 	if request_state != state:
 		match request_state:
 			State.ACTIVE:
@@ -189,6 +202,8 @@ func _process(delta):
 			pass
 
 func _physics_process(delta):
+	# enforce 2D play area
+	position.y = 0
 	if ray_cast.is_colliding():
 		tracker.global_position = ray_cast.get_collision_point()
 		tracker.normal_direction = ray_cast.get_collision_normal()
@@ -444,13 +459,34 @@ func get_current_effects()->Array[Effect]:
 	return _current_effects
 
 func add_trait(_trait:Trait):
-	current_traits.append(_trait)
+	_current_traits.append(_trait)
 	traits_changed.emit()
 	for modifier in _trait.modifiers:
 		attributes.add_modifier(modifier)
 
 func remove_trait(_trait:Trait):
-	current_traits.erase(_trait)
+	_current_traits.erase(_trait)
 	traits_changed.emit()
 	for modifier in _trait.modifiers:
 		attributes.remove_modifier(modifier)
+
+func get_current_traits()->Array[Trait]:
+	return _current_traits
+
+func run_energy(delta:float):
+	var run_energy_rate : float = attributes.get_attribute_value("run_energy_rate")
+	if running and not velocity.is_zero_approx():
+		_run_energy_debt += run_energy_rate * delta
+		if _run_energy_debt > 1.0 and energy.value > 0:
+			#print_debug("consuming " + str(1.0) + " energy for running")
+			energy.modify(-1.0,self)
+			_run_energy_debt -= 1.0
+	var exhausted := energy.value <= 0
+	if exhausted:
+		if not is_instance_valid(_exhausted_effect):
+			_exhausted_effect = exhaustion_effect_scene.instantiate()
+			add_child(_exhausted_effect)
+	else:
+		if is_instance_valid(_exhausted_effect):
+			remove_child(_exhausted_effect)
+			_exhausted_effect.queue_free()

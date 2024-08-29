@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://djfhuura0i4r8"
+path="res://.godot/imported/LighterFluid3.ogg-9aeac5f72d3e479e36a8619c5dec8624.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Equipment/LighterFluid3.ogg"
+dest_files=["res://.godot/imported/LighterFluid3.ogg-9aeac5f72d3e479e36a8619c5dec8624.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

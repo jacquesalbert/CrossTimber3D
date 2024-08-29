@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/MC.Weapon.Tridant" itemID="5c7bffb5-0000054e" lastModified="1553541978">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.Tridant">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/MC.Weapon.Tridant.Base" name="base" centerPoint3DX="0.05">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/MC.Weapon.Tridant.Mag" name="mag" centerPoint3DX="1.45" centerPoint3DY="29.05">
+                  <matrix>
+                    <Matrix a="0.482955932617188" b="-0.12939453125" c="0.12939453125" d="0.482955932617188" tx="1.55" ty="29"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.2" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.M249.Optic" name="optic" centerPoint3DX="-27.5" centerPoint3DY="-58.5">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-27.5" ty="-41"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

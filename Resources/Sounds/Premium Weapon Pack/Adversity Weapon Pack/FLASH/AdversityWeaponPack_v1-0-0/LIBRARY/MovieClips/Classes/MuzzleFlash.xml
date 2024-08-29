@@ -1,0 +1,139 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Classes/MuzzleFlash" itemID="512c0b83-000003e0" lastModified="1424553054" lastUniqueIdentifier="9">
+  <timeline>
+    <DOMTimeline name="MuzzleFlash">
+      <layers>
+        <DOMLayer name="actions" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" name="default" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" name="silencer" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="flash" color="#4FFF4F" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Effects/FX.MuzzleFlash" name="mc_flash" blendMode="screen" centerPoint3DX="51.2" centerPoint3DY="-0.1">
+                  <matrix>
+                    <Matrix a="0.7999267578125" d="0.800003051757813" tx="-1.2" ty="-0.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="65.5" y="0.45"/>
+                  </transformationPoint>
+                  <filters>
+                    <BlurFilter blurX="2" blurY="0" quality="3"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Effects/FX.MuzzleFlashSilencer" name="mc_flash" blendMode="screen" centerPoint3DX="138" centerPoint3DY="-10">
+                  <matrix>
+                    <Matrix a="0.337966918945313" d="0.337966918945313"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <filters>
+                    <BlurFilter blurX="2" blurY="0" quality="3"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="sparks" color="#FF800A" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Effects/FX.MuzzleSparks" name="mc_sparks" blendMode="add" centerPoint3DX="-21.3" centerPoint3DY="-7">
+                  <matrix>
+                    <Matrix a="0.5863037109375" d="0.586441040039063"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <filters>
+                    <BlurFilter blurY="0" quality="3"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="flash" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements>
+                <DOMOvalObject objectWidth="62" objectHeight="62" x="-152.95" y="-161" selected="true" endAngle="0">
+                  <matrix>
+                    <Matrix a="4.5084228515625" d="2.75608825683594" tx="635" ty="358.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-121.95" y="-129.95"/>
+                  </transformationPoint>
+                  <fill>
+                    <RadialGradient>
+                      <matrix>
+                        <Matrix a="0.03826904296875" d="0.03826904296875" tx="-121.95" ty="-130"/>
+                      </matrix>
+                      <GradientEntry color="#FFFFFF" alpha="0.501960784313725" ratio="0"/>
+                      <GradientEntry color="#FFE391" alpha="0" ratio="0.909803921568627"/>
+                    </RadialGradient>
+                  </fill>
+                </DOMOvalObject>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" keyMode="9728">
+              <elements>
+                <DOMOvalObject objectWidth="62" objectHeight="62" x="-152.95" y="-161" selected="true" endAngle="0">
+                  <matrix>
+                    <Matrix a="3.4049072265625" d="2.08148193359375" tx="500.4" ty="270.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-121.95" y="-129.95"/>
+                  </transformationPoint>
+                  <fill>
+                    <RadialGradient>
+                      <matrix>
+                        <Matrix a="0.03826904296875" d="0.03826904296875" tx="-121.95" ty="-130"/>
+                      </matrix>
+                      <GradientEntry color="#FFFFFF" alpha="0.2" ratio="0"/>
+                      <GradientEntry color="#FFE391" alpha="0" ratio="0.909803921568627"/>
+                    </RadialGradient>
+                  </fill>
+                </DOMOvalObject>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="9" keyMode="9728">
+              <elements>
+                <DOMOvalObject objectWidth="62" objectHeight="62" x="-152.95" y="-161" endAngle="0">
+                  <matrix>
+                    <Matrix tx="121.95" ty="130"/>
+                  </matrix>
+                  <fill>
+                    <RadialGradient>
+                      <matrix>
+                        <Matrix a="0.03826904296875" d="0.03826904296875" tx="-121.95" ty="-130"/>
+                      </matrix>
+                      <GradientEntry color="#FFFFFF" alpha="0.2" ratio="0"/>
+                      <GradientEntry color="#FFE391" alpha="0" ratio="1"/>
+                    </RadialGradient>
+                  </fill>
+                </DOMOvalObject>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

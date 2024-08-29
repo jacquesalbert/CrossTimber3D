@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5xokerhhdkvo"
+path="res://.godot/imported/wpn_deploy_firearm_2.mp3-e2e5c0be1441cd35e6a5f049597d5308.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_deploy_firearm_2.mp3"
+dest_files=["res://.godot/imported/wpn_deploy_firearm_2.mp3-e2e5c0be1441cd35e6a5f049597d5308.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://wwmyk8u446xe"
+path="res://.godot/imported/Hammer3.ogg-1ce0486610b914914a59c3b19ab4e8ec.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Tools/Hammer3.ogg"
+dest_files=["res://.godot/imported/Hammer3.ogg-1ce0486610b914914a59c3b19ab4e8ec.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

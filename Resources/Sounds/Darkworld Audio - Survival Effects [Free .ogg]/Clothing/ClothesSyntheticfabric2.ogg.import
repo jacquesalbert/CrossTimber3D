@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cuiu2rlrewdxr"
+path="res://.godot/imported/ClothesSyntheticfabric2.ogg-a4b6ebe8682d6a97c969340fde399d30.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Clothing/ClothesSyntheticfabric2.ogg"
+dest_files=["res://.godot/imported/ClothesSyntheticfabric2.ogg-a4b6ebe8682d6a97c969340fde399d30.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

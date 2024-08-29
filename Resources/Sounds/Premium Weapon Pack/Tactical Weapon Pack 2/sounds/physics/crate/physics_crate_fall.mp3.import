@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ceas6aeyx52uw"
+path="res://.godot/imported/physics_crate_fall.mp3-5663eba75af3eb3545ba7e1788c65959.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/physics/crate/physics_crate_fall.mp3"
+dest_files=["res://.godot/imported/physics_crate_fall.mp3-5663eba75af3eb3545ba7e1788c65959.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

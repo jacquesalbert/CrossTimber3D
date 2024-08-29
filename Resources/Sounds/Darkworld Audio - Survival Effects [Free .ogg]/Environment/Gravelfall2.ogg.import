@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cmp7umgivqpyl"
+path="res://.godot/imported/Gravelfall2.ogg-f3ddc6ff76ea758e7e65a7132aefca52.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Environment/Gravelfall2.ogg"
+dest_files=["res://.godot/imported/Gravelfall2.ogg-f3ddc6ff76ea758e7e65a7132aefca52.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

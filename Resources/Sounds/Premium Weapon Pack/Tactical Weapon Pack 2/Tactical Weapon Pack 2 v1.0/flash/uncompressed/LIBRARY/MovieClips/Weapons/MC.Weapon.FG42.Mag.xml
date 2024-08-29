@@ -1,0 +1,31 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.FG42.Mag" itemID="5c8936fa-000007c4" lastModified="1552496378">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.FG42.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMRectangleObject objectWidth="50" objectHeight="12" x="-68.05" y="126.35" selected="true" lockFlag="true" topLeftRadius="2" topRightRadius="2" bottomLeftRadius="2" bottomRightRadius="2">
+                  <matrix>
+                    <Matrix tx="43.05" ty="-132.35"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor color="#141414"/>
+                  </fill>
+                  <stroke>
+                    <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                      <fill>
+                        <SolidColor alpha="0.498039215686275"/>
+                      </fill>
+                    </SolidStroke>
+                  </stroke>
+                </DOMRectangleObject>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

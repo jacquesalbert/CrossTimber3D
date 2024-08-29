@@ -1,12 +1,12 @@
-[gd_scene load_steps=22 format=3 uid="uid://wyqm77ee568q"]
+[gd_scene load_steps=21 format=3 uid="uid://wyqm77ee568q"]
 
 [ext_resource type="Script" path="res://MatchPosition.gd" id="1_agiep"]
 [ext_resource type="PackedScene" uid="uid://y2763ntb71tf" path="res://test_character.tscn" id="2_0tjcj"]
 [ext_resource type="Script" path="res://PlayerController.gd" id="3_670ss"]
+[ext_resource type="Texture2D" uid="uid://8prv2c0ly0ip" path="res://Resources/kenney_prototype-textures/PNG/Dark/texture_02.png" id="3_o2frl"]
 [ext_resource type="PackedScene" uid="uid://bgr4pc5yl88ai" path="res://Resources/FBX/Trashcan.fbx" id="3_p21rf"]
 [ext_resource type="Script" path="res://MaterialEffectStaticBody.gd" id="4_b3va3"]
 [ext_resource type="Script" path="res://Level.gd" id="6_5ppbu"]
-[ext_resource type="Texture2D" uid="uid://bxxxxjv8xpr48" path="res://Resources/kenney_prototype-textures/PNG/Red/texture_03.png" id="7_jm3hb"]
 [ext_resource type="Texture2D" uid="uid://d3nrns06j7fb4" path="res://Resources/kenney_prototype-textures/PNG/Dark/texture_01.png" id="7_s0txq"]
 [ext_resource type="PackedScene" uid="uid://clfbdnb2xhjtw" path="res://test_supply_pickup.tscn" id="8_a10ku"]
 [ext_resource type="PackedScene" uid="uid://d17hiwv22avsm" path="res://test_vehicle.tscn" id="9_368ct"]
@@ -14,26 +14,22 @@
 [ext_resource type="Resource" uid="uid://ba12msy183178" path="res://tool_test.tres" id="10_ahy3r"]
 [ext_resource type="PackedScene" uid="uid://dpkenrejsd1ix" path="res://GUI/HUD/hud.tscn" id="10_p7hlu"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ew573"]
-albedo_texture = ExtResource("7_s0txq")
-uv1_scale = Vector3(10000, 10000, 10000)
+[sub_resource type="BoxShape3D" id="BoxShape3D_sl88v"]
+size = Vector3(1000, 1, 1000)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_45m7c"]
-material = SubResource("StandardMaterial3D_ew573")
-size = Vector2(100000, 100000)
-subdivide_width = 100
-subdivide_depth = 100
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_en3c8"]
+albedo_texture = ExtResource("3_o2frl")
+uv1_scale = Vector3(100, 100, 100)
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_16s7y"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_dttcw"]
+material = SubResource("StandardMaterial3D_en3c8")
+size = Vector2(1000, 1000)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_apjq2"]
 size = Vector3(4, 3, 4)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6pga"]
 albedo_texture = ExtResource("7_s0txq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_en3c8"]
-albedo_texture = ExtResource("7_jm3hb")
 
 [sub_resource type="BoxMesh" id="BoxMesh_k48fu"]
 material = SubResource("StandardMaterial3D_en3c8")
@@ -47,23 +43,22 @@ size = Vector3(0.7, 1.3, 0.8)
 [node name="Level" type="Node" parent="."]
 script = ExtResource("6_5ppbu")
 
-[node name="GroundStaticBody" type="StaticBody3D" parent="Level"]
-collision_mask = 0
-script = ExtResource("4_b3va3")
-effect_material = &"dirt"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/GroundStaticBody"]
-mesh = SubResource("PlaneMesh_45m7c")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/GroundStaticBody"]
-shape = SubResource("WorldBoundaryShape3D_16s7y")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Level"]
 transform = Transform3D(0.707107, -0.696364, 0.122788, 0, 0.173648, 0.984808, -0.707107, -0.696364, 0.122788, 0, 0, 0)
 shadow_enabled = true
 directional_shadow_mode = 0
 directional_shadow_fade_start = 1.0
 directional_shadow_max_distance = 500.0
+
+[node name="MaterialEffectStaticBody" type="StaticBody3D" parent="Level"]
+script = ExtResource("4_b3va3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/MaterialEffectStaticBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_sl88v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/MaterialEffectStaticBody"]
+mesh = SubResource("PlaneMesh_dttcw")
 
 [node name="WallStaticBody2" type="StaticBody3D" parent="Level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67245, -1.41031, 0.19923)
@@ -75,6 +70,19 @@ effect_material = &"flesh"
 shape = SubResource("BoxShape3D_apjq2")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Level/WallStaticBody2"]
+material_override = SubResource("StandardMaterial3D_r6pga")
+mesh = SubResource("BoxMesh_k48fu")
+
+[node name="WallStaticBody3" type="StaticBody3D" parent="Level"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, -8)
+collision_mask = 0
+script = ExtResource("4_b3va3")
+effect_material = &"flesh"
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Level/WallStaticBody3"]
+shape = SubResource("BoxShape3D_apjq2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Level/WallStaticBody3"]
 material_override = SubResource("StandardMaterial3D_r6pga")
 mesh = SubResource("BoxMesh_k48fu")
 
@@ -92,6 +100,7 @@ far = 100.0
 
 [node name="SupplyPickup" parent="." instance=ExtResource("8_a10ku")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63881, 2.62076, 0)
+quantity = 200
 
 [node name="Vehicle" parent="." instance=ExtResource("9_368ct")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.76483, 0, 0)
@@ -103,6 +112,8 @@ script = ExtResource("3_670ss")
 cursor_mask = 3
 max_cursor_distance = 500.0
 camera = NodePath("../../CameraMount/Camera3D")
+camera_mounted_zoom = 40.0
+camera_dismounted_zoom = 20.0
 
 [node name="PhysicalProp" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.755912, 50.1816, 0)

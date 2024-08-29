@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c4rdawkdcrj1k"
+path="res://.godot/imported/FirelighterPackaging1.ogg-b2ef24ab9c4ac65e51998cee0dada297.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Equipment/FirelighterPackaging1.ogg"
+dest_files=["res://.godot/imported/FirelighterPackaging1.ogg-b2ef24ab9c4ac65e51998cee0dada297.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

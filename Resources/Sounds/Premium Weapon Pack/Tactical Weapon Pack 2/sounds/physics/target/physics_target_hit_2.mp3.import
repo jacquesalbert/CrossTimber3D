@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcp85t1tshspe"
+path="res://.godot/imported/physics_target_hit_2.mp3-99f9c9a580f99dec732d6c0bdd4ad3a0.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/physics/target/physics_target_hit_2.mp3"
+dest_files=["res://.godot/imported/physics_target_hit_2.mp3-99f9c9a580f99dec732d6c0bdd4ad3a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

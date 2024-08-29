@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b2herwn61mbm"
+path="res://.godot/imported/FootstepsSlushSnow4.ogg-1b20963c79ea17f455c360a98003053e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Footsteps/FootstepsSlushSnow4.ogg"
+dest_files=["res://.godot/imported/FootstepsSlushSnow4.ogg-1b20963c79ea17f455c360a98003053e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

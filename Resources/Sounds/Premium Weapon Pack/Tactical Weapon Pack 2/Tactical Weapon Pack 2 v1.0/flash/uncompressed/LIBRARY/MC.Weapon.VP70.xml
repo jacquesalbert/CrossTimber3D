@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MC.Weapon.VP70" itemID="5c7b0b5a-00000509" lastModified="1551891403">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.VP70">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MC.Weapon.VP70.Mag" name="mag" centerPoint3DX="47.05" centerPoint3DY="7.85">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="47.05" ty="7.85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MC.Weapon.VP70.Base" name="base" centerPoint3DX="0.05">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MC.Weapon.VP70.Slide" name="slide" centerPoint3DX="79.9" centerPoint3DY="-29">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="79.9" ty="-29"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

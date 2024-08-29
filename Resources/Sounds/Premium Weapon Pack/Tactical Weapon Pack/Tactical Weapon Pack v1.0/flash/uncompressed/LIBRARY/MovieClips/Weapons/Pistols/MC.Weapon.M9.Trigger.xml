@@ -1,0 +1,47 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Pistols/MC.Weapon.M9.Trigger" itemID="555424ca-0000038e" lastModified="1539915706">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.M9.Trigger">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#141414"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.250980392156863"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!166 -4S6[#57.32 #3D.A8 77 167!77 167[77 239 109 293!109 293[139 343 196 378!196 378|204 407!204 407|143 392!143 392[74 380 33 314!33 314[23 299 15 281!15 281|-50 40!-50 40|-48 39.5!-48 39.5|-48 -4"/>
+                    <Edge fillStyle1="1" edges="!-48 -4S2|166 -4"/>
+                    <Edge cubics="!204 407(;204,407 143,392 143,392q204 407 143 392);"/>
+                    <Edge cubics="!196 378(;196,378 204,407 204,407q196 378 204 407);"/>
+                    <Edge cubics="!15 281(;15,281 -50,40 -50,40q15 281 -50 40);"/>
+                    <Edge cubics="!109 293(;130,326 158,355 196,378q109 293Q139 343q196 378);"/>
+                    <Edge cubics="!77 167(;76,215 87,257 109,293q77 167Q77 239q109 293);"/>
+                    <Edge cubics="!33 314(;26,305 20,293 15,281q33 314Q23 299q15 281);"/>
+                    <Edge cubics="!143 392(;97,383 60,358 33,314q143 392Q74 380q33 314);"/>
+                    <Edge cubics="!-50 40(;-50,40 -48,40 -48,40q-50 40 -48 40);"/>
+                    <Edge cubics="!166 -4(;166,-4 -48,-4 -48,-4q166 -4 -48 -4);"/>
+                    <Edge cubics="!-48 40(;-48,40 -48,-4 -48,-4q-48 40 -48 -4)-48,-4;"/>
+                    <Edge cubics="!166 -4(;113,40 84,97 77,167q166 -4Q87 62q77 167);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

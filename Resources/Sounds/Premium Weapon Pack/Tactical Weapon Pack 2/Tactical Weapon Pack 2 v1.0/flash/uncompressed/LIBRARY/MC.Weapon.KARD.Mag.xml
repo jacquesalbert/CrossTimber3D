@@ -1,0 +1,49 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MC.Weapon.KARD.Mag" itemID="5c66f4c8-0000045f" lastModified="1550251243">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.KARD.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix a="2" d="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#141414"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.498039215686275"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!-197 -54S5|-514 721!-514 721|-514 754!-514 754|-208 874!-208 874[-151 885 -135 812!-135 812|206 -54!206 -54|514 -874!514 -874|94 -874!94 -874|-197 -54"/>
+                    <Edge cubics="!-514 721(;-514,721 -514,754 -514,754q-514 721 -514 754);"/>
+                    <Edge cubics="!-208 874(;-170,881 -146,861 -135,812q-208 874Q-151 885q-135 812);"/>
+                    <Edge cubics="!-514 754(;-514,754 -208,874 -208,874q-514 754 -208 874);"/>
+                    <Edge cubics="!-197 -54(;-197,-54 -514,721 -514,721q-197 -54 -514 721);"/>
+                    <Edge cubics="!-135 812(;-135,812 206,-54 206,-54q-135 812 206 -54);"/>
+                    <Edge cubics="!-197 -54(;-197,-54 94,-874 94,-874q-197 -54 94 -874);"/>
+                    <Edge cubics="!94 -874(;94,-874 514,-874 514,-874q94 -874 514 -874);"/>
+                    <Edge cubics="!206 -54(;206,-54 514,-874 514,-874q206 -54 514 -874);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

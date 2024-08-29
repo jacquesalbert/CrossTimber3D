@@ -1,0 +1,57 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/MC.MuzzleBreak" itemID="5bd859be-000003d2" lastModified="1553020826">
+  <timeline>
+    <DOMTimeline name="MC.MuzzleBreak">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#141414"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.498039215686275"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!-160 -40|160 -40!160 -40[176 -40 188 -28!188 -28[200 -16 200 0!200 0[200 16 188 28!188 28[176 40 160 40!160 40|-160 40!-160 40[-176 40 -188 28!-188 28[-200 16 -200 0!-200 0[-200 -16 -188 -28!-188 -28[-176 -40 -160 -40"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-203 180|-294 180!-294 180|-294 -180!-294 -180|-203 -180"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!-203 180|-203 200!-203 200|295 200!295 200|295 -200!295 -200|-203 -200!-203 -200|-203 -180"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-203 -180|-203 180"/>
+                    <Edge cubics="!295 200(;295,200 -203,200 -203,200q295 200 -203 200);"/>
+                    <Edge cubics="!295 -200(;295,-200 295,200 295,200q295 -200 295 200);"/>
+                    <Edge cubics="!-203 -200(;-203,-200 295,-200 295,-200q-203 -200 295 -200);"/>
+                    <Edge cubics="!-294 -180(;-294,-180 -203,-180 -203,-180q-294 -180 -203 -180);"/>
+                    <Edge cubics="!-203 -200(;-203,-200 -203,-180 -203,-180q-203 -200 -203 -180);"/>
+                    <Edge cubics="!-203 180(;-203,180 -294,180 -294,180q-203 180 -294 180);"/>
+                    <Edge cubics="!-203 180(;-203,180 -203,200 -203,200q-203 180 -203 200);"/>
+                    <Edge cubics="!-203 -180(;-203,-180 -203,180 -203,180q-203 -180 -203 180);"/>
+                    <Edge cubics="!-294 -180(;-294,-180 -294,180 -294,180q-294 -180 -294 180);"/>
+                    <Edge cubics="!-188 -28(;-180,-36 -171,-40 -160,-40q-188 -28Q-176 -40q-160 -40);"/>
+                    <Edge cubics="!-160 40(;-171,40 -180,36 -188,28q-160 40Q-176 40q-188 28);"/>
+                    <Edge cubics="!-188 28(;-196,20 -200,11 -200,0q-188 28Q-200 16q-200 0);"/>
+                    <Edge cubics="!-200 0(;-200,-11 -196,-20 -188,-28q-200 0Q-200 -16q-188 -28);"/>
+                    <Edge cubics="!160 -40(;171,-40 180,-36 188,-28q160 -40Q176 -40q188 -28);"/>
+                    <Edge cubics="!188 -28(;196,-20 200,-11 200,0q188 -28Q200 -16q200 0);"/>
+                    <Edge cubics="!200 0(;200,11 196,20 188,28q200 0Q200 16q188 28);"/>
+                    <Edge cubics="!188 28(;180,36 171,40 160,40q188 28Q176 40q160 40);"/>
+                    <Edge cubics="!160 40(;160,40 -160,40 -160,40q160 40 -160 40);"/>
+                    <Edge cubics="!-160 -40(;-160,-40 160,-40 160,-40q-160 -40 160 -40);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,36 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Machine Pistols/MC.Weapon.G18.Mag" itemID="5b8a0d5b-00000f99" lastModified="1535774152">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.G18.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#141414"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.498039215686275"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!-7 1195S5|685 -1334!685 -1334|-6 -1334!-6 -1334|-278 -255!-278 -255|-680 1195!-680 1195|-684 1292!-684 1292|27 1334!27 1334|57 1315!57 1315|60 1212!60 1212|42 1195!42 1195|-7 1195"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-680 1195S7|-7 1195"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

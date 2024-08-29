@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b716mlv5ea77q"
+path="res://.godot/imported/physics_bullet_flyby_3.mp3-f0df2951566d682286c41619030ad2de.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/physics/bullet/physics_bullet_flyby_3.mp3"
+dest_files=["res://.godot/imported/physics_bullet_flyby_3.mp3-f0df2951566d682286c41619030ad2de.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

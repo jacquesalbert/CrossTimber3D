@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://brykhsdt1dkn1"
+path="res://.godot/imported/DesignedGunSoundHandling2.ogg-8f2bcb0c7cd16e403a5f0ad1817e9eee.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Equipment/DesignedGunSoundHandling2.ogg"
+dest_files=["res://.godot/imported/DesignedGunSoundHandling2.ogg-8f2bcb0c7cd16e403a5f0ad1817e9eee.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

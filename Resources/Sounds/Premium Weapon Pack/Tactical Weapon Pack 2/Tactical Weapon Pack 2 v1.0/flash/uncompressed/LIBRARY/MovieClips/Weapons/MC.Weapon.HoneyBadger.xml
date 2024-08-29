@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.HoneyBadger" itemID="5c61d3f9-00000c1a" lastModified="1552573305">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.HoneyBadger">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.HoneyBadger.Mag" name="mag" centerPoint3DX="7.55" centerPoint3DY="24.75">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="7.5" ty="24.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.1" y="0.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.HoneyBadger.Base" name="base">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-9.9" ty="-2.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.HoneyBadger.Optic" name="optic" selected="true" centerPoint3DX="-14.5" centerPoint3DY="-39.3">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-14.5" ty="-30.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-18.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

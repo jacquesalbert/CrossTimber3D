@@ -21,7 +21,7 @@ func _ready():
 	
 	character.controller.hover_object_changed.connect(on_hover_changed)
 	character.mount_changed.connect(on_mount_changed)
-
+	
 	character_panel.character = character
 
 func on_hover_changed(object:Node3D):

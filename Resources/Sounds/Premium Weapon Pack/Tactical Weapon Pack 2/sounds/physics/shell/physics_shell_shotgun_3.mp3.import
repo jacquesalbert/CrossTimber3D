@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://rlem6876cnsi"
+path="res://.godot/imported/physics_shell_shotgun_3.mp3-947f4b25bfd725e59dd6966b63d6d1c3.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/physics/shell/physics_shell_shotgun_3.mp3"
+dest_files=["res://.godot/imported/physics_shell_shotgun_3.mp3-947f4b25bfd725e59dd6966b63d6d1c3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

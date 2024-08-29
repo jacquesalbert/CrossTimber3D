@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.VSK" itemID="5c5765a1-000005f0" lastModified="1552572767">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.VSK">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.VSK.Mag" name="mag" centerPoint3DX="37.5" centerPoint3DY="6.9">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="37.45" ty="6.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.1" y="56.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.VSK.Base" name="base">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.MAC10.Optic" name="optic" centerPoint3DX="10.5" centerPoint3DY="-49.8">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="10.5" ty="-32.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Mods/Mags/MC.HollowPoint" itemID="5bdb242a-00000768" lastModified="1541088298">
+  <timeline>
+    <DOMTimeline name="MC.HollowPoint">
+      <layers>
+        <DOMLayer name="shells" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Mods/Mags/MC.HollowPoint.Bullet" centerPoint3DY="0.3">
+                  <matrix>
+                    <Matrix d="0.999984741210938" ty="0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

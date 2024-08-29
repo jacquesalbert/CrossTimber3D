@@ -1,0 +1,98 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Rifles/M16A4/MC.Weapon.M16A4.Mag" itemID="54ebbc57-00000412" lastModified="1532471884">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.M16A4.Mag">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup selected="true">
+                  <members>
+                    <DOMShape selected="true">
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#474747"/>
+                        </FillStyle>
+                        <FillStyle index="2">
+                          <SolidColor color="#4C4C4C"/>
+                        </FillStyle>
+                        <FillStyle index="3">
+                          <SolidColor color="#424242"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                            <fill>
+                              <SolidColor alpha="0.498039215686275"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="3" strokeStyle="1" edges="!573 1142S6|482 1185"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!482 1185S6|252 1294"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!252 1294S6|169 1334"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!169 1334S6|-41 1434"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-41 1434S6|-126 1475"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!-126 1475S6|-196 1508!-196 1508|-241 1508!-241 1508[-640 718 -672 -236!-672 -236[-673 -248 -673 -260!-673 -260|-672 -260!-672 -260|-672 -1507!-672 -1507|-566 -1507"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-566 -1507S6|-472 -1507"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!-472 -1507S6|-289 -1507"/>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-289 -1507S6|-179 -1507"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!-179 -1507S6|81 -1507"/>
+                        <Edge fillStyle1="3" strokeStyle="1" edges="!81 -1507S6|196 -1507"/>
+                        <Edge fillStyle1="2" strokeStyle="1" edges="!196 -1507S6|330 -1507!330 -1507|330 -407!330 -407[351 433 674 1048!674 1048|674 1093!674 1093|573 1142"/>
+                        <Edge fillStyle0="3" fillStyle1="2" edges="!573 1142S3[199 383 196 -502!196 -502|196 -1507"/>
+                        <Edge fillStyle0="2" fillStyle1="3" edges="!482 1185S3[100 463 81 -502!81 -502|81 -1507"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!-126 1475S3[-484 716 -567 -471!-567 -471[-568 -486 -569 -502!-569 -502|-566 -502!-566 -502|-566 -1507"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!-41 1434S3[-399 752 -473 -483!-473 -483|-472 -1507"/>
+                        <Edge fillStyle0="2" fillStyle1="1" edges="!169 1334S3[-234 672 -289 -502!-289 -502|-289 -1507"/>
+                        <Edge fillStyle0="1" fillStyle1="2" edges="!252 1294S3[-163 540 -179 -502!-179 -502|-179 -1507"/>
+                        <Edge cubics="!-241 1508(;-241,1508 -196,1508 -196,1508q-241 1508 -196 1508);"/>
+                        <Edge cubics="!674 1093(;674,1093 674,1048 674,1048q674 1093 674 1048);"/>
+                        <Edge cubics="!674 1048(;459,638 344,153 330,-407q674 1048Q351 433q330 -407);"/>
+                        <Edge cubics="!-672 -1507(;-672,-1507 -566,-1507 -566,-1507q-672 -1507 -566 -1507);"/>
+                        <Edge cubics="!-566 -1507(;-566,-1507 -472,-1507 -472,-1507q-566 -1507 -472 -1507);"/>
+                        <Edge cubics="!-472 -1507(;-472,-1507 -289,-1507 -289,-1507q-472 -1507 -289 -1507);"/>
+                        <Edge cubics="!-289 -1507(;-289,-1507 -179,-1507 -179,-1507q-289 -1507 -179 -1507)-179,-1507;"/>
+                        <Edge cubics="!81 -1507(;81,-1507 196,-1507 196,-1507q81 -1507 196 -1507);"/>
+                        <Edge cubics="!196 -1507(;196,-1507 330,-1507 330,-1507q196 -1507 330 -1507);"/>
+                        <Edge cubics="!-672 -236(;-673,-244 -673,-252 -673,-260q-672 -236Q-673 -248q-673 -260);"/>
+                        <Edge cubics="!-673 -260(;-673,-260 -672,-260 -672,-260q-673 -260 -672 -260);"/>
+                        <Edge cubics="!-241 1508(;-507,981 -651,400 -672,-236q-241 1508Q-640 718q-672 -236);"/>
+                        <Edge cubics="!81 -502(;81,-502 81,-1507 81,-1507q81 -502 81 -1507);"/>
+                        <Edge cubics="!252 1294(;252,1294 169,1334 169,1334q252 1294 169 1334);"/>
+                        <Edge cubics="!573 1142(;573,1142 482,1185 482,1185q573 1142 482 1185);"/>
+                        <Edge cubics="!674 1093(;674,1093 573,1142 573,1142q674 1093 573 1142);"/>
+                        <Edge cubics="!-41 1434(;-41,1434 -126,1475 -126,1475q-41 1434 -126 1475);"/>
+                        <Edge cubics="!-126 1475(;-126,1475 -196,1508 -196,1508q-126 1475 -196 1508);"/>
+                        <Edge cubics="!169 1334(;169,1334 -41,1434 -41,1434q169 1334 -41 1434);"/>
+                        <Edge cubics="!252 1294(;-25,791 -168,193 -179,-502q252 1294Q-163 540q-179 -502);"/>
+                        <Edge cubics="!330 -407(;330,-407 330,-1507 330,-1507q330 -407 330 -1507);"/>
+                        <Edge cubics="!-672 -260(;-672,-260 -672,-1507 -672,-1507q-672 -260 -672 -1507);"/>
+                        <Edge cubics="!169 1334(;-100,893 -252,281 -289,-502q169 1334Q-234 672q-289 -502);"/>
+                        <Edge cubics="!482 1185(;227,704 94,141 81,-502q482 1185Q100 463q81 -502);"/>
+                        <Edge cubics="!573 1142(;324,636 198,88 196,-502q573 1142Q199 383q196 -502);"/>
+                        <Edge cubics="!-567 -471(;-568,-481 -568,-491 -569,-502q-567 -471Q-568 -486q-569 -502);"/>
+                        <Edge cubics="!-566 -502(;-566,-502 -569,-502 -569,-502q-566 -502 -569 -502);"/>
+                        <Edge cubics="!-566 -502(;-566,-502 -566,-1507 -566,-1507q-566 -502 -566 -1507);"/>
+                        <Edge cubics="!-473 -483(;-473,-483 -472,-1507 -472,-1507q-473 -483 -472 -1507);"/>
+                        <Edge cubics="!-179 -502(;-179,-502 -179,-1507 -179,-1507q-179 -502 -179 -1507);"/>
+                        <Edge cubics="!-289 -502(;-289,-502 -289,-1507 -289,-1507q-289 -502 -289 -1507);"/>
+                        <Edge cubics="!196 -502(;196,-502 196,-1507 196,-1507q196 -502 196 -1507);"/>
+                        <Edge cubics="!-126 1475(;-365,969 -512,320 -567,-471q-126 1475Q-484 716q-567 -471);"/>
+                        <Edge cubics="!-41 1434(;-280,979 -424,340 -473,-483q-41 1434Q-399 752q-473 -483);"/>
+                        <Edge cubics="!482 1185(;482,1185 252,1294 252,1294q482 1185 252 1294);"/>
+                        <Edge cubics="!-179 -1507(;-179,-1507 81,-1507 81,-1507q-179 -1507 81 -1507);"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

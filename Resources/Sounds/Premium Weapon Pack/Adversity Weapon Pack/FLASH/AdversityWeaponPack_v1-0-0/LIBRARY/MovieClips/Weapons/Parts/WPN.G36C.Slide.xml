@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Parts/WPN.G36C.Slide" itemID="527c46ae-0000249a" lastModified="1384670951">
+  <timeline>
+    <DOMTimeline name="WPN.G36C.Slide">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#404040"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.247058823529412"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-188 -15|-188 -45!-188 -45|188 -45!188 -45|188 -15!188 -15|188 45!188 45|-188 45!-188 45|-188 -15"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-188 -15|188 -15"/>
+                    <Edge cubics="!188 -45(;188,-45 188,45 188,45q188 -45 188 45);"/>
+                    <Edge cubics="!-188 -45(-188,-45;-188,-45 -188,45 -188,45q-188 -45 -188 45);"/>
+                    <Edge cubics="!-188 -45(;-188,-45 188,-45 188,-45q-188 -45 188 -45);"/>
+                    <Edge cubics="!188 45(;188,45 -188,45 -188,45q188 45 -188 45);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,47 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Attachments/ATTACHMENT.Grip" itemID="5270673f-000023e6" lastModified="1383098281">
+  <timeline>
+    <DOMTimeline name="ATTACHMENT.Grip">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#191919"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#171717"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.247058823529412"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-27 28|-33 18!-33 18|-50 8!-50 8|-42 7!-42 7|-42 5!-42 5|-40 4!-40 4|-39 3!-39 3|-39 -8!-39 -8|-38 -9!-38 -9|79 -9!79 -9|78 -8!78 -8|79 -6!79 -6|81 -3!81 -3|90 -4!90 -4|90.5 28!90.5 28|91 58!91 58|86 58!86 58|82 56!82 56|78 57!78 57
+|80 58!80 58|65 60!65 60|54 74"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="
+!54 74|13 196!13 196|13 202"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!13 202|14 206!14 206|14 211!14 211|30 229!30 229|27 241!27 241|15 247!15 247|-84 217!-84 217|-90 194!-90 194|-71 147!-71 147|-24 65!-24 65|-21 41!-21 41|-21 39!-21 39|-27 28"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="
+!54 74|-4 74!-4 74|-59 180!-59 180|13 202"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!90.5 28|-27 28"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

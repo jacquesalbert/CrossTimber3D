@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.PDR" itemID="5c5ae6e3-000003dd" lastModified="1552573269">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.PDR">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.PDR.Mag" name="mag" centerPoint3DX="-52" centerPoint3DY="7.4">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-51.95" ty="7.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.1" y="34.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.PDR.Base" name="base">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/MC.Weapon.PDR.Optic" name="optic" centerPoint3DX="39.5" centerPoint3DY="-54.05">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="39.5" ty="-36.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

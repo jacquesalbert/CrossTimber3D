@@ -1,0 +1,59 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Parts/WPN.SPRINGFIELD.Sight" itemID="531fab4f-000004bd" lastModified="1394584501">
+  <timeline>
+    <DOMTimeline name="WPN.SPRINGFIELD.Sight">
+      <layers>
+        <DOMLayer name="actions" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" name="none" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gfx" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#404040"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.250980392156863"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!66 -8[60 -15 60 -25!60 -25[60 -33 65 -37"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!65 -37[66 -40 68 -43!68 -43[74 -50 84 -50!84 -50[95 -50 102 -43!102 -43[108 -34 108 -25!108 -25[108 -23 108 -22!108 -22[107 -14 102 -8!102 -8[95 0 84 0!84 0[74 0 68 -8!68 -8[67 -8 66 -8"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!65 -37|-74 -37!-74 -37|-107 -32!-107 -32|-107 -8!-107 -8|66 -8"/>
+                    <Edge cubics="!84 -50(;91,-50 97,-49 102,-43q84 -50Q95 -50q102 -43);"/>
+                    <Edge cubics="!68 -43(;72,-49 78,-50 84,-50q68 -43Q74 -50q84 -50);"/>
+                    <Edge cubics="!66 -8(;62,-12 60,-20 60,-25p66 -8Q60 -15q60 -25);"/>
+                    <Edge cubics="!68 -8(68,-8;67,-8 67,-8 66,-8q68 -8Q67 -8p66 -8);"/>
+                    <Edge cubics="!65 -37(;66,-38 67,-41 68,-43p65 -37Q66 -40q68 -43);"/>
+                    <Edge cubics="!60 -25(;60,-30 62,-34 65,-37q60 -25Q60 -33p65 -37);"/>
+                    <Edge cubics="!108 -22(;107,-17 105,-11 102,-8p108 -22Q107 -14q102 -8);"/>
+                    <Edge cubics="!108 -25(;108,-23 108,-23 108,-22q108 -25Q108 -23p108 -22);"/>
+                    <Edge cubics="!102 -43(;105,-37 108,-32 108,-25q102 -43Q108 -34q108 -25);"/>
+                    <Edge cubics="!84 0(;78,0 72,-3 68,-8q84 0Q74 0q68 -8);"/>
+                    <Edge cubics="!102 -8(;97,-3 91,0 84,0q102 -8Q95 0q84 0);"/>
+                    <Edge cubics="!-107 -32(;-107,-32 -74,-37 -74,-37q-107 -32 -74 -37);"/>
+                    <Edge cubics="!-74 -37(;-74,-37 65,-37 65,-37q-74 -37p65 -37);"/>
+                    <Edge cubics="!-107 -8(;-107,-8 66,-8 66,-8q-107 -8p66 -8);"/>
+                    <Edge cubics="!-107 -8(;-107,-8 -107,-32 -107,-32q-107 -8 -107 -32);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

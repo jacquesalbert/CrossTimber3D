@@ -1,0 +1,134 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Mods/Barrels/MC.MuzzleBreak" itemID="5bd859be-000003d2" lastModified="1540905974">
+  <timeline>
+    <DOMTimeline name="MC.MuzzleBreak">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#141414"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#1E1E1E"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.498039215686275"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!315 185|358 142!358 142|358 -142!358 -142|315 -185"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-62 -42|-62 38!-62 38|230 38!230 38|230 -42!230 -42|-62 -42"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!315 -185|315 185"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!-229 -160|-229 -135"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-229 163|-229 185!-229 185|-314 185!-314 185|-314 -185!-314 -185|-229 -185!-229 -185|-229 -160!-145 -160|-145 -185!-145 -185|315 -185"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!-145 -135|-145 -160"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!-229 -160|-145 -160"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!-229 -135|-145 -135!-145 163|-145 135"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!315 185|-145 185!-145 185|-145 163"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!-229 135|-229 163"/>
+                    <Edge fillStyle0="2" strokeStyle="1" edges="!-229 163|-145 163"/>
+                    <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!-229 135|-145 135"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-145 -135|-145 135!-229 -135|-229 135"/>
+                    <Edge cubics="!-229 185(;-229,185 -314,185 -314,185q-229 185 -314 185);"/>
+                    <Edge cubics="!-314 -185(;-314,-185 -229,-185 -229,-185q-314 -185 -229 -185);"/>
+                    <Edge cubics="!-314 -185(;-314,-185 -314,185 -314,185q-314 -185 -314 185);"/>
+                    <Edge cubics="!315 185(;315,185 -145,185 -145,185q315 185 -145 185);"/>
+                    <Edge cubics="!315 -185(;315,-185 315,185 315,185q315 -185 315 185);"/>
+                    <Edge cubics="!-145 -185(;-145,-185 315,-185 315,-185q-145 -185 315 -185);"/>
+                    <Edge cubics="!230 38(;230,38 -62,38 -62,38q230 38 -62 38);"/>
+                    <Edge cubics="!-62 -42(;-62,-42 -62,38 -62,38q-62 -42 -62 38);"/>
+                    <Edge cubics="!230 -42(;230,-42 230,38 230,38q230 -42 230 38);"/>
+                    <Edge cubics="!-62 -42(;-62,-42 230,-42 230,-42q-62 -42 230 -42);"/>
+                    <Edge cubics="!315 185(;315,185 358,142 358,142q315 185 358 142);"/>
+                    <Edge cubics="!358 142(;358,142 358,-142 358,-142q358 142 358 -142);"/>
+                    <Edge cubics="!315 -185(;315,-185 358,-142 358,-142q315 -185 358 -142);"/>
+                    <Edge cubics="!-229 -135(;-229,-135 -145,-135 -145,-135q-229 -135 -145 -135);"/>
+                    <Edge cubics="!-229 135(;-229,135 -145,135 -145,135q-229 135 -145 135);"/>
+                    <Edge cubics="!-229 135(;-229,135 -229,185 -229,185q-229 135 -229 185);"/>
+                    <Edge cubics="!-229 -135(;-229,-135 -229,135 -229,135q-229 -135 -229 135);"/>
+                    <Edge cubics="!-145 185(;-145,185 -145,135 -145,135q-145 185 -145 135);"/>
+                    <Edge cubics="!-145 -135(;-145,-135 -145,135 -145,135q-145 -135 -145 135);"/>
+                    <Edge cubics="!-229 -160(;-229,-160 -229,-135 -229,-135q-229 -160 -229 -135);"/>
+                    <Edge cubics="!-229 -185(;-229,-185 -229,-160 -229,-160q-229 -185 -229 -160);"/>
+                    <Edge cubics="!-145 -160(;-145,-160 -145,-185 -145,-185q-145 -160 -145 -185);"/>
+                    <Edge cubics="!-145 -135(;-145,-135 -145,-160 -145,-160q-145 -135 -145 -160);"/>
+                    <Edge cubics="!-229 -160(;-229,-160 -145,-160 -145,-160q-229 -160 -145 -160);"/>
+                  </edges>
+                </DOMShape>
+                <DOMOvalObject objectWidth="2.25" objectHeight="2.25" x="-29.1" y="-28.35" endAngle="0">
+                  <matrix>
+                    <Matrix a="0.86956787109375" d="0.86956787109375" tx="20.2" ty="16.9"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor color="#1E1E1E"/>
+                  </fill>
+                  <stroke>
+                    <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                      <fill>
+                        <SolidColor alpha="0.498039215686275"/>
+                      </fill>
+                    </SolidStroke>
+                  </stroke>
+                </DOMOvalObject>
+                <DOMOvalObject objectWidth="2.25" objectHeight="2.25" x="-29.1" y="-28.35" endAngle="0">
+                  <matrix>
+                    <Matrix a="0.86956787109375" d="0.86956787109375" tx="37.8" ty="16.9"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor color="#1E1E1E"/>
+                  </fill>
+                  <stroke>
+                    <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                      <fill>
+                        <SolidColor alpha="0.498039215686275"/>
+                      </fill>
+                    </SolidStroke>
+                  </stroke>
+                </DOMOvalObject>
+                <DOMOvalObject objectWidth="2.25" objectHeight="2.25" x="-29.1" y="-28.35" endAngle="0">
+                  <matrix>
+                    <Matrix a="0.86956787109375" d="0.86956787109375" tx="20.2" ty="30.65"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor color="#1E1E1E"/>
+                  </fill>
+                  <stroke>
+                    <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                      <fill>
+                        <SolidColor alpha="0.498039215686275"/>
+                      </fill>
+                    </SolidStroke>
+                  </stroke>
+                </DOMOvalObject>
+                <DOMOvalObject objectWidth="2.25" objectHeight="2.25" x="-29.1" y="-28.35" endAngle="0">
+                  <matrix>
+                    <Matrix a="0.86956787109375" d="0.86956787109375" tx="37.8" ty="30.65"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor color="#1E1E1E"/>
+                  </fill>
+                  <stroke>
+                    <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                      <fill>
+                        <SolidColor alpha="0.498039215686275"/>
+                      </fill>
+                    </SolidStroke>
+                  </stroke>
+                </DOMOvalObject>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -125,9 +125,9 @@ func update_sounds():
 		var engine_speed := relative_speed - this_gear_speed
 		engine_stream_player.pitch_scale = 1.0 + engine_speed if brake < 0.5 else 1.0
 
-func run_fuel(real_timestep:float):
+func run_fuel(delta:float):
 	if can_run:
-		_fuel_debt += fuel_consumpution_rate * abs(throttle) * real_timestep
+		_fuel_debt += fuel_consumpution_rate * abs(throttle) * delta
 		if _fuel_debt > 1.0 and fuel.value > 0:
 			var fuel_consumption_amount : int = floor(_fuel_debt)
 			fuel.modify(-fuel_consumption_amount,driver_character)
@@ -202,24 +202,25 @@ func get_speedo()->float:
 	return abs(velocity.dot(global_basis.z))
 
 func _physics_process(delta:float):
+	#enforce 2D play area
+	position.y = 0
 	var forward := global_basis.z
 	var right := -global_basis.x
-	var real_timestep := delta * Engine.time_scale
-	run_fuel(real_timestep)
+	run_fuel(delta)
 	var longitudinal_speed := velocity.dot(forward)
-	velocity -= forward * longitudinal_speed * rolling_resistance * real_timestep
+	velocity -= forward * longitudinal_speed * rolling_resistance * delta
 	var steer_angle := -steer * max_steer_angle
 	front_left_wheel.rotation.y = steer_angle
 	front_right_wheel.rotation.y = steer_angle
 	var rotation_speed :float = (longitudinal_speed / wheelbase) * tan(steer_angle)
 
 	# add rotation from steering
-	angular_speed = move_toward(angular_speed,rotation_speed, handling_speed* real_timestep)
+	angular_speed = move_toward(angular_speed,rotation_speed, handling_speed* delta)
 	var steering_lateral_speed := -rear_axle_distance * angular_speed
 	# add lateral movement from steering
-	global_position += -right * steering_lateral_speed * real_timestep
+	global_position += -right * steering_lateral_speed * delta
 	# apply angular speed
-	global_rotation.y += angular_speed * real_timestep
+	global_rotation.y += angular_speed * delta
 	
 	# cancel lateral movement up to lateral tracking max
 	var lateral_movement := velocity.dot(right)
@@ -232,7 +233,6 @@ func _physics_process(delta:float):
 	var front_traction :float= max(fl_traction,fr_traction)
 	var rear_traction :float= max(rl_traction,rr_traction)
 	var all_traction : float = max(front_traction,rear_traction)
-	
 	var spin : float = 0.0
 	# apply drive movement up to traction maximum
 	#var speed_modifier :float = max(0,(top_speed - abs(longitudinal_speed)) / top_speed)
@@ -291,8 +291,8 @@ func _physics_process(delta:float):
 		return
 	
 	move_and_slide()
-	if is_on_floor():
-		global_position += global_basis.y * ride_height
+	#if is_on_floor():
+		#global_position += global_basis.y * ride_height
 	#move_and_handle_collisions(delta)
 
 func get_effect_material()->StringName:

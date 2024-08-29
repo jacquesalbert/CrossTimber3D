@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c8cbqp3hyu15k"
+path="res://.godot/imported/HumanInjured3.ogg-fa8d8c06b662bb602d79f55184385eaf.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Human/HumanInjured3.ogg"
+dest_files=["res://.godot/imported/HumanInjured3.ogg-fa8d8c06b662bb602d79f55184385eaf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

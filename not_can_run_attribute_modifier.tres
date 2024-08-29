@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AttributeModifier" load_steps=2 format=3 uid="uid://db06ks3fy6g75"]
+
+[ext_resource type="Script" path="res://AttributeModifier.gd" id="1_cxivt"]
+
+[resource]
+script = ExtResource("1_cxivt")
+overrides = {
+"can_run": false
+}
+multiply_modifiers = {}
+add_modifiers = {}

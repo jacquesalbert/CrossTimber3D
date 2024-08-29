@@ -12,8 +12,8 @@ extends Node3D
 @export var gradient : Gradient
 @export var width_curve : Curve
 @export var bias : float = 0.01
-@export var cast_shadow : GeometryInstance3D.ShadowCastingSetting
-@export var transparency : BaseMaterial3D.Transparency
+@export var cast_shadow : GeometryInstance3D.ShadowCastingSetting = GeometryInstance3D.ShadowCastingSetting.SHADOW_CASTING_SETTING_OFF
+@export var transparency : BaseMaterial3D.Transparency = BaseMaterial3D.Transparency.TRANSPARENCY_ALPHA
 
 @export var trailing: bool:
 	set(value):
@@ -42,8 +42,6 @@ func create_trail():
 	
 func enable():
 	trailing = true
-	if not is_instance_valid(_trail):
-		create_trail()
 	add_current_point()
 
 func disable():
@@ -53,6 +51,8 @@ func disable():
 	trailing = false
 
 func add_current_point():
+	if not is_instance_valid(_trail):
+		create_trail()
 	_trail.update_points(global_position+global_basis*normal_direction*bias,global_basis*normal_direction if local_normal else normal_direction)
 
 func _physics_process(delta):

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b11qbabvr4r4t"]
+[gd_scene load_steps=4 format=3 uid="uid://b11qbabvr4r4t"]
 
 [ext_resource type="Script" path="res://GUI/HUD/Effects/effects_panel.gd" id="1_3ncth"]
+[ext_resource type="Texture2D" uid="uid://cvn2b21qpeu4c" path="res://Resources/icons/cover_icon.png" id="2_f6nr6"]
+[ext_resource type="Texture2D" uid="uid://bux7ibbb6adwf" path="res://Resources/icons/energy_icon.png" id="3_moawr"]
 
 [node name="EffectsPanelContainer" type="PanelContainer" node_paths=PackedStringArray("effects_container")]
 size_flags_horizontal = 8
@@ -16,3 +18,11 @@ theme_override_constants/margin_bottom = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_f6nr6")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_moawr")

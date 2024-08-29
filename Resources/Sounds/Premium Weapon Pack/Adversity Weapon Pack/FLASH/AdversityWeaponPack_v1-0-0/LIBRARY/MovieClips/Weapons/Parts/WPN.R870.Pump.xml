@@ -1,0 +1,153 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Parts/WPN.R870.Pump" itemID="5270795a-0000265e" lastModified="1424228514" lastUniqueIdentifier="8">
+  <timeline>
+    <DOMTimeline name="WPN.R870.Pump">
+      <layers>
+        <DOMLayer name="actions" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" name="none" labelType="name" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" name="laser" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="5" name="grip" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="14" duration="5" name="silencer" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="5" name="bayonet" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gfx" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="24" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#1C1C1C"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#191919"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.247058823529412"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="2" strokeStyle="1" edges="!245 -27|245 -65!245 -65|-244 -65!-244 -65|-244 -27"/>
+                    <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!-34 -11[-22 -11 -10 -11!-10 -11[3 -12 16 -11!-88 -9[-80 -10 -72 -10!-72 -10[-57 -11 -42 -11!-42 -11[-38 -11 -34 -11!-142 -6[-122 -7 -102 -8!-102 -8[-95 -9 -88 -9!-194 -1[-185 -2 -176 -3!-176 -3[-159 -5 -142 -6!16 -11[20 -11 24 -11!24
+ -11[36 -11 48 -10!48 -10[61 -10 74 -9!74 -9[76 -10 78 -9!78 -9[91 -9 104 -8!104 -8[116 -7 128 -6!128 -6[129 -6 130 -6!130 -6[142 -6 154 -4!154 -4[171 -3 188 -1!188 -1[189 -1 190 -1!245 -27|-244 -27"/>
+                    <Edge fillStyle0="2" strokeStyle="1" edges="
+!16 65|74 65!74 65|130 65!130 65|190 65!190 65|216 65!216 65|245 36!245 36|245 5"/>
+                    <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!190 -1[200 0 210 1!210 1[228 3 245 5"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="
+!-194 65|-244 65!-244 65|-244 5!-142 65|-194 65!-88 65|-142 65!-34 65|-88 65"/>
+                    <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="
+!-244 5[-224 2 -204 0!-204 0[-199 -1 -194 -1"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="
+!16 65|-34 65"/>
+                    <Edge fillStyle0="2" fillStyle1="2" strokeStyle="1" edges="
+!-194 -1|-194 65!-34 -11|-34 65!-142 -6|-142 65!-88 65|-88 -9!16 -11|16 65!74 65|74 -9!130 65|130 -6!190 65|190 -1"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="
+!-244 -27|-244 5!245 5|245 -27"/>
+                    <Edge cubics="!245 36(245,36;245,36 245,5 245,5q245 36 245 5);"/>
+                    <Edge cubics="!216 65(216,65;216,65 245,36 245,36q216 65 245 36);"/>
+                    <Edge cubics="!-244 -27(;-244,-27 -244,5 -244,5q-244 -27 -244 5);"/>
+                    <Edge cubics="!-244 -65(;-244,-65 245,-65 245,-65q-244 -65 245 -65);"/>
+                    <Edge cubics="!-72 -10(;-62,-11 -52,-11 -42,-11q-72 -10Q-57 -11q-42 -11);"/>
+                    <Edge cubics="!-142 -6(-142,-6;-129,-7 -115,-7 -102,-8q-142 -6Q-122 -7q-102 -8);"/>
+                    <Edge cubics="!-244 5(-244,5;-231,3 -217,1 -204,0q-244 5Q-224 2q-204 0);"/>
+                    <Edge cubics="!-142 -6(-142,-6;-142,-6 -142,65 -142,65q-142 -6 -142 65);"/>
+                    <Edge cubics="!-176 -3(-176,-3;-165,-4 -153,-5 -142,-6q-176 -3Q-159 -5q-142 -6);"/>
+                    <Edge cubics="!104 -8(;112,-7 120,-7 128,-6q104 -8Q116 -7q128 -6);"/>
+                    <Edge cubics="!78 -9(78,-9;87,-9 95,-9 104,-8q78 -9Q91 -9q104 -8);"/>
+                    <Edge cubics="!154 -4(;165,-3 177,-2 188,-1q154 -4Q171 -3q188 -1);"/>
+                    <Edge cubics="!210 1(;222,2 234,4 245,5q210 1Q228 3q245 5);"/>
+                    <Edge cubics="!24 -11(24,-11;32,-11 40,-11 48,-10q24 -11Q36 -11q48 -10);"/>
+                    <Edge cubics="!-194 -1(;-188,-2 -182,-2 -176,-3q-194 -1Q-185 -2q-176 -3);"/>
+                    <Edge cubics="!-204 0(;-201,-1 -197,-1 -194,-1q-204 0Q-199 -1q-194 -1);"/>
+                    <Edge cubics="!-244 65(;-244,65 -194,65 -194,65q-244 65 -194 65);"/>
+                    <Edge cubics="!-194 65(;-194,65 -142,65 -142,65q-194 65 -142 65);"/>
+                    <Edge cubics="!-194 -1(;-194,-1 -194,65 -194,65q-194 -1 -194 65);"/>
+                    <Edge cubics="!128 -6(;129,-6 129,-6 130,-6q128 -6Q129 -6q130 -6);"/>
+                    <Edge cubics="!74 -9(74,-9;75,-10 77,-10 78,-9q74 -9Q76 -10q78 -9);"/>
+                    <Edge cubics="!130 -6(130,-6;138,-6 146,-5 154,-4q130 -6Q142 -6q154 -4);"/>
+                    <Edge cubics="!74 65(;74,65 130,65 130,65q74 65 130 65);"/>
+                    <Edge cubics="!130 -6(;130,-6 130,65 130,65q130 -6 130 65);"/>
+                    <Edge cubics="!74 -9(;74,-9 74,65 74,65q74 -9 74 65);"/>
+                    <Edge cubics="!-88 -9(;-83,-10 -77,-10 -72,-10q-88 -9Q-80 -10q-72 -10);"/>
+                    <Edge cubics="!-102 -8(;-97,-9 -93,-9 -88,-9q-102 -8Q-95 -9q-88 -9);"/>
+                    <Edge cubics="!16 -11(;19,-11 21,-11 24,-11q16 -11Q20 -11q24 -11);"/>
+                    <Edge cubics="!-10 -11(;-1,-12 7,-12 16,-11q-10 -11Q3 -12q16 -11);"/>
+                    <Edge cubics="!-34 -11(;-26,-11 -18,-11 -10,-11q-34 -11Q-22 -11q-10 -11);"/>
+                    <Edge cubics="!-42 -11(;-39,-11 -37,-11 -34,-11q-42 -11Q-38 -11q-34 -11);"/>
+                    <Edge cubics="!-34 65(;-34,65 16,65 16,65q-34 65 16 65);"/>
+                    <Edge cubics="!-88 65(;-88,65 -34,65 -34,65q-88 65 -34 65);"/>
+                    <Edge cubics="!-142 65(;-142,65 -88,65 -88,65q-142 65 -88 65);"/>
+                    <Edge cubics="!16 -11(;16,-11 16,65 16,65q16 -11 16 65);"/>
+                    <Edge cubics="!-34 -11(;-34,-11 -34,65 -34,65q-34 -11 -34 65);"/>
+                    <Edge cubics="!-88 -9(;-88,-9 -88,65 -88,65q-88 -9 -88 65);"/>
+                    <Edge cubics="!48 -10(;57,-10 65,-10 74,-9q48 -10Q61 -10q74 -9);"/>
+                    <Edge cubics="!16 65(;16,65 74,65 74,65q16 65 74 65);"/>
+                    <Edge cubics="!188 -1(188,-1;189,-1 189,-1 190,-1q188 -1Q189 -1q190 -1)190,-1;"/>
+                    <Edge cubics="!190 -1(;197,0 203,0 210,1q190 -1Q200 0q210 1);"/>
+                    <Edge cubics="!190 65(;190,65 216,65 216,65q190 65 216 65);"/>
+                    <Edge cubics="!130 65(130,65;130,65 190,65 190,65q130 65 190 65)190,65;"/>
+                    <Edge cubics="!190 -1(;190,-1 190,65 190,65q190 -1 190 65);"/>
+                    <Edge cubics="!-244 -27(;-244,-27 245,-27 245,-27q-244 -27 245 -27);"/>
+                    <Edge cubics="!245 -27(245,-27;245,-27 245,-65 245,-65p245 -27q245 -65);"/>
+                    <Edge cubics="!245 5(;245,5 245,-27 245,-27p245 5 245 -27);"/>
+                    <Edge cubics="!-244 -65(;-244,-65 -244,-27 -244,-27q-244 -65p-244 -27);"/>
+                    <Edge cubics="!-244 5(-244,5;-244,5 -244,65 -244,65p-244 5q-244 65);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="attachment" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Attachments/ATTACHMENT.Grip" centerPoint3DX="-0.6" centerPoint3DY="9.2">
+                  <matrix>
+                    <Matrix tx="-0.6" ty="3.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="5.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="14" duration="5" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="5" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

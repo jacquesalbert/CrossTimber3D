@@ -15,7 +15,7 @@ interaction = NodePath("InteractionArea/Interaction")
 pickup_stream = NodePath("AudioStreamPlayer3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0349731, 0.108643, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035, 0.5, 0)
 shape = SubResource("BoxShape3D_qgou0")
 
 [node name="InteractionArea" type="Area3D" parent="."]
@@ -24,6 +24,7 @@ collision_mask = 0
 script = ExtResource("3_dwyk7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_d8npq")
 
 [node name="Interaction" type="Node" parent="InteractionArea"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://mbl3rj2y104i"
+path="res://.godot/imported/OldDoorCreak.ogg-868f4f1196e7680198c3c06abb1b8a2d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Environment/OldDoorCreak.ogg"
+dest_files=["res://.godot/imported/OldDoorCreak.ogg-868f4f1196e7680198c3c06abb1b8a2d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

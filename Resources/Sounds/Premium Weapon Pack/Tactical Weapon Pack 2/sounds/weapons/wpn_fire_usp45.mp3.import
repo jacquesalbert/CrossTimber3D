@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cg8u01ar3j7h6"
+path="res://.godot/imported/wpn_fire_usp45.mp3-256de735377a500a32177c3a6144f461.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/weapons/wpn_fire_usp45.mp3"
+dest_files=["res://.godot/imported/wpn_fire_usp45.mp3-256de735377a500a32177c3a6144f461.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

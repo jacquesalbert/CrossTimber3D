@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmhsajpujipvt"
+path="res://.godot/imported/wpn_fire_pecheneg.mp3-b6cd636a4b171c9077a3f89a0f9ec909.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/weapons/wpn_fire_pecheneg.mp3"
+dest_files=["res://.godot/imported/wpn_fire_pecheneg.mp3-b6cd636a4b171c9077a3f89a0f9ec909.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

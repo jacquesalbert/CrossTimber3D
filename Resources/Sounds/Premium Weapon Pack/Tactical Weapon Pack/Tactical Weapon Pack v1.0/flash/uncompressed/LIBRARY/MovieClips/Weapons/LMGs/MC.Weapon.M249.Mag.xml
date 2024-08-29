@@ -1,0 +1,85 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/LMGs/MC.Weapon.M249.Mag" itemID="5b5d25e0-00001423" lastModified="1540167161">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.M249.Mag">
+      <layers>
+        <DOMLayer name="Layer 2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMOvalObject objectWidth="8.5" objectHeight="8.5" x="109.1" y="18.9" endAngle="0">
+                  <matrix>
+                    <Matrix a="0.705886840820313" d="0.705886840820313" tx="-80" ty="-65.95"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor color="#141414"/>
+                  </fill>
+                  <stroke>
+                    <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                      <fill>
+                        <SolidColor alpha="0.498039215686275"/>
+                      </fill>
+                    </SolidStroke>
+                  </stroke>
+                </DOMOvalObject>
+                <DOMOvalObject objectWidth="8.5" objectHeight="8.5" x="109.1" y="18.9" endAngle="0">
+                  <matrix>
+                    <Matrix a="0.705825805664063" d="0.705780029296875" tx="-79.3" ty="34.4"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor color="#141414"/>
+                  </fill>
+                  <stroke>
+                    <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                      <fill>
+                        <SolidColor alpha="0.498039215686275"/>
+                      </fill>
+                    </SolidStroke>
+                  </stroke>
+                </DOMOvalObject>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#54504C"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.05" pixelHinting="true" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.498039215686275"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-460 -1240|459 -1240!459 -1240[600 -1240 600 -1080!600 -1080|600 1080!600 1080[600 1240 459 1240!459 1240|-460 1240!-460 1240[#FFFDB3.E1 1240 -599 1106!-599 1106[-600 #445.94 -600 1080!-600 1080|-600 -1080!-600 -1080[-600 -1240 -460
+ -1240"/>
+                    <Edge cubics="!459 -1240(;553,-1240 600,-1187 600,-1080q459 -1240Q600 -1240q600 -1080);"/>
+                    <Edge cubics="!600 1080(;600,1187 553,1240 459,1240q600 1080Q600 1240q459 1240);"/>
+                    <Edge cubics="!-600 -1080(;-600,-1187 -553,-1240 -460,-1240q-600 -1080Q-600 -1240q-460 -1240);"/>
+                    <Edge cubics="!-599 1106(;-600,1098 -600,1089 -600,1080q-599 1106Q-600 1094q-600 1080);"/>
+                    <Edge cubics="!-460 1240(;-545,1240 -592,1195 -599,1106q-460 1240Q-588 1240q-599 1106);"/>
+                    <Edge cubics="!-460 -1240(;-460,-1240 296,-1240 296,-1240q-460 -1240 296 -1240);"/>
+                    <Edge cubics="!296 -1240(;296,-1240 459,-1240 459,-1240q296 -1240 459 -1240);"/>
+                    <Edge cubics="!459 1240(;459,1240 296,1240 296,1240q459 1240 296 1240);"/>
+                    <Edge cubics="!296 1240(;296,1240 -460,1240 -460,1240q296 1240 -460 1240);"/>
+                    <Edge cubics="!600 -1080(;600,-1080 600,1080 600,1080q600 -1080 600 1080);"/>
+                    <Edge cubics="!-600 1080(;-600,1080 -600,-1080 -600,-1080q-600 1080 -600 -1080);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

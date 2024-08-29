@@ -1,0 +1,122 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Parts/WPN.G36C.Sight" itemID="527c4a9c-00002552" lastModified="1405736559" lastUniqueIdentifier="20">
+  <timeline>
+    <DOMTimeline name="WPN.G36C.Sight" currentFrame="23">
+      <layers>
+        <DOMLayer name="actions" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" name="none" labelType="name" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" name="reflex" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="5" name="eotech" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="14" duration="5" name="aimpoint" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="5" name="acog" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="gfx" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="4" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Sights/SIGHT.Reflex" centerPoint3DX="12.85" centerPoint3DY="-0.7">
+                  <matrix>
+                    <Matrix tx="12.85" ty="-0.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Sights/SIGHT.EOTech" centerPoint3DX="15.35" centerPoint3DY="-5.8">
+                  <matrix>
+                    <Matrix tx="15.35" ty="-1.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-4.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="14" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Sights/SIGHT.Aimpoint" centerPoint3DX="19.75" centerPoint3DY="-5.65">
+                  <matrix>
+                    <Matrix tx="19.75" ty="-0.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" duration="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Sights/SIGHT.ACOG" centerPoint3DX="10.4" centerPoint3DY="-6.6">
+                  <matrix>
+                    <Matrix tx="10.4" ty="-0.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-6.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 1" color="#4FFF4F" locked="true">
+          <frames>
+            <DOMFrame index="0" duration="24" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#191919"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.247058823529412"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!61 -55|63 -49!63 -49|63 0!63 0|-63 0!-63 0|-58 -27!-58 -27|-16 -55!-16 -55|1 -64!1 -64|56 -64!56 -64|61 -55"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!61 -55|-16 -55"/>
+                    <Edge cubics="!56 -64(;56,-64 61,-55 61,-55q56 -64p61 -55);"/>
+                    <Edge cubics="!63 -49(;63,-49 61,-55 61,-55q63 -49p61 -55);"/>
+                    <Edge cubics="!-58 -27(;-58,-27 -16,-55 -16,-55q-58 -27p-16 -55);"/>
+                    <Edge cubics="!-16 -55(;-16,-55 1,-64 1,-64p-16 -55q1 -64);"/>
+                    <Edge cubics="!1 -64(1,-64;1,-64 56,-64 56,-64q1 -64 56 -64);"/>
+                    <Edge cubics="!63 0(;63,0 -63,0 -63,0q63 0p-63 0);"/>
+                    <Edge cubics="!61 -55(;61,-55 -16,-55 -16,-55p61 -55 -16 -55);"/>
+                    <Edge cubics="!-63 0(;-63,0 -58,-27 -58,-27p-63 0q-58 -27);"/>
+                    <Edge cubics="!63 -49(63,-49;63,-49 63,0 63,0q63 -49 63 0);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.Vector.Mag" itemID="5c8c31f1-00000e2b" lastModified="1552691728">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.Vector.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix ty="35.85"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#141414"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.498039215686275"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!-287 964S5|939 -2402!939 -2402|239 -2502!239 -2502|-329 -930!-329 -930|-921 676!-921 676|-921 754"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-287 964S6|-287 1002!-287 1002[-303 1074 -359 1068!-359 1068|-913 858!-913 858[-961 806 -921 754"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!-921 754S7|-287 964"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

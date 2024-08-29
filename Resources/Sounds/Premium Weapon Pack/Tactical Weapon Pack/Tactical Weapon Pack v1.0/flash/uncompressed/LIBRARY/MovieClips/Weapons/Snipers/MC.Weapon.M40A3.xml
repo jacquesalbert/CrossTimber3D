@@ -1,0 +1,37 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Snipers/MC.Weapon.M40A3" itemID="5b53ca84-000014b5" lastModified="1532483945">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.M40A3">
+      <layers>
+        <DOMLayer name="optic" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Snipers/MC.Weapon.M40A3.Optic" name="optic" centerPoint3DX="-34.55" centerPoint3DY="-41.25">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="-34.55" ty="-32.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="-18.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="base" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MovieClips/Weapons/Snipers/MC.Weapon.M40A3.Base" name="base">
+                  <transformationPoint>
+                    <Point x="214.4" y="32.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dmfshy1q5j21u"
+path="res://.godot/imported/CoastalWavesOnRocksLoop.ogg-837f2d77840cdcf438aaebe8074d051e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Environment/CoastalWavesOnRocksLoop.ogg"
+dest_files=["res://.godot/imported/CoastalWavesOnRocksLoop.ogg-837f2d77840cdcf438aaebe8074d051e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,47 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/MC.Weapon.HTI.Mag" itemID="5c5da5c9-00000720" lastModified="1549641183">
+  <timeline>
+    <DOMTimeline name="MC.Weapon.HTI.Mag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix ty="12.1"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#4C4C4C"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#474747"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="0.05" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.498039215686275"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!989 525S5|989 -1046!989 -1046|157 -1046"/>
+                    <Edge fillStyle0="2" strokeStyle="1" edges="!157 -1046S5|-35 -1046"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!-35 -1046S5|-989 -1046!-989 -1046|-989 429!-989 429[-969 501 -867 515!-867 515|-35 537"/>
+                    <Edge fillStyle0="2" strokeStyle="1" edges="!-35 537S5|157 543"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!157 543S5|887 561!887 561|989 525"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!157 543S3|157 -1046"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!-35 537S3|-35 -1046"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bigfeo3cl4ubq"
+path="res://.godot/imported/ClothRip3.ogg-ed7d9b4c4a6ac91c8b8d684fcc69de2f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Destruction/ClothRip3.ogg"
+dest_files=["res://.godot/imported/ClothRip3.ogg-ed7d9b4c4a6ac91c8b8d684fcc69de2f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

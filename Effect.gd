@@ -1,5 +1,5 @@
 class_name Effect
-extends Node2D
+extends Node3D
 
 @export var text : StringName
 @export var icon : Texture2D

@@ -1,0 +1,45 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MovieClips/Weapons/Parts/WPN.M4.Slide" itemID="524cef24-000028db" lastModified="1381457936">
+  <timeline>
+    <DOMTimeline name="WPN.M4.Slide">
+      <layers>
+        <DOMLayer name="gfx" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix a="1.23202514648438" tx="-1.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#272727"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.05" pixelHinting="true" joints="miter" solidStyle="hairline">
+                        <fill>
+                          <SolidColor alpha="0.247058823529412"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-153 -45S6|153 -45!153 -45|153 45!153 45|-153 45!-153 45|-153 -45"/>
+                    <Edge cubics="!153 -45(;153,-45 153,45 153,45q153 -45 153 45);"/>
+                    <Edge cubics="!-153 -45(-153,-45;-153,-45 -153,45 -153,45q-153 -45 -153 45);"/>
+                    <Edge cubics="!-153 -45(;-153,-45 153,-45 153,-45q-153 -45 153 -45);"/>
+                    <Edge cubics="!153 45(;153,45 -153,45 -153,45q153 45 -153 45);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsyx1mt6mw7br"
+path="res://.godot/imported/ui_challenge_complete.mp3-6d767e09631941efac0666ef6c07ae14.mp3str"
+
+[deps]
+
+source_file="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/ui/ui_challenge_complete.mp3"
+dest_files=["res://.godot/imported/ui_challenge_complete.mp3-6d767e09631941efac0666ef6c07ae14.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
