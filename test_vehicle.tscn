@@ -27,6 +27,8 @@ size = Vector3(1.5, 1, 4)
 [node name="Vehicle" type="CharacterBody3D" node_paths=PackedStringArray("fuel", "health")]
 collision_layer = 128
 script = ExtResource("1_ho58b")
+max_drive_traction_accel = 25.0
+max_traction_accel = 50.0
 power_curve = SubResource("Curve_gryd5")
 top_speed = 50.0
 handling_speed = 10.0

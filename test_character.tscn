@@ -181,10 +181,10 @@ script = ExtResource("10_emt75")
 [node name="Interactor" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 target_position = Vector3(0, 0, 1)
-collision_mask = 137
-hit_from_inside = true
+collision_mask = 385
 collide_with_areas = true
 script = ExtResource("11_t6hvw")
+interaction_mask = 8
 
 [node name="Tracker" type="Node3D" parent="."]
 script = ExtResource("12_j113j")

@@ -14,7 +14,7 @@ const COLLISION_CONSEVATION : float = 0.5
 @export var rear_drive : bool
 @export var collision_friction : float = 0.5
 @export var mass : float = 1500
-@export var ride_height : float = 0.1
+#@export var ride_height : float = 0.1
 @export var rolling_resistance : float = 0.1
 @export var fuel_consumpution_rate : float = 1.0
 @export var traction_control_modifier : float = 0.8
@@ -207,15 +207,25 @@ func _physics_process(delta:float):
 	var forward := global_basis.z
 	var right := -global_basis.x
 	run_fuel(delta)
+
 	var longitudinal_speed := velocity.dot(forward)
 	velocity -= forward * longitudinal_speed * rolling_resistance * delta
+
 	var steer_angle := -steer * max_steer_angle
 	front_left_wheel.rotation.y = steer_angle
 	front_right_wheel.rotation.y = steer_angle
 	var rotation_speed :float = (longitudinal_speed / wheelbase) * tan(steer_angle)
 
+	var fl_traction :float= front_left_wheel.traction
+	var fr_traction :float= front_right_wheel.traction
+	var rl_traction :float= rear_left_wheel.traction
+	var rr_traction :float= rear_right_wheel.traction
+	var front_traction :float= max(fl_traction,fr_traction)
+	var rear_traction :float= max(rl_traction,rr_traction)
+	var all_traction : float = max(front_traction,rear_traction)
+
 	# add rotation from steering
-	angular_speed = move_toward(angular_speed,rotation_speed, handling_speed* delta)
+	angular_speed = move_toward(angular_speed,rotation_speed, handling_speed* front_traction*delta)
 	var steering_lateral_speed := -rear_axle_distance * angular_speed
 	# add lateral movement from steering
 	global_position += -right * steering_lateral_speed * delta
@@ -226,13 +236,7 @@ func _physics_process(delta:float):
 	var lateral_movement := velocity.dot(right)
 	var lateral_accel := lateral_movement / delta
 	
-	var fl_traction :float= front_left_wheel.traction
-	var fr_traction :float= front_right_wheel.traction
-	var rl_traction :float= rear_left_wheel.traction
-	var rr_traction :float= rear_right_wheel.traction
-	var front_traction :float= max(fl_traction,fr_traction)
-	var rear_traction :float= max(rl_traction,rr_traction)
-	var all_traction : float = max(front_traction,rear_traction)
+
 	var spin : float = 0.0
 	# apply drive movement up to traction maximum
 	#var speed_modifier :float = max(0,(top_speed - abs(longitudinal_speed)) / top_speed)

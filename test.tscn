@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://wyqm77ee568q"]
+[gd_scene load_steps=27 format=3 uid="uid://wyqm77ee568q"]
 
 [ext_resource type="Script" path="res://MatchPosition.gd" id="1_agiep"]
 [ext_resource type="PackedScene" uid="uid://y2763ntb71tf" path="res://test_character.tscn" id="2_0tjcj"]
@@ -6,7 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://8prv2c0ly0ip" path="res://Resources/kenney_prototype-textures/PNG/Dark/texture_02.png" id="3_o2frl"]
 [ext_resource type="PackedScene" uid="uid://bgr4pc5yl88ai" path="res://Resources/FBX/Trashcan.fbx" id="3_p21rf"]
 [ext_resource type="Script" path="res://MaterialEffectStaticBody.gd" id="4_b3va3"]
+[ext_resource type="Script" path="res://DoorInteraction.gd" id="5_fttj3"]
+[ext_resource type="Script" path="res://DoorBody3D.gd" id="5_qegm1"]
 [ext_resource type="Script" path="res://Level.gd" id="6_5ppbu"]
+[ext_resource type="Script" path="res://InteractionArea.gd" id="7_bn8cv"]
 [ext_resource type="Texture2D" uid="uid://d3nrns06j7fb4" path="res://Resources/kenney_prototype-textures/PNG/Dark/texture_01.png" id="7_s0txq"]
 [ext_resource type="PackedScene" uid="uid://clfbdnb2xhjtw" path="res://test_supply_pickup.tscn" id="8_a10ku"]
 [ext_resource type="PackedScene" uid="uid://d17hiwv22avsm" path="res://test_vehicle.tscn" id="9_368ct"]
@@ -34,6 +37,15 @@ albedo_texture = ExtResource("7_s0txq")
 [sub_resource type="BoxMesh" id="BoxMesh_k48fu"]
 material = SubResource("StandardMaterial3D_en3c8")
 size = Vector3(4, 3, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_byfje"]
+size = Vector3(1, 2.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_620il"]
+size = Vector3(1, 2.1, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wy0yj"]
+size = Vector3(1, 2.1, 0.1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6hxia"]
 size = Vector3(0.7, 1.3, 0.8)
@@ -85,6 +97,46 @@ shape = SubResource("BoxShape3D_apjq2")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Level/WallStaticBody3"]
 material_override = SubResource("StandardMaterial3D_r6pga")
 mesh = SubResource("BoxMesh_k48fu")
+
+[node name="Door" type="Node3D" parent="Level"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.73719, 0.0470952, -3.78049)
+
+[node name="DoorBody3D" type="RigidBody3D" parent="Level/Door"]
+collision_mask = 131
+script = ExtResource("5_qegm1")
+open_collision = 256
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Door/DoorBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.05, 0)
+shape = SubResource("BoxShape3D_byfje")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/Door/DoorBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.05, 0)
+mesh = SubResource("BoxMesh_620il")
+
+[node name="DoorInteraction" type="Node" parent="Level/Door/DoorBody3D" node_paths=PackedStringArray("door")]
+script = ExtResource("5_fttj3")
+door = NodePath("..")
+
+[node name="HingeJoint3D" type="HingeJoint3D" parent="Level/Door"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+node_a = NodePath("../DoorBody3D")
+angular_limit/enable = true
+angular_limit/upper = 2.0944
+angular_limit/lower = -2.0944
+
+[node name="InteractionArea" type="Area3D" parent="Level/Door"]
+collision_layer = 256
+collision_mask = 0
+script = ExtResource("7_bn8cv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Door/InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.05, 0)
+shape = SubResource("BoxShape3D_wy0yj")
+
+[node name="DoorInteraction" type="Node" parent="Level/Door/InteractionArea" node_paths=PackedStringArray("door")]
+script = ExtResource("5_fttj3")
+door = NodePath("../../DoorBody3D")
 
 [node name="CameraMount" type="Node3D" parent="." node_paths=PackedStringArray("target")]
 script = ExtResource("1_agiep")
