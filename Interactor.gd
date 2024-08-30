@@ -52,13 +52,24 @@ func interact():
 
 func add_interaction(interaction:Interaction):
 	if not _all_interactions.has(interaction):
+		interaction.tree_exiting.connect(_on_interaction_exit.bind(interaction))
 		_all_interactions.append(interaction)
 		interactions_changed.emit(interactions)
 		_update_available_interactions()
 
+func _on_interaction_exit(interaction:Interaction):
+	remove_interaction(interaction)
+
+func _on_area_exit(area:InteractionArea):
+	_remove_interaction_area(area)
+
+func _on_body_exit(body:Node3D):
+	_update_interaction_body(null)
+
 func remove_interaction(interaction:Interaction):
 	if _all_interactions.has(interaction):
 		_all_interactions.erase(interaction)
+		interaction.tree_exiting.disconnect(_on_interaction_exit.bind(interaction))
 		interactions_changed.emit(interactions)
 		_update_available_interactions()
 
@@ -74,11 +85,13 @@ func _add_interaction_area(area:InteractionArea):
 	if _current_interaction_areas.has(area):
 		return
 	_current_interaction_areas.append(area)
+	area.tree_exiting.connect(_on_area_exit.bind(area))
 	for interaction in area.interactions:
 		add_interaction(interaction)
 		
 func _remove_interaction_area(area:InteractionArea):
 	_current_interaction_areas.erase(area)
+	area.tree_exiting.disconnect(_on_area_exit.bind(area))
 	for interaction in area.interactions:
 		remove_interaction(interaction)
 
@@ -86,12 +99,14 @@ func _update_interaction_body(body:Node):
 	if body == _current_interaction_body:
 		return
 	if is_instance_valid(_current_interaction_body):
+		_current_interaction_body.tree_exited.disconnect(_on_body_exit.bind(_current_interaction_body))
 		for child in _current_interaction_body.get_children():
 			if child is Interaction:
 				remove_interaction(child)
 	_current_interaction_body = body
 	var new_body_interactions :Array[Interaction]
 	if is_instance_valid(_current_interaction_body):
+		_current_interaction_body.tree_exited.connect(_on_body_exit.bind(_current_interaction_body))
 		for child in _current_interaction_body.get_children():
 			if child is Interaction:
 				add_interaction(child)
@@ -131,10 +146,12 @@ func update_interactions():
 				new_interaction_areas.append(collider)
 	for area in _current_interaction_areas:
 		if not new_interaction_areas.has(area):
-			_remove_interaction_area(area)
+			if is_instance_valid(area):
+				_remove_interaction_area(area)
 	for area in new_interaction_areas:
 		if not _current_interaction_areas.has(area):
-			_add_interaction_area(area)
+			if is_instance_valid(area):
+				_add_interaction_area(area)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
