@@ -10,6 +10,7 @@ var character:Character
 
 signal fired
 
+
 func on_equip():
 	pass
 

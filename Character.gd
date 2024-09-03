@@ -28,6 +28,7 @@ enum State {
 	ACTIVE,
 	DRIVER_MOUNTED,
 	MOUNTED,
+	STUN,
 	INACTIVE
 }
 
@@ -178,7 +179,6 @@ func load_character():
 			child.queue_free()
 
 func _process(delta):
-	run_energy(delta)
 	if request_state != state:
 		match request_state:
 			State.ACTIVE:
@@ -187,6 +187,8 @@ func _process(delta):
 				set_mounted()
 			State.DRIVER_MOUNTED:
 				set_driver_mounted()
+			State.STUN:
+				set_stun()
 			State.INACTIVE:
 				set_inactive()
 		request_state = state
@@ -198,8 +200,29 @@ func _process(delta):
 			pass
 		State.MOUNTED:
 			mount_process(delta)
+		State.STUN:
+			pass
 		State.INACTIVE:
 			pass
+
+func set_stun():
+	state = State.STUN
+	collision_layer = 0
+	hitbox.disable()
+	if is_instance_valid(graphics):
+		graphics.alive = false
+		graphics.mounted = false
+		graphics.driving = false
+	tool_user.triggered = false
+
+	supply_area.disable()
+	tracker.disable()
+	if controller:
+		controller.trigger_tool_off.disconnect(on_controls_trigger_tool_off)
+		controller.trigger_tool_on.disconnect(on_controls_trigger_tool_on)
+		controller.trigger_equipment_off.disconnect(on_controls_trigger_equipment_off)
+		controller.trigger_equipment_on.disconnect(on_controls_trigger_equipment_on)
+		controller.interact.disconnect(on_controls_interact)
 
 func _physics_process(delta):
 	# enforce 2D play area
@@ -215,10 +238,13 @@ func _physics_process(delta):
 			pass
 		State.MOUNTED:
 			pass
+		State.STUN:
+			stun_physics_process(delta)
 		State.INACTIVE:
 			pass
 
 func on_health_died(killed_by:Node):
+	print("kill")
 	request_state = State.INACTIVE
 	drop_all_tools(tool_user)
 	drop_all_tools(equipment_user)
@@ -296,10 +322,12 @@ func set_inactive():
 	state = State.INACTIVE
 	collision_layer = 0
 	hitbox.disable()
-	graphics.alive = false
+	if is_instance_valid(graphics):
+		graphics.alive = false
+		graphics.mounted = false
+		graphics.driving = false
 	tool_user.triggered = false
-	graphics.mounted = false
-	graphics.driving = false
+
 	supply_area.disable()
 	tracker.disable()
 	if controller:
@@ -372,6 +400,7 @@ func set_driver_mounted():
 	tracker.disable()
 
 func active_process(delta:float):
+	run_energy(delta)
 	apply_controls(delta)
 	apply_graphics()
 
@@ -400,7 +429,7 @@ func active_physics_process(delta:float):
 		#velocity.y -= gravity * delta
 	move_and_slide()
 
-func knockback_physics_process(delta:float):
+func stun_physics_process(delta:float):
 	move_and_collide(Vector3.ZERO)
 	if health.value > 0:
 		request_state = State.ACTIVE

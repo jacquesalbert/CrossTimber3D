@@ -1,0 +1,147 @@
+[gd_scene load_steps=14 format=3 uid="uid://cjfqqr8ew8hpw"]
+
+[ext_resource type="AudioStream" uid="uid://dy4sdsitopaub" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_01.wav" id="1_svnru"]
+[ext_resource type="Script" path="res://randomize_rotation.gd" id="1_v75pu"]
+[ext_resource type="AudioStream" uid="uid://di7iol01otmsj" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_02.wav" id="2_6sxry"]
+[ext_resource type="AudioStream" uid="uid://b7mtacah7glbt" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_03.wav" id="3_2nv47"]
+[ext_resource type="AudioStream" uid="uid://dam2ix04a35jj" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_04.wav" id="4_2yekg"]
+[ext_resource type="AudioStream" uid="uid://dy01iwmk0yl36" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV2_Jump_Land_01.wav" id="5_v8eau"]
+[ext_resource type="AudioStream" uid="uid://bsma58fx8m8t6" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV2_Jump_Land_02.wav" id="6_rvau8"]
+[ext_resource type="AudioStream" uid="uid://b0hx8qe5mung2" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV2_Jump_Land_03.wav" id="7_e2evt"]
+[ext_resource type="Texture2D" uid="uid://b4jnvgg4i52xm" path="res://Resources/Free/Part 8/376.png" id="8_v5ufm"]
+
+[sub_resource type="Animation" id="Animation_tkf3l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OmniLight3D:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_it6at"]
+resource_name = "hit"
+length = 0.4
+step = 0.05
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OmniLight3D:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [5.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OmniLight3D:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.8, 0, 1), Color(1, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite3D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tng7r"]
+_data = {
+"RESET": SubResource("Animation_tkf3l"),
+"hit": SubResource("Animation_it6at")
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4fqcc"]
+streams_count = 7
+stream_0/stream = ExtResource("1_svnru")
+stream_1/stream = ExtResource("2_6sxry")
+stream_2/stream = ExtResource("3_2nv47")
+stream_3/stream = ExtResource("4_2yekg")
+stream_4/stream = ExtResource("5_v8eau")
+stream_5/stream = ExtResource("6_rvau8")
+stream_6/stream = ExtResource("7_e2evt")
+
+[node name="MetalHitEffect" type="Node3D"]
+script = ExtResource("1_v75pu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tng7r")
+}
+autoplay = "hit"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+shadow_enabled = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_4fqcc")
+autoplay = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+cast_shadow = 0
+pixel_size = 0.05
+axis = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_v5ufm")
+hframes = 8
+vframes = 9

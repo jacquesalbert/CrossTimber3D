@@ -6,12 +6,12 @@ extends Interaction
 func interact(character:Character):
 	door.toggle_open(character.global_position)
 
-func update_text(new_state:DoorBody3D.State):
-	match new_state:
-		DoorBody3D.State.CLOSED:
-			text = "Open Door"
-		DoorBody3D.State.OPEN:
-			text = "Close Door"
+func close_text():
+	text = "Close Door"
+
+func open_text():
+	text = "Open Door"
 
 func _ready() -> void:
-	door.state_changed.connect(update_text)
+	door.door_closed.connect(open_text)
+	door.door_opened.connect(close_text)

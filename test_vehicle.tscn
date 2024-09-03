@@ -1,15 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://d17hiwv22avsm"]
+[gd_scene load_steps=21 format=3 uid="uid://d17hiwv22avsm"]
 
 [ext_resource type="Script" path="res://Vehicle.gd" id="1_ho58b"]
-[ext_resource type="PackedScene" uid="uid://cr55wp2mtwpje" path="res://Resources/FBX/Cop.fbx" id="2_83reb"]
+[ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="2_7n5wi"]
+[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="3_r6n5c"]
 [ext_resource type="Script" path="res://Stat.gd" id="4_ocxkf"]
 [ext_resource type="PackedScene" uid="uid://bk0lpn0aayava" path="res://test_wheel.tscn" id="4_r4ysp"]
+[ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="5_whwhk"]
 [ext_resource type="Script" path="res://Mount.gd" id="6_l5t2n"]
 [ext_resource type="Script" path="res://VehicleControlMount.gd" id="7_i6lbx"]
 [ext_resource type="Script" path="res://MountInteraction.gd" id="8_t0yfh"]
 [ext_resource type="Script" path="res://InteractionArea.gd" id="8_vohwo"]
 [ext_resource type="Script" path="res://DismountInteraction.gd" id="9_cteup"]
 [ext_resource type="Texture2D" uid="uid://dwk6b47x5yyoc" path="res://Resources/muscle_car-24-pirate.png" id="10_wth24"]
+[ext_resource type="Script" path="res://Hitbox.gd" id="11_1towl"]
+[ext_resource type="Script" path="res://NodeEffectMaterial.gd" id="12_lslb7"]
+[ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="13_dug1e"]
 
 [sub_resource type="Curve" id="Curve_gryd5"]
 _data = [Vector2(0, 0.515648), 0.0, 0.0, 0, 0, Vector2(0.258182, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -4.29303, 0.0, 0, 0]
@@ -19,30 +24,38 @@ point_count = 3
 size = Vector3(1.75, 1, 4.5)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0l12j"]
-radius = 1.5
+radius = 1.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_evnc1"]
 size = Vector3(1.5, 1, 4)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_gk76p"]
+size = Vector3(1.8, 2, 4.3)
+
 [node name="Vehicle" type="CharacterBody3D" node_paths=PackedStringArray("fuel", "health")]
 collision_layer = 128
+collision_mask = 131
 script = ExtResource("1_ho58b")
 max_drive_traction_accel = 25.0
 max_traction_accel = 50.0
 power_curve = SubResource("Curve_gryd5")
 top_speed = 50.0
-handling_speed = 10.0
+handling_speed = 5.0
 rear_drive = true
 fuel = NodePath("Fuel")
 health = NodePath("Health")
+material_hit_effects = {
+ExtResource("2_7n5wi"): ExtResource("3_r6n5c"),
+ExtResource("13_dug1e"): ExtResource("5_whwhk")
+}
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_snmgp")
 
-[node name="Cop" parent="." instance=ExtResource("2_83reb")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-visible = false
+[node name="MetalMaterial" type="Node" parent="CollisionShape3D"]
+script = ExtResource("12_lslb7")
+material = ExtResource("13_dug1e")
 
 [node name="RRWheel" parent="." instance=ExtResource("4_r4ysp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.825, 0.5, -1.175)
@@ -70,7 +83,7 @@ vehicle = NodePath("..")
 dismount_point = NodePath("Node3D")
 
 [node name="InteractionArea" type="Area3D" parent="Mount"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 2.5, 0)
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("8_vohwo")
@@ -99,7 +112,7 @@ dismount_point = NodePath("Node3D")
 control = true
 
 [node name="InteractionArea" type="Area3D" parent="VehicleControlMount"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 2.5, 0)
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("8_vohwo")
@@ -121,7 +134,7 @@ mount = NodePath("..")
 text = "Dismount"
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.9, 0)
 pixel_size = 0.05
 axis = 1
 shaded = true
@@ -134,3 +147,14 @@ texture = ExtResource("10_wth24")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 cast_shadow = 3
 mesh = SubResource("BoxMesh_evnc1")
+
+[node name="Hitbox" type="Area3D" parent="."]
+script = ExtResource("11_1towl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.000915527)
+shape = SubResource("BoxShape3D_gk76p")
+
+[node name="MetalMaterial" type="Node" parent="Hitbox/CollisionShape3D"]
+script = ExtResource("12_lslb7")
+material = ExtResource("13_dug1e")

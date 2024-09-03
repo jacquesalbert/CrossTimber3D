@@ -1,7 +1,6 @@
 class_name Hitbox
 extends Area3D
 
-@export var effect_material : StringName
 @export_range(0,1) var hit_chance : float = 1.0
 #@export var penetration_resistance : float = 0.0
 @export var stability_reduction : float = 1.0
@@ -33,6 +32,3 @@ func hit(amount:int,hit_by:Node)->Dictionary:
 		"stability_modify" : -stability_reduction,
 		"damage_modify" : -damage_reduction
 		}
-
-func get_effect_material()->StringName:
-	return effect_material

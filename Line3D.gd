@@ -11,7 +11,7 @@ var _colors : Array[Color]
 var _uv_ts : Array[float]
 
 var _rebuild_queued : bool
-var _material : Material
+var _material : StandardMaterial3D
 
 func _ready() -> void:
 	_rebuild_queued = true

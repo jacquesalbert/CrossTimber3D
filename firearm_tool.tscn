@@ -1,10 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://dscki76d3tu2q"]
+[gd_scene load_steps=13 format=3 uid="uid://dscki76d3tu2q"]
 
 [ext_resource type="Script" path="res://FirearmTool.gd" id="1_2j8qw"]
 [ext_resource type="Resource" uid="uid://cf20pmwfu20a5" path="res://item_test.tres" id="2_mwmob"]
 [ext_resource type="PackedScene" uid="uid://c7xcd5bpu10ej" path="res://bullet_trailer.tscn" id="3_4la7t"]
+[ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="4_57swq"]
 [ext_resource type="AudioStream" uid="uid://c8r50lvnucscd" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_fire_ak47.mp3" id="4_ac35g"]
 [ext_resource type="Texture2D" uid="uid://cp5bdg4fpju20" path="res://Resources/muzzleflash.png" id="4_it5q0"]
+[ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="5_35kxc"]
+[ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="6_vgfjy"]
+[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="7_itd7b"]
 
 [sub_resource type="Animation" id="Animation_f2622"]
 length = 0.001
@@ -54,7 +58,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [2.0]
+"values": [5.0]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -154,13 +158,16 @@ _data = {
 
 [node name="FirearmToolInstance" type="Node3D" node_paths=PackedStringArray("stream_player")]
 script = ExtResource("1_2j8qw")
-speed = 250.0
 speed_minimum = 1.0
-count = 5
+angle_spread = 0.05
 supply = ExtResource("2_mwmob")
 supply_amount = 1
 bullet_collision_mask = 5
 bullet_trailer_scene = ExtResource("3_4la7t")
+material_hit_effects = {
+ExtResource("4_57swq"): ExtResource("5_35kxc"),
+ExtResource("6_vgfjy"): ExtResource("7_itd7b")
+}
 stream_player = NodePath("AudioStreamPlayer3D")
 fire_stream = ExtResource("4_ac35g")
 
@@ -172,10 +179,10 @@ one_shot = true
 stream = ExtResource("4_ac35g")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 1)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0.5)
 visible = false
 cast_shadow = 0
-pixel_size = 0.1
+pixel_size = 0.05
 axis = 1
 alpha_cut = 1
 texture_filter = 0
@@ -184,7 +191,7 @@ hframes = 4
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Sprite3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
-light_energy = 2.0
+light_energy = 5.0
 shadow_enabled = true
 omni_range = 10.0
 omni_shadow_mode = 0

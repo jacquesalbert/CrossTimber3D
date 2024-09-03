@@ -2,7 +2,7 @@ extends ToolInstance
 
 @export var damage : int = 10
 @export var fire_rate : float = 1.0
-@export var speed : float = 50
+@export var speed : float = 250
 @export var speed_variation : float = 0.0
 @export var speed_minimum : float = 50.0
 @export var range : float = 1000
@@ -73,11 +73,13 @@ func attack():
 		
 
 func fire_bullet():
-	var target_dir := global_basis * Vector3(randf()*angle_spread,randf()*angle_spread,1.0).normalized()
+	var target_dir := global_basis * Vector3((randf() - 0.5)*angle_spread,0.0,1.0).normalized()
 	var bullet_speed :float = max(speed_minimum,randfn(speed, speed_variation))
 	var bullet_range := randfn(range, range_variation)
 	var bullet := Bullet.new(target_dir, bullet_speed, stability, damage, bullet_range, self.character, bullet_collision_mask)
 	bullet.apply_effects = apply_effects
+	if is_instance_valid(character):
+		bullet.add_exception(character.hitbox)
 	#bullet.trail_transparency = trail_transparency
 	#bullet.trail_shadow = trail_shadow
 	#bullet.trail_width_curve = trail_width_curve

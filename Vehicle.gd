@@ -99,7 +99,7 @@ func get_input_debug():
 	throttle = Input.get_axis("ui_down","ui_up")
 	brake = 1.0 if Input.is_action_pressed("ui_select") else 0.0
 
-func get_input():
+func get_input(delta:float):
 	if is_instance_valid(driver_character):
 		var controller : Controller = driver_character.controller
 		if is_instance_valid(controller):
@@ -112,7 +112,7 @@ func get_input():
 
 func _process(delta):
 	#get_input_debug()
-	get_input()
+	get_input(delta)
 	update_sounds()
 
 func update_sounds():
@@ -138,7 +138,7 @@ func move_and_handle_collisions(delta:float):
 # move and handle collisions
 	var remainder : Vector3
 	var collision := move_and_collide(velocity*delta)
-	var frame_exceptions: Array[CollisionObject2D]
+	var frame_exceptions: Array[CollisionObject3D]
 	while collision:
 		var collider := collision.get_collider()
 		var normal := collision.get_normal()
@@ -149,16 +149,20 @@ func move_and_handle_collisions(delta:float):
 			remainder = collision.get_remainder()
 			#collider.request_state = Character.State.KNOCKBACK
 			#collider.move_and_collide(normal_velocity*normal*delta)
-			if abs(normal_velocity) > 100.0:
-				spawn_hit_effect(collision.get_position(),velocity,normal,collider.get_effect_material())
+			if abs(normal_velocity) > 5.0:
+				var collider_shape_id := collision.get_collider_shape_index()
+				var effect_material = EffectMaterial.get_collision_shape_material(collider,collider_shape_id)
+				LevelManager.spawn_hit_effect_in_level(collision.get_position(),velocity.normalized(),normal,material_hit_effects.get(effect_material))
 			var damage :int = round(-normal_velocity)
 			collider.hitbox.hit(-damage,driver_character)
+			collider.request_state = Character.State.STUN
 			collision = move_and_collide(remainder)
 			continue
 		elif collider is Vehicle:
-			if abs(normal_velocity) > 50.0:
-				spawn_hit_effect(collision.get_position(),velocity,normal,collider.get_effect_material())
-		
+			if abs(normal_velocity) > 5.0:
+				var collider_shape_id := collision.get_collider_shape_index()
+				var effect_material = EffectMaterial.get_collision_shape_material(collider,collider_shape_id)
+				LevelManager.spawn_hit_effect_in_level(collision.get_position(),velocity.normalized(),normal,material_hit_effects.get(effect_material))
 			var system_mass :float= collider.mass + mass
 			var my_collision_part :float= collider.mass / system_mass
 			var my_velocity_change := COLLISION_CONSEVATION * my_collision_part * normal_velocity*normal
@@ -279,7 +283,7 @@ func _physics_process(delta:float):
 	if traction_acceleration.length() > modified_max_traction_acceleration:
 		skid = true
 		traction_acceleration = modified_max_traction_acceleration * traction_acceleration.normalized()
-		
+	
 	front_left_wheel.traction_slip = skid
 	front_right_wheel.traction_slip = skid
 	rear_left_wheel.traction_slip = skid
@@ -294,10 +298,10 @@ func _physics_process(delta:float):
 	if velocity.is_zero_approx():
 		return
 	
-	move_and_slide()
+	#move_and_slide()
 	#if is_on_floor():
 		#global_position += global_basis.y * ride_height
-	#move_and_handle_collisions(delta)
+	move_and_handle_collisions(delta)
 
 func get_effect_material()->StringName:
 	return "metal"

@@ -11,6 +11,7 @@ class_name Trail
 
 @export var line_transparency : BaseMaterial3D.Transparency
 @export var line_shadow : GeometryInstance3D.ShadowCastingSetting
+@export var line_unshaded : bool
 
 var _point_ages : Array[float]
 var _idle_time : float
@@ -20,6 +21,11 @@ signal expired
 func _ready() -> void:
 	super._ready()
 	_material.transparency = line_transparency
+	_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED if line_unshaded else BaseMaterial3D.SHADING_MODE_PER_PIXEL
+	#_material.albedo_color = Color.WHITE * 4.0
+	#_material.emission = Color.GREEN
+	#_material.emission_enabled = true
+	#_material.emission_energy_multiplier = 2.0
 	cast_shadow = line_shadow
 
 func update_points(global_point:Vector3, normal:Vector3=Vector3.UP):

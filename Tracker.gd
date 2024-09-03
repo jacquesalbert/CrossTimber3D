@@ -34,6 +34,7 @@ func create_track():
 	_track.min_segment_length = min_segment_length
 	_track.two_sided = two_sided
 	_track.lifetime = lifetime
+	_track.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	#_track.update_points(global_position+global_basis*normal_direction*bias,global_basis*normal_direction if local_normal else normal_direction)
 	LevelManager.spawn_in_level(_track)
 	#_queue_create_track = false

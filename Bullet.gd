@@ -44,13 +44,12 @@ func _init(direction:Vector3, speed:float, stability:float, damage:int, range:fl
 	
 #var trail:Trail
 
-func spawn_hit_effect(global_pos:Vector3, direction:Vector3, normal:Vector3, effect_material:StringName):
+func spawn_hit_effect(global_pos:Vector3, direction:Vector3, normal:Vector3, effect_material:EffectMaterial):
 	var effect : PackedScene = material_hit_effects.get(effect_material)
 	if effect:
 		var hit_effect_instance := effect.instantiate()
-		#print("set rotation")
-		#hit_effect_instance.global_rotation = normal.angle()
-		hit_effect_instance.global_position = global_pos
+		hit_effect_instance.rotation.y = normal.signed_angle_to(Vector3.BACK,Vector3.DOWN)
+		hit_effect_instance.position = global_pos
 		LevelManager.spawn_in_level(hit_effect_instance)
 
 # Called when the node enters the scene tree for the first time.
@@ -144,10 +143,9 @@ func _physics_process(delta):
 				force_raycast_update()
 			
 			if spawn_effect:
-				if collider.has_method("get_effect_material"):
-					var effect_material = collider.get_effect_material()
-					var hit_normal := get_collision_normal()
-					spawn_hit_effect(collision_point, self.direction, hit_normal, effect_material) # _direction.bounce(get_collision_normal()).angle()
+				var effect_material = EffectMaterial.get_collision_shape_material(collider,get_collider_shape())
+				var hit_normal := get_collision_normal()
+				spawn_hit_effect(collision_point, self.direction, hit_normal,effect_material) # _direction.bounce(get_collision_normal()).angle()
 			
 			#if trail and is_instance_valid(trail):
 				#trail.update_points(collision_point)

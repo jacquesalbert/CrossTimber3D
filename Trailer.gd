@@ -14,6 +14,7 @@ extends Node3D
 @export var bias : float = 0.01
 @export var cast_shadow : GeometryInstance3D.ShadowCastingSetting = GeometryInstance3D.ShadowCastingSetting.SHADOW_CASTING_SETTING_OFF
 @export var transparency : BaseMaterial3D.Transparency = BaseMaterial3D.Transparency.TRANSPARENCY_ALPHA
+@export var unshaded : bool = false
 
 @export var trailing: bool:
 	set(value):
@@ -38,6 +39,7 @@ func create_trail():
 	_trail.default_color = color
 	_trail.line_shadow = cast_shadow
 	_trail.line_transparency = transparency
+	_trail.line_unshaded = unshaded
 	LevelManager.spawn_in_level(_trail)
 	
 func enable():

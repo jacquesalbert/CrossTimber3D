@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EffectMaterial" load_steps=2 format=3 uid="uid://784u5sak8kjf"]
+
+[ext_resource type="Script" path="res://EffectMaterial.gd" id="1_1x6dv"]
+
+[resource]
+script = ExtResource("1_1x6dv")
+text = &"flesh"
+base_color = Color(0, 0, 0, 1)
+accent_color = Color(0, 0, 0, 1)
