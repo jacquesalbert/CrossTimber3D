@@ -1,11 +1,13 @@
 class_name Character
 extends CharacterBody3D
-
+const STUN_TIME : float = 0.1
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @export_flags_2d_physics var character_body_layer
 @export var exhaustion_effect_scene : PackedScene
+@export var impact_effect : PackedScene
+@export var mass : float = 75
 
 var controller : Controller
 @onready var tool_user : SlotToolUser = $ToolUser
@@ -23,6 +25,8 @@ var controller : Controller
 #@onready var cover_detector : CoverDetector = $CoverDetector
 @onready var tracker : Tracker = $Tracker
 @onready var ray_cast : RayCast3D = $RayCast3D
+@onready var alive_collision_shape : CollisionShape3D = $AliveCollisionShape
+@onready var dead_collision_shape : CollisionShape3D = $DeadCollisionShape
 
 enum State {
 	ACTIVE,
@@ -42,6 +46,7 @@ var _current_traits: Array[Trait]
 var _run_energy_debt : float
 var _exhausted_effect : Effect
 var _traction : float
+var _stun_timer : Timer
 var _current_surface : Node3D:
 	set(value):
 		if _current_surface != value:
@@ -52,6 +57,8 @@ var _current_surface : Node3D:
 			tracker.change_effect_material(effect_material)
 			surface_changed.emit(_current_surface)
 			_traction = _current_surface.get_traction() if is_instance_valid(_current_surface) and _current_surface.has_method("get_traction") else 0.0
+var _local_target_velocity_2d : Vector2
+
 
 signal effects_changed
 signal traits_changed
@@ -59,8 +66,6 @@ signal surface_changed(surface:Node3D)
 signal mount_changed(mount:Mount)
 
 func apply_controls(delta:float, aim_only:bool=false):
-	var target_velocity_2d := Vector2.ZERO
-	
 	var turn_speed :float = attributes.get_attribute_value("turn_speed")
 	var speed :float = attributes.get_attribute_value("speed")
 	var run_modifier :float = attributes.get_attribute_value("run_modifier")
@@ -73,10 +78,11 @@ func apply_controls(delta:float, aim_only:bool=false):
 		var move_speed :float = speed * run_modifier if (running and can_run) else speed
 		#var max_speed := speed if running and energized else speed * walk_modifier
 		running = controller.run
-		target_velocity_2d = controller.movement.rotated(-global_rotation.y) * move_speed
-
+		_local_target_velocity_2d = controller.movement * move_speed
+	
 	if aim_only:
 		return
+	var target_velocity_2d := _local_target_velocity_2d.rotated(-global_rotation.y)
 	var target_velocity_3d := Vector3(target_velocity_2d.x, 0, target_velocity_2d.y)
 	velocity = velocity.move_toward(target_velocity_3d,acceleration*_traction*delta)
 
@@ -115,6 +121,8 @@ func _ready():
 		#cover_detector.add_ignore_area(hitbox)
 	if interactor:
 		interactor.character = self
+	if hitbox:
+		hitbox.was_hit.connect(_on_hitbox_hit)
 	if health:
 		health.changed.connect(on_health_damaged)
 		health.expended.connect(on_health_died)
@@ -122,8 +130,8 @@ func _ready():
 		tool_user.character = self
 		tool_user.tool_changed.connect(on_tool_changed)
 		tool_user.tool_fired.connect(on_tool_activated)
-		#if graphics:
-			#graphics.tool = get_graphics_tool_type_from_tool_type(tool_user.current_tool.type)
+		if graphics:
+			graphics.tool = get_graphics_tool_type_from_tool_type(tool_user.get_current_tool_type())
 	if equipment_user:
 		equipment_user.character = self
 		equipment_user.tool_changed.connect(on_equipment_changed)
@@ -137,22 +145,14 @@ func _ready():
 		if child is Controller:
 			controller = child
 			controller.character = self
-	if controller:
-		controller.cycle_tool.connect(on_controls_cycle_tool)
-		controller.cycle_equipment.connect(on_controls_cycle_equipment)
-		controller.trigger_tool_on.connect(on_controls_trigger_tool_on)
-		controller.trigger_tool_off.connect(on_controls_trigger_tool_off)
-		controller.trigger_equipment_on.connect(on_controls_trigger_equipment_on)
-		controller.trigger_equipment_off.connect(on_controls_trigger_equipment_off)
-		controller.interact.connect(on_controls_interact)
-		controller.cycle_interaction.connect(on_controls_cycle_interaction)
-	
 	 #then update all components with attribute values
 	update_attribute_values()
 	
 	 #finally, initialize the character as active
 	set_active()
 
+func _on_hitbox_hit(amount:int, hit_by:Node):
+	request_state = State.STUN
 
 func update_attribute_values():
 	var accuracy :float= attributes.get_attribute_value("accuracy")
@@ -207,10 +207,12 @@ func _process(delta):
 
 func set_stun():
 	state = State.STUN
-	collision_layer = 0
+	alive_collision_shape.disabled = true
+	dead_collision_shape.disabled = true
 	hitbox.disable()
 	if is_instance_valid(graphics):
-		graphics.alive = false
+		graphics.stunned = true
+		graphics.alive = true
 		graphics.mounted = false
 		graphics.driving = false
 	tool_user.triggered = false
@@ -223,6 +225,21 @@ func set_stun():
 		controller.trigger_equipment_off.disconnect(on_controls_trigger_equipment_off)
 		controller.trigger_equipment_on.disconnect(on_controls_trigger_equipment_on)
 		controller.interact.disconnect(on_controls_interact)
+	if not is_instance_valid(_stun_timer) or not _stun_timer.is_inside_tree():
+		_stun_timer = Timer.new()
+		_stun_timer.one_shot = true
+		_stun_timer.wait_time = STUN_TIME
+		add_child(_stun_timer)
+	_stun_timer.timeout.connect(_on_stun_timeout)
+	_stun_timer.start()
+
+
+func _on_stun_timeout():
+	_stun_timer.timeout.disconnect(_on_stun_timeout)
+	if health.value > 0:
+		request_state = State.ACTIVE
+	else:
+		request_state = State.INACTIVE
 
 func _physics_process(delta):
 	# enforce 2D play area
@@ -244,7 +261,6 @@ func _physics_process(delta):
 			pass
 
 func on_health_died(killed_by:Node):
-	print("kill")
 	request_state = State.INACTIVE
 	drop_all_tools(tool_user)
 	drop_all_tools(equipment_user)
@@ -320,9 +336,11 @@ func set_inactive():
 	if controller is PlayerController:
 		controller.mounted = false
 	state = State.INACTIVE
-	collision_layer = 0
+	alive_collision_shape.disabled = true
+	dead_collision_shape.disabled = false
 	hitbox.disable()
 	if is_instance_valid(graphics):
+		graphics.stunned = false
 		graphics.alive = false
 		graphics.mounted = false
 		graphics.driving = false
@@ -331,11 +349,15 @@ func set_inactive():
 	supply_area.disable()
 	tracker.disable()
 	if controller:
-		controller.trigger_tool_off.disconnect(on_controls_trigger_tool_off)
+		controller.cycle_tool.disconnect(on_controls_cycle_tool)
+		controller.cycle_equipment.disconnect(on_controls_cycle_equipment)
 		controller.trigger_tool_on.disconnect(on_controls_trigger_tool_on)
-		controller.trigger_equipment_off.disconnect(on_controls_trigger_equipment_off)
+		controller.trigger_tool_off.disconnect(on_controls_trigger_tool_off)
 		controller.trigger_equipment_on.disconnect(on_controls_trigger_equipment_on)
+		controller.trigger_equipment_off.disconnect(on_controls_trigger_equipment_off)
 		controller.interact.disconnect(on_controls_interact)
+		controller.cycle_interaction.disconnect(on_controls_cycle_interaction)
+	
 	
 func set_active():
 	var test_collision := move_and_collide(Vector3.ZERO,true)
@@ -344,20 +366,26 @@ func set_active():
 	if controller is PlayerController:
 		controller.mounted = false
 	state = State.ACTIVE
-	collision_layer = character_body_layer
+	#collision_layer = character_body_layer
+	alive_collision_shape.disabled = false
+	dead_collision_shape.disabled = true
 	#z_index = 10
 	hitbox.enable()
 	supply_area.enable()
-	#graphics.alive = true
-	#graphics.mounted = false
-	#graphics.driving = false
-	#if controller:
-		#if tool_user:
-			#controller.trigger_tool_off.connect(on_controls_trigger_tool_off)
-			#controller.trigger_tool_on.connect(on_controls_trigger_tool_on)
-		#if equipment_user:
-			#controller.trigger_equipment_off.connect(on_controls_trigger_equipment_off)
-			#controller.trigger_equipment_on.connect(on_controls_trigger_equipment_on)
+	if is_instance_valid(graphics):
+		graphics.stunned = false
+		graphics.alive = true
+		graphics.mounted = false
+		graphics.driving = false
+	if controller:
+		controller.cycle_tool.connect(on_controls_cycle_tool)
+		controller.cycle_equipment.connect(on_controls_cycle_equipment)
+		controller.trigger_tool_on.connect(on_controls_trigger_tool_on)
+		controller.trigger_tool_off.connect(on_controls_trigger_tool_off)
+		controller.trigger_equipment_on.connect(on_controls_trigger_equipment_on)
+		controller.trigger_equipment_off.connect(on_controls_trigger_equipment_off)
+		controller.interact.connect(on_controls_interact)
+		controller.cycle_interaction.connect(on_controls_cycle_interaction)
 	tracker.enable()
 
 func set_mounted():
@@ -367,13 +395,16 @@ func set_mounted():
 	if controller is PlayerController:
 		controller.mounted = true
 	state = State.MOUNTED
-	collision_layer = 0
+	alive_collision_shape.disabled = true
+	dead_collision_shape.disabled = true
 	#z_index = -1
 	hitbox.enable()
 	supply_area.disable()
-	#graphics.alive = true
-	#graphics.mounted = true
-	#graphics.driving = false
+	if is_instance_valid(graphics):
+		graphics.stunned = false
+		graphics.alive = true
+		graphics.mounted = true
+		graphics.driving = false
 	##if tool_user:
 		##on_tool_changed(null, tool_user.current_tool)
 	tracker.disable()
@@ -385,18 +416,21 @@ func set_driver_mounted():
 		controller.mounted = true
 	#print_debug("Setting ", self, " active.")
 	state = State.DRIVER_MOUNTED
-	collision_layer = 0
+	alive_collision_shape.disabled = true
+	dead_collision_shape.disabled = true
 	#z_index = -1
 	hitbox.enable()
 	supply_area.disable()
-	#graphics.alive = true
-	#graphics.mounted = true
-	#graphics.driving = true
-	#if controller:
-		#controller.trigger_tool_off.disconnect(on_controls_trigger_tool_off)
-		#controller.trigger_tool_on.disconnect(on_controls_trigger_tool_on)
-		#controller.trigger_equipment_off.disconnect(on_controls_trigger_equipment_off)
-		#controller.trigger_equipment_on.disconnect(on_controls_trigger_equipment_on)
+	if is_instance_valid(graphics):
+		graphics.stunned = false
+		graphics.alive = true
+		graphics.mounted = true
+		graphics.driving = true
+	if controller:
+		controller.trigger_tool_off.disconnect(on_controls_trigger_tool_off)
+		controller.trigger_tool_on.disconnect(on_controls_trigger_tool_on)
+		controller.trigger_equipment_off.disconnect(on_controls_trigger_equipment_off)
+		controller.trigger_equipment_on.disconnect(on_controls_trigger_equipment_on)
 	tracker.disable()
 
 func active_process(delta:float):
@@ -407,34 +441,38 @@ func active_process(delta:float):
 func apply_graphics():
 	if not is_instance_valid(graphics):
 		return
-	if attributes.can_run:
+	if attributes.get_attribute_value("can_run"):
 		graphics.exhaustion = 0.0
 	else:
 		graphics.exhaustion = 1.0
 	if controller:
-		if attributes.can_run and running and controller.movement.length() > attributes.speed:
-			graphics.move = "run"
-		elif controller.movement.length() > 0.0:
-			graphics.move = "walk"
-		else:
-			graphics.move = "idle"
-		graphics.move_angle = controller.movement.angle()
+		var run_speed :float= attributes.get_attribute_value("speed") * attributes.get_attribute_value("run_modifier")
+		graphics.movement = _local_target_velocity_2d / run_speed
 	else:
-		graphics.move = "idle"
-		graphics.move_angle = 0
+		graphics.movement = Vector2.ZERO
 
 func active_physics_process(delta:float):
 	# Add the gravity.
 	#if not is_on_floor():
 		#velocity.y -= gravity * delta
 	move_and_slide()
+	for i in range(get_slide_collision_count()):
+		var collision := get_slide_collision(i)
+		var collider := collision.get_collider()
+		if collider is Vehicle:
+			var normal := collision.get_normal()
+			var normal_velocity := velocity.dot(normal)
+			var other_normal_velocity :float= collider.velocity.dot(normal)
+			if abs(other_normal_velocity) > attributes.get_attribute_value("speed") * attributes.get_attribute_value("run_modifier"):
+				var collider_shape_id := collision.get_collider_shape_index()
+				var damage :float = -abs(other_normal_velocity) * collider.mass * 0.005
+				hitbox.hit(damage,collider)
+				LevelManager.spawn_hit_effect_in_level(collision.get_position(),collider.velocity.normalized(),normal,impact_effect)
+				request_state = State.STUN
+				velocity = other_normal_velocity * normal
 
 func stun_physics_process(delta:float):
-	move_and_collide(Vector3.ZERO)
-	if health.value > 0:
-		request_state = State.ACTIVE
-	else:
-		request_state = State.INACTIVE
+	move_and_slide()
 
 func mount(mount:Mount):
 	reparent(mount)

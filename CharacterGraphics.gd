@@ -11,8 +11,8 @@ enum ToolType {
 
 @export var animation_tree : AnimationTree
 #@export var tool_attachment : Node2D
-@export var upper_body : Sprite2D
-@export var lower_body : Sprite2D
+@export var upper_body : Sprite3D
+@export var lower_body : Sprite3D
 #@export var default_sprite : Texture2D
 #@export var default_palette : Texture2D
 #@export var empty_palette : Texture2D
@@ -36,7 +36,17 @@ var alive : bool:
 		var alive_key := "dead"
 		if alive:
 			alive_key = "alive"
-		animation_tree.set("parameters/Dead Transition/transition_request", alive_key)
+		#print(self, alive_key)
+		animation_tree.set("parameters/AliveTransition/transition_request", alive_key)
+
+var stunned : bool:
+	set(value):
+		stunned = value
+		var stunned_key := "active"
+		if stunned:
+			stunned_key = "stunned"
+		#print(self, alive_key)
+		animation_tree.set("parameters/StunTransition/transition_request", stunned_key)
 
 var mounted : bool:
 	set(value):
@@ -44,7 +54,8 @@ var mounted : bool:
 		var mounted_key := "unmounted"
 		if mounted:
 			mounted_key = "mounted"
-		animation_tree.set("parameters/Lower Body Mounted Transition/transition_request", mounted_key)
+		#print(self, mounted_key)
+		#animation_tree.set("parameters/Lower Body Mounted Transition/transition_request", mounted_key)
 var mount_forward_angle : float
 
 var driving : bool:
@@ -53,60 +64,63 @@ var driving : bool:
 		var driving_key := "not driving"
 		if driving:
 			driving_key = "driving"
-		animation_tree.set("parameters/Upper Body Driving Transition/transition_request", driving_key)
+		#print(self, driving_key)
+		#animation_tree.set("parameters/Upper Body Driving Transition/transition_request", driving_key)
 
 
-var move : String:
+var movement : Vector2:
 	set(value):
-		move = value
-		if move == "walk":
-			$FootstepAudioPlayer.volume_db = -9
-		elif move == "run":
-			$FootstepAudioPlayer.volume_db = 0
-		animation_tree.set("parameters/Lower Body Movement Transition/transition_request", move)
-		animation_tree.set("parameters/Upper Body Movement Transition/transition_request", move)
+		movement = value
+		#print(self, move)
+		#print("move key, ", move_key)
+		var speed := movement.length()
+		animation_tree.set("parameters/LowerBodyMovement/blend_position", speed)
+		animation_tree.set("parameters/UnarmedMovement/blend_position",speed)
+		#lower_body.rotation.y = movement.angle() + PI
+		#animation_tree.set("parameters/Lower Body Movement Transition/transition_request", move)
+		#animation_tree.set("parameters/Upper Body Movement Transition/transition_request", move)
 			
-var move_angle : float:
-	set(value):
-		move_angle = value
-		lower_body.rotation = value
+#var move_angle : float:
+	#set(value):
+		#move_angle = value
+		
 
 var tool : ToolType:
 	set(value):
 		tool = value
-		var tool_string := "Unarmed"
+		var tool_string := "unarmed"
 		match tool:
 			ToolType.UNARMED:
-				tool_string = "Unarmed"
+				tool_string = "unarmed"
 			ToolType.MELEE:
-				tool_string = "Melee"
+				tool_string = "melee"
 			ToolType.SIDEARM:
-				tool_string = "Sidearm"
+				tool_string = "sidearm"
 			ToolType.LONGARM:
-				tool_string = "Longarm"
+				tool_string = "longarm"
 			ToolType.THROWN:
 				tool_string = "Thrown"
-		animation_tree.set("parameters/Lower Body Weapon Transition/transition_request", tool_string)
-		animation_tree.set("parameters/Upper Body Weapon Transition/transition_request", tool_string)
+		#print(self, tool)
+		#animation_tree.set("parameters/Lower Body Weapon Transition/transition_request", tool_string)
+		animation_tree.set("parameters/WeaponTransition/transition_request", tool_string)
 
 var exhaustion : float = 0.0:
 	set(value):
 		exhaustion = value
-		animation_tree.set("parameters/BreatheRate/scale", max(0.0,1.0+exhaustion))
+		#print(self, "breathe", exhaustion)
+		#animation_tree.set("parameters/BreatheRate/scale", max(0.0,1.0+exhaustion))
 
 var ground_material: String:
 	set(value):
 		if ground_material != value:
 			ground_material = value
-			$FootstepAudioPlayer.stream = ground_material_footstep_streams.get(ground_material)
+			#$FootstepAudioPlayer.stream = ground_material_footstep_streams.get(ground_material)
 
 func activate_tool():
-#	animation_tree.set("parameters/Upper Body Unarmed Punch Oneshot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-	animation_tree.set("parameters/Upper Body Unarmed Attack Oneshot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-	animation_tree.set("parameters/Upper Body Melee Attack Oneshot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-	animation_tree.set("parameters/Upper Body Sidearm Recoil Oneshot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-	animation_tree.set("parameters/Upper Body Longarm Recoil Oneshot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-	animation_tree.set("parameters/Upper Body Throwable Throw Oneshot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+	animation_tree.set("parameters/FireUnarmedOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+	animation_tree.set("parameters/FireMeleeOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+	animation_tree.set("parameters/FireSidearmOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+	animation_tree.set("parameters/FireLongarmOneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
 
 func hurt(amount:int):
 	if amount < 0:
@@ -123,19 +137,20 @@ func hurt(amount:int):
 
 func _process(delta):
 	pass
-
 func _on_surface_changed(surface):
 	ground_material = surface.effect_material if surface else ""
 
 func update_sprite():
+	pass
 	#upper_body.texture = sprite_texture
 	#lower_body.texture = sprite_texture
-	set_palettes(upper_body.material)
-	set_palettes(lower_body.material)
+	#set_palettes(upper_body.material)
+	#set_palettes(lower_body.material)
 
 func set_palettes(shader_mat:ShaderMaterial):
-	shader_mat.set_shader_parameter("base_palette",base_palette)
-	shader_mat.set_shader_parameter("overlay_palette",overlay_palette)
+	pass
+	#shader_mat.set_shader_parameter("base_palette",base_palette)
+	#shader_mat.set_shader_parameter("overlay_palette",overlay_palette)
 
 func gib():
 	pass

@@ -1,0 +1,260 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=39 format=3 uid="uid://bpmdf5q6gw1i"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_sw7d8"]
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_0ana8"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0v8qp"]
+animation = &"character_animation_library/UpperBodyBreathe"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_xolrb"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_3ds67"]
+input_0/name = "alive"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "dead"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dm6bh"]
+animation = &"character_animation_library/Die"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1vm18"]
+animation = &"character_animation_library/Hurt"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_gvncs"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eet4q"]
+animation = &"character_animation_library/LowerBodyIdle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xye2p"]
+animation = &"character_animation_library/LowerBodyLongarmStance"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_scykj"]
+input_0/name = "mounted"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "unmounted"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_frgji"]
+animation = &"character_animation_library/LowerBodyMounted"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_glqi5"]
+input_0/name = "idle"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "walk"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "run"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j1bp1"]
+animation = &"character_animation_library/LowerBodyRun"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ormos"]
+animation = &"character_animation_library/LowerBodySidearmStance"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qqxe2"]
+animation = &"character_animation_library/LowerBodyWalk"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_shrsp"]
+input_0/name = "Unarmed"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "Sidearm"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "Longarm"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = true
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_xij0b"]
+input_0/name = "driving"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "not driving"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jw13e"]
+animation = &"character_animation_library/UpperBodyDriving"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iufvs"]
+animation = &"character_animation_library/UpperBodyIdle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5t5oy"]
+animation = &"character_animation_library/UpperBodyLongarmAim"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_b3kmc"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8wj2l"]
+animation = &"character_animation_library/UpperBodyLongarmRecoil"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_hvww2"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jgdri"]
+animation = &"character_animation_library/UpperBodyMeleeAttack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rbxv3"]
+animation = &"character_animation_library/UpperBodyMeleeIdle"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_wrlte"]
+input_0/name = "idle"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "walk"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "run"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_41vhb"]
+animation = &"character_animation_library/UpperBodySidearmAim"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_flx87"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mm8dg"]
+animation = &"character_animation_library/UpperBodySidearmRecoil"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4fsim"]
+animation = &"character_animation_library/UpperBodyThrowableAim"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_thswd"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_1yldf"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l50q5"]
+animation = &"character_animation_library/UpperBodyUnarmedAttack"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_uvudg"]
+input_0/name = "Unarmed"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "Melee"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "Sidearm"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = true
+input_3/name = "Longarm"
+input_3/auto_advance = false
+input_3/break_loop_at_end = false
+input_3/reset = true
+input_4/name = "Throwable"
+input_4/auto_advance = false
+input_4/break_loop_at_end = false
+input_4/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ntg18"]
+animation = &"character_animation_library/UpperBodyUnarmedWalk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qht45"]
+animation = &"character_animation_library/UpperBodyUnarmedRun"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5vvfo"]
+animation = &"character_animation_library/UpperBodyThrowableThrow"
+
+[resource]
+graph_offset = Vector2(-2017.56, 4539.31)
+nodes/AddBreathe/node = SubResource("AnimationNodeAdd2_sw7d8")
+nodes/AddBreathe/position = Vector2(1380, 5140)
+nodes/AddUpperLower/node = SubResource("AnimationNodeAdd2_0ana8")
+nodes/AddUpperLower/position = Vector2(1620, 4840)
+nodes/Breathe/node = SubResource("AnimationNodeAnimation_0v8qp")
+nodes/Breathe/position = Vector2(600, 5680)
+nodes/BreatheRate/node = SubResource("AnimationNodeTimeScale_xolrb")
+nodes/BreatheRate/position = Vector2(1080, 5380)
+"nodes/Dead Transition/node" = SubResource("AnimationNodeTransition_3ds67")
+"nodes/Dead Transition/position" = Vector2(2360, 4940)
+nodes/Die/node = SubResource("AnimationNodeAnimation_dm6bh")
+nodes/Die/position = Vector2(1880, 5520)
+nodes/Hurt/node = SubResource("AnimationNodeAnimation_1vm18")
+nodes/Hurt/position = Vector2(1540, 5560)
+nodes/HurtOneShot/node = SubResource("AnimationNodeOneShot_gvncs")
+nodes/HurtOneShot/position = Vector2(2020, 4980)
+"nodes/Lower Body Idle/node" = SubResource("AnimationNodeAnimation_eet4q")
+"nodes/Lower Body Idle/position" = Vector2(-2080, 3380)
+"nodes/Lower Body Longarm Stance/node" = SubResource("AnimationNodeAnimation_xye2p")
+"nodes/Lower Body Longarm Stance/position" = Vector2(-2240, 3820)
+"nodes/Lower Body Mounted/node" = SubResource("AnimationNodeAnimation_frgji")
+"nodes/Lower Body Mounted/position" = Vector2(20, 3260)
+"nodes/Lower Body Mounted Transition/node" = SubResource("AnimationNodeTransition_scykj")
+"nodes/Lower Body Mounted Transition/position" = Vector2(680, 3640)
+"nodes/Lower Body Movement Transition/node" = SubResource("AnimationNodeTransition_glqi5")
+"nodes/Lower Body Movement Transition/position" = Vector2(-400, 3660)
+"nodes/Lower Body Run/node" = SubResource("AnimationNodeAnimation_j1bp1")
+"nodes/Lower Body Run/position" = Vector2(-1380, 4180)
+"nodes/Lower Body Sidearm Stance/node" = SubResource("AnimationNodeAnimation_ormos")
+"nodes/Lower Body Sidearm Stance/position" = Vector2(-2260, 3620)
+"nodes/Lower Body Walk/node" = SubResource("AnimationNodeAnimation_qqxe2")
+"nodes/Lower Body Walk/position" = Vector2(-1260, 3960)
+"nodes/Lower Body Weapon Transition/node" = SubResource("AnimationNodeTransition_shrsp")
+"nodes/Lower Body Weapon Transition/position" = Vector2(-960, 3660)
+"nodes/Upper Body Driving/node" = SubResource("AnimationNodeAnimation_jw13e")
+"nodes/Upper Body Driving/position" = Vector2(-420, 4260)
+"nodes/Upper Body Driving Transition/node" = SubResource("AnimationNodeTransition_xij0b")
+"nodes/Upper Body Driving Transition/position" = Vector2(1040, 5040)
+"nodes/Upper Body Idle/node" = SubResource("AnimationNodeAnimation_iufvs")
+"nodes/Upper Body Idle/position" = Vector2(-1700, 4520)
+"nodes/Upper Body Longarm Aim/node" = SubResource("AnimationNodeAnimation_5t5oy")
+"nodes/Upper Body Longarm Aim/position" = Vector2(-1460, 6380)
+"nodes/Upper Body Longarm Recoil/node" = SubResource("AnimationNodeAnimation_8wj2l")
+"nodes/Upper Body Longarm Recoil/position" = Vector2(-1460, 6620)
+"nodes/Upper Body Longarm Recoil Oneshot/node" = SubResource("AnimationNodeOneShot_b3kmc")
+"nodes/Upper Body Longarm Recoil Oneshot/position" = Vector2(-920, 6360)
+"nodes/Upper Body Melee Attack/node" = SubResource("AnimationNodeAnimation_jgdri")
+"nodes/Upper Body Melee Attack/position" = Vector2(-1520, 5620)
+"nodes/Upper Body Melee Attack Oneshot/node" = SubResource("AnimationNodeOneShot_hvww2")
+"nodes/Upper Body Melee Attack Oneshot/position" = Vector2(-880, 5440)
+"nodes/Upper Body Melee Idle/node" = SubResource("AnimationNodeAnimation_rbxv3")
+"nodes/Upper Body Melee Idle/position" = Vector2(-1480, 5440)
+"nodes/Upper Body Movement Transition/node" = SubResource("AnimationNodeTransition_wrlte")
+"nodes/Upper Body Movement Transition/position" = Vector2(-800, 4520)
+"nodes/Upper Body Sidearm Aim/node" = SubResource("AnimationNodeAnimation_41vhb")
+"nodes/Upper Body Sidearm Aim/position" = Vector2(-1340, 5920)
+"nodes/Upper Body Sidearm Recoil/node" = SubResource("AnimationNodeAnimation_mm8dg")
+"nodes/Upper Body Sidearm Recoil/position" = Vector2(-1340, 6160)
+"nodes/Upper Body Sidearm Recoil Oneshot/node" = SubResource("AnimationNodeOneShot_flx87")
+"nodes/Upper Body Sidearm Recoil Oneshot/position" = Vector2(-800, 5900)
+"nodes/Upper Body Throwable Aim/node" = SubResource("AnimationNodeAnimation_4fsim")
+"nodes/Upper Body Throwable Aim/position" = Vector2(-1440, 7040)
+"nodes/Upper Body Throwable Throw Oneshot/node" = SubResource("AnimationNodeOneShot_thswd")
+"nodes/Upper Body Throwable Throw Oneshot/position" = Vector2(-300, 6540)
+"nodes/Upper Body Unarmed Attack/node" = SubResource("AnimationNodeAnimation_l50q5")
+"nodes/Upper Body Unarmed Attack/position" = Vector2(-940, 4900)
+"nodes/Upper Body Unarmed Attack Oneshot/node" = SubResource("AnimationNodeOneShot_1yldf")
+"nodes/Upper Body Unarmed Attack Oneshot/position" = Vector2(-300, 4540)
+"nodes/Upper Body Weapon Transition/node" = SubResource("AnimationNodeTransition_uvudg")
+"nodes/Upper Body Weapon Transition/position" = Vector2(260, 5220)
+"nodes/Upper Body unarmed Walk/node" = SubResource("AnimationNodeAnimation_ntg18")
+"nodes/Upper Body unarmed Walk/position" = Vector2(-1800, 4700)
+nodes/UpperBodyUnarmedRun/node = SubResource("AnimationNodeAnimation_qht45")
+nodes/UpperBodyUnarmedRun/position = Vector2(-1800, 4940)
+nodes/output/position = Vector2(2600, 4940)
+"nodes/uperr Body Throwable Throw/node" = SubResource("AnimationNodeAnimation_5vvfo")
+"nodes/uperr Body Throwable Throw/position" = Vector2(-1420, 7260)
+node_connections = [&"AddBreathe", 0, &"Upper Body Driving Transition", &"AddBreathe", 1, &"BreatheRate", &"AddUpperLower", 0, &"Lower Body Mounted Transition", &"AddUpperLower", 1, &"AddBreathe", &"BreatheRate", 0, &"Breathe", &"Dead Transition", 0, &"HurtOneShot", &"Dead Transition", 1, &"Die", &"HurtOneShot", 0, &"AddUpperLower", &"HurtOneShot", 1, &"Hurt", &"Lower Body Mounted Transition", 0, &"Lower Body Mounted", &"Lower Body Mounted Transition", 1, &"Lower Body Movement Transition", &"Lower Body Movement Transition", 0, &"Lower Body Weapon Transition", &"Lower Body Movement Transition", 1, &"Lower Body Walk", &"Lower Body Movement Transition", 2, &"Lower Body Run", &"Lower Body Weapon Transition", 0, &"Lower Body Idle", &"Lower Body Weapon Transition", 1, &"Lower Body Sidearm Stance", &"Lower Body Weapon Transition", 2, &"Lower Body Longarm Stance", &"Upper Body Driving Transition", 0, &"Upper Body Driving", &"Upper Body Driving Transition", 1, &"Upper Body Weapon Transition", &"Upper Body Longarm Recoil Oneshot", 0, &"Upper Body Longarm Aim", &"Upper Body Longarm Recoil Oneshot", 1, &"Upper Body Longarm Recoil", &"Upper Body Melee Attack Oneshot", 0, &"Upper Body Melee Idle", &"Upper Body Melee Attack Oneshot", 1, &"Upper Body Melee Attack", &"Upper Body Movement Transition", 0, &"Upper Body Idle", &"Upper Body Movement Transition", 1, &"Upper Body unarmed Walk", &"Upper Body Movement Transition", 2, &"UpperBodyUnarmedRun", &"Upper Body Sidearm Recoil Oneshot", 0, &"Upper Body Sidearm Aim", &"Upper Body Sidearm Recoil Oneshot", 1, &"Upper Body Sidearm Recoil", &"Upper Body Throwable Throw Oneshot", 0, &"Upper Body Throwable Aim", &"Upper Body Throwable Throw Oneshot", 1, &"uperr Body Throwable Throw", &"Upper Body Unarmed Attack Oneshot", 0, &"Upper Body Movement Transition", &"Upper Body Unarmed Attack Oneshot", 1, &"Upper Body Unarmed Attack", &"Upper Body Weapon Transition", 0, &"Upper Body Unarmed Attack Oneshot", &"Upper Body Weapon Transition", 1, &"Upper Body Melee Attack Oneshot", &"Upper Body Weapon Transition", 2, &"Upper Body Sidearm Recoil Oneshot", &"Upper Body Weapon Transition", 3, &"Upper Body Longarm Recoil Oneshot", &"Upper Body Weapon Transition", 4, &"Upper Body Throwable Throw Oneshot", &"output", 0, &"Dead Transition"]

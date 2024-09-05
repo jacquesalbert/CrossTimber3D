@@ -51,7 +51,7 @@ color = Color(0.24, 0.148, 0, 1)
 script = ExtResource("3_cqd0c")
 track = true
 width = 0.5
-color = Color(1, 0, 0, 1)
+color = Color(0.559675, 0, 0, 1)
 
 [sub_resource type="Resource" id="Resource_gct41"]
 script = ExtResource("3_cqd0c")
@@ -113,3 +113,4 @@ texture_filter = 0
 texture = ExtResource("6_il5nk")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
+collision_mask = 3

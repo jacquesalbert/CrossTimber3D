@@ -67,6 +67,11 @@ func unequip_tool(instance:ToolInstance):
 func get_current_tool()->Tool:
 	return current_tool
 
+func get_current_tool_type()->Tool.Type:
+	if is_instance_valid(current_tool):
+		return current_tool.type
+	return Tool.Type.UNARMED
+
 func register_instance(instance:ToolInstance):
 	#tool.attach_model(self)
 	#instance.cover_exceptions = cover_exceptions.duplicate()

@@ -34,7 +34,7 @@ size = Vector3(1.8, 2, 4.3)
 
 [node name="Vehicle" type="CharacterBody3D" node_paths=PackedStringArray("fuel", "health")]
 collision_layer = 128
-collision_mask = 131
+collision_mask = 129
 script = ExtResource("1_ho58b")
 max_drive_traction_accel = 25.0
 max_traction_accel = 50.0
@@ -50,7 +50,7 @@ ExtResource("13_dug1e"): ExtResource("5_whwhk")
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_snmgp")
 
 [node name="MetalMaterial" type="Node" parent="CollisionShape3D"]
@@ -93,23 +93,23 @@ shape = SubResource("CylinderShape3D_0l12j")
 
 [node name="MountInteraction" type="Node" parent="Mount/InteractionArea" node_paths=PackedStringArray("mount")]
 script = ExtResource("8_t0yfh")
-mount = NodePath("../..")
 text = "Passenger"
+mount = NodePath("../..")
 
 [node name="Node3D" type="Node3D" parent="Mount"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.5, 0)
 
 [node name="DismountInteraction" type="Node" parent="Mount" node_paths=PackedStringArray("mount")]
 script = ExtResource("9_cteup")
-mount = NodePath("..")
 text = "Dismount"
+mount = NodePath("..")
 
 [node name="VehicleControlMount" type="Node3D" parent="." node_paths=PackedStringArray("vehicle", "dismount_point")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -1.5, 0)
 script = ExtResource("7_i6lbx")
+control = true
 vehicle = NodePath("..")
 dismount_point = NodePath("Node3D")
-control = true
 
 [node name="InteractionArea" type="Area3D" parent="VehicleControlMount"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 2.5, 0)
@@ -122,16 +122,16 @@ shape = SubResource("CylinderShape3D_0l12j")
 
 [node name="MountInteraction" type="Node" parent="VehicleControlMount/InteractionArea" node_paths=PackedStringArray("mount")]
 script = ExtResource("8_t0yfh")
-mount = NodePath("../..")
 text = "Driver"
+mount = NodePath("../..")
 
 [node name="Node3D" type="Node3D" parent="VehicleControlMount"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, 0)
 
 [node name="DismountInteraction" type="Node" parent="VehicleControlMount" node_paths=PackedStringArray("mount")]
 script = ExtResource("9_cteup")
-mount = NodePath("..")
 text = "Dismount"
+mount = NodePath("..")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.9, 0)

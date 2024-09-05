@@ -2,6 +2,7 @@ class_name Vehicle
 extends CharacterBody3D
 
 const COLLISION_CONSEVATION : float = 0.5
+const CHARACTER_COLLISION_DAMAGE_ENERGY_RATIO : float = 0.1
 
 @export_range(0.0,PI/2) var max_steer_angle : float = PI/8
 @export var max_drive_traction_accel : float = 50.0
@@ -144,17 +145,27 @@ func move_and_handle_collisions(delta:float):
 		var normal := collision.get_normal()
 		var normal_velocity := velocity.dot(normal)
 		if collider is Character:
+			remainder = collision.get_remainder()
 			frame_exceptions.append(collider)
 			add_collision_exception_with(collider)
-			remainder = collision.get_remainder()
+			
 			#collider.request_state = Character.State.KNOCKBACK
 			#collider.move_and_collide(normal_velocity*normal*delta)
+			#var system_mass :float= collider.mass + mass
+			#var my_collision_part :float= collider.mass / system_mass
+			#var my_velocity_change := COLLISION_CONSEVATION * my_collision_part * normal_velocity*normal
+			#var other_collision_part :float= mass / system_mass
+			#var other_velocity_change := COLLISION_CONSEVATION * other_collision_part * normal_velocity*normal
+				
+			
 			if abs(normal_velocity) > 5.0:
 				var collider_shape_id := collision.get_collider_shape_index()
 				var effect_material = EffectMaterial.get_collision_shape_material(collider,collider_shape_id)
 				LevelManager.spawn_hit_effect_in_level(collision.get_position(),velocity.normalized(),normal,material_hit_effects.get(effect_material))
-			var damage :int = round(-normal_velocity)
-			collider.hitbox.hit(-damage,driver_character)
+				var damage :int = -floor(normal_velocity*CHARACTER_COLLISION_DAMAGE_ENERGY_RATIO)
+				collider.hitbox.hit(damage,driver_character)
+			#velocity -= my_velocity_change
+			#collider.velocity += other_velocity_change
 			collider.request_state = Character.State.STUN
 			collision = move_and_collide(remainder)
 			continue
@@ -188,10 +199,13 @@ func move_and_handle_collisions(delta:float):
 			#collision = move_and_collide(remainder)
 			#continue
 		else:
-			if collider.has_method("get_effect_material") and abs(normal_velocity) > 50.0:
-				spawn_hit_effect(collision.get_position(),velocity,normal,collider.get_effect_material())
+			if abs(normal_velocity) > 5.0:
+				var collider_shape_id := collision.get_collider_shape_index()
+				var effect_material = EffectMaterial.get_collision_shape_material(collider,collider_shape_id)
+				LevelManager.spawn_hit_effect_in_level(collision.get_position(),velocity.normalized(),normal,material_hit_effects.get(effect_material))
 		
 			# cancel immovable collision velocity
+
 			velocity -= normal_velocity*normal
 			# apply scraping drag on lateral collisions
 			var tangent_velocity := -velocity.normalized()
@@ -303,22 +317,13 @@ func _physics_process(delta:float):
 		#global_position += global_basis.y * ride_height
 	move_and_handle_collisions(delta)
 
-func get_effect_material()->StringName:
-	return "metal"
-
-func get_emission_texture():
-	return emission_texture
-
-func get_emission_points():
-	return emission_points
-
-func spawn_hit_effect(global_pos:Vector3, direction:Vector3, normal:Vector3, effect_material:String):
-	var effect : PackedScene = material_hit_effects.get(effect_material)
-	if effect:
-		var hit_effect_instance : Node3D = effect.instantiate()
-		hit_effect_instance.global_position = global_pos
-		hit_effect_instance.global_transform = hit_effect_instance.global_transform.looking_at(hit_effect_instance.global_position + normal)
-		LevelManager.spawn_in_level(hit_effect_instance)
+#func spawn_hit_effect(global_pos:Vector3, direction:Vector3, normal:Vector3, effect_material:String):
+	#var effect : PackedScene = material_hit_effects.get(effect_material)
+	#if effect:
+		#var hit_effect_instance : Node3D = effect.instantiate()
+		#hit_effect_instance.global_position = global_pos
+		#hit_effect_instance.global_transform = hit_effect_instance.global_transform.looking_at(hit_effect_instance.global_position + normal)
+		#LevelManager.spawn_in_level(hit_effect_instance)
 
 func add_effect(effect:Effect):
 	_current_effects.append(effect)
