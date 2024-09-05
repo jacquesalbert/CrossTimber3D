@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://bk0lpn0aayava"]
 
-[ext_resource type="Script" path="res://Wheel.gd" id="1_8sto1"]
+[ext_resource type="Script" path="res://Core/Vehicle/Wheel.gd" id="1_8sto1"]
 [ext_resource type="Texture2D" uid="uid://dynew1wq01hxm" path="res://Resources/smoke_sprite.png" id="2_7pjao"]
-[ext_resource type="Script" path="res://Tracker.gd" id="2_nx6bx"]
-[ext_resource type="Script" path="res://TrackSettings.gd" id="3_cqd0c"]
+[ext_resource type="Script" path="res://Core/Track/Tracker.gd" id="2_nx6bx"]
+[ext_resource type="Script" path="res://Core/Track/TrackSettings.gd" id="3_cqd0c"]
 [ext_resource type="Texture2D" uid="uid://04ecjn62bnmn" path="res://Resources/tread.png" id="5_xmelf"]
 [ext_resource type="Texture2D" uid="uid://b2lmwk2tmhx3e" path="res://Resources/tire_skid.png" id="6_75t3i"]
 [ext_resource type="Texture2D" uid="uid://bkmtc1nufws7d" path="res://Resources/tire.png" id="6_il5nk"]

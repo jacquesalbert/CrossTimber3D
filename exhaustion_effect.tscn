@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bmhp7gx70w6va"]
 
-[ext_resource type="Script" path="res://Effect.gd" id="1_4ovqe"]
+[ext_resource type="Script" path="res://Core/Character/Effect.gd" id="1_4ovqe"]
 [ext_resource type="Texture2D" uid="uid://bux7ibbb6adwf" path="res://Resources/icons/energy_icon.png" id="2_irhjl"]
-[ext_resource type="Script" path="res://AttributeModifier.gd" id="3_ej8nd"]
+[ext_resource type="Script" path="res://Core/Attributes/AttributeModifier.gd" id="3_ej8nd"]
 [ext_resource type="Resource" uid="uid://db06ks3fy6g75" path="res://not_can_run_attribute_modifier.tres" id="4_yuflk"]
 
 [node name="Effect" type="Node3D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://deb68dul78qxv"]
 
-[ext_resource type="Script" path="res://ToolPanel.gd" id="1_jynsi"]
+[ext_resource type="Script" path="res://GUI/HUD/Tools/ToolPanel.gd" id="1_jynsi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jom6q"]
 bg_color = Color(1, 1, 1, 0.498039)

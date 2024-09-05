@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="AttributePackage" load_steps=2 format=3 uid="uid://716w77prpogm"]
 
-[ext_resource type="Script" path="res://AttributePackage.gd" id="2_cr0sy"]
+[ext_resource type="Script" path="res://Core/Attributes/AttributePackage.gd" id="1_rib1r"]
 
 [resource]
-script = ExtResource("2_cr0sy")
+script = ExtResource("1_rib1r")
 attribute_base_values = {
 "acceleration": 1000.0,
 "accuracy": 0.05,

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://cjfqqr8ew8hpw"]
 
 [ext_resource type="AudioStream" uid="uid://dy4sdsitopaub" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_01.wav" id="1_svnru"]
-[ext_resource type="Script" path="res://randomize_rotation.gd" id="1_v75pu"]
+[ext_resource type="Script" path="res://Core/randomize_rotation.gd" id="1_v75pu"]
 [ext_resource type="AudioStream" uid="uid://di7iol01otmsj" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_02.wav" id="2_6sxry"]
 [ext_resource type="AudioStream" uid="uid://b7mtacah7glbt" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_03.wav" id="3_2nv47"]
 [ext_resource type="AudioStream" uid="uid://dam2ix04a35jj" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_04.wav" id="4_2yekg"]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="EffectMaterial" load_steps=2 format=3 uid="uid://bmxy23y5ky80a"]
 
-[ext_resource type="Script" path="res://EffectMaterial.gd" id="1_bl57n"]
+[ext_resource type="Script" path="res://Core/NodeMaterial/NodeMaterial.gd" id="1_bl57n"]
 
 [resource]
 script = ExtResource("1_bl57n")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cs17ufaonysfq"]
 
-[ext_resource type="Script" path="res://Line3D.gd" id="1_ahunx"]
+[ext_resource type="Script" path="res://Core/Line3D.gd" id="1_ahunx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dyog0"]
 transparency = 1

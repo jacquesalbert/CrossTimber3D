@@ -16,7 +16,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-LevelManager="*res://LevelManager.gd"
+LevelManager="*res://Core/Level/LevelManager.gd"
 
 [input]
 

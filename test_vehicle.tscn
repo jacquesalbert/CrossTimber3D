@@ -1,19 +1,19 @@
 [gd_scene load_steps=21 format=3 uid="uid://d17hiwv22avsm"]
 
-[ext_resource type="Script" path="res://Vehicle.gd" id="1_ho58b"]
+[ext_resource type="Script" path="res://Core/Vehicle/Vehicle.gd" id="1_ho58b"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="2_7n5wi"]
 [ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="3_r6n5c"]
-[ext_resource type="Script" path="res://Stat.gd" id="4_ocxkf"]
+[ext_resource type="Script" path="res://Core/Stat.gd" id="4_ocxkf"]
 [ext_resource type="PackedScene" uid="uid://bk0lpn0aayava" path="res://test_wheel.tscn" id="4_r4ysp"]
 [ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="5_whwhk"]
-[ext_resource type="Script" path="res://Mount.gd" id="6_l5t2n"]
-[ext_resource type="Script" path="res://VehicleControlMount.gd" id="7_i6lbx"]
-[ext_resource type="Script" path="res://MountInteraction.gd" id="8_t0yfh"]
-[ext_resource type="Script" path="res://InteractionArea.gd" id="8_vohwo"]
-[ext_resource type="Script" path="res://DismountInteraction.gd" id="9_cteup"]
+[ext_resource type="Script" path="res://Core/Vehicle/Mount.gd" id="6_l5t2n"]
+[ext_resource type="Script" path="res://Core/Vehicle/VehicleControlMount.gd" id="7_i6lbx"]
+[ext_resource type="Script" path="res://Core/Vehicle/MountInteraction.gd" id="8_t0yfh"]
+[ext_resource type="Script" path="res://Core/Interaction/InteractionArea.gd" id="8_vohwo"]
 [ext_resource type="Texture2D" uid="uid://dwk6b47x5yyoc" path="res://Resources/muscle_car-24-pirate.png" id="10_wth24"]
-[ext_resource type="Script" path="res://Hitbox.gd" id="11_1towl"]
-[ext_resource type="Script" path="res://NodeEffectMaterial.gd" id="12_lslb7"]
+[ext_resource type="Script" path="res://Core/Hitbox.gd" id="11_1towl"]
+[ext_resource type="Script" path="res://Core/Vehicle/DismountInteraction.gd" id="12_4h4ko"]
+[ext_resource type="Script" path="res://Core/NodeMaterial/MaterialNode.gd" id="12_lslb7"]
 [ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="13_dug1e"]
 
 [sub_resource type="Curve" id="Curve_gryd5"]
@@ -93,23 +93,23 @@ shape = SubResource("CylinderShape3D_0l12j")
 
 [node name="MountInteraction" type="Node" parent="Mount/InteractionArea" node_paths=PackedStringArray("mount")]
 script = ExtResource("8_t0yfh")
-text = "Passenger"
 mount = NodePath("../..")
+text = "Passenger"
 
 [node name="Node3D" type="Node3D" parent="Mount"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.5, 0)
 
 [node name="DismountInteraction" type="Node" parent="Mount" node_paths=PackedStringArray("mount")]
-script = ExtResource("9_cteup")
-text = "Dismount"
+script = ExtResource("12_4h4ko")
 mount = NodePath("..")
+text = "Dismount"
 
 [node name="VehicleControlMount" type="Node3D" parent="." node_paths=PackedStringArray("vehicle", "dismount_point")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -1.5, 0)
 script = ExtResource("7_i6lbx")
-control = true
 vehicle = NodePath("..")
 dismount_point = NodePath("Node3D")
+control = true
 
 [node name="InteractionArea" type="Area3D" parent="VehicleControlMount"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 2.5, 0)
@@ -122,16 +122,16 @@ shape = SubResource("CylinderShape3D_0l12j")
 
 [node name="MountInteraction" type="Node" parent="VehicleControlMount/InteractionArea" node_paths=PackedStringArray("mount")]
 script = ExtResource("8_t0yfh")
-text = "Driver"
 mount = NodePath("../..")
+text = "Driver"
 
 [node name="Node3D" type="Node3D" parent="VehicleControlMount"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, 0)
 
 [node name="DismountInteraction" type="Node" parent="VehicleControlMount" node_paths=PackedStringArray("mount")]
-script = ExtResource("9_cteup")
-text = "Dismount"
+script = ExtResource("12_4h4ko")
 mount = NodePath("..")
+text = "Dismount"
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.9, 0)

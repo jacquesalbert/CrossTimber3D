@@ -1,24 +1,24 @@
 [gd_scene load_steps=82 format=3 uid="uid://y2763ntb71tf"]
 
-[ext_resource type="Script" path="res://Character.gd" id="1_aywxf"]
+[ext_resource type="Script" path="res://Core/Character/Character.gd" id="1_aywxf"]
 [ext_resource type="PackedScene" uid="uid://bmhp7gx70w6va" path="res://exhaustion_effect.tscn" id="2_iu6pc"]
 [ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="3_of1k3"]
-[ext_resource type="Script" path="res://Hitbox.gd" id="6_dvorw"]
-[ext_resource type="Script" path="res://NodeEffectMaterial.gd" id="7_lim1o"]
-[ext_resource type="Script" path="res://Stat.gd" id="7_xe5s5"]
-[ext_resource type="Script" path="res://SlotToolUser.gd" id="8_gt7dl"]
+[ext_resource type="Script" path="res://Core/Hitbox.gd" id="6_dvorw"]
+[ext_resource type="Script" path="res://Core/NodeMaterial/MaterialNode.gd" id="7_lim1o"]
+[ext_resource type="Script" path="res://Core/Stat.gd" id="7_xe5s5"]
+[ext_resource type="Script" path="res://Core/Tool/SlotToolUser.gd" id="8_gt7dl"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="8_yacv2"]
-[ext_resource type="Script" path="res://SupplyArea.gd" id="9_phpst"]
-[ext_resource type="Script" path="res://Inventory.gd" id="10_emt75"]
-[ext_resource type="Script" path="res://Interactor.gd" id="11_t6hvw"]
+[ext_resource type="Script" path="res://Core/Inventory/Inventory.gd" id="10_emt75"]
+[ext_resource type="Script" path="res://Core/Supply/SupplyArea.gd" id="11_6p5wk"]
+[ext_resource type="Script" path="res://Core/Interaction/Interactor.gd" id="11_t6hvw"]
 [ext_resource type="Texture2D" uid="uid://qgix8spprtde" path="res://Resources/footprints.png" id="12_b0lh4"]
-[ext_resource type="Script" path="res://Tracker.gd" id="12_j113j"]
-[ext_resource type="Script" path="res://TrackSettings.gd" id="13_8sisl"]
-[ext_resource type="Script" path="res://Trailer.gd" id="14_n4qha"]
-[ext_resource type="Script" path="res://CharacterStatManager.gd" id="16_w8ojt"]
-[ext_resource type="Script" path="res://EntityAttributeHandler.gd" id="17_pn34l"]
+[ext_resource type="Script" path="res://Core/Track/Tracker.gd" id="12_j113j"]
+[ext_resource type="Script" path="res://Core/Track/TrackSettings.gd" id="13_8sisl"]
+[ext_resource type="Script" path="res://Core/Trail/Trailer.gd" id="14_n4qha"]
+[ext_resource type="Script" path="res://Core/Character/CharacterStatManager.gd" id="16_w8ojt"]
+[ext_resource type="Script" path="res://Core/Attributes/EntityAttributeHandler.gd" id="17_pn34l"]
 [ext_resource type="Resource" uid="uid://716w77prpogm" path="res://test_attribute_package.tres" id="18_bb2ni"]
-[ext_resource type="Script" path="res://CharacterGraphics.gd" id="19_v78eu"]
+[ext_resource type="Script" path="res://Core/Character/CharacterGraphics.gd" id="19_v78eu"]
 [ext_resource type="Texture2D" uid="uid://cnpcq3lofoufx" path="res://Resources/person-24.png" id="21_ogfc6"]
 [ext_resource type="AudioStream" uid="uid://ddjmcor7tdrxj" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_01.wav" id="22_mh0s3"]
 [ext_resource type="AudioStream" uid="uid://batg3v8qmqxll" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_02.wav" id="23_17km5"]
@@ -697,7 +697,7 @@ tool_slots = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_layer = 0
 collision_mask = 64
-script = ExtResource("9_phpst")
+script = ExtResource("11_6p5wk")
 inventory = NodePath("../Inventory")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyArea"]

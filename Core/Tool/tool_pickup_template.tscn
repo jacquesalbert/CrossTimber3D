@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmnda8wv7ktxj"]
+
+[ext_resource type="Script" path="res://Core/Tool/ToolPickup.gd" id="1_r536c"]
+[ext_resource type="Script" path="res://Core/Interaction/InteractionArea.gd" id="3_dwyk7"]
+[ext_resource type="Script" path="res://Core/Tool/ToolPickupInteraction.gd" id="4_rhxfd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qgou0"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_d8npq"]
+
+[node name="ToolPickup" type="CharacterBody3D" node_paths=PackedStringArray("interaction_area", "interaction", "pickup_stream")]
+script = ExtResource("1_r536c")
+interaction_area = NodePath("InteractionArea")
+interaction = NodePath("InteractionArea/Interaction")
+pickup_stream = NodePath("AudioStreamPlayer3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035, 0.5, 0)
+shape = SubResource("BoxShape3D_qgou0")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("3_dwyk7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_d8npq")
+
+[node name="Interaction" type="Node" parent="InteractionArea"]
+script = ExtResource("4_rhxfd")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]

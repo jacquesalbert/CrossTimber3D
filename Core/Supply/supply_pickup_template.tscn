@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://clfbdnb2xhjtw"]
+
+[ext_resource type="Script" path="res://Core/Supply/SupplyPickup.gd" id="1_1hbmd"]
+[ext_resource type="Resource" uid="uid://cf20pmwfu20a5" path="res://item_test.tres" id="2_867kb"]
+[ext_resource type="Script" path="res://Core/Supply/SupplyPickupArea.gd" id="3_6b0ar"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_asqnn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l0for"]
+
+[node name="SupplyPickup" type="CharacterBody3D" node_paths=PackedStringArray("supply_pickup_area", "stream_player")]
+collision_layer = 32
+collision_mask = 33
+script = ExtResource("1_1hbmd")
+item = ExtResource("2_867kb")
+quantity = 5
+supply_pickup_area = NodePath("SupplyPickupArea")
+stream_player = NodePath("AudioStreamPlayer3D")
+
+[node name="SupplyPickupArea" type="Area3D" parent="."]
+collision_layer = 64
+collision_mask = 0
+script = ExtResource("3_6b0ar")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyPickupArea"]
+shape = SubResource("CylinderShape3D_asqnn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_l0for")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]

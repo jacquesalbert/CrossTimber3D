@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c7xcd5bpu10ej"]
 
-[ext_resource type="Script" path="res://Trailer.gd" id="1_rasgo"]
+[ext_resource type="Script" path="res://Core/Trail/Trailer.gd" id="1_rasgo"]
 [ext_resource type="AudioStream" uid="uid://bpa5tpaeypm0h" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Vehicle_Essentials_NOX_SOUND/Vehicle_Car/Vehicle_Car_Engine_2000_RPM_Rear_Exterior_Loop_Mono.wav" id="2_no7vk"]
 
 [sub_resource type="Gradient" id="Gradient_70rba"]

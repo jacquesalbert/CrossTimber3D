@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://3nfi1gbdyftt"]
 
-[ext_resource type="Script" path="res://FirearmTool.gd" id="1_njwyd"]
+[ext_resource type="Script" path="res://Core/Tool/FirearmTool.gd" id="1_njwyd"]
 [ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="3_dfo21"]
 [ext_resource type="PackedScene" uid="uid://c7xcd5bpu10ej" path="res://bullet_trailer.tscn" id="3_s1qvc"]
 [ext_resource type="AudioStream" uid="uid://c8r50lvnucscd" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_fire_ak47.mp3" id="4_sy47e"]
