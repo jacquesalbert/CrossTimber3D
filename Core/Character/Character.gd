@@ -24,6 +24,7 @@ var controller : Controller
 @onready var attributes : EntityAttributeHandler = $EntityAttributeHandler
 #@onready var cover_detector : CoverDetector = $CoverDetector
 @onready var tracker : Tracker = $Tracker
+#@onready var bleeder : Bleeder = $Bleeder
 @onready var ray_cast : RayCast3D = $RayCast3D
 @onready var alive_collision_shape : CollisionShape3D = $AliveCollisionShape
 @onready var dead_collision_shape : CollisionShape3D = $DeadCollisionShape
@@ -150,6 +151,9 @@ func _ready():
 
 func _on_hitbox_hit(amount:int, hit_by:Node):
 	request_state = State.STUN
+	#bleeder.rotation.y = (randf()-.5) * TAU
+	#bleeder.count = abs(amount) * 10
+	#bleeder.spawn()
 
 func update_attribute_values():
 	var accuracy :float= attributes.get_attribute_value("accuracy")
@@ -265,8 +269,7 @@ func on_health_died(killed_by:Node):
 	drop_all_tools(equipment_user)
 	drop_all_supplies(inventory)
 	if health.value <= -health.max_value * 0.5:
-		print("gib")
-		#graphics.gib()
+		graphics.gib()
 
 func drop_all_supplies(supplies:Inventory):
 	for item in supplies.get_items():

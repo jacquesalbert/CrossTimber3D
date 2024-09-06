@@ -9,6 +9,9 @@ extends Node3D
 @export var two_sided : bool
 @export var bias : float = 0.01
 
+@export var default_track_settings : TrackSettings
+@export var effect_material_track_settings : Dictionary
+
 @export var tracking: bool:
 	set(value):
 		if value != tracking:
@@ -18,14 +21,12 @@ extends Node3D
 			else:
 				disable()
 
-@export var default_track_settings : TrackSettings
-@export var effect_material_track_settings : Dictionary
-
 var _current_effect_material : NodeMaterial
 var _track_settings:TrackSettings
 var _track : Track
 
 func _ready() -> void:
+	_track_settings = default_track_settings
 	change_effect_material(null)
 
 func create_track():
@@ -45,6 +46,8 @@ func change_effect_material(new_material:NodeMaterial):
 
 func enable():
 	tracking = true
+	if not is_instance_valid(_track_settings):
+		_track_settings = default_track_settings
 	if _track_settings.track:
 		add_current_point()
 

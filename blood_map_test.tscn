@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://cnwik10h3edkw"]
+
+[ext_resource type="Texture2D" uid="uid://d3nrns06j7fb4" path="res://Resources/kenney_prototype-textures/PNG/Dark/texture_01.png" id="1_q4qnm"]
+[ext_resource type="Script" path="res://blood_map_test.gd" id="1_yf2mf"]
+[ext_resource type="Script" path="res://BloodMap.gd" id="4_b6pig"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klsaq"]
+albedo_texture = ExtResource("1_q4qnm")
+uv1_scale = Vector3(500, 500, 500)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_62gkn"]
+material = SubResource("StandardMaterial3D_klsaq")
+size = Vector2(1000, 1000)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_u5tpy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dahb4"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+blend_mode = 3
+texture_filter = 1
+texture_repeat = false
+
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("blood_map")]
+script = ExtResource("1_yf2mf")
+blood_map = NodePath("BloodMap")
+cursor_mask = 1
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_62gkn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_u5tpy")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 20, 10)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0)
+
+[node name="BloodMap" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+script = ExtResource("4_b6pig")
+pixel_scale = 1.0
+base_material = SubResource("StandardMaterial3D_dahb4")

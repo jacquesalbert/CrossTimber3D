@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://y2763ntb71tf"]
+[gd_scene load_steps=92 format=3 uid="uid://y2763ntb71tf"]
 
 [ext_resource type="Script" path="res://Core/Character/Character.gd" id="1_aywxf"]
 [ext_resource type="PackedScene" uid="uid://bmhp7gx70w6va" path="res://exhaustion_effect.tscn" id="2_iu6pc"]
@@ -19,13 +19,23 @@
 [ext_resource type="Script" path="res://Core/Attributes/EntityAttributeHandler.gd" id="17_pn34l"]
 [ext_resource type="Resource" uid="uid://716w77prpogm" path="res://test_attribute_package.tres" id="18_bb2ni"]
 [ext_resource type="Script" path="res://Core/Character/CharacterGraphics.gd" id="19_v78eu"]
+[ext_resource type="PackedScene" uid="uid://bahkooggplao5" path="res://gib.tscn" id="20_rqfm3"]
+[ext_resource type="Script" path="res://Core/Shadow.gd" id="21_6w6ig"]
+[ext_resource type="Texture2D" uid="uid://d08en7fcx0uba" path="res://Resources/gib-1.png" id="21_f56tj"]
 [ext_resource type="Texture2D" uid="uid://cnpcq3lofoufx" path="res://Resources/person-24.png" id="21_ogfc6"]
+[ext_resource type="Texture2D" uid="uid://dj5uyj465r7ij" path="res://Resources/gib-2.png" id="22_855mj"]
 [ext_resource type="AudioStream" uid="uid://ddjmcor7tdrxj" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_01.wav" id="22_mh0s3"]
+[ext_resource type="Texture2D" uid="uid://mg7vgi38t8xv" path="res://Resources/icons/bag_icon.png" id="22_ub6ty"]
 [ext_resource type="AudioStream" uid="uid://batg3v8qmqxll" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_02.wav" id="23_17km5"]
+[ext_resource type="Texture2D" uid="uid://7bkakp3e2uyy" path="res://Resources/gib-3.png" id="23_jrr3w"]
 [ext_resource type="AudioStream" uid="uid://jguf2fv7mb2b" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_03.wav" id="24_5ke5j"]
+[ext_resource type="Texture2D" uid="uid://1i24ih1107vx" path="res://Resources/gib-4.png" id="24_fmwhm"]
 [ext_resource type="AudioStream" uid="uid://cd27coe8jau1f" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_04.wav" id="25_00ok4"]
+[ext_resource type="Texture2D" uid="uid://dhvvp3xdoa1m4" path="res://Resources/gib-5.png" id="25_s85ge"]
+[ext_resource type="Texture2D" uid="uid://dedy4yfptai48" path="res://Resources/bone.png" id="26_m2so5"]
 [ext_resource type="AudioStream" uid="uid://cjlthtx2e3vwg" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_05.wav" id="26_rmexd"]
 [ext_resource type="AudioStream" uid="uid://ch0yvhkj2ot40" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_06.wav" id="27_18pma"]
+[ext_resource type="Texture2D" uid="uid://cjg335boemge7" path="res://Resources/skull.png" id="27_p2g84"]
 [ext_resource type="AudioStream" uid="uid://b03egvuggl1gl" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_07.wav" id="28_en4wh"]
 [ext_resource type="AudioStream" uid="uid://d3f5m5siuw746" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_08.wav" id="29_ilj63"]
 [ext_resource type="AudioStream" uid="uid://khi7bbnl7osu" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_09.wav" id="30_y152l"]
@@ -105,7 +115,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 2, 0), Vector3(0, 0.25, 0)]
+"values": [Vector3(0, 1, 0), Vector3(0, 0.25, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -118,6 +128,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("UpperBodySprite/Sprite3D:offset_amount")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.25, 0.1]
 }
 
 [sub_resource type="Animation" id="Animation_ttw3g"]
@@ -409,7 +431,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 2, 0)]
+"values": [Vector3(0, 1.5, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -421,7 +443,19 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UpperBodySprite/Sprite3D:offset_amount")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.25]
 }
 
 [sub_resource type="Animation" id="Animation_i4vwl"]
@@ -592,7 +626,6 @@ input_3/break_loop_at_end = false
 input_3/reset = true
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_7phm6"]
-graph_offset = Vector2(296.783, 131.686)
 nodes/AddUpperLower/node = SubResource("AnimationNodeAdd2_8laro")
 nodes/AddUpperLower/position = Vector2(540, 260)
 nodes/AliveTransition/node = SubResource("AnimationNodeTransition_xlocw")
@@ -735,15 +768,19 @@ script = ExtResource("19_v78eu")
 animation_tree = NodePath("AnimationTree")
 upper_body = NodePath("UpperBodySprite")
 lower_body = NodePath("LowerBodySprite")
+gib_scene = ExtResource("20_rqfm3")
+gib_textures = Array[Texture2D]([ExtResource("21_f56tj"), ExtResource("22_855mj"), ExtResource("23_jrr3w"), ExtResource("24_fmwhm"), ExtResource("25_s85ge"), ExtResource("26_m2so5"), ExtResource("27_p2g84")])
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterGraphics"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 cast_shadow = 3
 mesh = SubResource("CylinderMesh_tmjnt")
 skeleton = NodePath("../..")
 
 [node name="UpperBodySprite" type="Sprite3D" parent="CharacterGraphics"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 2, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.5, 0)
+cast_shadow = 0
 pixel_size = 0.05
 axis = 1
 shaded = true
@@ -754,8 +791,21 @@ hframes = 20
 vframes = 2
 frame = 28
 
+[node name="Sprite3D" type="Sprite3D" parent="CharacterGraphics/UpperBodySprite"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.1, 0.2)
+transparency = 0.5
+cast_shadow = 0
+modulate = Color(0, 0, 0, 1)
+pixel_size = 0.05
+axis = 1
+texture_filter = 0
+texture = ExtResource("22_ub6ty")
+script = ExtResource("21_6w6ig")
+offset_amount = 0.25
+
 [node name="LowerBodySprite" type="Sprite3D" parent="CharacterGraphics"]
 transform = Transform3D(-3.61999e-06, 0, -1, 0, 1, 0, 1, 0, -3.61999e-06, 0, 0.816528, 0)
+cast_shadow = 0
 pixel_size = 0.05
 axis = 1
 shaded = true
@@ -794,9 +844,9 @@ parameters/FireUnarmedOneShot/active = false
 parameters/FireUnarmedOneShot/internal_active = false
 parameters/FireUnarmedOneShot/request = 0
 parameters/LowerBodyMovement/blend_position = 0
-parameters/StunTransition/current_state = "stunned"
+parameters/StunTransition/current_state = "active"
 parameters/StunTransition/transition_request = ""
-parameters/StunTransition/current_index = 1
+parameters/StunTransition/current_index = 0
 parameters/UnarmedMovement/blend_position = 0
 parameters/WeaponTransition/current_state = "longarm"
 parameters/WeaponTransition/transition_request = ""

@@ -35,7 +35,7 @@ enum Type {
 
 func get_pickup()->ToolPickup:
 	if has_pickup:
-		var pickup :ToolPickup = load("res://tool_pickup_template.tscn").instantiate()
+		var pickup :ToolPickup = load("res://Core/Tool/tool_pickup_template.tscn").instantiate()
 		pickup.tool = self
 		return pickup
 	return null

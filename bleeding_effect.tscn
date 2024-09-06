@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c14g3ii2cj5e1"]
+
+[ext_resource type="Script" path="res://Core/Character/DrainHealthEffect.gd" id="1_edcy4"]
+[ext_resource type="Texture2D" uid="uid://dl1c54g6v16vx" path="res://Resources/icons/bleeding_icon.png" id="2_4m5av"]
+[ext_resource type="Script" path="res://Bleeder.gd" id="2_syv7l"]
+
+[node name="BleedingEffect" type="Node3D"]
+script = ExtResource("1_edcy4")
+damage = 1
+text = &"bleeding"
+icon = ExtResource("2_4m5av")
+duration = 30.0
+interval = 1.0
+
+[node name="Bleeder" type="Node3D" parent="."]
+script = ExtResource("2_syv7l")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="drained" from="." to="Bleeder" method="spawn"]
+[connection signal="timeout" from="Timer" to="Bleeder" method="spawn"]

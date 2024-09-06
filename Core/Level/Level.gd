@@ -9,6 +9,7 @@ extends Node
 @export var sky_time_gradient : Gradient
 @export var day_intensity : float = 1.0
 @export var night_intensity : float = 0.5
+@export var blood_map : BloodMap
 
 var level_time : float
 

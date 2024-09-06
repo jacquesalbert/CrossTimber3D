@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dscki76d3tu2q"]
+[gd_scene load_steps=14 format=3 uid="uid://dscki76d3tu2q"]
 
 [ext_resource type="Script" path="res://Core/Tool/FirearmTool.gd" id="1_2j8qw"]
 [ext_resource type="Resource" uid="uid://cf20pmwfu20a5" path="res://item_test.tres" id="2_mwmob"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="5_35kxc"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="6_vgfjy"]
 [ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="7_itd7b"]
+[ext_resource type="PackedScene" uid="uid://c14g3ii2cj5e1" path="res://bleeding_effect.tscn" id="8_bxu3c"]
 
 [sub_resource type="Animation" id="Animation_f2622"]
 length = 0.001
@@ -168,6 +169,7 @@ material_hit_effects = {
 ExtResource("4_57swq"): ExtResource("5_35kxc"),
 ExtResource("6_vgfjy"): ExtResource("7_itd7b")
 }
+apply_effects = Array[PackedScene]([ExtResource("8_bxu3c")])
 stream_player = NodePath("AudioStreamPlayer3D")
 fire_stream = ExtResource("4_ac35g")
 

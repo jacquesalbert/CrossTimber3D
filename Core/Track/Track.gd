@@ -55,9 +55,10 @@ func _physics_process(delta):
 		queue_free()
 
 func update_points():
-	var point_count := get_point_count()
-	if point_count == 0:
-		return
-	
-	while _point_ages[0] > lifetime:
-		remove_point(0)
+	pass
+	#var point_count := get_point_count()
+	#if point_count == 0:
+		#return
+	#
+	#while _point_ages[0] > lifetime:
+		#remove_point(0)

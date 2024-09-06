@@ -27,7 +27,7 @@ func get_pickups(quantity:int)->Array[SupplyPickup]:
 	var pickups : Array[SupplyPickup]
 	while quantity_remaining > 0:
 		var pickup_quantity :int= min(quantity_remaining, stack_size)
-		var pickup :SupplyPickup = load("res://supply_pickup_template.tscn").instantiate()
+		var pickup :SupplyPickup = load("res://Core/Supply/supply_pickup_template.tscn").instantiate()
 		pickup.item = self
 		pickup.quantity = pickup_quantity
 		pickup.init_from_item(self)

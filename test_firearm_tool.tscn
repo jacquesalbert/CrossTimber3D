@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://3nfi1gbdyftt"]
+[gd_scene load_steps=13 format=3 uid="uid://3nfi1gbdyftt"]
 
 [ext_resource type="Script" path="res://Core/Tool/FirearmTool.gd" id="1_njwyd"]
 [ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="3_dfo21"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://c8r50lvnucscd" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_fire_ak47.mp3" id="4_sy47e"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="4_urvni"]
 [ext_resource type="Texture2D" uid="uid://cp5bdg4fpju20" path="res://Resources/muzzleflash.png" id="5_v5y7f"]
+[ext_resource type="PackedScene" uid="uid://c14g3ii2cj5e1" path="res://bleeding_effect.tscn" id="7_c3u2p"]
 [ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="7_ooloh"]
 [ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="8_y28uj"]
 
@@ -167,6 +168,7 @@ material_hit_effects = {
 ExtResource("3_dfo21"): ExtResource("8_y28uj"),
 ExtResource("4_urvni"): ExtResource("7_ooloh")
 }
+apply_effects = Array[PackedScene]([ExtResource("7_c3u2p")])
 stream_player = NodePath("AudioStreamPlayer3D")
 fire_stream = ExtResource("4_sy47e")
 

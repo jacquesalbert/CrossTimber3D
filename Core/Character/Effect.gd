@@ -21,10 +21,13 @@ func _enter_tree():
 		_duration_timer.autostart = true
 		_duration_timer.one_shot = true
 		_duration_timer.wait_time = duration
+		_duration_timer.timeout.connect(queue_free)
+		add_child(_duration_timer)
 	if interval > 0.0:
 		_interval_timer = Timer.new()
 		_interval_timer.autostart = true
 		_interval_timer.wait_time = interval
+		add_child(_interval_timer)
 	if not stackable:
 		var stack_overlap_effect : Effect
 		for sibling in get_parent().get_children():
