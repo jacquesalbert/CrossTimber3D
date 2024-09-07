@@ -47,6 +47,7 @@ script = ExtResource("3_efvmt")
 count = 10
 spread = 0.01
 squirt_velocity = 1.0
+chunkiness = 0.25
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0

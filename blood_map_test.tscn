@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d3nrns06j7fb4" path="res://Resources/kenney_prototype-textures/PNG/Dark/texture_01.png" id="1_q4qnm"]
 [ext_resource type="Script" path="res://blood_map_test.gd" id="1_yf2mf"]
-[ext_resource type="Script" path="res://BloodMap.gd" id="4_b6pig"]
+[ext_resource type="Script" path="res://PaintMap.gd" id="4_b6pig"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klsaq"]
 albedo_texture = ExtResource("1_q4qnm")

@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var max_cursor_distance : float = 1000
-@export var blood_map : BloodMap
+@export var blood_map : PaintMap
 @export_flags_3d_physics var cursor_mask : int
 
 @export var paint_color : Color

@@ -8,6 +8,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @export var exhaustion_effect_scene : PackedScene
 @export var impact_effect : PackedScene
 @export var mass : float = 75
+@export var walk_stride : float = 0.4
 
 var controller : Controller
 @onready var tool_user : SlotToolUser = $ToolUser
@@ -28,6 +29,8 @@ var controller : Controller
 @onready var ray_cast : RayCast3D = $RayCast3D
 @onready var alive_collision_shape : CollisionShape3D = $AliveCollisionShape
 @onready var dead_collision_shape : CollisionShape3D = $DeadCollisionShape
+@onready var l_foot_printer : Printer = $Printer_L
+@onready var r_foot_printer : Printer = $Printer_R
 
 enum State {
 	ACTIVE,
@@ -56,7 +59,8 @@ var _current_surface : NodeMaterial:
 			surface_changed.emit(_current_surface)
 			_traction = _current_surface.traction if is_instance_valid(_current_surface) else 0.0
 var _local_target_velocity_2d : Vector2
-
+var _current_foot_printer : Printer
+var _print_distance : float
 
 signal effects_changed
 signal traits_changed
@@ -109,6 +113,7 @@ func on_controls_cycle_interaction():
 	interactor.cycle_selected_interaction()
 
 func _ready():
+	_current_foot_printer = r_foot_printer
 	child_entered_tree.connect(on_child_entered)
 	child_exiting_tree.connect(on_child_exited)
 	# first connect all the necessary components
@@ -457,7 +462,15 @@ func active_physics_process(delta:float):
 	# Add the gravity.
 	#if not is_on_floor():
 		#velocity.y -= gravity * delta
+	var _prev_pos := global_position
 	move_and_slide()
+	_print_distance += (global_position - _prev_pos).length()
+	var stride :float= walk_stride * attributes.get_attribute_value("run_modifier") if running else walk_stride
+	if _print_distance > stride:
+		_print_distance -= stride
+		_current_foot_printer.apply_print()
+		_current_foot_printer = l_foot_printer if _current_foot_printer == r_foot_printer else r_foot_printer
+	
 	for i in range(get_slide_collision_count()):
 		var collision := get_slide_collision(i)
 		var collider := collision.get_collider()

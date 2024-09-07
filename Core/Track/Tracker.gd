@@ -24,8 +24,10 @@ extends Node3D
 var _current_effect_material : NodeMaterial
 var _track_settings:TrackSettings
 var _track : Track
+var _prev_position : Vector3
 
 func _ready() -> void:
+	_prev_position = global_position
 	_track_settings = default_track_settings
 	change_effect_material(null)
 
@@ -58,8 +60,10 @@ func disable():
 func add_current_point():
 	if not is_instance_valid(_track) or not _track.is_inside_tree():
 		create_track()
-	_track.add_point(global_position+global_basis*normal_direction*bias,global_basis*normal_direction if local_normal else normal_direction,_track_settings.width,_track_settings.color)
+	#_track.add_point(global_position+global_basis*normal_direction*bias,global_basis*normal_direction if local_normal else normal_direction,_track_settings.width,_track_settings.color)
+	LevelManager.current_level.paint_map.set_line(global_position, _prev_position,_track_settings.width, _track_settings.color)
 
 func _physics_process(delta):
 	if tracking and _track_settings.track:
 		add_current_point()
+	_prev_position = global_position

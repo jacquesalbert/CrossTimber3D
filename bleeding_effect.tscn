@@ -14,6 +14,7 @@ interval = 1.0
 
 [node name="Bleeder" type="Node3D" parent="."]
 script = ExtResource("2_syv7l")
+chunkiness = 0.1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1

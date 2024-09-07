@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://y2763ntb71tf"]
+[gd_scene load_steps=93 format=3 uid="uid://y2763ntb71tf"]
 
 [ext_resource type="Script" path="res://Core/Character/Character.gd" id="1_aywxf"]
 [ext_resource type="PackedScene" uid="uid://bmhp7gx70w6va" path="res://exhaustion_effect.tscn" id="2_iu6pc"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://qgix8spprtde" path="res://Resources/footprints.png" id="12_b0lh4"]
 [ext_resource type="Script" path="res://Core/Track/Tracker.gd" id="12_j113j"]
 [ext_resource type="Script" path="res://Core/Track/TrackSettings.gd" id="13_8sisl"]
-[ext_resource type="Script" path="res://Core/Trail/Trailer.gd" id="14_n4qha"]
 [ext_resource type="Script" path="res://Core/Character/CharacterStatManager.gd" id="16_w8ojt"]
 [ext_resource type="Script" path="res://Core/Attributes/EntityAttributeHandler.gd" id="17_pn34l"]
 [ext_resource type="Resource" uid="uid://716w77prpogm" path="res://test_attribute_package.tres" id="18_bb2ni"]
@@ -40,6 +39,7 @@
 [ext_resource type="AudioStream" uid="uid://d3f5m5siuw746" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_08.wav" id="29_ilj63"]
 [ext_resource type="AudioStream" uid="uid://khi7bbnl7osu" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_09.wav" id="30_y152l"]
 [ext_resource type="AudioStream" uid="uid://drnsmnfjpaa31" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_10.wav" id="31_hsf5l"]
+[ext_resource type="Script" path="res://Printer.gd" id="41_eid74"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_greoe"]
 height = 0.25
@@ -56,9 +56,15 @@ radius = 0.25
 
 [sub_resource type="Resource" id="Resource_3l03p"]
 script = ExtResource("13_8sisl")
-track = true
+track = false
 width = 0.35
 color = Color(0, 0, 0, 1)
+
+[sub_resource type="Resource" id="Resource_4wvar"]
+script = ExtResource("13_8sisl")
+track = false
+width = 0.3
+color = Color(1, 0, 0, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_tmjnt"]
 top_radius = 0.2
@@ -349,7 +355,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_cvxtp"]
 resource_name = "LowerBodyRun"
-length = 0.4
+length = 0.8
 loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
@@ -359,7 +365,7 @@ tracks/0/path = NodePath("LowerBodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [4, 5, 6, 7]
@@ -367,7 +373,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_tvs4w"]
 resource_name = "LowerBodyWalk"
-length = 0.4
+length = 0.8
 loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
@@ -377,7 +383,7 @@ tracks/0/path = NodePath("LowerBodySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
@@ -751,13 +757,14 @@ interaction_mask = 8
 script = ExtResource("12_j113j")
 texture = ExtResource("12_b0lh4")
 default_track_settings = SubResource("Resource_3l03p")
+effect_material_track_settings = {
+ExtResource("8_yacv2"): SubResource("Resource_4wvar")
+}
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00366211, 1, -0.0032959)
 target_position = Vector3(0, -3, 0)
-
-[node name="Trailer" type="Node3D" parent="."]
-script = ExtResource("14_n4qha")
+collision_mask = 3
 
 [node name="CharacterStatManager" type="Node" parent="." node_paths=PackedStringArray("character")]
 script = ExtResource("16_w8ojt")
@@ -851,5 +858,15 @@ parameters/UnarmedMovement/blend_position = 0
 parameters/WeaponTransition/current_state = "longarm"
 parameters/WeaponTransition/transition_request = ""
 parameters/WeaponTransition/current_index = 3
+
+[node name="Printer_L" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0, 0)
+script = ExtResource("41_eid74")
+color = Color(0.368627, 0, 0, 1)
+
+[node name="Printer_R" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0, 0)
+script = ExtResource("41_eid74")
+color = Color(0.368627, 0, 0, 1)
 
 [connection signal="was_hit" from="Hitbox" to="Health" method="modify"]
