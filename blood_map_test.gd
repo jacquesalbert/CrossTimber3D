@@ -22,7 +22,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action("use_equipment"):
 		if event.is_pressed():
 			tracing = true
-			color = Color.TRANSPARENT
+			color = Color.RED
 		elif event.is_released():
 			tracing = false
 
@@ -47,4 +47,6 @@ func update_map():
 	
 	var result = space_state.intersect_ray(query)
 	if result.has('position'):
-		blood_map.set_point(result['position'],color)
+		#blood_map.draw_point(result['position'],color)
+		#blood_map.draw_circle(result['position'],3,color,PaintMap.BlendMode.BLEND)
+		blood_map.draw_line(result['position'], result['position'] + Vector3(3,0,3),3,color,PaintMap.BlendMode.BLEND)

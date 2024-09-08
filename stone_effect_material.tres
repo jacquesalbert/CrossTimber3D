@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NodeMaterial" load_steps=2 format=3 uid="uid://bf6f5dthj17ya"]
+
+[ext_resource type="Script" path="res://Core/NodeMaterial/NodeMaterial.gd" id="1_p5nif"]
+
+[resource]
+script = ExtResource("1_p5nif")
+text = &"stone"
+traction = 1.0
+base_color = Color(0, 0, 0, 1)
+accent_color = Color(0, 0, 0, 1)

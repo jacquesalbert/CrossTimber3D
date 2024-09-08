@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" path="res://Core/MatchPosition.gd" id="1_agiep"]
 [ext_resource type="PackedScene" uid="uid://y2763ntb71tf" path="res://test_character.tscn" id="2_0tjcj"]
+[ext_resource type="Script" path="res://SimplePaintMap.gd" id="2_dy1a1"]
 [ext_resource type="Script" path="res://Core/Character/PlayerController.gd" id="3_670ss"]
 [ext_resource type="Script" path="res://Core/NodeMaterial/MaterialNode.gd" id="3_aannx"]
+[ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="4_3sutf"]
 [ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="5_2quyv"]
 [ext_resource type="AudioStream" uid="uid://c47pq1gxk1n0v" path="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Environment/OldDoorOpen.ogg" id="5_k863u"]
 [ext_resource type="Script" path="res://Core/Level/Level.gd" id="6_5ppbu"]
@@ -17,21 +19,12 @@
 [ext_resource type="Script" path="res://Core/Door/DoorInteraction.gd" id="10_75ygd"]
 [ext_resource type="Resource" uid="uid://ba12msy183178" path="res://tool_test.tres" id="10_ahy3r"]
 [ext_resource type="PackedScene" uid="uid://dpkenrejsd1ix" path="res://GUI/HUD/hud.tscn" id="10_p7hlu"]
-[ext_resource type="Script" path="res://PaintMap.gd" id="19_gcsp0"]
 [ext_resource type="Script" path="res://test_bullet_firer.gd" id="20_tlgcc"]
 [ext_resource type="PackedScene" uid="uid://3nfi1gbdyftt" path="res://test_firearm_tool.tscn" id="21_7xrhy"]
 
 [sub_resource type="Gradient" id="Gradient_w2rni"]
 offsets = PackedFloat32Array(0.199243, 0.225725, 0.255725, 0.281211, 0.301527, 0.721374, 0.738966, 0.751908, 0.779319, 0.807062)
 colors = PackedColorArray(0.381667, 0.3, 1, 1, 0.533333, 0, 1, 1, 1, 0, 0.0166664, 1, 1, 0.65, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.683333, 0, 1, 1, 0, 0.0166664, 1, 0.533333, 0, 1, 1, 0.380392, 0.301961, 1, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dahb4"]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
-albedo_texture_force_srgb = true
-texture_filter = 0
-texture_repeat = false
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jpbg3"]
 
@@ -94,8 +87,7 @@ paint_map = NodePath("PaintMap")
 
 [node name="PaintMap" type="Node3D" parent="Level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-script = ExtResource("19_gcsp0")
-base_material = SubResource("StandardMaterial3D_dahb4")
+script = ExtResource("2_dy1a1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Level"]
 transform = Transform3D(0.707107, -0.664463, 0.241845, 0, 0.34202, 0.939693, -0.707107, -0.664463, 0.241845, 0, 0, 0)
@@ -130,9 +122,9 @@ collision_mask = 0
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Level/WallStaticBody"]
 shape = SubResource("BoxShape3D_apjq2")
 
-[node name="MetalMaterial" type="Node" parent="Level/WallStaticBody/CollisionShape3D2"]
+[node name="StoneMaterial" type="Node" parent="Level/WallStaticBody/CollisionShape3D2"]
 script = ExtResource("3_aannx")
-material = ExtResource("5_2quyv")
+material = ExtResource("4_3sutf")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Level/WallStaticBody"]
 material_override = SubResource("StandardMaterial3D_r6pga")
@@ -159,7 +151,7 @@ shape = SubResource("BoxShape3D_byfje")
 
 [node name="MetalMaterial" type="Node" parent="Level/Door/DoorBody3D/CollisionShape3D"]
 script = ExtResource("3_aannx")
-material = ExtResource("5_2quyv")
+material = ExtResource("4_3sutf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Level/Door/DoorBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.05, 0)

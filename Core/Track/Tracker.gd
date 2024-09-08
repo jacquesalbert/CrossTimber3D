@@ -61,7 +61,7 @@ func add_current_point():
 	if not is_instance_valid(_track) or not _track.is_inside_tree():
 		create_track()
 	#_track.add_point(global_position+global_basis*normal_direction*bias,global_basis*normal_direction if local_normal else normal_direction,_track_settings.width,_track_settings.color)
-	LevelManager.current_level.paint_map.set_line(global_position, _prev_position,_track_settings.width, _track_settings.color)
+	LevelManager.current_level.paint_map.draw_line(global_position, _prev_position,_track_settings.width, _track_settings.color,PaintMap.BlendMode.BLEND)
 
 func _physics_process(delta):
 	if tracking and _track_settings.track:

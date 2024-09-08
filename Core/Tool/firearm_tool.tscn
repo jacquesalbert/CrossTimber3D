@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dscki76d3tu2q"]
+[gd_scene load_steps=16 format=3 uid="uid://dscki76d3tu2q"]
 
 [ext_resource type="Script" path="res://Core/Tool/FirearmTool.gd" id="1_2j8qw"]
 [ext_resource type="Resource" uid="uid://cf20pmwfu20a5" path="res://item_test.tres" id="2_mwmob"]
@@ -6,6 +6,8 @@
 [ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="4_57swq"]
 [ext_resource type="AudioStream" uid="uid://c8r50lvnucscd" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_fire_ak47.mp3" id="4_ac35g"]
 [ext_resource type="Texture2D" uid="uid://cp5bdg4fpju20" path="res://Resources/muzzleflash.png" id="4_it5q0"]
+[ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="4_vofiq"]
+[ext_resource type="PackedScene" uid="uid://ct4g7c8aqeeg7" path="res://stone_hit_effect.tscn" id="5_5hslg"]
 [ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="5_35kxc"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="6_vgfjy"]
 [ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="7_itd7b"]
@@ -166,8 +168,9 @@ supply_amount = 1
 bullet_collision_mask = 5
 bullet_trailer_scene = ExtResource("3_4la7t")
 material_hit_effects = {
-ExtResource("4_57swq"): ExtResource("5_35kxc"),
-ExtResource("6_vgfjy"): ExtResource("7_itd7b")
+ExtResource("4_vofiq"): ExtResource("5_5hslg"),
+ExtResource("6_vgfjy"): ExtResource("7_itd7b"),
+ExtResource("4_57swq"): ExtResource("5_35kxc")
 }
 apply_effects = Array[PackedScene]([ExtResource("8_bxu3c")])
 stream_player = NodePath("AudioStreamPlayer3D")

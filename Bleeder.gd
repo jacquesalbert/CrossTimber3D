@@ -2,8 +2,8 @@ class_name Bleeder
 extends Node3D
 
 @export var count :int = 1
-@export var min_drop_radius : float = 0.5
-@export var max_drop_radius : float = 1.5
+@export var min_drop_radius : float = 0.5*0.05
+@export var max_drop_radius : float = 1.5*0.05
 @export var spread: float = 0.1
 @export var squirt_velocity: float = 2.0
 @export var color : Color = Color(0.7,0,0)
@@ -26,7 +26,10 @@ func _physics_process(delta: float) -> void:
 		_drop_velocities[i] = _drop_velocities[i] + gravity
 		_drop_positions[i] = _drop_positions[i] + _drop_velocities[i] * delta
 		if _drop_positions[i].y < 0:
-			LevelManager.current_level.paint_map.set_circle(_drop_positions[i],randf_range(min_drop_radius,max_drop_radius),color.blend(Color(randf(),0,0,randf_range(0.0,chunkiness))))
+			var blend_color := color
+			blend_color.h = blend_color.h + ((randf()-0.5) * chunkiness * 0.1)
+			blend_color.v = blend_color.v + ((randf()-0.5) * chunkiness * 0.5)
+			LevelManager.current_level.paint_map.draw_circle(_drop_positions[i],randf_range(min_drop_radius,max_drop_radius),blend_color,PaintMap.BlendMode.BLEND)
 		else:
 			keep_drops.append(_drop_positions[i])
 			keep_vels.append(_drop_velocities[i])

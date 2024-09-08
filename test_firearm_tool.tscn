@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://3nfi1gbdyftt"]
 
 [ext_resource type="Script" path="res://Core/Tool/FirearmTool.gd" id="1_njwyd"]
-[ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="3_dfo21"]
+[ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="3_5ds4u"]
 [ext_resource type="PackedScene" uid="uid://c7xcd5bpu10ej" path="res://bullet_trailer.tscn" id="3_s1qvc"]
 [ext_resource type="AudioStream" uid="uid://c8r50lvnucscd" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_fire_ak47.mp3" id="4_sy47e"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="4_urvni"]
@@ -165,7 +165,7 @@ angle_spread = 0.05
 bullet_collision_mask = 5
 bullet_trailer_scene = ExtResource("3_s1qvc")
 material_hit_effects = {
-ExtResource("3_dfo21"): ExtResource("8_y28uj"),
+ExtResource("3_5ds4u"): ExtResource("8_y28uj"),
 ExtResource("4_urvni"): ExtResource("7_ooloh")
 }
 apply_effects = Array[PackedScene]([ExtResource("7_c3u2p")])
