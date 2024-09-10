@@ -5,6 +5,7 @@ extends Node3D
 @export_flags_3d_physics var cursor_mask : int
 
 @export var paint_color : Color
+@export var texture : Texture2D
 
 var tracing : bool
 var color : Color
@@ -49,4 +50,5 @@ func update_map():
 	if result.has('position'):
 		#blood_map.draw_point(result['position'],color)
 		#blood_map.draw_circle(result['position'],3,color,PaintMap.BlendMode.BLEND)
-		blood_map.draw_line(result['position'], result['position'] + Vector3(3,0,3),3,color,PaintMap.BlendMode.BLEND)
+		#blood_map.draw_line(result['position'], result['position'] + Vector3(3,0,3),3,color,PaintMap.BlendMode.BLEND)
+		blood_map.draw_image(texture.get_image(),result['position'],randf()*TAU, PaintMap.BlendMode.ADD)

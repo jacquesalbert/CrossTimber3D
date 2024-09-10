@@ -1,12 +1,11 @@
-[gd_scene load_steps=36 format=3 uid="uid://wyqm77ee568q"]
+[gd_scene load_steps=35 format=3 uid="uid://wyqm77ee568q"]
 
 [ext_resource type="Script" path="res://Core/MatchPosition.gd" id="1_agiep"]
 [ext_resource type="PackedScene" uid="uid://y2763ntb71tf" path="res://test_character.tscn" id="2_0tjcj"]
-[ext_resource type="Script" path="res://SimplePaintMap.gd" id="2_dy1a1"]
+[ext_resource type="Script" path="res://Core/PaintMap/SimplePaintMap.gd" id="2_dy1a1"]
 [ext_resource type="Script" path="res://Core/Character/PlayerController.gd" id="3_670ss"]
 [ext_resource type="Script" path="res://Core/NodeMaterial/MaterialNode.gd" id="3_aannx"]
 [ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="4_3sutf"]
-[ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="5_2quyv"]
 [ext_resource type="AudioStream" uid="uid://c47pq1gxk1n0v" path="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Environment/OldDoorOpen.ogg" id="5_k863u"]
 [ext_resource type="Script" path="res://Core/Level/Level.gd" id="6_5ppbu"]
 [ext_resource type="AudioStream" uid="uid://bqvk2xb3nuf5y" path="res://Resources/Sounds/Darkworld Audio - Survival Effects [Free .ogg]/Environment/OldDoorClose.ogg" id="6_6ptiv"]
@@ -46,11 +45,11 @@ size = Vector3(1000, 1, 1000)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_en3c8"]
 albedo_texture = ExtResource("7_s0txq")
-uv1_scale = Vector3(50, 50, 50)
+uv1_scale = Vector3(5000, 5000, 5000)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_dttcw"]
 material = SubResource("StandardMaterial3D_en3c8")
-size = Vector2(100, 100)
+size = Vector2(10000, 10000)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_apjq2"]
 size = Vector3(4, 3, 4)
@@ -88,6 +87,7 @@ paint_map = NodePath("PaintMap")
 [node name="PaintMap" type="Node3D" parent="Level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 script = ExtResource("2_dy1a1")
+texture_size = 1024
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Level"]
 transform = Transform3D(0.707107, -0.664463, 0.241845, 0, 0.34202, 0.939693, -0.707107, -0.664463, 0.241845, 0, 0, 0)
@@ -108,9 +108,9 @@ environment = SubResource("Environment_bhalu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_sl88v")
 
-[node name="MetalMaterial" type="Node" parent="Level/GroundStaticBody/CollisionShape3D"]
+[node name="StoneMaterial" type="Node" parent="Level/GroundStaticBody/CollisionShape3D"]
 script = ExtResource("3_aannx")
-material = ExtResource("5_2quyv")
+material = ExtResource("4_3sutf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Level/GroundStaticBody"]
 mesh = SubResource("PlaneMesh_dttcw")
@@ -231,7 +231,7 @@ tool = ExtResource("10_ahy3r")
 [node name="Vehicle2" parent="." instance=ExtResource("9_368ct")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4401, 0, 0.984223)
 
-[node name="Node" type="Node" parent="."]
+[node name="Node" type="Node3D" parent="."]
 
 [node name="Character6" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94888, 0, 0)
@@ -312,6 +312,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0427, 9.53674e-07, 2.4049
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.70652, 0, 1.59147)
 
 [node name="TestShooter" type="Node3D" parent="."]
+process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97622, 1.7612, -3.34465)
 script = ExtResource("20_tlgcc")
 firearm_scene = ExtResource("21_7xrhy")

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="EffectMaterial" load_steps=2 format=3 uid="uid://784u5sak8kjf"]
+[gd_resource type="Resource" script_class="NodeMaterial" load_steps=2 format=3 uid="uid://784u5sak8kjf"]
 
 [ext_resource type="Script" path="res://Core/NodeMaterial/NodeMaterial.gd" id="1_1x6dv"]
 
 [resource]
 script = ExtResource("1_1x6dv")
 text = &"flesh"
-base_color = Color(0, 0, 0, 1)
+traction = 1.0
+base_color = Color(0.461862, 8.00174e-07, 1.44392e-07, 1)
 accent_color = Color(0, 0, 0, 1)
+deposit_distance = 10.0

@@ -47,6 +47,7 @@ script = ExtResource("3_efvmt")
 count = 10
 spread = 0.01
 squirt_velocity = 1.0
+color = Color(0.526793, 4.99357e-07, 9.62615e-08, 1)
 chunkiness = 0.25
 
 [node name="Timer" type="Timer" parent="."]

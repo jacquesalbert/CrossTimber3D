@@ -8,6 +8,9 @@ extends Node3D
 @export var local_normal : bool
 @export var two_sided : bool
 @export var bias : float = 0.01
+var color : Color = Color.BLACK
+var strength : float = 0.1
+
 
 @export var default_track_settings : TrackSettings
 @export var effect_material_track_settings : Dictionary

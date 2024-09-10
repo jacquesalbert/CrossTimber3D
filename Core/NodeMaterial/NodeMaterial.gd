@@ -5,6 +5,7 @@ extends Resource
 @export var traction : float = 1.0
 @export var base_color : Color
 @export var accent_color : Color
+@export var deposit_distance : float = 0.0
 
 
 static func get_collision_shape_material(collider:CollisionObject3D, shape_id:int)->NodeMaterial:

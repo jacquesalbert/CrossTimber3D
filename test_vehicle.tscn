@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d17hiwv22avsm"]
+[gd_scene load_steps=24 format=3 uid="uid://d17hiwv22avsm"]
 
 [ext_resource type="Script" path="res://Core/Vehicle/Vehicle.gd" id="1_ho58b"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="2_7n5wi"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bk0lpn0aayava" path="res://test_wheel.tscn" id="4_r4ysp"]
 [ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="5_whwhk"]
 [ext_resource type="Script" path="res://Core/Vehicle/Mount.gd" id="6_l5t2n"]
+[ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="6_ufth8"]
+[ext_resource type="PackedScene" uid="uid://ct4g7c8aqeeg7" path="res://stone_hit_effect.tscn" id="7_2gqbp"]
 [ext_resource type="Script" path="res://Core/Vehicle/VehicleControlMount.gd" id="7_i6lbx"]
 [ext_resource type="Script" path="res://Core/Vehicle/MountInteraction.gd" id="8_t0yfh"]
 [ext_resource type="Script" path="res://Core/Interaction/InteractionArea.gd" id="8_vohwo"]
@@ -47,7 +49,8 @@ fuel = NodePath("Fuel")
 health = NodePath("Health")
 material_hit_effects = {
 ExtResource("2_7n5wi"): ExtResource("3_r6n5c"),
-ExtResource("13_dug1e"): ExtResource("5_whwhk")
+ExtResource("13_dug1e"): ExtResource("5_whwhk"),
+ExtResource("6_ufth8"): ExtResource("7_2gqbp")
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -172,3 +175,17 @@ shape = SubResource("BoxShape3D_gk76p")
 [node name="MetalMaterial" type="Node" parent="Hitbox/CollisionShape3D"]
 script = ExtResource("12_lslb7")
 material = ExtResource("13_dug1e")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-1, 1.37708e-08, -1.30766e-07, -5.34573e-08, 0.866025, 0.5, 1.20132e-07, 0.5, -0.866025, 0.75, 1.5, 2)
+light_color = Color(1, 0.780392, 0.596078, 1)
+light_energy = 10.0
+spot_range = 30.0
+spot_angle = 30.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(-1, 1.37708e-08, -1.30766e-07, -5.34573e-08, 0.866025, 0.5, 1.20132e-07, 0.5, -0.866025, -0.75, 1.5, 2)
+light_color = Color(1, 0.780392, 0.596078, 1)
+light_energy = 10.0
+spot_range = 30.0
+spot_angle = 30.0

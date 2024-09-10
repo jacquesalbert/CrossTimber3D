@@ -6,6 +6,8 @@ var _current_surface : NodeMaterial:
 		if _current_surface != value:
 			_current_surface = value
 			surface_changed.emit(_current_surface)
+			#print(self, " ", _current_surface.text if is_instance_valid(_current_surface) else "none")
+
 
 signal surface_changed(surface:NodeMaterial)
 

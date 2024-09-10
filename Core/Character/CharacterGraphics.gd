@@ -169,7 +169,7 @@ func gib():
 		gib_instance.position = global_position + Vector3.UP * 2
 		gib_instance.rotation = Vector3(0,randf(),0)*TAU
 		gib_instance.angular_velocity = randf() * 10
-		gib_instance.velocity = Vector3.UP*10+Vector3.FORWARD.rotated(Vector3.UP,randf()*TAU)*randf_range(0,2)
+		gib_instance.velocity = Vector3.UP*1+Vector3.FORWARD.rotated(Vector3.UP,randf()*TAU)*randf_range(0,2)
 		LevelManager.spawn_in_level(gib_instance)
 		#gib_instance.apply_impulse(*randf_range(1,5),Vector3.FORWARD.rotated(Vector3.UP,randf()*TAU))
 	

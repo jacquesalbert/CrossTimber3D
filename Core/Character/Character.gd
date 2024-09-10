@@ -24,7 +24,7 @@ var controller : Controller
 @onready var hitbox : Hitbox = $Hitbox
 @onready var attributes : EntityAttributeHandler = $EntityAttributeHandler
 #@onready var cover_detector : CoverDetector = $CoverDetector
-@onready var tracker : Tracker = $Tracker
+#@onready var tracker : TrackPrinter = $Tracker
 #@onready var bleeder : Bleeder = $Bleeder
 @onready var ray_cast : RayCast3D = $RayCast3D
 @onready var alive_collision_shape : CollisionShape3D = $AliveCollisionShape
@@ -49,15 +49,16 @@ var _current_effects: Array[Effect]
 var _current_traits: Array[Trait]
 var _run_energy_debt : float
 var _exhausted_effect : Effect
-var _traction : float
+var _traction : float = 1.0
 var _stun_timer : Timer
-var _current_surface : NodeMaterial:
-	set(value):
-		if _current_surface != value:
-			_current_surface = value
-			tracker.change_effect_material(_current_surface)
-			surface_changed.emit(_current_surface)
-			_traction = _current_surface.traction if is_instance_valid(_current_surface) else 0.0
+#var _current_surface : NodeMaterial:
+	#set(value):
+		#if _current_surface != value:
+			#_current_surface = value
+			##tracker.change_effect_material(_current_surface)
+			#surface_changed.emit(_current_surface)
+			
+
 var _local_target_velocity_2d : Vector2
 var _current_foot_printer : Printer
 var _print_distance : float
@@ -66,6 +67,15 @@ signal effects_changed
 signal traits_changed
 signal surface_changed(surface:NodeMaterial)
 signal mount_changed(mount:Mount)
+
+func _on_surface_changed(new_material:NodeMaterial):
+	#print(self, " ", new_material.text if is_instance_valid(new_material) else "none")
+	_traction = new_material.traction if is_instance_valid(new_material) else 1.0
+	var strength = 1.0 if is_instance_valid($MaterialDepositHandler.deposit_material) else 0.1
+	l_foot_printer.strength = strength
+	r_foot_printer.strength = strength
+	l_foot_printer.base_color = new_material.base_color if is_instance_valid(new_material) else Color.TRANSPARENT
+	r_foot_printer.base_color = new_material.base_color if is_instance_valid(new_material) else Color.TRANSPARENT
 
 func apply_controls(delta:float, aim_only:bool=false):
 	var turn_speed :float = attributes.get_attribute_value("turn_speed")
@@ -224,7 +234,7 @@ func set_stun():
 	tool_user.triggered = false
 
 	supply_area.disable()
-	tracker.disable()
+	#tracker.disable()
 	if controller:
 		controller.trigger_tool_off.disconnect(on_controls_trigger_tool_off)
 		controller.trigger_tool_on.disconnect(on_controls_trigger_tool_on)
@@ -251,11 +261,11 @@ func _physics_process(delta):
 	# enforce 2D play area
 	position.y = 0
 	var cast_material : NodeMaterial
-	if ray_cast.is_colliding():
-		tracker.global_position = ray_cast.get_collision_point()
-		tracker.normal_direction = ray_cast.get_collision_normal()
-		cast_material = NodeMaterial.get_collision_shape_material(ray_cast.get_collider(),ray_cast.get_collider_shape())
-	_current_surface = cast_material
+	#if ray_cast.is_colliding():
+		##tracker.global_position = ray_cast.get_collision_point()
+		##tracker.normal_direction = ray_cast.get_collision_normal()
+		#cast_material = NodeMaterial.get_collision_shape_material(ray_cast.get_collider(),ray_cast.get_collider_shape())
+	#_current_surface = cast_material
 	match state:
 		State.ACTIVE:
 			active_physics_process(delta)
@@ -354,7 +364,7 @@ func set_inactive():
 	tool_user.triggered = false
 
 	supply_area.disable()
-	tracker.disable()
+	#tracker.disable()
 	if controller:
 		controller.cycle_tool.disconnect(on_controls_cycle_tool)
 		controller.cycle_equipment.disconnect(on_controls_cycle_equipment)
@@ -393,7 +403,7 @@ func set_active():
 		controller.trigger_equipment_off.connect(on_controls_trigger_equipment_off)
 		controller.interact.connect(on_controls_interact)
 		controller.cycle_interaction.connect(on_controls_cycle_interaction)
-	tracker.enable()
+	#tracker.enable()
 
 func set_mounted():
 	position = Vector3.ZERO
@@ -414,7 +424,7 @@ func set_mounted():
 		graphics.driving = false
 	##if tool_user:
 		##on_tool_changed(null, tool_user.current_tool)
-	tracker.disable()
+	#tracker.disable()
 
 func set_driver_mounted():
 	position = Vector3.ZERO
@@ -438,7 +448,7 @@ func set_driver_mounted():
 		controller.trigger_tool_on.disconnect(on_controls_trigger_tool_on)
 		controller.trigger_equipment_off.disconnect(on_controls_trigger_equipment_off)
 		controller.trigger_equipment_on.disconnect(on_controls_trigger_equipment_on)
-	tracker.disable()
+	#tracker.disable()
 
 func active_process(delta:float):
 	run_energy(delta)

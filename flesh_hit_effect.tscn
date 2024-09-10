@@ -133,5 +133,6 @@ script = ExtResource("6_j275c")
 count = 100
 spread = 1.0
 squirt_velocity = 5.0
+color = Color(0.461862, 8.00174e-07, 1.44392e-07, 1)
 auto_trigger = true
 chunkiness = 0.15

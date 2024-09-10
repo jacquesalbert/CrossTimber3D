@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnwik10h3edkw"]
+[gd_scene load_steps=8 format=3 uid="uid://cnwik10h3edkw"]
 
 [ext_resource type="Texture2D" uid="uid://d3nrns06j7fb4" path="res://Resources/kenney_prototype-textures/PNG/Dark/texture_01.png" id="1_q4qnm"]
 [ext_resource type="Script" path="res://blood_map_test.gd" id="1_yf2mf"]
-[ext_resource type="Script" path="res://SimplePaintMap.gd" id="3_04v87"]
+[ext_resource type="Texture2D" uid="uid://bxumyhy6ei1xv" path="res://Resources/dirt_blast_scar.png" id="2_b4od6"]
+[ext_resource type="Script" path="res://Core/PaintMap/SimplePaintMap.gd" id="3_04v87"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klsaq"]
 albedo_texture = ExtResource("1_q4qnm")
@@ -19,6 +20,7 @@ script = ExtResource("1_yf2mf")
 blood_map = NodePath("PaintMap")
 cursor_mask = 1
 paint_color = Color(1, 1, 1, 1)
+texture = ExtResource("2_b4od6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -40,4 +42,3 @@ transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 script = ExtResource("3_04v87")
 texture_size = 8
-pixel_scale = 0.25

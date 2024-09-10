@@ -1,13 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://ct4g7c8aqeeg7"]
+[gd_scene load_steps=11 format=3 uid="uid://ct4g7c8aqeeg7"]
 
 [ext_resource type="Script" path="res://Core/randomize_rotation.gd" id="1_h1c7s"]
-[ext_resource type="AudioStream" uid="uid://dy4sdsitopaub" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_01.wav" id="2_e2hdq"]
-[ext_resource type="AudioStream" uid="uid://di7iol01otmsj" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_02.wav" id="3_qfinc"]
-[ext_resource type="AudioStream" uid="uid://b7mtacah7glbt" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_03.wav" id="4_qurar"]
-[ext_resource type="AudioStream" uid="uid://dam2ix04a35jj" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV1_Jump_Land_04.wav" id="5_sq0kd"]
-[ext_resource type="AudioStream" uid="uid://dy01iwmk0yl36" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV2_Jump_Land_01.wav" id="6_sinla"]
-[ext_resource type="AudioStream" uid="uid://bsma58fx8m8t6" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV2_Jump_Land_02.wav" id="7_qexdw"]
-[ext_resource type="AudioStream" uid="uid://b0hx8qe5mung2" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Metal/Footsteps_Metal_Jump/Footsteps_MetalV2_Jump_Land_03.wav" id="8_h0wwc"]
+[ext_resource type="AudioStream" uid="uid://cnwalr8t3o62w" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/physics/concrete/physics_concrete_impact_bullet_1.mp3" id="2_68clr"]
+[ext_resource type="AudioStream" uid="uid://6lvb4ju6pir2" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/physics/concrete/physics_concrete_impact_bullet_2.mp3" id="3_6xm7s"]
+[ext_resource type="AudioStream" uid="uid://dboqk0br6k0st" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/physics/concrete/physics_concrete_impact_bullet_3.mp3" id="4_g2sai"]
 [ext_resource type="Texture2D" uid="uid://1t445hnuq6oy" path="res://Resources/Free/Part 11/519.png" id="9_adu73"]
 [ext_resource type="Script" path="res://Bleeder.gd" id="10_58b1f"]
 
@@ -63,15 +59,11 @@ _data = {
 "hit": SubResource("Animation_it6at")
 }
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4fqcc"]
-streams_count = 7
-stream_0/stream = ExtResource("2_e2hdq")
-stream_1/stream = ExtResource("3_qfinc")
-stream_2/stream = ExtResource("4_qurar")
-stream_3/stream = ExtResource("5_sq0kd")
-stream_4/stream = ExtResource("6_sinla")
-stream_5/stream = ExtResource("7_qexdw")
-stream_6/stream = ExtResource("8_h0wwc")
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3upg3"]
+streams_count = 3
+stream_0/stream = ExtResource("2_68clr")
+stream_1/stream = ExtResource("3_6xm7s")
+stream_2/stream = ExtResource("4_g2sai")
 
 [node name="StoneHitEffect" type="Node3D"]
 script = ExtResource("1_h1c7s")
@@ -83,13 +75,14 @@ libraries = {
 autoplay = "hit"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = SubResource("AudioStreamRandomizer_4fqcc")
+stream = SubResource("AudioStreamRandomizer_3upg3")
 autoplay = true
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 cast_shadow = 0
 pixel_size = 0.05
 axis = 1
+shaded = true
 alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("9_adu73")
