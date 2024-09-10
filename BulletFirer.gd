@@ -28,7 +28,7 @@ func fire():
 	queue_fire = true
 
 func _fire_bullet():
-	var target_dir := global_basis * Vector3((randf() - 0.5)*2*angle_spread,0.0,1.0).normalized()
+	var target_dir := global_basis * Vector3.FORWARD.normalized().rotated(Vector3.UP,(randf() - 0.5)*2*angle_spread)
 	var bullet_speed :float = max(speed_minimum,randfn(speed, speed_variation))
 	var bullet_range := randfn(range, range_variation)
 	var bullet := Bullet.new(target_dir, bullet_speed, stability, damage, bullet_range, responsible_node, bullet_collision_mask)
