@@ -146,7 +146,8 @@ func _physics_process(delta):
 				var effect_material = NodeMaterial.get_collision_shape_material(collider,get_collider_shape())
 				var hit_normal := get_collision_normal()
 				spawn_hit_effect(collision_point, self.direction, hit_normal,effect_material) # _direction.bounce(get_collision_normal()).angle()
-			
+				if not stop:
+					spawn_hit_effect(collision_point, self.direction, self.direction,effect_material) # _direction.bounce(get_collision_normal()).angle()
 			#if trail and is_instance_valid(trail):
 				#trail.update_points(collision_point)
 		else:

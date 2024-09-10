@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://yq57hcr8tpef"]
+
+[ext_resource type="Script" path="res://Core/Tool/ThrowableTool.gd" id="1_wuyke"]
+[ext_resource type="PackedScene" uid="uid://c1mhr3fyjxsof" path="res://throwable_projectile_test.tscn" id="2_ucu7o"]
+[ext_resource type="AudioStream" uid="uid://c8r50lvnucscd" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_fire_ak47.mp3" id="11_xw4u6"]
+[ext_resource type="AudioStream" uid="uid://re5ysp6ugk8p" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_reload_start.mp3" id="13_qevtg"]
+
+[node name="ThrowableToolInstance" type="Node3D" node_paths=PackedStringArray("streamplayer")]
+script = ExtResource("1_wuyke")
+projectile_scene = ExtResource("2_ucu7o")
+angle_spread = 0.05
+equip_stream = ExtResource("13_qevtg")
+streamplayer = NodePath("AudioStreamPlayer3D")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("11_xw4u6")

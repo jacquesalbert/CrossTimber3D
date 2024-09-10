@@ -30,7 +30,7 @@ enum Type {
 @export var has_pickup : bool
 @export var pickup_graphics : PackedScene
 @export var pickup_sound : AudioStream
-@export var equip_sound : AudioStream
+#@export var equip_sound : AudioStream
 @export var drop_sound : AudioStream
 
 func get_pickup()->ToolPickup:

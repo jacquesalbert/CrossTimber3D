@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddmbh2ciekb5y"]
+
+[ext_resource type="PackedScene" uid="uid://dbfbjvqkevihl" path="res://Resources/FBX/FirstAidKit.fbx" id="1_t3jio"]
+[ext_resource type="Texture2D" uid="uid://5v5bfuke0vhx" path="res://Resources/large_stack_556_pickup.png" id="2_73tli"]
+[ext_resource type="Script" path="res://Core/Shadow.gd" id="3_m3cav"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_t3jio")]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0.47932, 0)
+visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0759195, 0)
+light_color = Color(0, 1, 0, 1)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+pixel_size = 0.05
+axis = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_73tli")
+
+[node name="Shadow" type="Sprite3D" parent="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
+transparency = 0.5
+cast_shadow = 0
+modulate = Color(0, 0, 0, 1)
+pixel_size = 0.05
+axis = 1
+texture_filter = 0
+script = ExtResource("3_m3cav")

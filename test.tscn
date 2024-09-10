@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://wyqm77ee568q"]
+[gd_scene load_steps=36 format=3 uid="uid://wyqm77ee568q"]
 
 [ext_resource type="Script" path="res://Core/MatchPosition.gd" id="1_agiep"]
 [ext_resource type="PackedScene" uid="uid://y2763ntb71tf" path="res://test_character.tscn" id="2_0tjcj"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dpkenrejsd1ix" path="res://GUI/HUD/hud.tscn" id="10_p7hlu"]
 [ext_resource type="Script" path="res://test_bullet_firer.gd" id="20_tlgcc"]
 [ext_resource type="PackedScene" uid="uid://3nfi1gbdyftt" path="res://test_firearm_tool.tscn" id="21_7xrhy"]
+[ext_resource type="Resource" uid="uid://cdyg1n6sm1je7" path="res://throw_tool_test.tres" id="21_mihkq"]
 
 [sub_resource type="Gradient" id="Gradient_w2rni"]
 offsets = PackedFloat32Array(0.199243, 0.225725, 0.255725, 0.281211, 0.301527, 0.721374, 0.738966, 0.751908, 0.779319, 0.807062)
@@ -316,3 +317,9 @@ process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97622, 1.7612, -3.34465)
 script = ExtResource("20_tlgcc")
 firearm_scene = ExtResource("21_7xrhy")
+
+[node name="ToolPickup2" parent="." instance=ExtResource("9_l86uy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89, 0, 2.529)
+collision_layer = 32
+collision_mask = 33
+tool = ExtResource("21_mihkq")

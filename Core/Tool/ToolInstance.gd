@@ -2,6 +2,8 @@ class_name ToolInstance
 extends Node3D
 
 #var target_distance:float
+@export var equip_stream : AudioStream
+@export var streamplayer : AudioStreamPlayer3D
 
 var triggered : bool = false
 
@@ -10,9 +12,9 @@ var character:Character
 
 signal fired
 
-
 func on_equip():
-	pass
+	streamplayer.stream = equip_stream
+	streamplayer.play()
 
 func on_unequip():
 	pass

@@ -25,8 +25,8 @@ extends ToolInstance
 @export var material_hit_effects: Dictionary
 @export var apply_effects: Array[PackedScene]
 
-@export var stream_player : AudioStreamPlayer3D
-@export var equip_stream : AudioStream
+#@export var stream_player : AudioStreamPlayer3D
+#@export var equip_stream : AudioStream
 @export var fire_stream : AudioStream
 @export var empty_stream : AudioStream
 
@@ -35,11 +35,10 @@ func _ready():
 	pass # Replace with function body.
 
 func on_equip():
-	stream_player.stream = equip_stream
-	stream_player.play()
+	super.on_equip()
 
 func on_unequip():
-	pass
+	super.on_unequip()
 
 func attack():
 	if not $Timer.is_stopped():
@@ -62,13 +61,13 @@ func attack():
 		for i in range(count):
 			fire_bullet()
 		#$AnimationPlayer.play("fire")
-		stream_player.stream = fire_stream
-		stream_player.play()
+		streamplayer.stream = fire_stream
+		streamplayer.play()
 		fired.emit()
 		#$CameraShaker.add_trauma()
 	else:
-		stream_player.stream = empty_stream
-		stream_player.play()
+		streamplayer.stream = empty_stream
+		streamplayer.play()
 	$Timer.start()
 		
 

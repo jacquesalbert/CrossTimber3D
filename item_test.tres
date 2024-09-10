@@ -1,15 +1,19 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cf20pmwfu20a5"]
+[gd_resource type="Resource" script_class="Item" load_steps=6 format=3 uid="uid://cf20pmwfu20a5"]
 
-[ext_resource type="PackedScene" uid="uid://bojvp2dccjwb4" path="res://aid_kit_graphics_test.tscn" id="1_estyu"]
-[ext_resource type="Texture2D" uid="uid://dx7702uld251g" path="res://Resources/icons/wrench_icon.png" id="2_lu4lk"]
+[ext_resource type="PackedScene" uid="uid://ddmbh2ciekb5y" path="res://ammo_graphics_test.tscn" id="1_4mlwp"]
+[ext_resource type="AudioStream" uid="uid://re5ysp6ugk8p" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_reload_start.mp3" id="1_8knb2"]
+[ext_resource type="Texture2D" uid="uid://ck4jislb57if2" path="res://Resources/icons/556_nato_icon.png" id="2_5yjm1"]
 [ext_resource type="Script" path="res://Core/Inventory/Item.gd" id="3_xu1pc"]
+[ext_resource type="AudioStream" uid="uid://bv5bb3khdypr2" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_reload_end.mp3" id="4_b1tgk"]
 
 [resource]
 script = ExtResource("3_xu1pc")
 text = "Test Item"
 description = "test item"
-icon = ExtResource("2_lu4lk")
+icon = ExtResource("2_5yjm1")
+pickup_sound = ExtResource("4_b1tgk")
+drop_sound = ExtResource("1_8knb2")
 stack_size = 100
-single_pickup_graphics = ExtResource("1_estyu")
-partial_stack_pickup_graphics = ExtResource("1_estyu")
-full_stack_pickup_graphics = ExtResource("1_estyu")
+single_pickup_graphics = ExtResource("1_4mlwp")
+partial_stack_pickup_graphics = ExtResource("1_4mlwp")
+full_stack_pickup_graphics = ExtResource("1_4mlwp")

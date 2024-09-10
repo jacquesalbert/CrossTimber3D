@@ -8,11 +8,11 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_d8npq"]
 
-[node name="ToolPickup" type="CharacterBody3D" node_paths=PackedStringArray("interaction_area", "interaction", "pickup_stream")]
+[node name="ToolPickup" type="CharacterBody3D" node_paths=PackedStringArray("interaction_area", "interaction", "streamplayer")]
 script = ExtResource("1_r536c")
 interaction_area = NodePath("InteractionArea")
 interaction = NodePath("InteractionArea/Interaction")
-pickup_stream = NodePath("AudioStreamPlayer3D")
+streamplayer = NodePath("AudioStreamPlayer3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035, 0.5, 0)
