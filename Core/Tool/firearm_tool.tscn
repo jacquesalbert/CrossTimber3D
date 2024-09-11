@@ -1,18 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://dscki76d3tu2q"]
+[gd_scene load_steps=12 format=3 uid="uid://dscki76d3tu2q"]
 
 [ext_resource type="Script" path="res://Core/Tool/FirearmTool.gd" id="1_2j8qw"]
-[ext_resource type="PackedScene" uid="uid://c7xcd5bpu10ej" path="res://bullet_trailer.tscn" id="3_4la7t"]
-[ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="4_57swq"]
+[ext_resource type="Resource" uid="uid://cf20pmwfu20a5" path="res://item_test.tres" id="2_e8nty"]
 [ext_resource type="AudioStream" uid="uid://c8r50lvnucscd" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_fire_ak47.mp3" id="4_ac35g"]
 [ext_resource type="Texture2D" uid="uid://cp5bdg4fpju20" path="res://Resources/muzzleflash.png" id="4_it5q0"]
-[ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="4_vofiq"]
-[ext_resource type="PackedScene" uid="uid://ct4g7c8aqeeg7" path="res://stone_hit_effect.tscn" id="5_5hslg"]
-[ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="5_35kxc"]
-[ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="6_vgfjy"]
-[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="7_itd7b"]
-[ext_resource type="PackedScene" uid="uid://c14g3ii2cj5e1" path="res://bleeding_effect.tscn" id="8_bxu3c"]
+[ext_resource type="Script" path="res://BulletFirer.gd" id="7_ul84y"]
 [ext_resource type="AudioStream" uid="uid://bv5bb3khdypr2" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_reload_end.mp3" id="12_fesk3"]
 [ext_resource type="AudioStream" uid="uid://ds5cgwpgjqucx" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_empty.mp3" id="13_5qa42"]
+[ext_resource type="PackedScene" uid="uid://bb7hpl0e7ngjd" path="res://bullet_scene.tscn" id="14_1lu7p"]
 
 [sub_resource type="Animation" id="Animation_f2622"]
 length = 0.001
@@ -160,16 +155,12 @@ _data = {
 "fire": SubResource("Animation_s0m84")
 }
 
-[node name="FirearmToolInstance" type="Node3D" node_paths=PackedStringArray("streamplayer")]
+[node name="FirearmToolInstance" type="Node3D" node_paths=PackedStringArray("firer", "animation_player", "streamplayer")]
 script = ExtResource("1_2j8qw")
-angle_spread = 0.05
-bullet_trailer_scene = ExtResource("3_4la7t")
-material_hit_effects = {
-ExtResource("6_vgfjy"): ExtResource("7_itd7b"),
-ExtResource("4_57swq"): ExtResource("5_35kxc"),
-ExtResource("4_vofiq"): ExtResource("5_5hslg")
-}
-apply_effects = Array[PackedScene]([ExtResource("8_bxu3c")])
+firer = NodePath("BulletFirer")
+animation_player = NodePath("AnimationPlayer")
+supply = ExtResource("2_e8nty")
+supply_amount = 1
 fire_stream = ExtResource("4_ac35g")
 empty_stream = ExtResource("13_5qa42")
 equip_stream = ExtResource("12_fesk3")
@@ -204,3 +195,8 @@ omni_shadow_mode = 0
 libraries = {
 "": SubResource("AnimationLibrary_5sovc")
 }
+
+[node name="BulletFirer" type="Node3D" parent="."]
+script = ExtResource("7_ul84y")
+bullet_scene = ExtResource("14_1lu7p")
+angle_spread = 0.1

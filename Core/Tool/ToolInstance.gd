@@ -12,6 +12,9 @@ var character:Character
 
 signal fired
 
+func set_character(character:Character):
+	self.character=character
+
 func on_equip():
 	streamplayer.stream = equip_stream
 	streamplayer.play()

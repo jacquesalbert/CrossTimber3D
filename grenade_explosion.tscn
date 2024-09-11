@@ -1,14 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://cr4klpdylfgx7"]
+[gd_scene load_steps=10 format=3 uid="uid://cr4klpdylfgx7"]
 
 [ext_resource type="Script" path="res://BulletFirer.gd" id="1_0ual5"]
-[ext_resource type="PackedScene" uid="uid://c7xcd5bpu10ej" path="res://bullet_trailer.tscn" id="2_r74a1"]
-[ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="3_5ks35"]
-[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="4_xf0ic"]
-[ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="5_x4w5q"]
-[ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="6_kw3k1"]
-[ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="7_ng06g"]
-[ext_resource type="PackedScene" uid="uid://ct4g7c8aqeeg7" path="res://stone_hit_effect.tscn" id="8_eh73b"]
-[ext_resource type="PackedScene" uid="uid://c14g3ii2cj5e1" path="res://bleeding_effect.tscn" id="9_53i41"]
+[ext_resource type="PackedScene" uid="uid://bb7hpl0e7ngjd" path="res://bullet_scene.tscn" id="2_t3wyc"]
 [ext_resource type="Texture2D" uid="uid://bkc4jjjyg3tm6" path="res://Resources/explosion_sprite.png" id="10_5hacc"]
 [ext_resource type="AudioStream" uid="uid://uaq213iq63xk" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/explosions/explosion_1.mp3" id="11_dhm8k"]
 [ext_resource type="Script" path="res://Explosion.gd" id="12_ykec0"]
@@ -243,21 +236,8 @@ point_count = 2
 
 [node name="BulletFirer" type="Node3D" parent="."]
 script = ExtResource("1_0ual5")
-speed = 250.0
-speed_variation = 0.0
-speed_minimum = 20.0
-range = 20.0
-range_variation = 10.0
-stability = 0.4
+bullet_scene = ExtResource("2_t3wyc")
 count = 20
-bullet_collision_mask = 5
-bullet_trailer_scene = ExtResource("2_r74a1")
-material_hit_effects = {
-ExtResource("3_5ks35"): ExtResource("4_xf0ic"),
-ExtResource("5_x4w5q"): ExtResource("6_kw3k1"),
-ExtResource("7_ng06g"): ExtResource("8_eh73b")
-}
-apply_effects = Array[PackedScene]([ExtResource("9_53i41")])
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 cast_shadow = 0

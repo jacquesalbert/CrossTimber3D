@@ -76,7 +76,7 @@ func register_instance(instance:ToolInstance):
 	#tool.attach_model(self)
 	#instance.cover_exceptions = cover_exceptions.duplicate()
 	instance.fired.connect(on_tool_fired)
-	instance.character = character
+	instance.set_character(character)
 	instance.on_equip()
 
 func unregister_instance(instance:ToolInstance):
@@ -84,7 +84,7 @@ func unregister_instance(instance:ToolInstance):
 	#instance.cover_exceptions = []
 	#tool.detach_model()
 	instance.fired.disconnect(on_tool_fired)
-	instance.character = null
+	instance.set_character(null)
 	instance.on_unequip()
 
 func on_tool_fired():

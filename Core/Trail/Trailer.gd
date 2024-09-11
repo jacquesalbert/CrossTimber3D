@@ -44,7 +44,12 @@ func create_trail():
 	
 func enable():
 	trailing = true
-	add_current_point()
+	if is_inside_tree():
+		add_current_point()
+
+func _enter_tree() -> void:
+	if trailing:
+		add_current_point()
 
 func disable():
 	if trailing:
