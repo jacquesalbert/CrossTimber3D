@@ -199,6 +199,7 @@ target = NodePath("../Character")
 [node name="Camera3D" type="Camera3D" parent="CameraMount"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 50, 0)
 attributes = SubResource("CameraAttributesPractical_xi2yg")
+projection = 1
 current = true
 fov = 25.0
 size = 30.0
@@ -215,6 +216,8 @@ quantity = 200
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.76483, 0, 0)
 
 [node name="Character" parent="." instance=ExtResource("2_0tjcj")]
+mass = 75.0
+walk_stride = 0.4
 
 [node name="PlayerController" type="Node3D" parent="Character" node_paths=PackedStringArray("camera")]
 script = ExtResource("3_670ss")
@@ -238,81 +241,133 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4401, 0, 0.984223)
 
 [node name="Character6" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94888, 0, 0)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character2" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.216819, 0, 3.40533)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character3" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34911, 0, 6.60724)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character4" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.86595, 0, 7.26389)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character5" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55695, 0, 2.88446)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character7" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.89, 9.53674e-07, -1.06769)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character8" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.158, 9.53674e-07, 2.33764)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character9" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.592, 9.53674e-07, 5.53955)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character10" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.07518, 9.53674e-07, 6.19621)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character11" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4981, 9.53674e-07, 1.81678)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character12" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4347, 9.53674e-07, -0.479549)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character13" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7026, 9.53674e-07, 2.92578)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character14" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1367, 9.53674e-07, 6.12769)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character15" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6198, 9.53674e-07, 6.78435)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character17" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3904, 9.53674e-07, -0.101094)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character18" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6584, 9.53674e-07, 3.30423)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character19" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0925, 9.53674e-07, 6.50615)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character20" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5756, 9.53674e-07, 7.1628)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character21" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.9985, 9.53674e-07, 2.78337)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character22" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6138, 9.53674e-07, 1.33041)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character23" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8817, 9.53674e-07, 4.73574)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character24" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3158, 9.53674e-07, 7.93765)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character25" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7989, 9.53674e-07, 8.5943)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character26" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2219, 9.53674e-07, 4.21488)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character16" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0427, 9.53674e-07, 2.40492)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="Character" parent="Node" instance=ExtResource("2_0tjcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.70652, 0, 1.59147)
+mass = 75.0
+walk_stride = 0.4
 
 [node name="TestShooter" type="Node3D" parent="."]
 process_mode = 4

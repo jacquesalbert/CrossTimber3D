@@ -1,6 +1,6 @@
 class_name Character
 extends CharacterBody3D
-const STUN_TIME : float = 0.1
+#const STUN_TIME : float = 0.1
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -52,7 +52,7 @@ var _current_traits: Array[Trait]
 var _run_energy_debt : float
 var _exhausted_effect : Effect
 var _traction : float = 1.0
-var _stun_timer : Timer
+@onready var stun_timer : Timer = $StunTimer
 #var _current_surface : NodeMaterial:
 	#set(value):
 		#if _current_surface != value:
@@ -168,7 +168,9 @@ func _ready():
 	set_active()
 
 func _on_hitbox_hit(amount:int, hit_by:Node):
-	request_state = State.STUN
+	if state == State.ACTIVE and request_state != State.GIBBED and request_state != State.INACTIVE:
+		stun_timer.wait_time = -amount * 0.01
+		request_state = State.STUN
 	#bleeder.rotation.y = (randf()-.5) * TAU
 	#bleeder.count = abs(amount) * 10
 	#bleeder.spawn()
@@ -251,21 +253,19 @@ func set_stun():
 		controller.trigger_equipment_off.disconnect(on_controls_trigger_equipment_off)
 		controller.trigger_equipment_on.disconnect(on_controls_trigger_equipment_on)
 		controller.interact.disconnect(on_controls_interact)
-	if not is_instance_valid(_stun_timer) or not _stun_timer.is_inside_tree():
-		_stun_timer = Timer.new()
-		_stun_timer.one_shot = true
-		_stun_timer.wait_time = STUN_TIME
-		add_child(_stun_timer)
-	_stun_timer.timeout.connect(_on_stun_timeout)
-	_stun_timer.start()
+	stun_timer.timeout.connect(_on_stun_timeout)
+	stun_timer.start()
 
 
 func _on_stun_timeout():
-	_stun_timer.timeout.disconnect(_on_stun_timeout)
+	stun_timer.timeout.disconnect(_on_stun_timeout)
 	if health.value > 0:
 		request_state = State.ACTIVE
 	else:
-		request_state = State.INACTIVE
+		if health.value > health.max_value * 0.5:
+			request_state = State.INACTIVE
+		else:
+			request_state = State.GIBBED
 
 func _physics_process(delta):
 	# enforce 2D play area

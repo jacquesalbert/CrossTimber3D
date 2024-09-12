@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://y2763ntb71tf"]
+[gd_scene load_steps=85 format=3 uid="uid://y2763ntb71tf"]
 
 [ext_resource type="Script" path="res://Core/Character/Character.gd" id="1_aywxf"]
 [ext_resource type="PackedScene" uid="uid://bmhp7gx70w6va" path="res://exhaustion_effect.tscn" id="2_iu6pc"]
@@ -20,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://prt31uvinqvw" path="res://Resources/Gibs/gib_scene.tscn" id="19_fgme8"]
 [ext_resource type="Script" path="res://Core/Character/CharacterGraphics.gd" id="19_v78eu"]
 [ext_resource type="Texture2D" uid="uid://cnpcq3lofoufx" path="res://Resources/person-24.png" id="21_ogfc6"]
+[ext_resource type="Texture2D" uid="uid://cxft0jyo7ovp5" path="res://Resources/person-madmax-24.png" id="21_xgih6"]
+[ext_resource type="Script" path="res://Core/MatchFrames.gd" id="22_hdlvn"]
 [ext_resource type="AudioStream" uid="uid://ddjmcor7tdrxj" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_01.wav" id="22_mh0s3"]
 [ext_resource type="AudioStream" uid="uid://batg3v8qmqxll" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_02.wav" id="23_17km5"]
 [ext_resource type="AudioStream" uid="uid://jguf2fv7mb2b" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Gravel/Footsteps_Gravel_Walk/Footsteps_Gravel_Walk_03.wav" id="24_5ke5j"]
@@ -765,6 +767,19 @@ hframes = 20
 vframes = 2
 frame = 28
 
+[node name="UpperBodySprite2" type="Sprite3D" parent="CharacterGraphics/UpperBodySprite"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+pixel_size = 0.05
+axis = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("21_xgih6")
+hframes = 20
+vframes = 2
+frame = 31
+script = ExtResource("22_hdlvn")
+
 [node name="LowerBodySprite" type="Sprite3D" parent="CharacterGraphics"]
 transform = Transform3D(-3.61999e-06, 0, -1, 0, 1, 0, 1, 0, -3.61999e-06, 0, 0.816528, 0)
 pixel_size = 0.05
@@ -776,6 +791,19 @@ texture = ExtResource("21_ogfc6")
 hframes = 20
 vframes = 2
 frame = 8
+
+[node name="LowerBodySprite2" type="Sprite3D" parent="CharacterGraphics/LowerBodySprite"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050472, 0)
+pixel_size = 0.05
+axis = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("21_xgih6")
+hframes = 20
+vframes = 2
+frame = 8
+script = ExtResource("22_hdlvn")
 
 [node name="FootstepAudioPlayer" type="AudioStreamPlayer3D" parent="CharacterGraphics"]
 stream = SubResource("AudioStreamRandomizer_ftyk1")
@@ -820,6 +848,9 @@ script = ExtResource("41_eid74")
 [node name="Printer_R" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0, 0)
 script = ExtResource("41_eid74")
+
+[node name="StunTimer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="was_hit" from="Hitbox" to="Health" method="modify"]
 [connection signal="was_hit" from="DeadHitbox" to="Health" method="modify"]
