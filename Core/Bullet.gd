@@ -58,7 +58,9 @@ func set_next_target_position(delta:float):
 	total_travelled += travel.length()
 	if total_travelled > _range:
 		var excess_travel := total_travelled - _range
-		travel = _local_velocity * (travel.length() - excess_travel)  * delta
+		total_travelled -= excess_travel
+		travel -= _local_velocity.normalized() * excess_travel
+		#travel = _local_velocity.normalized() * (travel.length() - excess_travel)
 	target_position = travel
 
 func _physics_process(delta):
@@ -67,7 +69,7 @@ func _physics_process(delta):
 	# first see if we have collided with anything
 	var stop : bool = false
 	var frame_travel_finished := false
-	var end_position : Vector3 = position + target_position
+	var end_position : Vector3 = position + global_basis * target_position
 	var frame_exceptions : Array[CollisionObject3D]
 	while not frame_travel_finished:
 		if is_colliding():
@@ -130,6 +132,7 @@ func _physics_process(delta):
 	
 	if total_travelled >= range:
 		var excess_travel := total_travelled - range
+		end_position -= _local_velocity.normalized() * excess_travel
 		stop = true
 	
 	if stop:
@@ -141,7 +144,8 @@ func _physics_process(delta):
 	# if we didn't hit anything, advance our position. Be careful to check that we don't extend the ray further than the total distance
 	last_pos = position
 	position += global_basis * target_position 
-	print("set tumble")
-	#var tumble_angle : float= _noise.get_noise_2dv(global_position)*PI * (1.0 - stability) * 10 * delta
-	#direction = direction.rotated(tumble_angle)
+	
+	_noise.seed = randi()
+	var tumble_angle : float= _noise.get_noise_3dv(global_position)*PI * (1.0 - stability) * 10 * delta
+	rotate(Vector3.UP,tumble_angle)
 	set_next_target_position(delta)

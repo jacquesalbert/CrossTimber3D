@@ -26,7 +26,6 @@ enum ToolType {
 		update_sprite()
 @export var ground_material_footstep_streams : Dictionary
 @export var gib_scene :PackedScene
-@export var gib_textures :Array[Texture2D]
 
 #var sprite_texture : Texture2D
 
@@ -155,23 +154,22 @@ func set_palettes(shader_mat:ShaderMaterial):
 func gib():
 	upper_body.hide()
 	lower_body.hide()
-	for i in range(10):
-		#print("gib")
-		var gib_instance : SimpleProjectile= gib_scene.instantiate()
-		var sprite := gib_instance.get_node("Sprite3D")
-		sprite.texture = gib_textures.pick_random()
-		#set_palettes(sprite.material)
-		#gib_instance.global_rotation = randf() * TAU
-		#gib_instance.angular_speed = randf() * 5.0
-		#gib_instance.speed = randf_range(50,100)
-		#gib_instance.target = global_position + Vector2.RIGHT.rotated(randf()*TAU) * randf() * 32.0
-		
-		gib_instance.position = global_position + Vector3.UP * 2
-		gib_instance.rotation = Vector3(0,randf(),0)*TAU
-		gib_instance.angular_velocity = randf() * 10
-		gib_instance.velocity = Vector3.UP*1+Vector3.FORWARD.rotated(Vector3.UP,randf()*TAU)*randf_range(0,2)
-		LevelManager.spawn_in_level(gib_instance)
-		#gib_instance.apply_impulse(*randf_range(1,5),Vector3.FORWARD.rotated(Vector3.UP,randf()*TAU))
+	#print("gib")
+	var gib_instance := gib_scene.instantiate()
+	#var sprite := gib_instance.get_node("Sprite3D")
+	#sprite.texture = gib_textures.pick_random()
+	#set_palettes(sprite.material)
+	#gib_instance.global_rotation = randf() * TAU
+	#gib_instance.angular_speed = randf() * 5.0
+	#gib_instance.speed = randf_range(50,100)
+	#gib_instance.target = global_position + Vector2.RIGHT.rotated(randf()*TAU) * randf() * 32.0
+	
+	gib_instance.position = global_position
+	gib_instance.rotation.y = global_rotation.y
+	#gib_instance.angular_velocity = Vector3(randf() * 10,randf() * 10,randf() * 10)
+	#gib_instance.linear_velocity = Vector3.UP*1+Vector3.FORWARD.rotated(Vector3.UP,randf()*TAU)*randf_range(0,2)
+	LevelManager.spawn_in_level(gib_instance)
+	#gib_instance.apply_impulse(*randf_range(1,5),Vector3.FORWARD.rotated(Vector3.UP,randf()*TAU))
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():

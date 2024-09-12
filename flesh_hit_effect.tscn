@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://0p2al2ahesmc"]
+[gd_scene load_steps=10 format=3 uid="uid://0p2al2ahesmc"]
 
 [ext_resource type="AudioStream" uid="uid://beyagoj26igci" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/physics/body/physics_body_impact_bullet_1.mp3" id="1_qokp7"]
 [ext_resource type="AudioStream" uid="uid://c0u1uligfw3h6" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/physics/body/physics_body_impact_bullet_2.mp3" id="2_bathn"]
 [ext_resource type="AudioStream" uid="uid://ff6hfte17c46" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/physics/body/physics_body_impact_bullet_3.mp3" id="3_uqis1"]
 [ext_resource type="Texture2D" uid="uid://2vrruqh358km" path="res://Resources/Free/Part 8/378.png" id="4_pxl7a"]
-[ext_resource type="Script" path="res://Core/Shadow.gd" id="5_aaoy0"]
 [ext_resource type="Script" path="res://Bleeder.gd" id="6_j275c"]
 
 [sub_resource type="Animation" id="Animation_tkf3l"]
@@ -102,7 +101,6 @@ autoplay = true
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.448577, 0, 1.25)
-cast_shadow = 0
 modulate = Color(1, 0, 0, 1)
 pixel_size = 0.05
 axis = 1
@@ -113,19 +111,6 @@ texture = ExtResource("4_pxl7a")
 hframes = 8
 vframes = 9
 frame = 63
-
-[node name="Shadow" type="Sprite3D" parent="Sprite3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.1, 1)
-transparency = 0.5
-modulate = Color(0, 0, 0, 1)
-pixel_size = 0.05
-axis = 1
-texture = ExtResource("4_pxl7a")
-hframes = 8
-vframes = 9
-frame = 64
-script = ExtResource("5_aaoy0")
-offset_amount = 0.25
 
 [node name="Bleeder" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)

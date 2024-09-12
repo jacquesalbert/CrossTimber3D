@@ -2,7 +2,9 @@ extends ToolInstance
 
 @export var projectile_scene : PackedScene
 
+@export_flags_3d_physics var projectile_mask : int = 1
 @export_range(0.0,TAU) var angle_spread : float = 0.0
+#@export var speed : float = 10.0
 
 @export var count : int = 1
 
@@ -33,11 +35,13 @@ func attack():
 
 
 func throw_projectile():
-	var target_dir := global_basis * Vector3((randf() - 0.5)*angle_spread,PI/4,1.0).normalized()
-
+	var g := 9.8
+	var num := target_distance*target_distance*g
+	var denom := target_distance + 2 * global_position.y
+	var throw_velocity := sqrt(num/denom)
 	var projectile : SimpleProjectile= projectile_scene.instantiate()
 	projectile.position = global_position
-	projectile.velocity = target_dir * 10
+	projectile.velocity = global_basis.z.rotated(-global_basis.x,PI/4) * throw_velocity
 	LevelManager.spawn_in_level(projectile)
 	
 	

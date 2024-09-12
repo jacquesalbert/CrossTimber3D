@@ -8,7 +8,6 @@
 [node name="ThrowableToolInstance" type="Node3D" node_paths=PackedStringArray("streamplayer")]
 script = ExtResource("1_wuyke")
 projectile_scene = ExtResource("2_ucu7o")
-angle_spread = 0.05
 equip_stream = ExtResource("13_qevtg")
 streamplayer = NodePath("AudioStreamPlayer3D")
 

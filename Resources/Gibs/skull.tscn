@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4bc6fs63jlv3"]
+
+[ext_resource type="Texture2D" uid="uid://cjg335boemge7" path="res://Resources/skull.png" id="1_sl303"]
+[ext_resource type="Script" path="res://BillboardSprite.gd" id="2_4a2w1"]
+[ext_resource type="Script" path="res://Bleeder.gd" id="3_0hosv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w5b3d"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4h40r"]
+albedo_color = Color(0.392157, 0, 0, 1)
+albedo_texture_force_srgb = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_lnbxo"]
+material = SubResource("StandardMaterial3D_4h40r")
+size = Vector2(0.05, 0.05)
+orientation = 1
+
+[node name="Skull" type="RigidBody3D"]
+collision_layer = 32
+collision_mask = 163
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0)
+shape = SubResource("BoxShape3D_w5b3d")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0237682, 0)
+pixel_size = 0.05
+shaded = true
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_sl303")
+script = ExtResource("2_4a2w1")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+amount = 100
+mesh = SubResource("QuadMesh_lnbxo")
+emission_shape = 1
+emission_sphere_radius = 0.15
+
+[node name="Bleeder" type="Node3D" parent="."]
+script = ExtResource("3_0hosv")
+count = 10
+spread = 0.01
+squirt_velocity = 1.0
+color = Color(0.526793, 4.99357e-07, 9.62615e-08, 1)
+chunkiness = 0.25
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="CPUParticles3D" method="queue_free"]
+[connection signal="timeout" from="Timer" to="Bleeder" method="queue_free"]
+[connection signal="timeout" from="Timer2" to="Bleeder" method="spawn"]

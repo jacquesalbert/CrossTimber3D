@@ -88,7 +88,8 @@ func apply_controls(delta:float, aim_only:bool=false):
 		var look_at_rotation_y := -aim_vector_flattened.signed_angle_to(Vector3.MODEL_FRONT,Vector3.UP)
 		global_rotation.y = rotate_toward(global_rotation.y,look_at_rotation_y,turn_speed*delta)
 		var move_speed :float = speed * run_modifier if (running and can_run) else speed
-		#var max_speed := speed if running and energized else speed * walk_modifier
+		tool_user.target_distance = aim_vector_flattened.length()
+		equipment_user.target_distance = aim_vector_flattened.length()
 		running = controller.run
 		_local_target_velocity_2d = controller.movement * move_speed
 	

@@ -1,7 +1,7 @@
 class_name ToolInstance
 extends Node3D
 
-#var target_distance:float
+var target_distance:float
 @export var equip_stream : AudioStream
 @export var streamplayer : AudioStreamPlayer3D
 
@@ -11,6 +11,9 @@ var character:Character
 #var cover_exceptions : Array[CollisionObject2D]
 
 signal fired
+
+func set_target_distance(distance:float):
+	target_distance = distance
 
 func set_character(character:Character):
 	self.character=character

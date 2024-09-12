@@ -15,6 +15,12 @@ extends Node3D
 		if previous_tool != new_tool:
 			current_tool = new_tool
 
+var target_distance : float:
+	set(value):
+		target_distance = value
+		if is_instance_valid(_current_tool_instance):
+			_current_tool_instance.target_distance = target_distance
+
 var triggered : bool
 
 var _noise_offset : Vector3
@@ -75,6 +81,7 @@ func get_current_tool_type()->Tool.Type:
 func register_instance(instance:ToolInstance):
 	#tool.attach_model(self)
 	#instance.cover_exceptions = cover_exceptions.duplicate()
+	instance.target_distance = target_distance
 	instance.fired.connect(on_tool_fired)
 	instance.set_character(character)
 	instance.on_equip()

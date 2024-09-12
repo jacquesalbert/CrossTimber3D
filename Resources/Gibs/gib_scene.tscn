@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://prt31uvinqvw"]
+
+[ext_resource type="Texture2D" uid="uid://cnpcq3lofoufx" path="res://Resources/person-24.png" id="1_5uxxl"]
+[ext_resource type="PackedScene" uid="uid://c4bc6fs63jlv3" path="res://Resources/Gibs/skull.tscn" id="2_841rj"]
+[ext_resource type="PackedScene" uid="uid://bsgfi25xdqyax" path="res://Resources/Gibs/bone.tscn" id="3_5ttrn"]
+[ext_resource type="PackedScene" uid="uid://bahkooggplao5" path="res://Resources/Gibs/gib_1.tscn" id="4_14anv"]
+[ext_resource type="PackedScene" uid="uid://nypxwsol2yny" path="res://Resources/Gibs/gib_2.tscn" id="5_qhjy8"]
+[ext_resource type="PackedScene" uid="uid://c8jwbdour3ltr" path="res://Resources/Gibs/gib_3.tscn" id="6_8agyd"]
+[ext_resource type="PackedScene" uid="uid://cw3a3dnty4msv" path="res://Resources/Gibs/gib_4.tscn" id="7_x1dbr"]
+[ext_resource type="PackedScene" uid="uid://cc0mkwks4sc7l" path="res://Resources/Gibs/gib_5.tscn" id="8_ft6o6"]
+
+[node name="GibScene" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-0.684674, 0.728849, 0, -0.728849, -0.684674, 0, 0, 0, 1, 0, 0, 0)
+visible = false
+pixel_size = 0.05
+texture = ExtResource("1_5uxxl")
+hframes = 20
+vframes = 2
+frame = 17
+
+[node name="Skull" parent="." instance=ExtResource("2_841rj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.890074, 0)
+
+[node name="Bone" parent="." instance=ExtResource("3_5ttrn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136962, 0.779173, 0)
+
+[node name="Bone2" parent="." instance=ExtResource("3_5ttrn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25467, 0.781239, 0)
+
+[node name="Bone3" parent="." instance=ExtResource("3_5ttrn")]
+transform = Transform3D(0.338377, -0.941011, 0, 0.941011, 0.338377, 0, 0, 0, 1, -0.122984, 0.445744, 0)
+
+[node name="Bone4" parent="." instance=ExtResource("3_5ttrn")]
+transform = Transform3D(0.212979, 0.977057, 0, -0.977057, 0.212979, 0, 0, 0, 1, 0.0591044, 0.450602, 0)
+
+[node name="Gib" parent="." instance=ExtResource("4_14anv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119057, 0.69019, -0.0536689)
+
+[node name="Gib2" parent="." instance=ExtResource("5_qhjy8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0388539, 0.690594, 0.0658045)
+
+[node name="Gib3" parent="." instance=ExtResource("6_8agyd")]
+transform = Transform3D(0.291303, -0.956631, 0, 0.956631, 0.291303, 0, 0, 0, 1, -0.122562, 0.530304, -0.0597189)
+
+[node name="Gib4" parent="." instance=ExtResource("7_x1dbr")]
+transform = Transform3D(0.701855, -0.71232, 0, 0.71232, 0.701855, 0, 0, 0, 1, 0.0176674, 0.535508, 0.0730876)
+
+[node name="Gib5" parent="." instance=ExtResource("8_ft6o6")]
+transform = Transform3D(-0.785706, 0.6186, 0, -0.6186, -0.785706, 0, 0, 0, 1, 0.0118495, 0.665609, 0.0316982)

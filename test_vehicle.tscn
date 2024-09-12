@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d17hiwv22avsm"]
+[gd_scene load_steps=23 format=3 uid="uid://d17hiwv22avsm"]
 
 [ext_resource type="Script" path="res://Core/Vehicle/Vehicle.gd" id="1_ho58b"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="2_7n5wi"]
@@ -17,7 +17,6 @@
 [ext_resource type="Script" path="res://Core/Vehicle/DismountInteraction.gd" id="12_4h4ko"]
 [ext_resource type="Script" path="res://Core/NodeMaterial/MaterialNode.gd" id="12_lslb7"]
 [ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="13_dug1e"]
-[ext_resource type="Script" path="res://Core/Shadow.gd" id="15_jd630"]
 
 [sub_resource type="Curve" id="Curve_gryd5"]
 _data = [Vector2(0, 0.515648), 0.0, 0.0, 0, 0, Vector2(0.258182, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -4.29303, 0.0, 0, 0]
@@ -52,7 +51,7 @@ ExtResource("6_ufth8"): ExtResource("7_2gqbp")
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_snmgp")
 
 [node name="MetalMaterial" type="Node" parent="CollisionShape3D"]
@@ -137,25 +136,12 @@ text = "Dismount"
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.9, 0)
-cast_shadow = 0
 pixel_size = 0.05
 axis = 1
 shaded = true
 alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("10_wth24")
-
-[node name="Sprite3D" type="Sprite3D" parent="Sprite3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.37, 0.2)
-transparency = 0.5
-cast_shadow = 0
-modulate = Color(0, 0, 0, 1)
-pixel_size = 0.05
-axis = 1
-texture_filter = 0
-texture = ExtResource("10_wth24")
-script = ExtResource("15_jd630")
-offset_amount = 0.25
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

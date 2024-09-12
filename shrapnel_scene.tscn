@@ -1,0 +1,59 @@
+[gd_scene load_steps=14 format=3 uid="uid://bkvlob2lf1v2o"]
+
+[ext_resource type="Script" path="res://Core/Bullet.gd" id="1_53fn7"]
+[ext_resource type="PackedScene" uid="uid://c14g3ii2cj5e1" path="res://bleeding_effect.tscn" id="2_xxpg7"]
+[ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="3_dr7d3"]
+[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="4_wrj2a"]
+[ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="5_e1rww"]
+[ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="6_c4pr4"]
+[ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="7_j036k"]
+[ext_resource type="PackedScene" uid="uid://ct4g7c8aqeeg7" path="res://stone_hit_effect.tscn" id="8_8gax7"]
+[ext_resource type="Script" path="res://Core/Trail/Trailer.gd" id="9_qegpq"]
+[ext_resource type="AudioStream" uid="uid://bpa5tpaeypm0h" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Vehicle_Essentials_NOX_SOUND/Vehicle_Car/Vehicle_Car_Engine_2000_RPM_Rear_Exterior_Loop_Mono.wav" id="10_taau3"]
+
+[sub_resource type="Gradient" id="Gradient_ujjrs"]
+offsets = PackedFloat32Array(0, 0.155015, 1)
+colors = PackedColorArray(1, 1, 0, 1, 1, 0.54902, 0, 1, 1, 0, 0, 0)
+
+[sub_resource type="Curve" id="Curve_8yjg8"]
+_data = [Vector2(0.0112045, 0), 0.0, 21.6804, 0, 0, Vector2(0.140056, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fnstp"]
+transparency = 1
+blend_mode = 1
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+
+[node name="Shrapnel" type="RayCast3D"]
+collision_mask = 5
+script = ExtResource("1_53fn7")
+speed = 100.0
+speed_variation = 50.0
+range = 20.0
+range_variation = 20.0
+range_minimum = 1.0
+stability = 0.1
+apply_effects = Array[PackedScene]([ExtResource("2_xxpg7")])
+material_hit_effects = {
+ExtResource("3_dr7d3"): ExtResource("4_wrj2a"),
+ExtResource("5_e1rww"): ExtResource("6_c4pr4"),
+ExtResource("7_j036k"): ExtResource("8_8gax7")
+}
+
+[node name="Trailer" type="Node3D" parent="."]
+script = ExtResource("9_qegpq")
+lifetime = 0.06
+width = 0.05
+gradient = SubResource("Gradient_ujjrs")
+width_curve = SubResource("Curve_8yjg8")
+material = SubResource("StandardMaterial3D_fnstp")
+trailing = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Trailer"]
+stream = ExtResource("10_taau3")
+attenuation_model = 1
+volume_db = 3.0
+autoplay = true
+max_distance = 20.0
+doppler_tracking = 2

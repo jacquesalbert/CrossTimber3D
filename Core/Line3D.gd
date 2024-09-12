@@ -1,8 +1,11 @@
 class_name Line3D
 extends MeshInstance3D
 
-@export var texture : Texture2D
+#@export var texture : Texture2D
 @export var two_sided : bool
+@export var keep_aspect : bool
+#@export var emission_texture : Texture2D
+
 
 var _points : Array[Vector3]
 var _normals : Array[Vector3]
@@ -11,17 +14,21 @@ var _colors : Array[Color]
 var _uv_ts : Array[float]
 
 var _rebuild_queued : bool
-var _material : StandardMaterial3D
+var material : Material
 
 func _ready() -> void:
 	_rebuild_queued = true
-	_material = StandardMaterial3D.new()
-	_material.texture_repeat = true
-	_material.albedo_texture = texture
-	_material.vertex_color_is_srgb = true
-	_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
-	_material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
-	_material.vertex_color_use_as_albedo = true
+	#_material = StandardMaterial3D.new()
+	#_material.texture_repeat = true
+	#_material.albedo_texture = texture
+	#_material.vertex_color_is_srgb = true
+	#_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	#_material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
+	#_material.emission_enabled = is_instance_valid(emission_texture)
+	#_material.emission = Color.RED
+	#_material.emission_texture = emission_texture
+	#_material.emission_energy_multiplier = 5.0
+	#_material.vertex_color_use_as_albedo = true
 
 func clear_points():
 	_points.clear()
@@ -63,7 +70,7 @@ func build_mesh_side(reverse:bool=false):
 	mesh.surface_begin(Mesh.PRIMITIVE_TRIANGLE_STRIP)
 	
 	var side_modifier := -1 if reverse else 1
-	var texture_width_ratio :float = float(texture.get_height()) / texture.get_width() if  is_instance_valid(texture) else 1.0
+	var texture_width_ratio :float = float(material.albedo_texture.get_height()) / material.albedo_texture.get_width() if is_instance_valid(material.albedo_texture) else 1.0
 	for p in range(_points.size()):
 		#progress += (_points[p] - _points[p-1]).length() if p > 0 else 0.0
 		var point_center := _points[p]
@@ -78,7 +85,7 @@ func build_mesh_side(reverse:bool=false):
 		var point_a := point_center + side_modifier * (cross * half_width)
 		var point_b := point_center - side_modifier * (cross * half_width)
 		
-		var texture_width_scale : float = texture_width_ratio/point_width
+		var texture_width_scale : float = texture_width_ratio/point_width if keep_aspect else 1.0
 		
 		mesh.surface_set_normal(point_normal)
 		mesh.surface_set_uv(Vector2(point_t*texture_width_scale, 1))
@@ -92,7 +99,7 @@ func build_mesh_side(reverse:bool=false):
 
 	# End drawing.
 	mesh.surface_end()
-	mesh.surface_set_material(reverse,_material)
+	mesh.surface_set_material(reverse,material)
 
 func get_point_count()->int:
 	return _points.size()

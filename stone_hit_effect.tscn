@@ -79,7 +79,6 @@ stream = SubResource("AudioStreamRandomizer_3upg3")
 autoplay = true
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-cast_shadow = 0
 pixel_size = 0.05
 axis = 1
 shaded = true
