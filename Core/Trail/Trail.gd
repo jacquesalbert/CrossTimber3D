@@ -55,7 +55,7 @@ func update_points(global_point:Vector3, normal:Vector3=Vector3.UP):
 			var interp_seg_step : float = max_segment_length / last_segment_length
 			
 			for i in range(segment_division_floor):
-				var interp_step := interp_seg_step*i
+				var interp_step := interp_seg_step*(i+1)
 				var interp_point := last_position.lerp(new_point,interp_step)
 				var interp_age :float= lerp(last_age,0.0,interp_step)
 				var sample_offset :float= clampf(interp_age/hot_time,0.0,1.0)

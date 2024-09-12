@@ -22,6 +22,7 @@ var controller : Controller
 #@onready var bleeder : Decaler = $BloodDecaler
 #@onready var small_bleeder : Decaler = $SmallBloodDecaler
 @onready var hitbox : Hitbox = $Hitbox
+@onready var dead_hitbox : Hitbox = $DeadHitbox
 @onready var attributes : EntityAttributeHandler = $EntityAttributeHandler
 #@onready var cover_detector : CoverDetector = $CoverDetector
 #@onready var tracker : TrackPrinter = $Tracker
@@ -37,7 +38,8 @@ enum State {
 	DRIVER_MOUNTED,
 	MOUNTED,
 	STUN,
-	INACTIVE
+	INACTIVE,
+	GIBBED
 }
 
 var state : State
@@ -208,6 +210,8 @@ func _process(delta):
 				set_stun()
 			State.INACTIVE:
 				set_inactive()
+			State.GIBBED:
+				set_gibbed()
 		request_state = state
 		
 	match state:
@@ -221,6 +225,11 @@ func _process(delta):
 			pass
 		State.INACTIVE:
 			pass
+
+func set_gibbed():
+	set_inactive()
+	state = State.GIBBED
+	graphics.gib()
 
 func set_stun():
 	state = State.STUN
@@ -280,12 +289,13 @@ func _physics_process(delta):
 			pass
 
 func on_health_died(killed_by:Node):
-	request_state = State.INACTIVE
 	drop_all_tools(tool_user)
 	drop_all_tools(equipment_user)
 	drop_all_supplies(inventory)
 	if health.value <= -health.max_value * 0.5:
-		graphics.gib()
+		request_state = State.GIBBED
+	else:
+		request_state = State.INACTIVE
 
 func drop_all_supplies(supplies:Inventory):
 	for item in supplies.get_items():
@@ -310,11 +320,9 @@ func spawn_pickup(pickup:Pickup):
 	pickup.rotation = Vector3(0,randf(),0)*TAU
 
 func on_health_damaged(amount:int, damaged_by:Node):
-	pass
-	#if graphics:
-		#graphics.hurt(amount)
-	#bleeder.queue_decals += max(0,-amount / 10)
-	#small_bleeder.queue_decals += max(0,-amount % 10)
+	if state == State.INACTIVE:
+		if health.value <= -health.max_value * 0.5:
+			request_state = State.GIBBED
 
 func on_tool_changed(from_tool:Tool, to_tool:Tool):
 	if graphics:
@@ -357,6 +365,7 @@ func set_inactive():
 	alive_collision_shape.disabled = true
 	dead_collision_shape.disabled = false
 	hitbox.disable()
+	dead_hitbox.enable()
 	if is_instance_valid(graphics):
 		graphics.stunned = false
 		graphics.alive = false
@@ -389,6 +398,7 @@ func set_active():
 	dead_collision_shape.disabled = true
 	#z_index = 10
 	hitbox.enable()
+	dead_hitbox.disable()
 	supply_area.enable()
 	if is_instance_valid(graphics):
 		graphics.stunned = false
@@ -417,6 +427,7 @@ func set_mounted():
 	dead_collision_shape.disabled = true
 	#z_index = -1
 	hitbox.enable()
+	dead_hitbox.disable()
 	supply_area.disable()
 	if is_instance_valid(graphics):
 		graphics.stunned = false
@@ -438,6 +449,7 @@ func set_driver_mounted():
 	dead_collision_shape.disabled = true
 	#z_index = -1
 	hitbox.enable()
+	dead_hitbox.disable()
 	supply_area.disable()
 	if is_instance_valid(graphics):
 		graphics.stunned = false

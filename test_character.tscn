@@ -672,6 +672,19 @@ shape = SubResource("CylinderShape3D_gsofm")
 script = ExtResource("7_lim1o")
 material = ExtResource("8_yacv2")
 
+[node name="DeadHitbox" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("6_dvorw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeadHitbox"]
+shape = SubResource("CylinderShape3D_greoe")
+
+[node name="FleshMaterial" type="Node" parent="DeadHitbox/CollisionShape3D"]
+script = ExtResource("7_lim1o")
+material = ExtResource("8_yacv2")
+
 [node name="Health" type="Node" parent="."]
 script = ExtResource("7_xe5s5")
 allow_negative = true
@@ -809,5 +822,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0, 0)
 script = ExtResource("41_eid74")
 
 [connection signal="was_hit" from="Hitbox" to="Health" method="modify"]
+[connection signal="was_hit" from="DeadHitbox" to="Health" method="modify"]
 [connection signal="surface_changed" from="SurfaceCast3D" to="MaterialDepositHandler" method="set_base_material"]
 [connection signal="material_changed" from="MaterialDepositHandler" to="." method="_on_surface_changed"]

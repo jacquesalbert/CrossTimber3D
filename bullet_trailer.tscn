@@ -3,32 +3,32 @@
 [ext_resource type="Script" path="res://Core/Trail/Trailer.gd" id="1_rasgo"]
 [ext_resource type="AudioStream" uid="uid://bpa5tpaeypm0h" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Vehicle_Essentials_NOX_SOUND/Vehicle_Car/Vehicle_Car_Engine_2000_RPM_Rear_Exterior_Loop_Mono.wav" id="2_no7vk"]
 
-[sub_resource type="Curve" id="Curve_3wpxj"]
-_data = [Vector2(0, 0), 0.0, 19.1412, 0, 0, Vector2(0.0196078, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 3
+[sub_resource type="Gradient" id="Gradient_v5pkj"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="Gradient" id="Gradient_bvgyx"]
-colors = PackedColorArray(1, 0, 0, 1, 0, 0, 0, 1)
+[sub_resource type="Gradient" id="Gradient_ujjrs"]
+offsets = PackedFloat32Array(0, 0.155015, 1)
+colors = PackedColorArray(1, 1, 0, 1, 1, 0.54902, 0, 1, 1, 0, 0, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_mm5wo"]
-gradient = SubResource("Gradient_bvgyx")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2mnai"]
+gradient = SubResource("Gradient_ujjrs")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cpual"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fnstp"]
 transparency = 1
+blend_mode = 1
 vertex_color_use_as_albedo = true
 vertex_color_is_srgb = true
+albedo_texture = SubResource("GradientTexture1D_2mnai")
 emission_enabled = true
-emission_texture = SubResource("GradientTexture1D_mm5wo")
-texture_filter = 0
+emission_energy_multiplier = 5.0
+emission_texture = SubResource("GradientTexture1D_2mnai")
 
 [node name="Trailer" type="Node3D"]
 script = ExtResource("1_rasgo")
 lifetime = 0.05
 width = 0.05
-color = Color(1, 0, 0, 1)
-width_curve = SubResource("Curve_3wpxj")
-cast_shadow = 1
-material = SubResource("StandardMaterial3D_cpual")
+gradient = SubResource("Gradient_v5pkj")
+material = SubResource("StandardMaterial3D_fnstp")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_no7vk")

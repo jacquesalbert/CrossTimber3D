@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://wyqm77ee568q"]
+[gd_scene load_steps=36 format=3 uid="uid://wyqm77ee568q"]
 
 [ext_resource type="Script" path="res://Core/MatchPosition.gd" id="1_agiep"]
 [ext_resource type="PackedScene" uid="uid://y2763ntb71tf" path="res://test_character.tscn" id="2_0tjcj"]
@@ -25,31 +25,6 @@
 [sub_resource type="Gradient" id="Gradient_w2rni"]
 offsets = PackedFloat32Array(0.199243, 0.225725, 0.255725, 0.281211, 0.301527, 0.721374, 0.738966, 0.751908, 0.779319, 0.807062)
 colors = PackedColorArray(0.381667, 0.3, 1, 1, 0.533333, 0, 1, 1, 1, 0, 0.0166664, 1, 1, 0.65, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.683333, 0, 1, 1, 0, 0.0166664, 1, 0.533333, 0, 1, 1, 0.380392, 0.301961, 1, 1)
-
-[sub_resource type="Gradient" id="Gradient_le2aw"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_rbxwj"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_f2q8u"]
-seamless = true
-color_ramp = SubResource("Gradient_le2aw")
-noise = SubResource("FastNoiseLite_rbxwj")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cskxr"]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
-albedo_color = Color(0.67, 0.611152, 0.5561, 1)
-albedo_texture = SubResource("NoiseTexture2D_f2q8u")
-subsurf_scatter_strength = 0.72
-subsurf_scatter_texture = SubResource("NoiseTexture2D_f2q8u")
-texture_filter = 0
-
-[sub_resource type="QuadMesh" id="QuadMesh_lf2mr"]
-material = SubResource("StandardMaterial3D_cskxr")
-size = Vector2(100, 100)
-orientation = 1
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jpbg3"]
 
@@ -102,6 +77,7 @@ size = Vector3(1, 2.1, 0.1)
 size = Vector3(1, 2.1, 0.1)
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_xi2yg"]
+exposure_multiplier = 0.5
 
 [node name="Node3D" type="Node3D"]
 
@@ -114,12 +90,7 @@ sky_time_gradient = SubResource("Gradient_w2rni")
 night_intensity = 0.1
 paint_map = NodePath("PaintMap")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 55, 0)
-mesh = SubResource("QuadMesh_lf2mr")
-
 [node name="PaintMap" type="Node3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
 script = ExtResource("2_dy1a1")
 texture_size = 1024
 

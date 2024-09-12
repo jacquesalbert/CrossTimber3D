@@ -3,7 +3,7 @@ extends Node3D
 
 @export var min_segment_length : float = .1
 @export var max_segment_length : float = .1
-@export var texture : Texture2D
+#@export var texture : Texture2D
 @export var lifetime : float = 10.0
 @export var normal_direction : Vector3 = Vector3.UP
 @export var local_normal : bool
