@@ -1,26 +1,32 @@
-[gd_scene load_steps=23 format=3 uid="uid://d17hiwv22avsm"]
+[gd_scene load_steps=29 format=3 uid="uid://d17hiwv22avsm"]
 
-[ext_resource type="Script" path="res://Core/Vehicle/Vehicle.gd" id="1_ho58b"]
-[ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="2_7n5wi"]
-[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="3_r6n5c"]
+[ext_resource type="Script" path="res://Core/Vehicle/RigidBodyVehicle.gd" id="1_oq3ro"]
+[ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="2_smd1q"]
+[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="3_vbvi3"]
 [ext_resource type="Script" path="res://Core/Stat.gd" id="4_ocxkf"]
 [ext_resource type="PackedScene" uid="uid://bk0lpn0aayava" path="res://test_wheel.tscn" id="4_r4ysp"]
-[ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="5_whwhk"]
+[ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="5_nqq2f"]
+[ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="6_jspkc"]
 [ext_resource type="Script" path="res://Core/Vehicle/Mount.gd" id="6_l5t2n"]
-[ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="6_ufth8"]
-[ext_resource type="PackedScene" uid="uid://ct4g7c8aqeeg7" path="res://stone_hit_effect.tscn" id="7_2gqbp"]
 [ext_resource type="Script" path="res://Core/Vehicle/VehicleControlMount.gd" id="7_i6lbx"]
+[ext_resource type="PackedScene" uid="uid://ct4g7c8aqeeg7" path="res://stone_hit_effect.tscn" id="7_x1b01"]
 [ext_resource type="Script" path="res://Core/Vehicle/MountInteraction.gd" id="8_t0yfh"]
+[ext_resource type="AudioStream" uid="uid://ixdg6gaa04wg" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Vehicle_Essentials_NOX_SOUND/Vehicle_Car/Vehicle_Car_Start_Engine_Exterior_Mono.wav" id="8_uwhq3"]
 [ext_resource type="Script" path="res://Core/Interaction/InteractionArea.gd" id="8_vohwo"]
+[ext_resource type="AudioStream" uid="uid://d1c6qpcjo84uf" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Vehicle_Essentials_NOX_SOUND/Vehicle_Car/Vehicle_Car_Engine_Idle_Exterior_Loop_Mono_01.wav" id="9_vdvi4"]
+[ext_resource type="AudioStream" uid="uid://cb8os078xe25p" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Vehicle_Essentials_NOX_SOUND/Vehicle_Car/Vehicle_Car_Engine_2000_RPM_Front_Exterior_Loop_Mono.wav" id="10_0rcri"]
 [ext_resource type="Texture2D" uid="uid://dwk6b47x5yyoc" path="res://Resources/muscle_car-24-pirate.png" id="10_wth24"]
 [ext_resource type="Script" path="res://Core/Hitbox.gd" id="11_1towl"]
+[ext_resource type="AudioStream" uid="uid://dd0t7rlivr3y5" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Vehicle_Essentials_NOX_SOUND/Vehicle_Car/Vehicle_Car_Stop_Engine_Exterior_Mono.wav" id="11_k1d3t"]
 [ext_resource type="Script" path="res://Core/Vehicle/DismountInteraction.gd" id="12_4h4ko"]
 [ext_resource type="Script" path="res://Core/NodeMaterial/MaterialNode.gd" id="12_lslb7"]
 [ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="13_dug1e"]
+[ext_resource type="AudioStream" uid="uid://4iuv06hhop4g" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Vehicle_Essentials_NOX_SOUND/Vehicle_Truck/Vehicle_Truck_Back_Door_Closing_Exterior_Mono_01.wav" id="22_lwqr0"]
+[ext_resource type="AudioStream" uid="uid://bpa5tpaeypm0h" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Vehicle_Essentials_NOX_SOUND/Vehicle_Car/Vehicle_Car_Engine_2000_RPM_Rear_Exterior_Loop_Mono.wav" id="22_wm3sl"]
 
-[sub_resource type="Curve" id="Curve_gryd5"]
-_data = [Vector2(0, 0.515648), 0.0, 0.0, 0, 0, Vector2(0.258182, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -4.29303, 0.0, 0, 0]
-point_count = 3
+[sub_resource type="Curve" id="Curve_tqqhj"]
+_data = [Vector2(0, 0.563484), 0.0, 3.82634, 0, 0, Vector2(0.266106, 1), 0.0, 0.0, 0, 0, Vector2(0.694678, 0.844057), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.0825813, 0.0, 0, 0]
+point_count = 4
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_snmgp"]
 size = Vector3(1.75, 1, 4.5)
@@ -34,21 +40,35 @@ size = Vector3(1.5, 1, 4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_gk76p"]
 size = Vector3(1.8, 2, 4.3)
 
-[node name="Vehicle" type="CharacterBody3D" node_paths=PackedStringArray("fuel", "health")]
+[node name="Vehicle" type="RigidBody3D" node_paths=PackedStringArray("fuel", "health")]
 collision_layer = 128
 collision_mask = 129
-script = ExtResource("1_ho58b")
-power_curve = SubResource("Curve_gryd5")
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+mass = 1200.0
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_oq3ro")
+max_drive_traction_accel = 40.0
+max_traction_accel = 60.0
+max_engine_power = 50.0
+power_curve = SubResource("Curve_tqqhj")
 top_speed = 50.0
-handling_speed = 5.0
 rear_drive = true
+rolling_resistance = 0.0
 fuel = NodePath("Fuel")
 health = NodePath("Health")
+gear_scale = 3.0
 material_hit_effects = {
-ExtResource("2_7n5wi"): ExtResource("3_r6n5c"),
-ExtResource("13_dug1e"): ExtResource("5_whwhk"),
-ExtResource("6_ufth8"): ExtResource("7_2gqbp")
+ExtResource("2_smd1q"): ExtResource("3_vbvi3"),
+ExtResource("13_dug1e"): ExtResource("5_nqq2f"),
+ExtResource("6_jspkc"): ExtResource("7_x1b01")
 }
+start_stream = ExtResource("8_uwhq3")
+idle_stream = ExtResource("9_vdvi4")
+drive_stream = ExtResource("10_0rcri")
+stop_stream = ExtResource("11_k1d3t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -173,3 +193,10 @@ light_color = Color(1, 0.780392, 0.596078, 1)
 light_energy = 10.0
 spot_range = 30.0
 spot_angle = 30.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("22_wm3sl")
+doppler_tracking = 2
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("22_lwqr0")

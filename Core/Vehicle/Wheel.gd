@@ -50,6 +50,15 @@ var _current_surface : NodeMaterial:
 #var _deposit_remaining : float = 0.0
 
 
+func is_colliding()->bool:
+	return $SurfaceCast3D.is_colliding()
+
+func get_collision_normal()->Vector3:
+	return $SurfaceCast3D.get_collision_normal()
+
+func get_collision_point()->Vector3:
+	return $SurfaceCast3D.get_collision_point()
+
 func _ready():
 	if is_instance_valid(roost_particles):
 		roost_particles.emitting = false
@@ -126,7 +135,7 @@ func set_stopped():
 	rollstream_player.playing = false
 
 func _physics_process(delta):
-	
+
 	if is_zero_approx(speed):
 		state = State.STOPPED
 	elif abs(drive_spin) > 0.0:
@@ -134,10 +143,10 @@ func _physics_process(delta):
 		if is_instance_valid(roost_particles):
 			roost_particles.direction.z = -sign(drive_spin)
 			roost_particles.initial_velocity_max = abs(drive_spin) * 2.0
-		skidstream_player.volume_db = lerp(-9.0,0.0,drive_spin / 50.)
+		#skidstream_player.volume_db = lerp(-9.0,0.0,drive_spin / 50.)
 	elif traction_slip:
 		state = State.SKIDDING
-		skidstream_player.volume_db = lerp(-18.0,0.0,speed / 50.)
+		#skidstream_player.volume_db = lerp(-18.0,0.0,speed / 50.)
 	else:
 		state = State.ROLLING
-		rollstream_player.volume_db = lerp(-18.0,0.0,speed / 50.)
+		#rollstream_player.volume_db = lerp(-18.0,0.0,speed / 50.)

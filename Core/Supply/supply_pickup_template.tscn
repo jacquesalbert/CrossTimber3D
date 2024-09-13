@@ -9,8 +9,8 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_l0for"]
 
 [node name="SupplyPickup" type="CharacterBody3D" node_paths=PackedStringArray("supply_pickup_area", "stream_player")]
-collision_layer = 32
-collision_mask = 33
+collision_layer = 64
+collision_mask = 65
 script = ExtResource("1_1hbmd")
 item = ExtResource("2_867kb")
 quantity = 5

@@ -1,6 +1,6 @@
 class_name Character
 extends CharacterBody3D
-#const STUN_TIME : float = 0.1
+const GIB_THRESH : float = 2.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -237,7 +237,7 @@ func set_stun():
 	state = State.STUN
 	alive_collision_shape.disabled = true
 	dead_collision_shape.disabled = true
-	hitbox.disable()
+	hitbox.enable()
 	if is_instance_valid(graphics):
 		graphics.stunned = true
 		graphics.alive = true
@@ -262,15 +262,18 @@ func _on_stun_timeout():
 	if health.value > 0:
 		request_state = State.ACTIVE
 	else:
-		if health.value > health.max_value * 0.5:
+		if health.value > get_gib_threshold():
 			request_state = State.INACTIVE
 		else:
 			request_state = State.GIBBED
 
+func get_gib_threshold()->int:
+	return -health.max_value * GIB_THRESH
+
 func _physics_process(delta):
 	# enforce 2D play area
-	position.y = 0
-	var cast_material : NodeMaterial
+	#position.y = 0
+	#var cast_material : NodeMaterial
 	#if ray_cast.is_colliding():
 		##tracker.global_position = ray_cast.get_collision_point()
 		##tracker.normal_direction = ray_cast.get_collision_normal()
@@ -280,19 +283,23 @@ func _physics_process(delta):
 		State.ACTIVE:
 			active_physics_process(delta)
 		State.DRIVER_MOUNTED:
-			pass
+			mounted_physics_process(delta)
 		State.MOUNTED:
-			pass
+			mounted_physics_process(delta)
 		State.STUN:
 			stun_physics_process(delta)
 		State.INACTIVE:
 			pass
 
+func mounted_physics_process(delta:float):
+	if is_instance_valid(current_mount):
+		global_position = current_mount.global_position
+
 func on_health_died(killed_by:Node):
 	drop_all_tools(tool_user)
 	drop_all_tools(equipment_user)
 	drop_all_supplies(inventory)
-	if health.value <= -health.max_value * 0.5:
+	if health.value <= get_gib_threshold():
 		request_state = State.GIBBED
 	else:
 		request_state = State.INACTIVE
@@ -321,7 +328,7 @@ func spawn_pickup(pickup:Pickup):
 
 func on_health_damaged(amount:int, damaged_by:Node):
 	if state == State.INACTIVE:
-		if health.value <= -health.max_value * 0.5:
+		if health.value <= get_gib_threshold():
 			request_state = State.GIBBED
 
 func on_tool_changed(from_tool:Tool, to_tool:Tool):
@@ -513,8 +520,9 @@ func stun_physics_process(delta:float):
 	move_and_slide()
 
 func mount(mount:Mount):
-	reparent(mount)
+	#reparent(mount)
 	interactor.add_interactions(mount.interactions)
+	mount.vehicle.add_collision_exception_with(self)
 	if mount.control:
 		request_state = State.DRIVER_MOUNTED
 	else:
@@ -524,12 +532,17 @@ func mount(mount:Mount):
 
 func dismount(mount:Mount):
 	global_position = mount.dismount_point.global_position
-	reparent(get_tree().root)
+	get_tree().create_timer(.1).timeout.connect(delayed_mount_collision_exception.bind(mount.vehicle))
+	#mount.vehicle.remove_collision_exception_with.bind(self).call_deferred()
+	#reparent(get_tree().root)
 	interactor.remove_interactions(mount.interactions)
 	request_state = State.ACTIVE
 	current_mount = null
 	mount_changed.emit(current_mount)
-	
+
+func delayed_mount_collision_exception(vehicle:RigidBodyVehicle):
+	vehicle.remove_collision_exception_with(self)
+
 func mount_process(delta:float):
 	apply_controls(delta)
 

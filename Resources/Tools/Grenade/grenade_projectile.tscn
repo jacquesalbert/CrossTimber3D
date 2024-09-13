@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1mhr3fyjxsof"]
+
+[ext_resource type="Script" path="res://Resources/Tools/Grenade/ExplodingProjectile.gd" id="1_bly1n"]
+[ext_resource type="Texture2D" uid="uid://d1vxljtkgxfng" path="res://Resources/Tools/Grenade/grenade_projectile.png" id="2_2r4au"]
+[ext_resource type="Script" path="res://Resources/Tools/Grenade/ExplosionSpawner.gd" id="3_udn5j"]
+[ext_resource type="PackedScene" uid="uid://cr4klpdylfgx7" path="res://Resources/Tools/Grenade/grenade_explosion.tscn" id="5_2mcgo"]
+[ext_resource type="AudioStream" uid="uid://dsred5cga2uoa" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/physics/grenade/physics_grenade_bounce.mp3" id="5_lp5tx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_gvufe"]
+radius = 0.15
+
+[node name="GrenadeProjectile" type="CharacterBody3D" node_paths=PackedStringArray("explosion_spawner")]
+collision_layer = 32
+collision_mask = 161
+script = ExtResource("1_bly1n")
+explosion_spawner = NodePath("ExplosionSpawner")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.05
+axis = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_2r4au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_gvufe")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="ExplosionSpawner" type="Node3D" parent="."]
+script = ExtResource("3_udn5j")
+spawn_scene = ExtResource("5_2mcgo")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_lp5tx")
+
+[connection signal="landed" from="." to="AudioStreamPlayer3D" method="play"]
+[connection signal="timeout" from="Timer" to="." method="queue_free"]
+[connection signal="timeout" from="Timer" to="ExplosionSpawner" method="spawn"]

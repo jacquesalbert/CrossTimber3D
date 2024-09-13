@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Tool" load_steps=7 format=3 uid="uid://p3ag336roya0"]
+
+[ext_resource type="AudioStream" uid="uid://re5ysp6ugk8p" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_reload_start.mp3" id="1_msimk"]
+[ext_resource type="Texture2D" uid="uid://rdypfcqai0nd" path="res://Resources/Tools/Auto Pistol/pistol_icon.png" id="2_n45t8"]
+[ext_resource type="PackedScene" uid="uid://dbeve8vxrwtr3" path="res://Resources/Tools/Auto Pistol/auto_pistol_tool.tscn" id="3_kfemc"]
+[ext_resource type="PackedScene" uid="uid://cjn7or7wwklng" path="res://Resources/Tools/Auto Pistol/auto_pistol_pickup_graphics.tscn" id="4_60tqf"]
+[ext_resource type="AudioStream" uid="uid://bv5bb3khdypr2" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_reload_end.mp3" id="5_kq7wc"]
+[ext_resource type="Script" path="res://Core/Tool/Tool.gd" id="6_q7ni5"]
+
+[resource]
+script = ExtResource("6_q7ni5")
+text = "Auto Pistol"
+description = "auto pistol"
+icon = ExtResource("2_n45t8")
+category = 0
+type = 2
+instance = ExtResource("3_kfemc")
+consumable = false
+recoil = 0.0
+has_pickup = true
+pickup_graphics = ExtResource("4_60tqf")
+pickup_sound = ExtResource("5_kq7wc")
+drop_sound = ExtResource("1_msimk")

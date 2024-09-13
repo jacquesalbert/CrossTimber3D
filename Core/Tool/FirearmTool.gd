@@ -8,9 +8,6 @@ extends ToolInstance
 @export var fire_stream : AudioStream
 @export var empty_stream : AudioStream
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
 
 func set_character(character:Character):
 	super.set_character(character)
@@ -25,7 +22,7 @@ func on_unequip():
 	super.on_unequip()
 
 func attack():
-	if not $Timer.is_stopped():
+	if not ready_to_fire:
 		return
 	
 	var fire := true
@@ -51,7 +48,7 @@ func attack():
 	else:
 		streamplayer.stream = empty_stream
 		streamplayer.play()
-	$Timer.start()
+	set_not_ready_to_fire()
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

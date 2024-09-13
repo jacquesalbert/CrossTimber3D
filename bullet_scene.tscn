@@ -13,7 +13,8 @@
 [node name="Bullet" type="RayCast3D"]
 collision_mask = 5
 script = ExtResource("1_ouncg")
-speed = 100.0
+speed = 1000.0
+damage = 50
 apply_effects = Array[PackedScene]([ExtResource("2_aonvo")])
 material_hit_effects = {
 ExtResource("3_8s72e"): ExtResource("4_46ykv"),

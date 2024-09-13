@@ -7,10 +7,11 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_qgou0"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_d8npq"]
+radius = 1.0
 
 [node name="ToolPickup" type="CharacterBody3D" node_paths=PackedStringArray("interaction_area", "interaction", "streamplayer")]
-collision_layer = 32
-collision_mask = 33
+collision_layer = 64
+collision_mask = 65
 script = ExtResource("1_r536c")
 interaction_area = NodePath("InteractionArea")
 interaction = NodePath("InteractionArea/Interaction")

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Tool" load_steps=7 format=3 uid="uid://cdyg1n6sm1je7"]
+
+[ext_resource type="AudioStream" uid="uid://dcvfl73ena5wj" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/physics/grenade/physics_grenade_bounce.mp3" id="1_ptuoi"]
+[ext_resource type="Texture2D" uid="uid://bqjwlmq07jmrj" path="res://Resources/Tools/Grenade/grenade_icon.png" id="2_7u4ne"]
+[ext_resource type="PackedScene" uid="uid://yq57hcr8tpef" path="res://Resources/Tools/Grenade/grenade_tool.tscn" id="3_uqmhs"]
+[ext_resource type="PackedScene" uid="uid://ds0riga0s41bk" path="res://Resources/Tools/Grenade/grenade_pickup_graphics.tscn" id="4_b2hvy"]
+[ext_resource type="AudioStream" uid="uid://bv5bb3khdypr2" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_reload_end.mp3" id="4_gva3m"]
+[ext_resource type="Script" path="res://Core/Tool/Tool.gd" id="5_cwwsv"]
+
+[resource]
+script = ExtResource("5_cwwsv")
+text = "Grenade"
+description = "grenade"
+icon = ExtResource("2_7u4ne")
+category = 1
+type = 4
+instance = ExtResource("3_uqmhs")
+consumable = true
+recoil = 0.0
+has_pickup = true
+pickup_graphics = ExtResource("4_b2hvy")
+pickup_sound = ExtResource("4_gva3m")
+drop_sound = ExtResource("1_ptuoi")

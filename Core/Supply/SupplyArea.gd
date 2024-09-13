@@ -14,6 +14,14 @@ func disable():
 
 func on_area_entered(area:Area3D):
 	if area is SupplyPickupArea:
-		var supply_pickup :SupplyPickupArea = area
-		var added := inventory.add_items(supply_pickup.item,supply_pickup.quantity)
-		supply_pickup.take(added)
+		try_pickup(area)
+
+func check_pickup():
+	for area in get_overlapping_areas():
+		if area is SupplyPickupArea:
+			try_pickup(area)
+
+func try_pickup(area:SupplyPickupArea):
+	var supply_pickup :SupplyPickupArea = area
+	var added := inventory.add_items(supply_pickup.item,supply_pickup.quantity)
+	supply_pickup.take(added)

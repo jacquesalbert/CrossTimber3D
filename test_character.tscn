@@ -44,7 +44,7 @@ radius = 0.3
 radius = 0.25
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_fk3f4"]
-radius = 0.25
+radius = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptjab"]
 
@@ -635,6 +635,9 @@ node_connections = [&"AddUpperLower", 0, &"WeaponTransition", &"AddUpperLower", 
 [node name="Character" type="CharacterBody3D"]
 collision_layer = 2
 collision_mask = 131
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 script = ExtResource("1_aywxf")
 character_body_layer = 2
 exhaustion_effect_scene = ExtResource("2_iu6pc")
@@ -713,6 +716,9 @@ inventory = NodePath("../Inventory")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SupplyArea"]
 shape = SubResource("CylinderShape3D_fk3f4")
+
+[node name="Timer" type="Timer" parent="SupplyArea"]
+autostart = true
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("10_emt75")
@@ -854,5 +860,6 @@ one_shot = true
 
 [connection signal="was_hit" from="Hitbox" to="Health" method="modify"]
 [connection signal="was_hit" from="DeadHitbox" to="Health" method="modify"]
+[connection signal="timeout" from="SupplyArea/Timer" to="SupplyArea" method="check_pickup"]
 [connection signal="surface_changed" from="SurfaceCast3D" to="MaterialDepositHandler" method="set_base_material"]
 [connection signal="material_changed" from="MaterialDepositHandler" to="." method="_on_surface_changed"]

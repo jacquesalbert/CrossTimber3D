@@ -7,13 +7,13 @@ const MS_TO_MPH : float = 2.23694
 @export var fuel_stat_display : StatPanel
 @export var speed_label : Label
 
-var vehicle:Vehicle:
+var vehicle:RigidBodyVehicle:
 	set(value):
 		vehicle = value
 		on_vehicle_changed(vehicle)
 
 
-func on_vehicle_changed(vehicle:Vehicle):
+func on_vehicle_changed(vehicle:RigidBodyVehicle):
 	if is_instance_valid(vehicle):
 		show()
 		health_stat_display.stat = vehicle.health

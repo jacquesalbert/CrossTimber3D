@@ -1,7 +1,7 @@
 class_name Mount
 extends Node3D
 
-@export var vehicle:Vehicle
+@export var vehicle:RigidBodyVehicle
 @export var dismount_point : Node3D
 @export var control : bool
 

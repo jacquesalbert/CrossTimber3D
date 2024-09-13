@@ -4,13 +4,19 @@ extends Node3D
 var target_distance:float
 @export var equip_stream : AudioStream
 @export var streamplayer : AudioStreamPlayer3D
+@export var timer : Timer
 
-var triggered : bool = false
+var ready_to_fire : bool
+var triggered : bool
 
 var character:Character
 #var cover_exceptions : Array[CollisionObject2D]
 
 signal fired
+
+func _ready() -> void:
+	timer.timeout.connect(set_ready_to_fire)
+	set_ready_to_fire()
 
 func set_target_distance(distance:float):
 	target_distance = distance
@@ -24,6 +30,13 @@ func on_equip():
 
 func on_unequip():
 	pass
+
+func set_ready_to_fire():
+	ready_to_fire = true
+
+func set_not_ready_to_fire():
+	ready_to_fire = false
+	timer.start()
 
 func trigger():
 	triggered = true

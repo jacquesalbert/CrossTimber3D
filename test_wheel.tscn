@@ -53,8 +53,11 @@ ExtResource("5_2dv33"): ExtResource("3_ffynl")
 }
 
 [node name="SkidStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_ffynl")
+volume_db = -30.0
 
 [node name="RollStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+volume_db = -30.0
 
 [node name="RoostParticles" type="CPUParticles3D" parent="."]
 cast_shadow = 0
