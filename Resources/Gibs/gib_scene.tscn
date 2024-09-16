@@ -22,30 +22,40 @@ frame = 17
 
 [node name="Skull" parent="." instance=ExtResource("2_841rj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.890074, 0)
+collision_mask = 675
 
 [node name="Bone" parent="." instance=ExtResource("3_5ttrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136962, 0.779173, 0)
+collision_mask = 675
 
 [node name="Bone2" parent="." instance=ExtResource("3_5ttrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25467, 0.781239, 0)
+collision_mask = 675
 
 [node name="Bone3" parent="." instance=ExtResource("3_5ttrn")]
 transform = Transform3D(0.338377, -0.941011, 0, 0.941011, 0.338377, 0, 0, 0, 1, -0.122984, 0.445744, 0)
+collision_mask = 675
 
 [node name="Bone4" parent="." instance=ExtResource("3_5ttrn")]
 transform = Transform3D(0.212979, 0.977057, 0, -0.977057, 0.212979, 0, 0, 0, 1, 0.0591044, 0.450602, 0)
+collision_mask = 675
 
 [node name="Gib" parent="." instance=ExtResource("4_14anv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119057, 0.69019, -0.0536689)
+collision_mask = 675
 
 [node name="Gib2" parent="." instance=ExtResource("5_qhjy8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0388539, 0.690594, 0.0658045)
+collision_mask = 675
 
 [node name="Gib3" parent="." instance=ExtResource("6_8agyd")]
 transform = Transform3D(0.291303, -0.956631, 0, 0.956631, 0.291303, 0, 0, 0, 1, -0.122562, 0.530304, -0.0597189)
+collision_mask = 675
 
 [node name="Gib4" parent="." instance=ExtResource("7_x1dbr")]
 transform = Transform3D(0.701855, -0.71232, 0, 0.71232, 0.701855, 0, 0, 0, 1, 0.0176674, 0.535508, 0.0730876)
+collision_mask = 675
 
 [node name="Gib5" parent="." instance=ExtResource("8_ft6o6")]
 transform = Transform3D(-0.785706, 0.6186, 0, -0.6186, -0.785706, 0, 0, 0, 1, 0.0118495, 0.665609, 0.0316982)
+collision_mask = 675

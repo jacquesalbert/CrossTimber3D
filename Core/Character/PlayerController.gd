@@ -6,6 +6,9 @@ extends Controller
 @export var camera : Camera3D
 @export var camera_mounted_zoom : float = 80
 @export var camera_dismounted_zoom : float = 40
+@export var aim_line : Line3D
+@export var aim_ray : RayCast3D
+@export var relative_movement : bool
 
 var hover_object : Node3D:
 	set(value):
@@ -103,7 +106,8 @@ func update_dismounted_controls(delta:float):
 	run = Input.is_action_pressed("run")
 	
 	movement = Input.get_vector("move_right","move_left","move_back","move_forward")
-
+	if not relative_movement:
+		movement = -movement.rotated(global_rotation.y)
 func update_mounted_controls(delta:float):
 	traction_control = not Input.is_action_pressed("run")
 	steer = Input.get_axis("move_left","move_right")
@@ -111,4 +115,12 @@ func update_mounted_controls(delta:float):
 	brake = 1.0 if Input.is_action_pressed("ui_accept") else 0.0
 
 func _physics_process(delta):
+	if character:
+		aim_ray.add_exception(character.hitbox)
 	get_mouse_info()
+	aim_line.clear_points()
+	aim_line.add_point(to_local(aim_ray.global_position),Vector3.UP,0.05, Color.RED)
+	if aim_ray.is_colliding():
+		aim_line.add_point(to_local(aim_ray.get_collision_point()),Vector3.UP,0.05, Color.RED)
+	else:
+		aim_line.add_point(Vector3(0,0,100),Vector3.UP,0.05, Color.RED)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://BulletFirer.gd" id="1_0ual5"]
 [ext_resource type="Script" path="res://Resources/Tools/Grenade/Explosion.gd" id="1_l8cux"]
-[ext_resource type="PackedScene" uid="uid://bkvlob2lf1v2o" path="res://shrapnel_scene.tscn" id="2_gov3a"]
+[ext_resource type="PackedScene" uid="uid://bkvlob2lf1v2o" path="res://Resources/Tools/Grenade/shrapnel_scene.tscn" id="2_gov3a"]
 [ext_resource type="Texture2D" uid="uid://bkc4jjjyg3tm6" path="res://Resources/explosion_sprite.png" id="10_5hacc"]
 [ext_resource type="AudioStream" uid="uid://uaq213iq63xk" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/explosions/explosion_1.mp3" id="11_dhm8k"]
 [ext_resource type="Script" path="res://BlastArea.gd" id="12_ykec0"]
@@ -186,7 +186,7 @@ omni_range = 10.0
 [node name="BlastArea" type="Node3D" parent="."]
 script = ExtResource("12_ykec0")
 hit_layers = 36
-block_layers = 129
+block_layers = 641
 damage = 400
 damage_falloff = SubResource("Curve_roxyi")
 impulse_falloff = SubResource("Curve_roxyi")

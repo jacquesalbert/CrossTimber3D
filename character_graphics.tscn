@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://cy3frp8328wgg"]
+[gd_scene load_steps=62 format=3 uid="uid://cy3frp8328wgg"]
 
 [ext_resource type="Script" path="res://Core/Character/CharacterGraphics.gd" id="1_082kn"]
 [ext_resource type="PackedScene" uid="uid://prt31uvinqvw" path="res://Resources/Gibs/gib_scene.tscn" id="2_jqjck"]
@@ -67,7 +67,19 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 1, 0), Vector3(0, 0.25, 0)]
+"values": [Vector3(0, 1, 0), Vector3(0, 0.1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance3D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_ttw3g"]
@@ -359,7 +371,31 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 1.5, 0)]
+"values": [Vector3(0, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LowerBodySprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MeshInstance3D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_i4vwl"]
@@ -571,6 +607,11 @@ nodes/WeaponTransition/position = Vector2(140, 260)
 nodes/output/position = Vector2(1380, 200)
 node_connections = [&"AddUpperLower", 0, &"WeaponTransition", &"AddUpperLower", 1, &"LowerBodyMovement", &"AliveTransition", 0, &"StunTransition", &"AliveTransition", 1, &"Die", &"FireLongarmOneShot", 0, &"IdleLongarm", &"FireLongarmOneShot", 1, &"FireLongarm", &"FireMeleeOneShot", 0, &"IdleMelee", &"FireMeleeOneShot", 1, &"FireMelee", &"FireSidearmOneShot", 0, &"IdleSidearm", &"FireSidearmOneShot", 1, &"FireSidearm", &"FireUnarmedOneShot", 0, &"UnarmedMovement", &"FireUnarmedOneShot", 1, &"FireUnarmed", &"StunTransition", 0, &"AddUpperLower", &"StunTransition", 1, &"Hurt", &"WeaponTransition", 0, &"FireUnarmedOneShot", &"WeaponTransition", 1, &"FireMeleeOneShot", &"WeaponTransition", 2, &"FireSidearmOneShot", &"WeaponTransition", 3, &"FireLongarmOneShot", &"output", 0, &"AliveTransition"]
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_ht4q7"]
+top_radius = 0.15
+bottom_radius = 0.15
+height = 1.0
+
 [node name="CharacterGraphics" type="Node3D" node_paths=PackedStringArray("animation_tree", "upper_body", "lower_body")]
 script = ExtResource("1_082kn")
 animation_tree = NodePath("AnimationTree")
@@ -579,7 +620,7 @@ lower_body = NodePath("LowerBodySprite")
 gib_scene = ExtResource("2_jqjck")
 
 [node name="UpperBodySprite" type="Sprite3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.5, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0)
 pixel_size = 0.05
 axis = 1
 shaded = true
@@ -604,7 +645,7 @@ frame = 31
 script = ExtResource("5_ndut1")
 
 [node name="LowerBodySprite" type="Sprite3D" parent="."]
-transform = Transform3D(-3.61999e-06, 0, -1, 0, 1, 0, 1, 0, -3.61999e-06, 0, 0.816528, 0)
+transform = Transform3D(-3.61999e-06, 0, -1, 0, 1, 0, 1, 0, -3.61999e-06, 0, 0.5, 0)
 pixel_size = 0.05
 axis = 1
 shaded = true
@@ -663,3 +704,8 @@ parameters/UnarmedMovement/blend_position = 0
 parameters/WeaponTransition/current_state = "longarm"
 parameters/WeaponTransition/transition_request = ""
 parameters/WeaponTransition/current_index = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+cast_shadow = 3
+mesh = SubResource("CylinderMesh_ht4q7")

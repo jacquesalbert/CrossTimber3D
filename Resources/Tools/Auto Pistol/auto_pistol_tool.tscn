@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://dbeve8vxrwtr3"]
 
 [ext_resource type="Script" path="res://Core/Tool/FirearmTool.gd" id="1_kgy0d"]
-[ext_resource type="Resource" uid="uid://cf20pmwfu20a5" path="res://item_test.tres" id="2_xxpn5"]
+[ext_resource type="Resource" uid="uid://cf20pmwfu20a5" path="res://Resources/Items/Ammo/ammo_item.tres" id="2_xxpn5"]
 [ext_resource type="AudioStream" uid="uid://cg8u01ar3j7h6" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/weapons/wpn_fire_usp45.mp3" id="3_xvgpl"]
 [ext_resource type="AudioStream" uid="uid://ds5cgwpgjqucx" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_empty.mp3" id="4_5d14m"]
 [ext_resource type="AudioStream" uid="uid://bv5bb3khdypr2" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_reload_end.mp3" id="5_f2jtn"]
@@ -176,7 +176,7 @@ texture = ExtResource("7_e8ffe")
 hframes = 4
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Sprite3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.5, 0)
 light_energy = 5.0
 shadow_enabled = true
 omni_range = 10.0

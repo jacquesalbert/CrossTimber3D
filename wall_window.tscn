@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc8f2yy20g2fs"]
+
+[ext_resource type="PackedScene" uid="uid://ck2oafpuop07f" path="res://Resources/kenney_furniture-kit/Models/GLTF format/wallWindow.glb" id="1_af505"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yt27a"]
+transparency = 2
+alpha_scissor_threshold = 1.0
+alpha_antialiasing_mode = 0
+shading_mode = 0
+
+[node name="wallWindow" instance=ExtResource("1_af505")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="window" parent="wallWindow(Clone)" index="0"]
+visible = false
+surface_material_override/0 = SubResource("StandardMaterial3D_yt27a")

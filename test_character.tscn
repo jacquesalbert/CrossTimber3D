@@ -25,6 +25,7 @@ height = 0.25
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2hw1e"]
 radius = 0.3
+height = 1.8
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_gsofm"]
 radius = 0.25
@@ -57,7 +58,7 @@ script = ExtResource("7_lim1o")
 material = ExtResource("8_yacv2")
 
 [node name="AliveCollisionShape" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_2hw1e")
 
 [node name="FleshMaterial" type="Node" parent="AliveCollisionShape"]
@@ -160,6 +161,13 @@ script = ExtResource("41_eid74")
 
 [node name="StunTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-1, 4.37114e-08, -7.57103e-08, 0, 0.866025, 0.5, 8.74228e-08, 0.5, -0.866025, 0, 1.5, 0.136154)
+light_energy = 5.0
+shadow_enabled = true
+spot_range = 20.0
+spot_angle = 30.0
 
 [connection signal="was_hit" from="Hitbox" to="Health" method="modify"]
 [connection signal="was_hit" from="DeadHitbox" to="Health" method="modify"]

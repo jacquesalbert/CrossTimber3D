@@ -14,7 +14,7 @@ var _colors : Array[Color]
 var _uv_ts : Array[float]
 
 var _rebuild_queued : bool
-var material : Material
+@export var material : Material
 
 func _ready() -> void:
 	_rebuild_queued = true

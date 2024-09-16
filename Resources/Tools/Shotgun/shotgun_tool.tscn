@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://dp7pkkgg5xgpr"]
 
 [ext_resource type="Script" path="res://Core/Tool/FirearmTool.gd" id="1_kgy0d"]
-[ext_resource type="Resource" uid="uid://cf20pmwfu20a5" path="res://item_test.tres" id="2_xxpn5"]
+[ext_resource type="Resource" uid="uid://cf20pmwfu20a5" path="res://Resources/Items/Ammo/ammo_item.tres" id="2_xxpn5"]
 [ext_resource type="AudioStream" uid="uid://d2h3y6rlxxfb8" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_fire_mossberg.mp3" id="3_tk86v"]
 [ext_resource type="AudioStream" uid="uid://ds5cgwpgjqucx" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_empty.mp3" id="4_5d14m"]
 [ext_resource type="AudioStream" uid="uid://bv5bb3khdypr2" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_reload_end.mp3" id="5_f2jtn"]
@@ -169,17 +169,17 @@ _data = {
 "fire": SubResource("Animation_s0m84")
 }
 
-[node name="ShotgunToolInstance" type="Node3D" node_paths=PackedStringArray("firer", "animation_player", "timer", "streamplayer")]
+[node name="ShotgunToolInstance" type="Node3D" node_paths=PackedStringArray("firer", "animation_player", "streamplayer", "timer")]
 script = ExtResource("1_kgy0d")
 firer = NodePath("BulletFirer")
 animation_player = NodePath("AnimationPlayer")
 supply = ExtResource("2_xxpn5")
 supply_amount = 3
-timer = NodePath("Timer")
 fire_stream = ExtResource("3_tk86v")
 empty_stream = ExtResource("4_5d14m")
 equip_stream = ExtResource("5_f2jtn")
 streamplayer = NodePath("AudioStreamPlayer3D")
+timer = NodePath("Timer")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
@@ -200,7 +200,7 @@ texture = ExtResource("7_e8ffe")
 hframes = 4
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Sprite3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.5, 0)
 light_energy = 5.0
 shadow_enabled = true
 omni_range = 10.0

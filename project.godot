@@ -88,3 +88,4 @@ cycle_interaction={
 2d_physics/layer_8="Vehicle Body"
 3d_physics/layer_8="Vehicle Body"
 3d_physics/layer_9="Interaction Ray"
+3d_physics/layer_10="EnvironmentCeiling"

@@ -191,7 +191,7 @@ func update_attribute_values():
 	if energy:
 		energy.max_value = max_energy
 	if inventory:
-		inventory.max_item_capacity[load("res://item_test.tres")] = ammo_capacity
+		inventory.max_item_capacity[load("res://Resources/Items/Ammo/ammo_item.tres")] = ammo_capacity
 
 func load_character():
 	for child in get_children():
