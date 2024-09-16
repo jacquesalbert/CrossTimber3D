@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://d17hiwv22avsm" path="res://test_vehicle.tscn" id="9_368ct"]
 [ext_resource type="PackedScene" uid="uid://dmnda8wv7ktxj" path="res://Core/Tool/tool_pickup_template.tscn" id="9_l86uy"]
 [ext_resource type="Script" path="res://Core/Door/DoorInteraction.gd" id="10_75ygd"]
-[ext_resource type="Resource" uid="uid://ba12msy183178" path="res://tool_test.tres" id="10_ahy3r"]
+[ext_resource type="Resource" uid="uid://ba12msy183178" path="res://Resources/Tools/AK/ak_tool.tres" id="10_ahy3r"]
 [ext_resource type="PackedScene" uid="uid://dpkenrejsd1ix" path="res://GUI/HUD/hud.tscn" id="10_p7hlu"]
 [ext_resource type="Resource" uid="uid://cdyg1n6sm1je7" path="res://Resources/Tools/Grenade/grenade_tool.tres" id="21_mihkq"]
 [ext_resource type="Resource" uid="uid://cw8ja2sw5v775" path="res://Resources/Tools/Shotgun/shotgun_tool.tres" id="22_epved"]
@@ -210,7 +210,7 @@ script = ExtResource("1_agiep")
 target = NodePath("../Character")
 
 [node name="Camera3D" type="Camera3D" parent="CameraMount"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 50, 0)
 attributes = SubResource("CameraAttributesPractical_xi2yg")
 projection = 1
 current = true

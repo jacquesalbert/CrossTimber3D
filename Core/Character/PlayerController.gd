@@ -34,11 +34,11 @@ func update_camera_zoom():
 
 func set_camera_mounted():
 	camera.size = camera_mounted_zoom
-	camera.fov = 45
+	#camera.fov = 45
 
 func set_camera_dismounted():
 	camera.size = camera_dismounted_zoom
-	camera.fov = 30
+	#camera.fov = 30
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

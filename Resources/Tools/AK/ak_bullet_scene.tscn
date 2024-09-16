@@ -1,0 +1,26 @@
+[gd_scene load_steps=10 format=3 uid="uid://bb7hpl0e7ngjd"]
+
+[ext_resource type="Script" path="res://Core/Bullet.gd" id="1_ouncg"]
+[ext_resource type="PackedScene" uid="uid://c14g3ii2cj5e1" path="res://bleeding_effect.tscn" id="2_aonvo"]
+[ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="3_8s72e"]
+[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://big_flesh_hit_effect.tscn" id="4_46ykv"]
+[ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="5_ovqqc"]
+[ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="6_40w08"]
+[ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="7_heo2n"]
+[ext_resource type="PackedScene" uid="uid://ct4g7c8aqeeg7" path="res://stone_hit_effect.tscn" id="8_qdcod"]
+[ext_resource type="PackedScene" uid="uid://c7xcd5bpu10ej" path="res://bullet_trailer.tscn" id="9_wholi"]
+
+[node name="Bullet" type="RayCast3D"]
+collision_mask = 5
+script = ExtResource("1_ouncg")
+speed = 1000.0
+damage = 50
+apply_effects = Array[PackedScene]([ExtResource("2_aonvo")])
+material_hit_effects = {
+ExtResource("3_8s72e"): ExtResource("4_46ykv"),
+ExtResource("5_ovqqc"): ExtResource("6_40w08"),
+ExtResource("7_heo2n"): ExtResource("8_qdcod")
+}
+
+[node name="Trailer" parent="." instance=ExtResource("9_wholi")]
+trailing = true
