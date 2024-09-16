@@ -58,7 +58,7 @@ func set_next_target_position(delta:float):
 	total_travelled += travel.length()
 	if total_travelled > _range:
 		var excess_travel := total_travelled - _range
-		total_travelled -= excess_travel
+		total_travelled = _range
 		travel -= _local_velocity.normalized() * excess_travel
 		#travel = _local_velocity.normalized() * (travel.length() - excess_travel)
 	target_position = travel
@@ -130,16 +130,15 @@ func _physics_process(delta):
 		remove_exception(exception)
 	frame_exceptions.clear()
 	
-	if total_travelled >= range:
-		var excess_travel := total_travelled - range
-		end_position -= _local_velocity.normalized() * excess_travel
+	if total_travelled >= _range:
+		var excess_travel := total_travelled - _range
+		end_position -= global_basis*_local_velocity.normalized() * excess_travel
 		stop = true
 	
 	if stop:
 		position = end_position
 		queue_free()
 		return
-	
 	
 	# if we didn't hit anything, advance our position. Be careful to check that we don't extend the ray further than the total distance
 	last_pos = position
