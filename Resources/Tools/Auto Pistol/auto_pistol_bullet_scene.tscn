@@ -3,14 +3,14 @@
 [ext_resource type="Script" path="res://Core/Bullet.gd" id="1_hdftl"]
 [ext_resource type="PackedScene" uid="uid://c14g3ii2cj5e1" path="res://bleeding_effect.tscn" id="2_tor7u"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="3_wrxav"]
-[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="4_snfkj"]
+[ext_resource type="PackedScene" uid="uid://dptymrf7sjrf0" path="res://small_flesh_hit_effect.tscn" id="4_yj562"]
 [ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="5_s4fq3"]
 [ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="6_13bu3"]
 [ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="7_obmjg"]
 [ext_resource type="PackedScene" uid="uid://ct4g7c8aqeeg7" path="res://stone_hit_effect.tscn" id="8_clkks"]
 [ext_resource type="PackedScene" uid="uid://c7xcd5bpu10ej" path="res://bullet_trailer.tscn" id="9_way5r"]
 
-[node name="Bullet" type="RayCast3D"]
+[node name="AutoPistolBullet" type="RayCast3D"]
 collision_mask = 5
 script = ExtResource("1_hdftl")
 speed = 250.0
@@ -19,7 +19,7 @@ range = 50.0
 stability = 0.9
 apply_effects = Array[PackedScene]([ExtResource("2_tor7u")])
 material_hit_effects = {
-ExtResource("3_wrxav"): ExtResource("4_snfkj"),
+ExtResource("3_wrxav"): ExtResource("4_yj562"),
 ExtResource("5_s4fq3"): ExtResource("6_13bu3"),
 ExtResource("7_obmjg"): ExtResource("8_clkks")
 }

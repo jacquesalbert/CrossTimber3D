@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://c458ueadsx6tu" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack 2/sounds/weapons/wpn_fire_mossberg.mp3" id="6_qbhb8"]
 [ext_resource type="Texture2D" uid="uid://cp5bdg4fpju20" path="res://Resources/muzzleflash.png" id="7_e8ffe"]
 [ext_resource type="Script" path="res://BulletFirer.gd" id="8_rawjg"]
-[ext_resource type="PackedScene" uid="uid://ukfbayncknul" path="res://Resources/Tools/Shotgun/shotgun_pellet_scene.tscn" id="9_8idce"]
+[ext_resource type="PackedScene" uid="uid://d1sl1au76af5l" path="res://Resources/Tools/Auto Pistol/auto_pistol_bullet_scene.tscn" id="9_p22ds"]
 
 [sub_resource type="Animation" id="Animation_f2622"]
 length = 0.001
@@ -144,17 +144,17 @@ _data = {
 "fire": SubResource("Animation_s0m84")
 }
 
-[node name="AuoPistolToolInstance" type="Node3D" node_paths=PackedStringArray("firer", "animation_player", "timer", "streamplayer")]
+[node name="AuoPistolToolInstance" type="Node3D" node_paths=PackedStringArray("firer", "animation_player", "streamplayer", "timer")]
 script = ExtResource("1_kgy0d")
 firer = NodePath("BulletFirer")
 animation_player = NodePath("AnimationPlayer")
 supply = ExtResource("2_xxpn5")
 supply_amount = 1
-timer = NodePath("Timer")
 fire_stream = ExtResource("3_xvgpl")
 empty_stream = ExtResource("4_5d14m")
 equip_stream = ExtResource("5_f2jtn")
 streamplayer = NodePath("AudioStreamPlayer3D")
+timer = NodePath("Timer")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
@@ -189,7 +189,7 @@ libraries = {
 
 [node name="BulletFirer" type="Node3D" parent="."]
 script = ExtResource("8_rawjg")
-bullet_scene = ExtResource("9_8idce")
+bullet_scene = ExtResource("9_p22ds")
 angle_spread = 0.05
 
 [connection signal="fired" from="." to="Timer" method="start"]

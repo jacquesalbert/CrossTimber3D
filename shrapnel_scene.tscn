@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Core/Bullet.gd" id="1_53fn7"]
 [ext_resource type="PackedScene" uid="uid://c14g3ii2cj5e1" path="res://bleeding_effect.tscn" id="2_xxpg7"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="3_dr7d3"]
-[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="4_wrj2a"]
+[ext_resource type="PackedScene" uid="uid://cv0guijoenrwh" path="res://medium_flesh_hit_effect.tscn" id="4_mnpu1"]
 [ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="5_e1rww"]
 [ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="6_c4pr4"]
 [ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="7_j036k"]
@@ -39,7 +39,7 @@ range_minimum = 1.0
 stability = 0.1
 apply_effects = Array[PackedScene]([ExtResource("2_xxpg7")])
 material_hit_effects = {
-ExtResource("3_dr7d3"): ExtResource("4_wrj2a"),
+ExtResource("3_dr7d3"): ExtResource("4_mnpu1"),
 ExtResource("5_e1rww"): ExtResource("6_c4pr4"),
 ExtResource("7_j036k"): ExtResource("8_8gax7")
 }

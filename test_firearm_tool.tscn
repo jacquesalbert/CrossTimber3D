@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="4_urvni"]
 [ext_resource type="Texture2D" uid="uid://cp5bdg4fpju20" path="res://Resources/muzzleflash.png" id="5_v5y7f"]
 [ext_resource type="PackedScene" uid="uid://c14g3ii2cj5e1" path="res://bleeding_effect.tscn" id="7_c3u2p"]
-[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="7_ooloh"]
+[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://big_flesh_hit_effect.tscn" id="7_ooloh"]
 [ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="8_y28uj"]
 
 [sub_resource type="Animation" id="Animation_f2622"]

@@ -61,6 +61,7 @@ volume_db = -30.0
 
 [node name="RoostParticles" type="CPUParticles3D" parent="."]
 cast_shadow = 0
+emitting = false
 amount = 100
 mesh = SubResource("QuadMesh_he84l")
 direction = Vector3(0, 0.5, -1)

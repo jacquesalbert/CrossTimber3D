@@ -5,6 +5,12 @@ extends RigidBody3D
 const CHARACTER_COLLISION_DAMAGE_ENERGY_RATIO : float = 2.0
 const CONTACT_VELOCITY_EFFECT_THRESHOLD : float = 10.0
 
+enum State {
+	STOPPED,
+	RUNNING,
+	DESTROYED
+}
+
 
 @export_range(0.0,PI/2) var max_steer_angle : float = PI/8
 @export var max_drive_traction_accel : float = 50.0
@@ -25,6 +31,12 @@ const CONTACT_VELOCITY_EFFECT_THRESHOLD : float = 10.0
 @export var health : Stat
 @export var num_gears :int= 5
 @export var gear_scale :float= 2.0
+@export var taillights : Array[SpotLight3D]
+@export var headlights : Array[SpotLight3D]
+@export var brake_light_intensity : float = 5.0
+@export var taillight_intensity : float = 2.0
+@export var vehicle_graphics : VehicleGraphics
+
 
 #@export var emission_texture : Texture
 #@export var emission_points : int = 100.0
@@ -50,15 +62,13 @@ const CONTACT_VELOCITY_EFFECT_THRESHOLD : float = 10.0
 		if driver_character != value:
 			if is_instance_valid(door_stream_player):
 				door_stream_player.play()
-			#if is_instance_valid(driver_character):
-				#remove_collision_exception_with.bind(driver_character).call_deferred()
 			driver_character = value
-			if is_instance_valid(door_stream_player):
+			if not disabled:
 				if is_instance_valid(driver_character):
-					engine_stream_player.play()
-					#add_collision_exception_with(driver_character)
+					set_running()
 				else:
-					engine_stream_player.stop()
+					if linear_velocity.length() < 1.0:
+						set_stopped()
 
 var front_axle_distance : float
 var rear_axle_distance : float
@@ -73,21 +83,32 @@ var can_run : bool:
 var _fuel_debt : float
 var _current_effects : Array[Effect]
 var _steer_angle : float
+var _state : State
 
 signal effects_changed
+signal destroyed
+signal restored
 
 func _ready():
 	front_axle_distance = (front_left_wheel.position.z + front_right_wheel.position.z) * 0.5
 	rear_axle_distance = (rear_left_wheel.position.z + rear_right_wheel.position.z) * 0.5
 	wheelbase = front_axle_distance - rear_axle_distance
 
-	health.expended.connect(on_health_expended)
+	health.changed.connect(_on_health_changed)
+	health.expended.connect(_on_health_expended)
+	
+	set_stopped()
 
-func on_health_expended(responsible_node:Node):
-	disabled = true
+func _on_health_changed(amount:int,responsible_node:Node):
+	vehicle_graphics.damage = 1.0-float(health.value)/health.max_value
+	
+func _on_health_expended(responsible_node:Node):
+	set_destroyed()
+	destroyed.emit()
 
-func on_health_restored(responsible_node:Node):
-	disabled = false
+func _on_health_restored(responsible_node:Node):
+	set_stopped()
+	restored.emit()
 
 var throttle : float:
 	set(value):
@@ -96,6 +117,8 @@ var throttle : float:
 var brake : float:
 	set(value):
 		brake = clamp(value,0.0,1.0)
+		update_lights()
+				
 
 var steer : float:
 	set(value):
@@ -120,9 +143,48 @@ func get_input(delta:float):
 		throttle = 0.0
 
 func _process(delta):
-	#get_input_debug()
+	match _state:
+		State.STOPPED:
+			_stopped_process(delta)
+		State.RUNNING:
+			_running_process(delta)
+		State.DESTROYED:
+			_destroyed_process(delta)
+
+func _stopped_process(delta:float):
+	pass
+
+func _running_process(delta:float):
 	get_input(delta)
+	update_lights()
 	update_sounds()
+
+func _destroyed_process(delta:float):
+	pass
+
+func update_lights():
+	if _state == State.DESTROYED or _state == State.STOPPED:
+		for headlight in headlights:
+			headlight.visible = false
+		for taillight in taillights:
+			taillight.visible = false
+		return
+	
+	for headlight in headlights:
+		if LevelManager.current_level.is_daytime():
+			headlight.visible = false
+		else:
+			headlight.visible = true
+	for taillight in taillights:
+		if brake > 0.1:
+			taillight.visible = true
+			taillight.light_energy = brake_light_intensity
+		else:
+			if LevelManager.current_level.is_daytime():
+				taillight.visible = false
+			else:
+				taillight.visible = true
+				taillight.light_energy = taillight_intensity
 
 func update_sounds():
 	if is_instance_valid(driver_character) and is_instance_valid(engine_stream_player):
@@ -135,7 +197,7 @@ func update_sounds():
 		engine_stream_player.pitch_scale = min(2.0,1.0 + engine_speed) if brake < 0.5 else 1.0
 
 func run_fuel(delta:float):
-	if can_run:
+	if _state == State.RUNNING:
 		_fuel_debt += fuel_consumpution_rate * abs(throttle) * delta
 		if _fuel_debt > 1.0 and fuel.value > 0:
 			var fuel_consumption_amount : int = floor(_fuel_debt)
@@ -143,93 +205,10 @@ func run_fuel(delta:float):
 			_fuel_debt -= fuel_consumption_amount
 	fueled = fuel.value > 0
 
-#func move_and_handle_collisions(delta:float):
-## move and handle collisions
-	#var remainder : Vector3
-	#var collision := move_and_collide(velocity*delta)
-	#var frame_exceptions: Array[CollisionObject3D]
-	#while collision:
-		#var collider := collision.get_collider()
-		#var normal := collision.get_normal()
-		#var normal_velocity := velocity.dot(normal)
-		#if collider is Character:
-			#remainder = collision.get_remainder()
-			#frame_exceptions.append(collider)
-			#add_collision_exception_with(collider)
-			#
-			##collider.request_state = Character.State.KNOCKBACK
-			##collider.move_and_collide(normal_velocity*normal*delta)
-			##var system_mass :float= collider.mass + mass
-			##var my_collision_part :float= collider.mass / system_mass
-			##var my_velocity_change := COLLISION_CONSEVATION * my_collision_part * normal_velocity*normal
-			##var other_collision_part :float= mass / system_mass
-			##var other_velocity_change := COLLISION_CONSEVATION * other_collision_part * normal_velocity*normal
-				#
-			#
-			#if abs(normal_velocity) > 5.0:
-				#var collider_shape_id := collision.get_collider_shape_index()
-				#var effect_material = NodeMaterial.get_collision_shape_material(collider,collider_shape_id)
-				#LevelManager.spawn_hit_effect_in_level(collision.get_position(),velocity.normalized(),normal,material_hit_effects.get(effect_material))
-				#var damage :int = -floor(normal_velocity*CHARACTER_COLLISION_DAMAGE_ENERGY_RATIO)
-				#collider.hitbox.hit(damage,driver_character)
-			##velocity -= my_velocity_change
-			##collider.velocity += other_velocity_change
-			#collider.request_state = Character.State.STUN
-			#collision = move_and_collide(remainder)
-			#continue
-		#elif collider is Vehicle:
-			#if abs(normal_velocity) > 5.0:
-				#var collider_shape_id := collision.get_collider_shape_index()
-				#var effect_material = NodeMaterial.get_collision_shape_material(collider,collider_shape_id)
-				#LevelManager.spawn_hit_effect_in_level(collision.get_position(),velocity.normalized(),normal,material_hit_effects.get(effect_material))
-			#var system_mass :float= collider.mass + mass
-			#var my_collision_part :float= collider.mass / system_mass
-			#var my_velocity_change := COLLISION_CONSEVATION * my_collision_part * normal_velocity*normal
-			#var other_collision_part :float= mass / system_mass
-			#var other_velocity_change := COLLISION_CONSEVATION * other_collision_part * normal_velocity*normal
-			#velocity -= my_velocity_change
-			#collider.velocity += other_velocity_change
-			## consider applying torques here eventually
-			##var other_relative_point : Vector2= collision.get_position() - collider.global_position
-			##var other_torque_vel : float = other_relative_point.cross(other_velocity_change) / collider.mass
-			##collider.angular_speed += other_torque_vel
-			##var relative_point : Vector2 =collision.get_position() - global_position
-			##var torque_vel : float = relative_point.cross(my_velocity_change) / mass
-			##angular_speed += torque_vel
-			#break
-		##elif collider is DestructibleBody:
-			##frame_exceptions.append(collider)
-			##add_collision_exception_with(collider)
-			##remainder = collision.get_remainder()
-			##collider.impact(normal*normal_velocity)
-			##if collider.has_method("get_effect_material") and abs(normal_velocity) > 100.0:
-				##spawn_hit_effect(collision.get_position(),velocity,normal,collider.get_effect_material())
-			##collision = move_and_collide(remainder)
-			##continue
-		#else:
-			#if abs(normal_velocity) > 5.0:
-				#var collider_shape_id := collision.get_collider_shape_index()
-				#var effect_material = NodeMaterial.get_collision_shape_material(collider,collider_shape_id)
-				#LevelManager.spawn_hit_effect_in_level(collision.get_position(),velocity.normalized(),normal,material_hit_effects.get(effect_material))
-		#
-			## cancel immovable collision velocity
-#
-			#velocity -= normal_velocity*normal
-			## apply scraping drag on lateral collisions
-			#var tangent_velocity := -velocity.normalized()
-			#velocity -= collision_friction * tangent_velocity
-#
-			#break
-#
-	#for exception in frame_exceptions:
-		#remove_collision_exception_with(exception)
-
 func get_speedo()->float:
 	return abs(linear_velocity.dot(global_basis.z))
 
 func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
-	#enforce 2D play area
-	#position.y = 0
 	var forward := global_basis.z
 	var right := -global_basis.x
 	run_fuel(state.step)
@@ -285,7 +264,7 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	var spin : float = 0.0
 	# apply drive movement up to traction maximum
 	#var speed_modifier :float = max(0,(top_speed - abs(longitudinal_speed)) / top_speed)
-	var engine_power := power_curve.sample(abs(longitudinal_speed)/top_speed) * max_engine_power if can_run else 0.0
+	var engine_power := power_curve.sample(abs(longitudinal_speed)/top_speed) * max_engine_power if _state == State.RUNNING else 0.0
 	var drive_accel :float= (throttle * engine_power) - (brake * sign(throttle))
 	
 	var effective_max_drive_traction_accel : float
@@ -318,7 +297,14 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	var front_skid := false
 	var rear_skid := false
 	#apply braking traction
-	var braking_acceleration :float = brake * -forward_vel / state.step
+	var braking_acceleration :float
+	match _state:
+		State.STOPPED:
+			braking_acceleration = brake * -forward_vel / state.step
+		State.RUNNING:
+			braking_acceleration = brake * -forward_vel / state.step
+		State.DESTROYED:
+			braking_acceleration = -forward_vel / state.step
 
 	#velocity -= lateral_accel * delta * global_transform.y
 	var total_traction_acceleration := braking_acceleration * surface_forward + lateral_traction_accel*surface_right
@@ -358,24 +344,30 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 				var mass_ratio :float = mass / (body.mass + mass)
 				var damage :int = -floor(abs(contact_velocity)*mass_ratio*CHARACTER_COLLISION_DAMAGE_ENERGY_RATIO)
 				body.hitbox.hit(damage,driver_character)
-	#velocity += traction_acceleration * delta
-	#apply_central_force(traction_acceleration * mass)
-	#if velocity.is_zero_approx():
-		#return
-	
-	#move_and_slide()
-	#if is_on_floor():
-		#global_position += global_basis.y * ride_height
-	#move_and_handle_collisions(delta)
 
-#func spawn_hit_effect(global_pos:Vector3, direction:Vector3, normal:Vector3, effect_material:String):
-	#var effect : PackedScene = material_hit_effects.get(effect_material)
-	#if effect:
-		#var hit_effect_instance : Node3D = effect.instantiate()
-		#hit_effect_instance.global_position = global_pos
-		#hit_effect_instance.global_transform = hit_effect_instance.global_transform.looking_at(hit_effect_instance.global_position + normal)
-		#LevelManager.spawn_in_level(hit_effect_instance)
-	
+func set_stopped():
+	_state = State.STOPPED
+	engine_stream_player.playing = false
+	vehicle_graphics.destroyed = false
+	disabled = false
+	update_lights()
+	update_sounds()
+
+func set_destroyed():
+	_state = State.DESTROYED
+	engine_stream_player.playing = false
+	vehicle_graphics.destroyed = true
+	disabled = true
+	update_lights()
+	update_sounds()
+
+func set_running():
+	_state = State.RUNNING
+	engine_stream_player.playing = true
+	vehicle_graphics.destroyed = false
+	disabled = false
+	update_lights()
+	update_sounds()
 
 func add_effect(effect:Effect):
 	_current_effects.append(effect)

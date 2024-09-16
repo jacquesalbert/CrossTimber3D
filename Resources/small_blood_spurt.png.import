@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br47awyjam3gh"
-path.s3tc="res://.godot/imported/275.png-5b6de1f090f49826a33c909257f1c565.s3tc.ctex"
+uid="uid://duecv8pidjipr"
+path.s3tc="res://.godot/imported/small_blood_spurt.png-74efa23c23650c97051267f0e3d7998e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Resources/Free/Part 6/275.png"
-dest_files=["res://.godot/imported/275.png-5b6de1f090f49826a33c909257f1c565.s3tc.ctex"]
+source_file="res://Resources/small_blood_spurt.png"
+dest_files=["res://.godot/imported/small_blood_spurt.png-74efa23c23650c97051267f0e3d7998e.s3tc.ctex"]
 
 [params]
 

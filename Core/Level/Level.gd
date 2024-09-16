@@ -12,6 +12,7 @@ extends Node
 @export var paint_map : PaintMap
 
 var level_time : float
+var light_intensity : float
 
 var time_of_day : float:
 	get:
@@ -27,8 +28,15 @@ func _process(delta:float):
 	level_time += delta
 	update_light()
 
+func is_daytime():
+	return time_of_day > 0.3 and time_of_day < 0.7
+
+func is_nighttime():
+	return time_of_day <= 0.3 or time_of_day >= 0.7
+
 func update_light():
 	var relative_intensity :float= max(sin((time_of_day-0.25)*TAU),0.0)
+
 	#print(snappedf(time_of_day,0.01), " ", snappedf(relative_intensity,0.01))
 	var intensity := relative_intensity * day_intensity + night_intensity
 

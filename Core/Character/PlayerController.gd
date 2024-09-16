@@ -18,17 +18,20 @@ var mounted : bool:
 	set(value):
 		if mounted != value:
 			mounted = value
-			if mounted:
-				set_camera_mounted()
-			else:
-				set_camera_dismounted()
+			update_camera_zoom()
 
 signal hover_object_changed(object:Node2D)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-	
+	update_camera_zoom()
+
+func update_camera_zoom():
+	if mounted:
+		set_camera_mounted()
+	else:
+		set_camera_dismounted()
+
 func set_camera_mounted():
 	camera.size = camera_mounted_zoom
 	camera.fov = 45

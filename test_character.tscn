@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Core/Character/Character.gd" id="1_aywxf"]
 [ext_resource type="PackedScene" uid="uid://bmhp7gx70w6va" path="res://exhaustion_effect.tscn" id="2_iu6pc"]
-[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="3_of1k3"]
+[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://big_flesh_hit_effect.tscn" id="3_of1k3"]
 [ext_resource type="Script" path="res://Core/Hitbox.gd" id="6_dvorw"]
 [ext_resource type="Script" path="res://Core/NodeMaterial/MaterialNode.gd" id="7_lim1o"]
 [ext_resource type="Script" path="res://Core/Stat.gd" id="7_xe5s5"]

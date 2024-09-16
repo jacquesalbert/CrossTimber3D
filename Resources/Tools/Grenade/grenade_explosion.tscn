@@ -191,3 +191,5 @@ damage = 400
 damage_falloff = SubResource("Curve_roxyi")
 impulse_falloff = SubResource("Curve_roxyi")
 radius = 5.0
+
+[connection signal="finished" from="AudioStreamPlayer3D" to="." method="queue_free"]

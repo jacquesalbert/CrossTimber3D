@@ -12,3 +12,9 @@ var interactions : Array[Interaction]:
 		return interactions
 
 var active : bool = true
+
+func set_inactive():
+	active = false
+
+func set_active():
+	active = true

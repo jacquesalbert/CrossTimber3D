@@ -1,8 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://d17hiwv22avsm"]
+[gd_scene load_steps=40 format=3 uid="uid://d17hiwv22avsm"]
 
 [ext_resource type="Script" path="res://Core/Vehicle/RigidBodyVehicle.gd" id="1_oq3ro"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="2_smd1q"]
-[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://flesh_hit_effect.tscn" id="3_vbvi3"]
+[ext_resource type="PackedScene" uid="uid://0p2al2ahesmc" path="res://big_flesh_hit_effect.tscn" id="3_vbvi3"]
 [ext_resource type="Script" path="res://Core/Stat.gd" id="4_ocxkf"]
 [ext_resource type="PackedScene" uid="uid://bk0lpn0aayava" path="res://test_wheel.tscn" id="4_r4ysp"]
 [ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="5_nqq2f"]
@@ -23,6 +23,9 @@
 [ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="13_dug1e"]
 [ext_resource type="AudioStream" uid="uid://4iuv06hhop4g" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Vehicle_Essentials_NOX_SOUND/Vehicle_Truck/Vehicle_Truck_Back_Door_Closing_Exterior_Mono_01.wav" id="22_lwqr0"]
 [ext_resource type="AudioStream" uid="uid://bpa5tpaeypm0h" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Vehicle_Essentials_NOX_SOUND/Vehicle_Car/Vehicle_Car_Engine_2000_RPM_Rear_Exterior_Loop_Mono.wav" id="22_wm3sl"]
+[ext_resource type="Texture2D" uid="uid://nef1uttxunaf" path="res://Resources/small_smoke_sprite.png" id="24_74mk4"]
+[ext_resource type="Texture2D" uid="uid://cmuimnha4s2rp" path="res://Resources/small_flame_sprite.png" id="24_bcgo6"]
+[ext_resource type="Script" path="res://VehicleGraphics.gd" id="26_0pp25"]
 
 [sub_resource type="Curve" id="Curve_tqqhj"]
 _data = [Vector2(0, 0.563484), 0.0, 3.82634, 0, 0, Vector2(0.266106, 1), 0.0, 0.0, 0, 0, Vector2(0.694678, 0.844057), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.0825813, 0.0, 0, 0]
@@ -40,7 +43,95 @@ size = Vector3(1.5, 1, 4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_gk76p"]
 size = Vector3(1.8, 2, 4.3)
 
-[node name="Vehicle" type="RigidBody3D" node_paths=PackedStringArray("fuel", "health")]
+[sub_resource type="Gradient" id="Gradient_tkmoi"]
+offsets = PackedFloat32Array(0, 0.348974, 0.636364, 0.891496, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.436058, 5.95618e-07, 9.62615e-08, 1, 0.549555, 0.266407, 0, 1, 0.743976, 0.743977, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kdqyb"]
+noise_type = 0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2x5gj"]
+emission_shape_scale = Vector3(0.5, 0.1, 0.7)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_min = 1.07288e-05
+angle_max = 360.0
+angular_velocity_min = -120.0
+angular_velocity_max = 120.0
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = -2.23517e-05
+gravity = Vector3(0, 2, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = -2.23517e-06
+radial_accel_min = -2.23517e-06
+radial_accel_max = -2.23517e-06
+tangential_accel_min = -2.23517e-06
+tangential_accel_max = -2.23517e-06
+damping_min = 0.5
+damping_max = 0.5
+anim_speed_min = 2.0
+anim_speed_max = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_11ic3"]
+resource_local_to_scene = true
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("24_bcgo6")
+emission_enabled = true
+emission_energy_multiplier = 2.0
+emission_texture = ExtResource("24_bcgo6")
+texture_filter = 0
+billboard_mode = 3
+particles_anim_h_frames = 25
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_euwwh"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_11ic3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tsefd"]
+emission_shape_scale = Vector3(0.5, 0.1, 0.7)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_min = 1.07288e-05
+angle_max = 360.0
+angular_velocity_min = -120.0
+angular_velocity_max = 120.0
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = -2.23517e-05
+gravity = Vector3(0, 2, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = -2.23517e-06
+radial_accel_min = -2.23517e-06
+radial_accel_max = -2.23517e-06
+tangential_accel_min = -2.23517e-06
+tangential_accel_max = -2.23517e-06
+damping_min = 0.5
+damping_max = 0.5
+anim_speed_min = 2.0
+anim_speed_max = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxwdn"]
+resource_local_to_scene = true
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("24_74mk4")
+texture_filter = 0
+billboard_mode = 3
+particles_anim_h_frames = 25
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_t8kex"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_wxwdn")
+
+[node name="Vehicle" type="RigidBody3D" node_paths=PackedStringArray("fuel", "health", "taillights", "headlights", "vehicle_graphics")]
 collision_layer = 128
 collision_mask = 129
 axis_lock_linear_y = true
@@ -60,6 +151,9 @@ rolling_resistance = 0.0
 fuel = NodePath("Fuel")
 health = NodePath("Health")
 gear_scale = 3.0
+taillights = [NodePath("LTaillight"), NodePath("RTaillight")]
+headlights = [NodePath("LHeadlight"), NodePath("RHeadlight")]
+vehicle_graphics = NodePath("VehicleGraphics")
 material_hit_effects = {
 ExtResource("2_smd1q"): ExtResource("3_vbvi3"),
 ExtResource("13_dug1e"): ExtResource("5_nqq2f"),
@@ -92,6 +186,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.825, 0.5, 1.275)
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("4_ocxkf")
+max_value = 1000
 
 [node name="Fuel" type="Node" parent="."]
 script = ExtResource("4_ocxkf")
@@ -180,14 +275,24 @@ shape = SubResource("BoxShape3D_gk76p")
 script = ExtResource("12_lslb7")
 material = ExtResource("13_dug1e")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
+[node name="LTaillight" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.573576, 0.819152, 0, -0.819152, 0.573576, 0.75, 1.5, -2.1)
+light_color = Color(1, 0, 0, 1)
+spot_range = 3.0
+
+[node name="RTaillight" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.573576, 0.819152, 0, -0.819152, 0.573576, -0.75, 1.5, -2.1)
+light_color = Color(1, 0, 0, 1)
+spot_range = 3.0
+
+[node name="LHeadlight" type="SpotLight3D" parent="."]
 transform = Transform3D(-1, 1.37708e-08, -1.30766e-07, -5.34573e-08, 0.866025, 0.5, 1.20132e-07, 0.5, -0.866025, 0.75, 1.5, 2)
 light_color = Color(1, 0.780392, 0.596078, 1)
 light_energy = 10.0
 spot_range = 30.0
 spot_angle = 30.0
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+[node name="RHeadlight" type="SpotLight3D" parent="."]
 transform = Transform3D(-1, 1.37708e-08, -1.30766e-07, -5.34573e-08, 0.866025, 0.5, 1.20132e-07, 0.5, -0.866025, -0.75, 1.5, 2)
 light_color = Color(1, 0.780392, 0.596078, 1)
 light_energy = 10.0
@@ -200,3 +305,40 @@ doppler_tracking = 2
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("22_lwqr0")
+
+[node name="VehicleGraphics" type="Node3D" parent="." node_paths=PackedStringArray("fire_particles", "fire_light", "smoke_particles")]
+script = ExtResource("26_0pp25")
+full_damage_smoke_color = Color(0.136826, 0.136826, 0.136826, 1)
+fire_particles = NodePath("FireParticles")
+fire_light = NodePath("FireLight")
+fire_light_gradient = SubResource("Gradient_tkmoi")
+smoke_particles = NodePath("SmokeParticles")
+noise = SubResource("FastNoiseLite_kdqyb")
+
+[node name="FireParticles" type="GPUParticles3D" parent="VehicleGraphics"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14165, 1.40805)
+emitting = false
+amount = 100
+lifetime = 5.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_2x5gj")
+draw_pass_1 = SubResource("QuadMesh_euwwh")
+
+[node name="SmokeParticles" type="GPUParticles3D" parent="VehicleGraphics"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14165, 1.40805)
+amount = 100
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_tsefd")
+draw_pass_1 = SubResource("QuadMesh_t8kex")
+
+[node name="FireLight" type="OmniLight3D" parent="VehicleGraphics"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7729, 1.40805)
+visible = false
+light_color = Color(1, 0.713726, 0, 1)
+light_energy = 5.0
+
+[connection signal="destroyed" from="." to="Mount/InteractionArea" method="set_inactive"]
+[connection signal="destroyed" from="." to="VehicleControlMount/InteractionArea" method="set_inactive"]
+[connection signal="restored" from="." to="Mount/InteractionArea" method="set_active"]
+[connection signal="restored" from="." to="VehicleControlMount/InteractionArea" method="set_active"]
+[connection signal="was_hit" from="Hitbox" to="Health" method="modify"]
