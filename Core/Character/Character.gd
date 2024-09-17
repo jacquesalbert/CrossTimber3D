@@ -143,7 +143,7 @@ func _ready():
 		health.changed.connect(on_health_damaged)
 		health.expended.connect(on_health_died)
 	if tool_user:
-		tool_user.character = self
+		tool_user.set_character(self)
 		tool_user.tool_changed.connect(on_tool_changed)
 		tool_user.tool_fired.connect(on_tool_activated)
 		if graphics:
@@ -235,7 +235,7 @@ func set_gibbed():
 
 func set_stun():
 	state = State.STUN
-	alive_collision_shape.disabled = true
+	alive_collision_shape.disabled = false
 	dead_collision_shape.disabled = true
 	hitbox.enable()
 	if is_instance_valid(graphics):

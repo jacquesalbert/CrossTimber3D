@@ -18,11 +18,29 @@ var _tool_slots : Array[Tool]
 signal current_slot_changed(slot:int,tool:Tool)
 signal slot_changed(slot:int,tool:Tool)
 
-func _ready():
-	super._ready()
+func set_character(character:Character):
+	super.set_character(character)
 	if default_tool:
 		for slot in range(tool_slots):
 			set_slot_tool(slot,default_tool)
+
+func register_instance(instance:ToolInstance):
+	super.register_instance(instance)
+	instance.failed.connect(on_tool_failed)
+
+func unregister_instance(instance:ToolInstance):
+	super.unregister_instance(instance)
+	instance.failed.disconnect(on_tool_failed)
+
+func on_tool_failed():
+	var new_pickup :Node3D = current_tool.get_pickup()
+	if new_pickup:
+		new_pickup.global_position = character.global_position
+		#new_pickup.target = character.global_position + character.global_transform.x * 16
+		#new_pickup.angular_speed = 2
+		new_pickup.rotation.y = randf()*TAU
+		LevelManager.spawn_in_level(new_pickup)
+	set_current_slot_tool(default_tool)
 
 func clear_slot(slot:int):
 	set_slot_tool(slot, null)

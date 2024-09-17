@@ -40,6 +40,8 @@ func _ready():
 		aim_noise.seed = get_instance_id()
 	_noise_offset = Vector3(randf()*1000, randf()*1000, randf()*1000)
 
+func set_character(character:Character):
+	self.character = character
 
 #func add_cover(cover:CollisionObject2D):
 	#cover_exceptions.append(cover)

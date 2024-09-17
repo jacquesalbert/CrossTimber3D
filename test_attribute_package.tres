@@ -14,5 +14,5 @@ attribute_base_values = {
 "run_energy_rate": 10.0,
 "run_modifier": 2.0,
 "speed": 5.0,
-"turn_speed": 15.0
+"turn_speed": 30.0
 }

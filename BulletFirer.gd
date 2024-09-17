@@ -25,6 +25,13 @@ var queue_fire : bool
 var responsible_node : Node
 var exceptions : Array[CollisionObject3D]
 
+func add_exception(exception:CollisionObject3D):
+	if not exceptions.has(exception):
+		exceptions.append(exception)
+
+func remove_exception(exception:CollisionObject3D):
+	exceptions.erase(exception)
+
 func fire():
 	if is_inside_tree():
 		_fire_bullets()

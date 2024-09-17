@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Tool" load_steps=4 format=3 uid="uid://c0cexavapndyv"]
+
+[ext_resource type="Script" path="res://Core/Tool/Tool.gd" id="1_3jhhd"]
+[ext_resource type="Texture2D" uid="uid://dmemsl2gs3ail" path="res://Resources/Tools/Fist/fist_icon.png" id="1_k3c33"]
+[ext_resource type="PackedScene" uid="uid://b06eakl3ytml3" path="res://Resources/Tools/Fist/fist_tool.tscn" id="2_nnqjq"]
+
+[resource]
+script = ExtResource("1_3jhhd")
+text = "Fist"
+description = "fist"
+icon = ExtResource("1_k3c33")
+category = 0
+type = 0
+instance = ExtResource("2_nnqjq")
+consumable = false
+recoil = 0.0
+has_pickup = false

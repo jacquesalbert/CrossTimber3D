@@ -48,6 +48,7 @@ func attack():
 	else:
 		streamplayer.stream = empty_stream
 		streamplayer.play()
+		failed.emit()
 	set_not_ready_to_fire()
 	
 	

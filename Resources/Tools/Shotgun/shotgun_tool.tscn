@@ -214,7 +214,7 @@ libraries = {
 [node name="BulletFirer" type="Node3D" parent="."]
 script = ExtResource("8_rawjg")
 bullet_scene = ExtResource("9_r67ex")
-angle_spread = 0.05
+angle_spread = 0.1
 count = 10
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]

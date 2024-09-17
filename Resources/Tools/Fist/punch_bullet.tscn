@@ -1,0 +1,22 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwcjyc70wjlev"]
+
+[ext_resource type="Script" path="res://Core/Bullet.gd" id="1_vm506"]
+[ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="2_eb5t6"]
+[ext_resource type="PackedScene" uid="uid://cv0guijoenrwh" path="res://medium_flesh_hit_effect.tscn" id="3_pu1fq"]
+[ext_resource type="Resource" uid="uid://bmxy23y5ky80a" path="res://metal_effect_material.tres" id="4_1dsil"]
+[ext_resource type="PackedScene" uid="uid://cjfqqr8ew8hpw" path="res://metal_hit_effect.tscn" id="5_7ihdo"]
+[ext_resource type="Resource" uid="uid://bf6f5dthj17ya" path="res://stone_effect_material.tres" id="6_o336y"]
+[ext_resource type="PackedScene" uid="uid://ct4g7c8aqeeg7" path="res://stone_hit_effect.tscn" id="7_75jbm"]
+
+[node name="Punch" type="RayCast3D"]
+collision_mask = 645
+collide_with_areas = true
+script = ExtResource("1_vm506")
+speed_minimum = 0.0
+range = 0.5
+stability = 1.0
+material_hit_effects = {
+ExtResource("2_eb5t6"): ExtResource("3_pu1fq"),
+ExtResource("4_1dsil"): ExtResource("5_7ihdo"),
+ExtResource("6_o336y"): ExtResource("7_75jbm")
+}

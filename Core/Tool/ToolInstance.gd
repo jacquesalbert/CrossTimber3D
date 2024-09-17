@@ -13,6 +13,7 @@ var character:Character
 #var cover_exceptions : Array[CollisionObject2D]
 
 signal fired
+signal failed
 
 func _ready() -> void:
 	timer.timeout.connect(set_ready_to_fire)

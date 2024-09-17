@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://y2763ntb71tf"]
+[gd_scene load_steps=25 format=3 uid="uid://y2763ntb71tf"]
 
 [ext_resource type="Script" path="res://Core/Character/Character.gd" id="1_aywxf"]
 [ext_resource type="PackedScene" uid="uid://bmhp7gx70w6va" path="res://exhaustion_effect.tscn" id="2_iu6pc"]
@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="8_yacv2"]
 [ext_resource type="Script" path="res://Core/Inventory/Inventory.gd" id="10_emt75"]
 [ext_resource type="Script" path="res://Core/Supply/SupplyArea.gd" id="11_6p5wk"]
+[ext_resource type="Resource" uid="uid://c0cexavapndyv" path="res://Resources/Tools/Fist/fist_tool.tres" id="11_dw3g2"]
 [ext_resource type="Script" path="res://Core/Interaction/Interactor.gd" id="11_t6hvw"]
 [ext_resource type="Script" path="res://Core/PaintMap/TrackPrinter.gd" id="14_58v07"]
 [ext_resource type="Script" path="res://SurfaceCast3D.gd" id="15_f5iwf"]
@@ -102,6 +103,7 @@ script = ExtResource("7_xe5s5")
 [node name="ToolUser" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.25)
 script = ExtResource("8_gt7dl")
+default_tool = ExtResource("11_dw3g2")
 tool_slots = 2
 
 [node name="EquipmentUser" type="Node3D" parent="."]
