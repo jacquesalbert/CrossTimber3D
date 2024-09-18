@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3b31235bkdlx"]
+
+[ext_resource type="PackedScene" uid="uid://v8vcdpvb6nai" path="res://Resources/FBX/Axe.fbx" id="1_rgqwf"]
+[ext_resource type="Texture2D" uid="uid://c6hxuxd0n8due" path="res://Resources/Tools/SMG/smg_pickup.png" id="2_3hxp8"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0135015, 0)
+light_color = Color(1, 0, 0, 1)
+
+[node name="Root Scene" parent="." instance=ExtResource("1_rgqwf")]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 0.127643, 0)
+visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.05
+axis = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_3hxp8")

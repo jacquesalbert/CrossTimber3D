@@ -17,6 +17,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 LevelManager="*res://Core/Level/LevelManager.gd"
+Shaker="*res://addons/shaker/src/Shaker.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/shaker/plugin.cfg")
 
 [input]
 
@@ -89,3 +94,4 @@ cycle_interaction={
 3d_physics/layer_8="Vehicle Body"
 3d_physics/layer_9="Interaction Ray"
 3d_physics/layer_10="EnvironmentCeiling"
+3d_physics/layer_11="Shaker"

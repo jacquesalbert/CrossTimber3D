@@ -8,7 +8,6 @@ extends ToolInstance
 @export var fire_stream : AudioStream
 @export var empty_stream : AudioStream
 
-
 func set_character(character:Character):
 	super.set_character(character)
 	firer.responsible_node = character
@@ -41,6 +40,8 @@ func attack():
 			inventory.remove_items(supply,supply_amount)
 		firer.fire()
 		animation_player.play("fire")
+		animation_player.seek(0.0)
+		#$ShakerEmitter3D.play_shake()
 		streamplayer.stream = fire_stream
 		streamplayer.play()
 		fired.emit()

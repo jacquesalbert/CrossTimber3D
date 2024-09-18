@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Tool" load_steps=7 format=3 uid="uid://b2br0exsogxo3"]
+
+[ext_resource type="AudioStream" uid="uid://re5ysp6ugk8p" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_reload_start.mp3" id="1_6xf2q"]
+[ext_resource type="Texture2D" uid="uid://d20h4mc5tt5u8" path="res://Resources/Tools/SMG/smg_icon.png" id="2_f5g74"]
+[ext_resource type="PackedScene" uid="uid://dgrtlfpqdac4h" path="res://Resources/Tools/SMG/smg_tool.tscn" id="3_ar2il"]
+[ext_resource type="PackedScene" uid="uid://d3b31235bkdlx" path="res://Resources/Tools/SMG/smg_pickup_graphics.tscn" id="4_y7nw1"]
+[ext_resource type="AudioStream" uid="uid://bv5bb3khdypr2" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/weapons/wpn_reload_end.mp3" id="5_bevgd"]
+[ext_resource type="Script" path="res://Core/Tool/Tool.gd" id="6_h6a3m"]
+
+[resource]
+script = ExtResource("6_h6a3m")
+text = "SMG"
+description = "SMG"
+icon = ExtResource("2_f5g74")
+category = 0
+type = 3
+instance = ExtResource("3_ar2il")
+consumable = false
+recoil = 0.0
+has_pickup = true
+pickup_graphics = ExtResource("4_y7nw1")
+pickup_sound = ExtResource("5_bevgd")
+drop_sound = ExtResource("1_6xf2q")

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Resources/Tools/Fist/MeleeTool.gd" id="1_thk60"]
 [ext_resource type="AudioStream" uid="uid://cxo3wtjtws3cy" path="res://Resources/Sounds/Essentials_Series_NOX_SOUND/Footsteps_Essentials_NOX_SOUND/Footsteps_Leaves/Footsteps_Leaves_Run/Footsteps_Leaves_Run_01.wav" id="2_st0mq"]
 [ext_resource type="PackedScene" uid="uid://dwcjyc70wjlev" path="res://Resources/Tools/Fist/punch_bullet.tscn" id="4_4f0ls"]
-[ext_resource type="Script" path="res://BulletFirer.gd" id="8_i4rvn"]
+[ext_resource type="Script" path="res://Core/Bullet/BulletFirer.gd" id="8_i4rvn"]
 
 [node name="FistToolInstance" type="Node3D" node_paths=PackedStringArray("firer", "streamplayer", "timer")]
 script = ExtResource("1_thk60")

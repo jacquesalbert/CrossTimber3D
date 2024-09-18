@@ -1,9 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cr4klpdylfgx7"]
+[gd_scene load_steps=18 format=3 uid="uid://cr4klpdylfgx7"]
 
-[ext_resource type="Script" path="res://BulletFirer.gd" id="1_0ual5"]
+[ext_resource type="Script" path="res://Core/Bullet/BulletFirer.gd" id="1_0ual5"]
 [ext_resource type="Script" path="res://Resources/Tools/Grenade/Explosion.gd" id="1_l8cux"]
 [ext_resource type="PackedScene" uid="uid://bkvlob2lf1v2o" path="res://Resources/Tools/Grenade/shrapnel_scene.tscn" id="2_gov3a"]
+[ext_resource type="Script" path="res://addons/shaker/src/Vector3/ShakerEmitter3D.gd" id="7_gqf6n"]
+[ext_resource type="Script" path="res://addons/shaker/data/Vector3/BaseShakerType3D.gd" id="8_y4n4p"]
+[ext_resource type="Script" path="res://addons/shaker/data/Vector3/ShakerTypeRandom3D.gd" id="9_4y6i8"]
 [ext_resource type="Texture2D" uid="uid://bkc4jjjyg3tm6" path="res://Resources/explosion_sprite.png" id="10_5hacc"]
+[ext_resource type="Script" path="res://addons/shaker/data/Vector3/ShakerPreset3D.gd" id="10_8dbps"]
 [ext_resource type="AudioStream" uid="uid://uaq213iq63xk" path="res://Resources/Sounds/Premium Weapon Pack/Tactical Weapon Pack/sounds/explosions/explosion_1.mp3" id="11_dhm8k"]
 [ext_resource type="Script" path="res://BlastArea.gd" id="12_ykec0"]
 
@@ -149,6 +153,30 @@ _data = {
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="Resource" id="Resource_ij18y"]
+script = ExtResource("9_4y6i8")
+seed = 0
+amplitude = Vector3(10, 10, 10)
+offset = Vector3(0, 0, 0)
+BlendingMode = 0
+fade_in = 0.0
+fade_out = 2.0
+start_percent = 0.0
+end_percent = 1.0
+_temp_graph = false
+bake_internal = 64
+
+[sub_resource type="Resource" id="Resource_1fqvv"]
+script = ExtResource("10_8dbps")
+PositionShake = Array[ExtResource("8_y4n4p")]([SubResource("Resource_ij18y")])
+RotationShake = Array[ExtResource("8_y4n4p")]([])
+ScaleShake = Array[ExtResource("8_y4n4p")]([])
+bake_internal = 64
+__follow_timeline = false
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_blblr"]
+radius = 10.0
+
 [node name="GrenadeExplosion" type="Node3D" node_paths=PackedStringArray("shrapnel_firer", "blast_area")]
 script = ExtResource("1_l8cux")
 shrapnel_firer = NodePath("BulletFirer")
@@ -191,5 +219,20 @@ damage = 400
 damage_falloff = SubResource("Curve_roxyi")
 impulse_falloff = SubResource("Curve_roxyi")
 radius = 5.0
+
+[node name="ShakerEmitter3D" type="Node3D" parent="."]
+script = ExtResource("7_gqf6n")
+emit = true
+max_distance = 10.0
+distance_attenuation = 2.0
+duration = 0.5
+shakerPreset = SubResource("Resource_1fqvv")
+
+[node name="Area3D" type="Area3D" parent="ShakerEmitter3D"]
+collision_layer = 1024
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShakerEmitter3D/Area3D"]
+shape = SubResource("SphereShape3D_blblr")
 
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="queue_free"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://d1sl1au76af5l"]
 
-[ext_resource type="Script" path="res://Core/Bullet.gd" id="1_hdftl"]
+[ext_resource type="Script" path="res://Core/Bullet/Bullet.gd" id="1_hdftl"]
 [ext_resource type="PackedScene" uid="uid://c14g3ii2cj5e1" path="res://bleeding_effect.tscn" id="2_tor7u"]
 [ext_resource type="Resource" uid="uid://784u5sak8kjf" path="res://flesh_effect_material.tres" id="3_wrxav"]
 [ext_resource type="PackedScene" uid="uid://dptymrf7sjrf0" path="res://small_flesh_hit_effect.tscn" id="4_yj562"]

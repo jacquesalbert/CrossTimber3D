@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://tpqtldjmvpe4"]
+[gd_scene load_steps=37 format=3 uid="uid://tpqtldjmvpe4"]
 
 [ext_resource type="Script" path="res://Core/Level/Level.gd" id="1_hjx4v"]
 [ext_resource type="Script" path="res://Core/PaintMap/SimplePaintMap.gd" id="2_240kg"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b8of1ggjhnfx6" path="res://test_door.tscn" id="6_yh4dx"]
 [ext_resource type="PackedScene" uid="uid://y2763ntb71tf" path="res://test_character.tscn" id="11_c0iki"]
 [ext_resource type="PackedScene" uid="uid://dmnda8wv7ktxj" path="res://Core/Tool/tool_pickup_template.tscn" id="12_ek7ma"]
+[ext_resource type="Resource" uid="uid://b2br0exsogxo3" path="res://Resources/Tools/SMG/smg_tool.tres" id="13_f1mab"]
 [ext_resource type="Resource" uid="uid://cdyg1n6sm1je7" path="res://Resources/Tools/Grenade/grenade_tool.tres" id="13_vpq2l"]
 [ext_resource type="PackedScene" uid="uid://clfbdnb2xhjtw" path="res://Core/Supply/supply_pickup_template.tscn" id="14_scgyu"]
 [ext_resource type="PackedScene" uid="uid://cu7rxk67tc3gv" path="res://Resources/kenney_furniture-kit/Models/GLTF format/wall.glb" id="15_rreig"]
@@ -333,6 +334,10 @@ tool = ExtResource("17_ogx1m")
 [node name="SupplyPickup" parent="Pickups" instance=ExtResource("14_scgyu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63881, 2.62076, 0)
 quantity = 200
+
+[node name="ToolPickup11" parent="Pickups" instance=ExtResource("12_ek7ma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.419523, -0.0999981, 7.42205)
+tool = ExtResource("13_f1mab")
 
 [node name="Vehicles" type="Node3D" parent="."]
 
